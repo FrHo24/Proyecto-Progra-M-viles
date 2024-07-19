@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "857675165794",
+    "project_id": "fenixbox-ccfb1",
+    "storage_bucket": "fenixbox-ccfb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857675165794:android:e8d15b8708e441e19b213b",
+        "android_client_info": {
+          "package_name": "com.fenixbox.proyectomoviles"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjMiqQArG0DpnqhdqSvcPpUe3YIqi3w8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857675165794:android:bb8a0e906cab155a9b213b",
+        "android_client_info": {
+          "package_name": "com.mycompany.proyectomoviles"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjMiqQArG0DpnqhdqSvcPpUe3YIqi3w8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
