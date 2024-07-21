@@ -45,11 +45,6 @@ class UsersRecord extends FirestoreRecord {
   String get phoneNumber => _phoneNumber ?? '';
   bool hasPhoneNumber() => _phoneNumber != null;
 
-  // "isAdmin" field.
-  bool? _isAdmin;
-  bool get isAdmin => _isAdmin ?? false;
-  bool hasIsAdmin() => _isAdmin != null;
-
   // "peso" field.
   double? _peso;
   double get peso => _peso ?? 0.0;
@@ -60,6 +55,11 @@ class UsersRecord extends FirestoreRecord {
   int get altura => _altura ?? 0;
   bool hasAltura() => _altura != null;
 
+  // "roll" field.
+  String? _roll;
+  String get roll => _roll ?? '';
+  bool hasRoll() => _roll != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -67,9 +67,9 @@ class UsersRecord extends FirestoreRecord {
     _uid = snapshotData['uid'] as String?;
     _createdTime = snapshotData['created_time'] as DateTime?;
     _phoneNumber = snapshotData['phone_number'] as String?;
-    _isAdmin = snapshotData['isAdmin'] as bool?;
     _peso = castToType<double>(snapshotData['peso']);
     _altura = castToType<int>(snapshotData['altura']);
+    _roll = snapshotData['roll'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -112,9 +112,9 @@ Map<String, dynamic> createUsersRecordData({
   String? uid,
   DateTime? createdTime,
   String? phoneNumber,
-  bool? isAdmin,
   double? peso,
   int? altura,
+  String? roll,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -124,9 +124,9 @@ Map<String, dynamic> createUsersRecordData({
       'uid': uid,
       'created_time': createdTime,
       'phone_number': phoneNumber,
-      'isAdmin': isAdmin,
       'peso': peso,
       'altura': altura,
+      'roll': roll,
     }.withoutNulls,
   );
 
@@ -144,9 +144,9 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.uid == e2?.uid &&
         e1?.createdTime == e2?.createdTime &&
         e1?.phoneNumber == e2?.phoneNumber &&
-        e1?.isAdmin == e2?.isAdmin &&
         e1?.peso == e2?.peso &&
-        e1?.altura == e2?.altura;
+        e1?.altura == e2?.altura &&
+        e1?.roll == e2?.roll;
   }
 
   @override
@@ -157,9 +157,9 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.uid,
         e?.createdTime,
         e?.phoneNumber,
-        e?.isAdmin,
         e?.peso,
-        e?.altura
+        e?.altura,
+        e?.roll
       ]);
 
   @override
