@@ -5,16 +5,15 @@ import '../auth/firebase_auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'schema/util/firestore_util.dart';
 
-import 'schema/users_record.dart';
 import 'schema/instructores_record.dart';
 import 'schema/productos_record.dart';
-import 'schema/distribuidores_record.dart';
 import 'schema/equipos_record.dart';
 import 'schema/clases_record.dart';
-import 'schema/inventario_record.dart';
-import 'schema/historial_mantenimiento_record.dart';
 import 'schema/reservas_record.dart';
-import 'schema/categoras_record.dart';
+import 'schema/clientes_record.dart';
+import 'schema/usuarios_record.dart';
+import 'schema/proveedores_record.dart';
+import 'schema/transacciones_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -23,53 +22,15 @@ export 'schema/index.dart';
 export 'schema/util/firestore_util.dart';
 export 'schema/util/schema_util.dart';
 
-export 'schema/users_record.dart';
 export 'schema/instructores_record.dart';
 export 'schema/productos_record.dart';
-export 'schema/distribuidores_record.dart';
 export 'schema/equipos_record.dart';
 export 'schema/clases_record.dart';
-export 'schema/inventario_record.dart';
-export 'schema/historial_mantenimiento_record.dart';
 export 'schema/reservas_record.dart';
-export 'schema/categoras_record.dart';
-
-/// Functions to query UsersRecords (as a Stream and as a Future).
-Future<int> queryUsersRecordCount({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-}) =>
-    queryCollectionCount(
-      UsersRecord.collection,
-      queryBuilder: queryBuilder,
-      limit: limit,
-    );
-
-Stream<List<UsersRecord>> queryUsersRecord({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollection(
-      UsersRecord.collection,
-      UsersRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-Future<List<UsersRecord>> queryUsersRecordOnce({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollectionOnce(
-      UsersRecord.collection,
-      UsersRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
+export 'schema/clientes_record.dart';
+export 'schema/usuarios_record.dart';
+export 'schema/proveedores_record.dart';
+export 'schema/transacciones_record.dart';
 
 /// Functions to query InstructoresRecords (as a Stream and as a Future).
 Future<int> queryInstructoresRecordCount({
@@ -140,43 +101,6 @@ Future<List<ProductosRecord>> queryProductosRecordOnce({
     queryCollectionOnce(
       ProductosRecord.collection,
       ProductosRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-/// Functions to query DistribuidoresRecords (as a Stream and as a Future).
-Future<int> queryDistribuidoresRecordCount({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-}) =>
-    queryCollectionCount(
-      DistribuidoresRecord.collection,
-      queryBuilder: queryBuilder,
-      limit: limit,
-    );
-
-Stream<List<DistribuidoresRecord>> queryDistribuidoresRecord({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollection(
-      DistribuidoresRecord.collection,
-      DistribuidoresRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-Future<List<DistribuidoresRecord>> queryDistribuidoresRecordOnce({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollectionOnce(
-      DistribuidoresRecord.collection,
-      DistribuidoresRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,
@@ -256,81 +180,6 @@ Future<List<ClasesRecord>> queryClasesRecordOnce({
       singleRecord: singleRecord,
     );
 
-/// Functions to query InventarioRecords (as a Stream and as a Future).
-Future<int> queryInventarioRecordCount({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-}) =>
-    queryCollectionCount(
-      InventarioRecord.collection,
-      queryBuilder: queryBuilder,
-      limit: limit,
-    );
-
-Stream<List<InventarioRecord>> queryInventarioRecord({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollection(
-      InventarioRecord.collection,
-      InventarioRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-Future<List<InventarioRecord>> queryInventarioRecordOnce({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollectionOnce(
-      InventarioRecord.collection,
-      InventarioRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-/// Functions to query HistorialMantenimientoRecords (as a Stream and as a Future).
-Future<int> queryHistorialMantenimientoRecordCount({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-}) =>
-    queryCollectionCount(
-      HistorialMantenimientoRecord.collection,
-      queryBuilder: queryBuilder,
-      limit: limit,
-    );
-
-Stream<List<HistorialMantenimientoRecord>> queryHistorialMantenimientoRecord({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollection(
-      HistorialMantenimientoRecord.collection,
-      HistorialMantenimientoRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-Future<List<HistorialMantenimientoRecord>>
-    queryHistorialMantenimientoRecordOnce({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-        queryCollectionOnce(
-          HistorialMantenimientoRecord.collection,
-          HistorialMantenimientoRecord.fromSnapshot,
-          queryBuilder: queryBuilder,
-          limit: limit,
-          singleRecord: singleRecord,
-        );
-
 /// Functions to query ReservasRecords (as a Stream and as a Future).
 Future<int> queryReservasRecordCount({
   Query Function(Query)? queryBuilder,
@@ -368,38 +217,149 @@ Future<List<ReservasRecord>> queryReservasRecordOnce({
       singleRecord: singleRecord,
     );
 
-/// Functions to query CategorasRecords (as a Stream and as a Future).
-Future<int> queryCategorasRecordCount({
+/// Functions to query ClientesRecords (as a Stream and as a Future).
+Future<int> queryClientesRecordCount({
   Query Function(Query)? queryBuilder,
   int limit = -1,
 }) =>
     queryCollectionCount(
-      CategorasRecord.collection,
+      ClientesRecord.collection,
       queryBuilder: queryBuilder,
       limit: limit,
     );
 
-Stream<List<CategorasRecord>> queryCategorasRecord({
+Stream<List<ClientesRecord>> queryClientesRecord({
   Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
     queryCollection(
-      CategorasRecord.collection,
-      CategorasRecord.fromSnapshot,
+      ClientesRecord.collection,
+      ClientesRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,
     );
 
-Future<List<CategorasRecord>> queryCategorasRecordOnce({
+Future<List<ClientesRecord>> queryClientesRecordOnce({
   Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
     queryCollectionOnce(
-      CategorasRecord.collection,
-      CategorasRecord.fromSnapshot,
+      ClientesRecord.collection,
+      ClientesRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query UsuariosRecords (as a Stream and as a Future).
+Future<int> queryUsuariosRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      UsuariosRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<UsuariosRecord>> queryUsuariosRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      UsuariosRecord.collection,
+      UsuariosRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<UsuariosRecord>> queryUsuariosRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      UsuariosRecord.collection,
+      UsuariosRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query ProveedoresRecords (as a Stream and as a Future).
+Future<int> queryProveedoresRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      ProveedoresRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<ProveedoresRecord>> queryProveedoresRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      ProveedoresRecord.collection,
+      ProveedoresRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<ProveedoresRecord>> queryProveedoresRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      ProveedoresRecord.collection,
+      ProveedoresRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query TransaccionesRecords (as a Stream and as a Future).
+Future<int> queryTransaccionesRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      TransaccionesRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<TransaccionesRecord>> queryTransaccionesRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      TransaccionesRecord.collection,
+      TransaccionesRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<TransaccionesRecord>> queryTransaccionesRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      TransaccionesRecord.collection,
+      TransaccionesRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,
@@ -542,14 +502,14 @@ Future<FFFirestorePage<T>> queryCollectionPage<T>(
 
 // Creates a Firestore document representing the logged in user if it doesn't yet exist
 Future maybeCreateUser(User user) async {
-  final userRecord = UsersRecord.collection.doc(user.uid);
+  final userRecord = UsuariosRecord.collection.doc(user.uid);
   final userExists = await userRecord.get().then((u) => u.exists);
   if (userExists) {
-    currentUserDocument = await UsersRecord.getDocumentOnce(userRecord);
+    currentUserDocument = await UsuariosRecord.getDocumentOnce(userRecord);
     return;
   }
 
-  final userData = createUsersRecordData(
+  final userData = createUsuariosRecordData(
     email: user.email ??
         FirebaseAuth.instance.currentUser?.email ??
         user.providerData.firstOrNull?.email,
@@ -562,10 +522,11 @@ Future maybeCreateUser(User user) async {
   );
 
   await userRecord.set(userData);
-  currentUserDocument = UsersRecord.getDocumentFromData(userData, userRecord);
+  currentUserDocument =
+      UsuariosRecord.getDocumentFromData(userData, userRecord);
 }
 
 Future updateUserDocument({String? email}) async {
   await currentUserDocument?.reference
-      .update(createUsersRecordData(email: email));
+      .update(createUsuariosRecordData(email: email));
 }

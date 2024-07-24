@@ -15,37 +15,43 @@ class ProductosRecord extends FirestoreRecord {
     _initializeFields();
   }
 
-  // "nombre" field.
-  String? _nombre;
-  String get nombre => _nombre ?? '';
-  bool hasNombre() => _nombre != null;
+  // "nombreProducto" field.
+  String? _nombreProducto;
+  String get nombreProducto => _nombreProducto ?? '';
+  bool hasNombreProducto() => _nombreProducto != null;
 
-  // "descripcion" field.
-  String? _descripcion;
-  String get descripcion => _descripcion ?? '';
-  bool hasDescripcion() => _descripcion != null;
+  // "descripcionProducto" field.
+  String? _descripcionProducto;
+  String get descripcionProducto => _descripcionProducto ?? '';
+  bool hasDescripcionProducto() => _descripcionProducto != null;
 
-  // "precio" field.
-  double? _precio;
-  double get precio => _precio ?? 0.0;
-  bool hasPrecio() => _precio != null;
+  // "precioProducto" field.
+  double? _precioProducto;
+  double get precioProducto => _precioProducto ?? 0.0;
+  bool hasPrecioProducto() => _precioProducto != null;
 
-  // "cantidad" field.
-  int? _cantidad;
-  int get cantidad => _cantidad ?? 0;
-  bool hasCantidad() => _cantidad != null;
+  // "cantidadProducto" field.
+  int? _cantidadProducto;
+  int get cantidadProducto => _cantidadProducto ?? 0;
+  bool hasCantidadProducto() => _cantidadProducto != null;
 
-  // "categoria" field.
-  String? _categoria;
-  String get categoria => _categoria ?? '';
-  bool hasCategoria() => _categoria != null;
+  // "categoriaProducto" field.
+  String? _categoriaProducto;
+  String get categoriaProducto => _categoriaProducto ?? '';
+  bool hasCategoriaProducto() => _categoriaProducto != null;
+
+  // "proveedorProducto" field.
+  String? _proveedorProducto;
+  String get proveedorProducto => _proveedorProducto ?? '';
+  bool hasProveedorProducto() => _proveedorProducto != null;
 
   void _initializeFields() {
-    _nombre = snapshotData['nombre'] as String?;
-    _descripcion = snapshotData['descripcion'] as String?;
-    _precio = castToType<double>(snapshotData['precio']);
-    _cantidad = castToType<int>(snapshotData['cantidad']);
-    _categoria = snapshotData['categoria'] as String?;
+    _nombreProducto = snapshotData['nombreProducto'] as String?;
+    _descripcionProducto = snapshotData['descripcionProducto'] as String?;
+    _precioProducto = castToType<double>(snapshotData['precioProducto']);
+    _cantidadProducto = castToType<int>(snapshotData['cantidadProducto']);
+    _categoriaProducto = snapshotData['categoriaProducto'] as String?;
+    _proveedorProducto = snapshotData['proveedorProducto'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -83,19 +89,21 @@ class ProductosRecord extends FirestoreRecord {
 }
 
 Map<String, dynamic> createProductosRecordData({
-  String? nombre,
-  String? descripcion,
-  double? precio,
-  int? cantidad,
-  String? categoria,
+  String? nombreProducto,
+  String? descripcionProducto,
+  double? precioProducto,
+  int? cantidadProducto,
+  String? categoriaProducto,
+  String? proveedorProducto,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
-      'nombre': nombre,
-      'descripcion': descripcion,
-      'precio': precio,
-      'cantidad': cantidad,
-      'categoria': categoria,
+      'nombreProducto': nombreProducto,
+      'descripcionProducto': descripcionProducto,
+      'precioProducto': precioProducto,
+      'cantidadProducto': cantidadProducto,
+      'categoriaProducto': categoriaProducto,
+      'proveedorProducto': proveedorProducto,
     }.withoutNulls,
   );
 
@@ -107,16 +115,23 @@ class ProductosRecordDocumentEquality implements Equality<ProductosRecord> {
 
   @override
   bool equals(ProductosRecord? e1, ProductosRecord? e2) {
-    return e1?.nombre == e2?.nombre &&
-        e1?.descripcion == e2?.descripcion &&
-        e1?.precio == e2?.precio &&
-        e1?.cantidad == e2?.cantidad &&
-        e1?.categoria == e2?.categoria;
+    return e1?.nombreProducto == e2?.nombreProducto &&
+        e1?.descripcionProducto == e2?.descripcionProducto &&
+        e1?.precioProducto == e2?.precioProducto &&
+        e1?.cantidadProducto == e2?.cantidadProducto &&
+        e1?.categoriaProducto == e2?.categoriaProducto &&
+        e1?.proveedorProducto == e2?.proveedorProducto;
   }
 
   @override
-  int hash(ProductosRecord? e) => const ListEquality()
-      .hash([e?.nombre, e?.descripcion, e?.precio, e?.cantidad, e?.categoria]);
+  int hash(ProductosRecord? e) => const ListEquality().hash([
+        e?.nombreProducto,
+        e?.descripcionProducto,
+        e?.precioProducto,
+        e?.cantidadProducto,
+        e?.categoriaProducto,
+        e?.proveedorProducto
+      ]);
 
   @override
   bool isValidKey(Object? o) => o is ProductosRecord;

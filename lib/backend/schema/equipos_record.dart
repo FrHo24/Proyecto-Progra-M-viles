@@ -15,49 +15,38 @@ class EquiposRecord extends FirestoreRecord {
     _initializeFields();
   }
 
-  // "nombre" field.
-  String? _nombre;
-  String get nombre => _nombre ?? '';
-  bool hasNombre() => _nombre != null;
-
-  // "descripcion" field.
-  String? _descripcion;
-  String get descripcion => _descripcion ?? '';
-  bool hasDescripcion() => _descripcion != null;
-
-  // "tipo" field.
-  String? _tipo;
-  String get tipo => _tipo ?? '';
-  bool hasTipo() => _tipo != null;
-
-  // "ubicacion" field.
-  String? _ubicacion;
-  String get ubicacion => _ubicacion ?? '';
-  bool hasUbicacion() => _ubicacion != null;
-
-  // "estado" field.
-  String? _estado;
-  String get estado => _estado ?? '';
-  bool hasEstado() => _estado != null;
-
-  // "ultima_mantenimiento" field.
-  DateTime? _ultimaMantenimiento;
-  DateTime? get ultimaMantenimiento => _ultimaMantenimiento;
-  bool hasUltimaMantenimiento() => _ultimaMantenimiento != null;
+  // "nombreMaquina" field.
+  String? _nombreMaquina;
+  String get nombreMaquina => _nombreMaquina ?? '';
+  bool hasNombreMaquina() => _nombreMaquina != null;
 
   // "cantidad" field.
   int? _cantidad;
   int get cantidad => _cantidad ?? 0;
   bool hasCantidad() => _cantidad != null;
 
+  // "categoriaMaquina" field.
+  String? _categoriaMaquina;
+  String get categoriaMaquina => _categoriaMaquina ?? '';
+  bool hasCategoriaMaquina() => _categoriaMaquina != null;
+
+  // "estadoMaquina" field.
+  String? _estadoMaquina;
+  String get estadoMaquina => _estadoMaquina ?? '';
+  bool hasEstadoMaquina() => _estadoMaquina != null;
+
+  // "fechaUltimoMantenimiento" field.
+  DateTime? _fechaUltimoMantenimiento;
+  DateTime? get fechaUltimoMantenimiento => _fechaUltimoMantenimiento;
+  bool hasFechaUltimoMantenimiento() => _fechaUltimoMantenimiento != null;
+
   void _initializeFields() {
-    _nombre = snapshotData['nombre'] as String?;
-    _descripcion = snapshotData['descripcion'] as String?;
-    _tipo = snapshotData['tipo'] as String?;
-    _ubicacion = snapshotData['ubicacion'] as String?;
-    _estado = snapshotData['estado'] as String?;
-    _ultimaMantenimiento = snapshotData['ultima_mantenimiento'] as DateTime?;
+    _nombreMaquina = snapshotData['nombreMaquina'] as String?;
     _cantidad = castToType<int>(snapshotData['cantidad']);
+    _categoriaMaquina = snapshotData['categoriaMaquina'] as String?;
+    _estadoMaquina = snapshotData['estadoMaquina'] as String?;
+    _fechaUltimoMantenimiento =
+        snapshotData['fechaUltimoMantenimiento'] as DateTime?;
   }
 
   static CollectionReference get collection =>
@@ -95,23 +84,19 @@ class EquiposRecord extends FirestoreRecord {
 }
 
 Map<String, dynamic> createEquiposRecordData({
-  String? nombre,
-  String? descripcion,
-  String? tipo,
-  String? ubicacion,
-  String? estado,
-  DateTime? ultimaMantenimiento,
+  String? nombreMaquina,
   int? cantidad,
+  String? categoriaMaquina,
+  String? estadoMaquina,
+  DateTime? fechaUltimoMantenimiento,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
-      'nombre': nombre,
-      'descripcion': descripcion,
-      'tipo': tipo,
-      'ubicacion': ubicacion,
-      'estado': estado,
-      'ultima_mantenimiento': ultimaMantenimiento,
+      'nombreMaquina': nombreMaquina,
       'cantidad': cantidad,
+      'categoriaMaquina': categoriaMaquina,
+      'estadoMaquina': estadoMaquina,
+      'fechaUltimoMantenimiento': fechaUltimoMantenimiento,
     }.withoutNulls,
   );
 
@@ -123,24 +108,20 @@ class EquiposRecordDocumentEquality implements Equality<EquiposRecord> {
 
   @override
   bool equals(EquiposRecord? e1, EquiposRecord? e2) {
-    return e1?.nombre == e2?.nombre &&
-        e1?.descripcion == e2?.descripcion &&
-        e1?.tipo == e2?.tipo &&
-        e1?.ubicacion == e2?.ubicacion &&
-        e1?.estado == e2?.estado &&
-        e1?.ultimaMantenimiento == e2?.ultimaMantenimiento &&
-        e1?.cantidad == e2?.cantidad;
+    return e1?.nombreMaquina == e2?.nombreMaquina &&
+        e1?.cantidad == e2?.cantidad &&
+        e1?.categoriaMaquina == e2?.categoriaMaquina &&
+        e1?.estadoMaquina == e2?.estadoMaquina &&
+        e1?.fechaUltimoMantenimiento == e2?.fechaUltimoMantenimiento;
   }
 
   @override
   int hash(EquiposRecord? e) => const ListEquality().hash([
-        e?.nombre,
-        e?.descripcion,
-        e?.tipo,
-        e?.ubicacion,
-        e?.estado,
-        e?.ultimaMantenimiento,
-        e?.cantidad
+        e?.nombreMaquina,
+        e?.cantidad,
+        e?.categoriaMaquina,
+        e?.estadoMaquina,
+        e?.fechaUltimoMantenimiento
       ]);
 
   @override

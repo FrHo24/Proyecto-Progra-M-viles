@@ -15,11 +15,6 @@ class ReservasRecord extends FirestoreRecord {
     _initializeFields();
   }
 
-  // "cliente_id" field.
-  DocumentReference? _clienteId;
-  DocumentReference? get clienteId => _clienteId;
-  bool hasClienteId() => _clienteId != null;
-
   // "equipo_id" field.
   DocumentReference? _equipoId;
   DocumentReference? get equipoId => _equipoId;
@@ -40,12 +35,17 @@ class ReservasRecord extends FirestoreRecord {
   String get estado => _estado ?? '';
   bool hasEstado() => _estado != null;
 
+  // "cliente_id" field.
+  DocumentReference? _clienteId;
+  DocumentReference? get clienteId => _clienteId;
+  bool hasClienteId() => _clienteId != null;
+
   void _initializeFields() {
-    _clienteId = snapshotData['cliente_id'] as DocumentReference?;
     _equipoId = snapshotData['equipo_id'] as DocumentReference?;
     _claseId = snapshotData['clase_id'] as DocumentReference?;
     _fechaReserva = snapshotData['fecha_reserva'] as DateTime?;
     _estado = snapshotData['estado'] as String?;
+    _clienteId = snapshotData['cliente_id'] as DocumentReference?;
   }
 
   static CollectionReference get collection =>
@@ -83,19 +83,19 @@ class ReservasRecord extends FirestoreRecord {
 }
 
 Map<String, dynamic> createReservasRecordData({
-  DocumentReference? clienteId,
   DocumentReference? equipoId,
   DocumentReference? claseId,
   DateTime? fechaReserva,
   String? estado,
+  DocumentReference? clienteId,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
-      'cliente_id': clienteId,
       'equipo_id': equipoId,
       'clase_id': claseId,
       'fecha_reserva': fechaReserva,
       'estado': estado,
+      'cliente_id': clienteId,
     }.withoutNulls,
   );
 
@@ -107,16 +107,16 @@ class ReservasRecordDocumentEquality implements Equality<ReservasRecord> {
 
   @override
   bool equals(ReservasRecord? e1, ReservasRecord? e2) {
-    return e1?.clienteId == e2?.clienteId &&
-        e1?.equipoId == e2?.equipoId &&
+    return e1?.equipoId == e2?.equipoId &&
         e1?.claseId == e2?.claseId &&
         e1?.fechaReserva == e2?.fechaReserva &&
-        e1?.estado == e2?.estado;
+        e1?.estado == e2?.estado &&
+        e1?.clienteId == e2?.clienteId;
   }
 
   @override
   int hash(ReservasRecord? e) => const ListEquality().hash(
-      [e?.clienteId, e?.equipoId, e?.claseId, e?.fechaReserva, e?.estado]);
+      [e?.equipoId, e?.claseId, e?.fechaReserva, e?.estado, e?.clienteId]);
 
   @override
   bool isValidKey(Object? o) => o is ReservasRecord;

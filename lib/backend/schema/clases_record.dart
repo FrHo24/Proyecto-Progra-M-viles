@@ -15,37 +15,32 @@ class ClasesRecord extends FirestoreRecord {
     _initializeFields();
   }
 
-  // "nombre" field.
-  String? _nombre;
-  String get nombre => _nombre ?? '';
-  bool hasNombre() => _nombre != null;
+  // "nombreClase" field.
+  String? _nombreClase;
+  String get nombreClase => _nombreClase ?? '';
+  bool hasNombreClase() => _nombreClase != null;
 
-  // "instructor_id" field.
-  int? _instructorId;
-  int get instructorId => _instructorId ?? 0;
-  bool hasInstructorId() => _instructorId != null;
+  // "descripcionClase" field.
+  String? _descripcionClase;
+  String get descripcionClase => _descripcionClase ?? '';
+  bool hasDescripcionClase() => _descripcionClase != null;
 
-  // "fecha" field.
-  DateTime? _fecha;
-  DateTime? get fecha => _fecha;
-  bool hasFecha() => _fecha != null;
+  // "cantidadParticipantes" field.
+  int? _cantidadParticipantes;
+  int get cantidadParticipantes => _cantidadParticipantes ?? 0;
+  bool hasCantidadParticipantes() => _cantidadParticipantes != null;
 
-  // "duracion" field.
-  int? _duracion;
-  int get duracion => _duracion ?? 0;
-  bool hasDuracion() => _duracion != null;
-
-  // "clientes" field.
-  DocumentReference? _clientes;
-  DocumentReference? get clientes => _clientes;
-  bool hasClientes() => _clientes != null;
+  // "instructorAsignado" field.
+  String? _instructorAsignado;
+  String get instructorAsignado => _instructorAsignado ?? '';
+  bool hasInstructorAsignado() => _instructorAsignado != null;
 
   void _initializeFields() {
-    _nombre = snapshotData['nombre'] as String?;
-    _instructorId = castToType<int>(snapshotData['instructor_id']);
-    _fecha = snapshotData['fecha'] as DateTime?;
-    _duracion = castToType<int>(snapshotData['duracion']);
-    _clientes = snapshotData['clientes'] as DocumentReference?;
+    _nombreClase = snapshotData['nombreClase'] as String?;
+    _descripcionClase = snapshotData['descripcionClase'] as String?;
+    _cantidadParticipantes =
+        castToType<int>(snapshotData['cantidadParticipantes']);
+    _instructorAsignado = snapshotData['instructorAsignado'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -82,19 +77,17 @@ class ClasesRecord extends FirestoreRecord {
 }
 
 Map<String, dynamic> createClasesRecordData({
-  String? nombre,
-  int? instructorId,
-  DateTime? fecha,
-  int? duracion,
-  DocumentReference? clientes,
+  String? nombreClase,
+  String? descripcionClase,
+  int? cantidadParticipantes,
+  String? instructorAsignado,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
-      'nombre': nombre,
-      'instructor_id': instructorId,
-      'fecha': fecha,
-      'duracion': duracion,
-      'clientes': clientes,
+      'nombreClase': nombreClase,
+      'descripcionClase': descripcionClase,
+      'cantidadParticipantes': cantidadParticipantes,
+      'instructorAsignado': instructorAsignado,
     }.withoutNulls,
   );
 
@@ -106,16 +99,19 @@ class ClasesRecordDocumentEquality implements Equality<ClasesRecord> {
 
   @override
   bool equals(ClasesRecord? e1, ClasesRecord? e2) {
-    return e1?.nombre == e2?.nombre &&
-        e1?.instructorId == e2?.instructorId &&
-        e1?.fecha == e2?.fecha &&
-        e1?.duracion == e2?.duracion &&
-        e1?.clientes == e2?.clientes;
+    return e1?.nombreClase == e2?.nombreClase &&
+        e1?.descripcionClase == e2?.descripcionClase &&
+        e1?.cantidadParticipantes == e2?.cantidadParticipantes &&
+        e1?.instructorAsignado == e2?.instructorAsignado;
   }
 
   @override
-  int hash(ClasesRecord? e) => const ListEquality()
-      .hash([e?.nombre, e?.instructorId, e?.fecha, e?.duracion, e?.clientes]);
+  int hash(ClasesRecord? e) => const ListEquality().hash([
+        e?.nombreClase,
+        e?.descripcionClase,
+        e?.cantidadParticipantes,
+        e?.instructorAsignado
+      ]);
 
   @override
   bool isValidKey(Object? o) => o is ClasesRecord;

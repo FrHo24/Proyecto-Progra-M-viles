@@ -362,7 +362,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          '12ljm8sq' /* Correo: */,
+                                                          '12ljm8sq' /* Email: */,
                                                         ),
                                                         labelStyle:
                                                             FlutterFlowTheme.of(
@@ -481,14 +481,15 @@ class _LoginWidgetState extends State<LoginWidget>
                                                       autofillHints: const [
                                                         AutofillHints.email
                                                       ],
-                                                      obscureText: false,
+                                                      obscureText: !_model
+                                                          .nameCreateVisibility,
                                                       decoration:
                                                           InputDecoration(
                                                         labelText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'ohxf6i6i' /* Correo: */,
+                                                          'ohxf6i6i' /* Contraseña: */,
                                                         ),
                                                         labelStyle:
                                                             FlutterFlowTheme.of(
@@ -568,6 +569,27 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         contentPadding:
                                                             const EdgeInsets.all(
                                                                 24.0),
+                                                        suffixIcon: InkWell(
+                                                          onTap: () => setState(
+                                                            () => _model
+                                                                    .nameCreateVisibility =
+                                                                !_model
+                                                                    .nameCreateVisibility,
+                                                          ),
+                                                          focusNode: FocusNode(
+                                                              skipTraversal:
+                                                                  true),
+                                                          child: Icon(
+                                                            _model.nameCreateVisibility
+                                                                ? Icons
+                                                                    .visibility_outlined
+                                                                : Icons
+                                                                    .visibility_off_outlined,
+                                                            color: const Color(
+                                                                0xFF757575),
+                                                            size: 22.0,
+                                                          ),
+                                                        ),
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -615,7 +637,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'tatcadvs' /* Contraseña: */,
+                                                          'tatcadvs' /* Confirmar contraseña */,
                                                         ),
                                                         labelStyle:
                                                             FlutterFlowTheme.of(
@@ -770,14 +792,14 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         await authManager
                                                             .sendEmailVerification();
 
-                                                        context.goNamedAuth(
-                                                            'PaginadeInicio',
+                                                        context.pushNamedAuth(
+                                                            'Login',
                                                             context.mounted);
                                                       },
                                                       text: FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'gutbu4io' /* Empezar */,
+                                                        'gutbu4io' /* Registrarse */,
                                                       ),
                                                       options: FFButtonOptions(
                                                         width: 230.0,
@@ -1200,6 +1222,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                 0.0, 16.0),
                                                     child: FFButtonWidget(
                                                       onPressed: () async {
+                                                        await authManager
+                                                            .refreshUser();
                                                         GoRouter.of(context)
                                                             .prepareAuthEvent();
 
@@ -1218,9 +1242,34 @@ class _LoginWidgetState extends State<LoginWidget>
                                                           return;
                                                         }
 
-                                                        context.goNamedAuth(
-                                                            'PaginadeInicio',
-                                                            context.mounted);
+                                                        if (currentUserEmailVerified ==
+                                                            true) {
+                                                          context.pushNamedAuth(
+                                                              'PaginadeInicio',
+                                                              context.mounted);
+                                                        } else {
+                                                          ScaffoldMessenger.of(
+                                                                  context)
+                                                              .showSnackBar(
+                                                            SnackBar(
+                                                              content: const Text(
+                                                                'Cuenta no verificada, revisa tu correo',
+                                                                style:
+                                                                    TextStyle(
+                                                                  color: Color(
+                                                                      0xFFF4F0F0),
+                                                                ),
+                                                              ),
+                                                              duration: const Duration(
+                                                                  milliseconds:
+                                                                      4000),
+                                                              backgroundColor:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .error,
+                                                            ),
+                                                          );
+                                                        }
                                                       },
                                                       text: FFLocalizations.of(
                                                               context)

@@ -108,38 +108,73 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // PaginadeInicio
   {
-    'ujwagubg': {
-      'es': 'Por definir',
+    'eszqofps': {
+      'es': 'Administrador',
       'en': '',
       'pt': '',
     },
-    'imcf7s6v': {
+    '4xsr7cec': {
+      'es': 'Nombre del usuario...',
+      'en': '',
+      'pt': '',
+    },
+    'arj7y963': {
+      'es': 'Apellidos del usuario...',
+      'en': '',
+      'pt': '',
+    },
+    'qisynqli': {
+      'es': 'Correo electrónico del usuario...',
+      'en': '',
+      'pt': '',
+    },
+    '1qcrnk2h': {
+      'es': 'Cédula del usuario...',
+      'en': '',
+      'pt': '',
+    },
+    'rh4rfgik': {
+      'es': 'Número de teléfono...',
+      'en': '',
+      'pt': '',
+    },
+    'hmvurnz3': {
+      'es': 'Option 1',
+      'en': '',
+      'pt': '',
+    },
+    '6mp87ngw': {
+      'es': 'Please select...',
+      'en': '',
+      'pt': '',
+    },
+    '164alnif': {
+      'es': 'Search for an item...',
+      'en': '',
+      'pt': '',
+    },
+    'z4f252ze': {
+      'es': 'Agregar imagen',
+      'en': '',
+      'pt': '',
+    },
+    'rtmm2zns': {
+      'es': 'Instructores',
+      'en': '',
+      'pt': '',
+    },
+    'c5b3ee9u': {
       'es': 'Title',
       'en': '',
       'pt': '',
     },
-    '69qmorc9': {
+    'h0gynqw4': {
       'es': 'Subtitle goes here...',
       'en': '',
       'pt': '',
     },
-    '5eiv2ixa': {
-      'es': 'Por definir',
-      'en': '',
-      'pt': '',
-    },
-    'y9xfswpo': {
-      'es': 'Title',
-      'en': '',
-      'pt': '',
-    },
-    '9fkup5tf': {
-      'es': 'Subtitle goes here...',
-      'en': '',
-      'pt': '',
-    },
-    'vwh545z8': {
-      'es': 'Por definir',
+    'd7tue4oj': {
+      'es': 'Clientes',
       'en': '',
       'pt': '',
     },
@@ -182,22 +217,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Preencha as seguintes informações',
     },
     '12ljm8sq': {
-      'es': 'Correo:',
+      'es': 'Email:',
       'en': 'Mail:',
       'pt': 'Correspondência:',
     },
     'ohxf6i6i': {
-      'es': 'Correo:',
+      'es': 'Contraseña:',
       'en': 'Mail:',
       'pt': 'Correspondência:',
     },
     'tatcadvs': {
-      'es': 'Contraseña:',
+      'es': 'Confirmar contraseña',
       'en': 'Password:',
       'pt': 'Senha:',
     },
     'gutbu4io': {
-      'es': 'Empezar',
+      'es': 'Registrarse',
       'en': 'Begin',
       'pt': 'Começar',
     },

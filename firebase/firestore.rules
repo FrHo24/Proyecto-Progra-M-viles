@@ -1,13 +1,6 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /users/{document} {
-      allow create: if request.auth != null;
-      allow read: if request.auth != null;
-      allow write: if request.auth != null;
-      allow delete: if request.auth != null;
-    }
-
     match /Instructores/{document} {
       allow create: if true;
       allow read: if true;
@@ -16,13 +9,6 @@ service cloud.firestore {
     }
 
     match /Productos/{document} {
-      allow create: if true;
-      allow read: if true;
-      allow write: if false;
-      allow delete: if false;
-    }
-
-    match /Distribuidores/{document} {
       allow create: if true;
       allow read: if true;
       allow write: if false;
@@ -43,20 +29,6 @@ service cloud.firestore {
       allow delete: if false;
     }
 
-    match /Inventario/{document} {
-      allow create: if true;
-      allow read: if true;
-      allow write: if false;
-      allow delete: if false;
-    }
-
-    match /HistorialMantenimiento/{document} {
-      allow create: if true;
-      allow read: if true;
-      allow write: if false;
-      allow delete: if false;
-    }
-
     match /Reservas/{document} {
       allow create: if true;
       allow read: if true;
@@ -64,7 +36,28 @@ service cloud.firestore {
       allow delete: if false;
     }
 
-    match /Categoras/{document} {
+    match /Clientes/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /Usuarios/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /Proveedores/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /Transacciones/{document} {
       allow create: if true;
       allow read: if true;
       allow write: if false;

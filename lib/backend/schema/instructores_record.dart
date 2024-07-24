@@ -15,37 +15,37 @@ class InstructoresRecord extends FirestoreRecord {
     _initializeFields();
   }
 
-  // "nombre" field.
-  String? _nombre;
-  String get nombre => _nombre ?? '';
-  bool hasNombre() => _nombre != null;
+  // "nombreInstructor" field.
+  String? _nombreInstructor;
+  String get nombreInstructor => _nombreInstructor ?? '';
+  bool hasNombreInstructor() => _nombreInstructor != null;
 
-  // "especiaiidad" field.
-  String? _especiaiidad;
-  String get especiaiidad => _especiaiidad ?? '';
-  bool hasEspeciaiidad() => _especiaiidad != null;
+  // "email_Instructor" field.
+  String? _emailInstructor;
+  String get emailInstructor => _emailInstructor ?? '';
+  bool hasEmailInstructor() => _emailInstructor != null;
 
-  // "email" field.
-  String? _email;
-  String get email => _email ?? '';
-  bool hasEmail() => _email != null;
+  // "telefonoInstructor" field.
+  String? _telefonoInstructor;
+  String get telefonoInstructor => _telefonoInstructor ?? '';
+  bool hasTelefonoInstructor() => _telefonoInstructor != null;
 
-  // "telefono" field.
-  int? _telefono;
-  int get telefono => _telefono ?? 0;
-  bool hasTelefono() => _telefono != null;
+  // "cedulaInstructor" field.
+  String? _cedulaInstructor;
+  String get cedulaInstructor => _cedulaInstructor ?? '';
+  bool hasCedulaInstructor() => _cedulaInstructor != null;
 
-  // "disponibilidad" field.
-  bool? _disponibilidad;
-  bool get disponibilidad => _disponibilidad ?? false;
-  bool hasDisponibilidad() => _disponibilidad != null;
+  // "areaTrabajo_Instructor" field.
+  String? _areaTrabajoInstructor;
+  String get areaTrabajoInstructor => _areaTrabajoInstructor ?? '';
+  bool hasAreaTrabajoInstructor() => _areaTrabajoInstructor != null;
 
   void _initializeFields() {
-    _nombre = snapshotData['nombre'] as String?;
-    _especiaiidad = snapshotData['especiaiidad'] as String?;
-    _email = snapshotData['email'] as String?;
-    _telefono = castToType<int>(snapshotData['telefono']);
-    _disponibilidad = snapshotData['disponibilidad'] as bool?;
+    _nombreInstructor = snapshotData['nombreInstructor'] as String?;
+    _emailInstructor = snapshotData['email_Instructor'] as String?;
+    _telefonoInstructor = snapshotData['telefonoInstructor'] as String?;
+    _cedulaInstructor = snapshotData['cedulaInstructor'] as String?;
+    _areaTrabajoInstructor = snapshotData['areaTrabajo_Instructor'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -83,19 +83,19 @@ class InstructoresRecord extends FirestoreRecord {
 }
 
 Map<String, dynamic> createInstructoresRecordData({
-  String? nombre,
-  String? especiaiidad,
-  String? email,
-  int? telefono,
-  bool? disponibilidad,
+  String? nombreInstructor,
+  String? emailInstructor,
+  String? telefonoInstructor,
+  String? cedulaInstructor,
+  String? areaTrabajoInstructor,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
-      'nombre': nombre,
-      'especiaiidad': especiaiidad,
-      'email': email,
-      'telefono': telefono,
-      'disponibilidad': disponibilidad,
+      'nombreInstructor': nombreInstructor,
+      'email_Instructor': emailInstructor,
+      'telefonoInstructor': telefonoInstructor,
+      'cedulaInstructor': cedulaInstructor,
+      'areaTrabajo_Instructor': areaTrabajoInstructor,
     }.withoutNulls,
   );
 
@@ -108,16 +108,21 @@ class InstructoresRecordDocumentEquality
 
   @override
   bool equals(InstructoresRecord? e1, InstructoresRecord? e2) {
-    return e1?.nombre == e2?.nombre &&
-        e1?.especiaiidad == e2?.especiaiidad &&
-        e1?.email == e2?.email &&
-        e1?.telefono == e2?.telefono &&
-        e1?.disponibilidad == e2?.disponibilidad;
+    return e1?.nombreInstructor == e2?.nombreInstructor &&
+        e1?.emailInstructor == e2?.emailInstructor &&
+        e1?.telefonoInstructor == e2?.telefonoInstructor &&
+        e1?.cedulaInstructor == e2?.cedulaInstructor &&
+        e1?.areaTrabajoInstructor == e2?.areaTrabajoInstructor;
   }
 
   @override
-  int hash(InstructoresRecord? e) => const ListEquality().hash(
-      [e?.nombre, e?.especiaiidad, e?.email, e?.telefono, e?.disponibilidad]);
+  int hash(InstructoresRecord? e) => const ListEquality().hash([
+        e?.nombreInstructor,
+        e?.emailInstructor,
+        e?.telefonoInstructor,
+        e?.cedulaInstructor,
+        e?.areaTrabajoInstructor
+      ]);
 
   @override
   bool isValidKey(Object? o) => o is InstructoresRecord;
