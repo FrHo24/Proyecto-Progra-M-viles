@@ -40,7 +40,7 @@ class _AjustesWidgetState extends State<AjustesWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: const Color(0xFF175F6D),
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           automaticallyImplyLeading: false,
@@ -87,7 +87,7 @@ class _AjustesWidgetState extends State<AjustesWidget> {
                     ),
                     style: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Readex Pro',
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: Colors.white,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.normal,
                         ),
@@ -231,7 +231,7 @@ class _AjustesWidgetState extends State<AjustesWidget> {
                     ),
                     style: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Readex Pro',
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: Colors.white,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.normal,
                         ),
@@ -444,7 +444,7 @@ class _AjustesWidgetState extends State<AjustesWidget> {
                     ),
                     style: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Readex Pro',
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: Colors.white,
                           letterSpacing: 0.0,
                         ),
                   ),

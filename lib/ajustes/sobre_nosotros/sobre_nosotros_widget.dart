@@ -38,7 +38,7 @@ class _SobreNosotrosWidgetState extends State<SobreNosotrosWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: const Color(0xFF175F6D),
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           automaticallyImplyLeading: false,
@@ -87,6 +87,7 @@ class _SobreNosotrosWidgetState extends State<SobreNosotrosWidget> {
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
+                          color: const Color(0xFFF2EEEE),
                           fontSize: 24.0,
                           letterSpacing: 0.0,
                         ),
@@ -180,6 +181,7 @@ class _SobreNosotrosWidgetState extends State<SobreNosotrosWidget> {
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Readex Pro',
+                      color: const Color(0xFFF4ECEC),
                       fontSize: 24.0,
                       letterSpacing: 0.0,
                     ),

@@ -144,7 +144,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     '6mp87ngw': {
-      'es': 'Please select...',
+      'es': 'Seleccione',
       'en': '',
       'pt': '',
     },
@@ -168,11 +168,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    'hql0sy80': {
-      'es': 'Button',
-      'en': '',
-      'pt': '',
-    },
     'rtmm2zns': {
       'es': 'Instructores',
       'en': '',
@@ -192,11 +187,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Clientes',
       'en': '',
       'pt': '',
-    },
-    '33epe25m': {
-      'es': 'Calendario',
-      'en': 'Activity',
-      'pt': 'Atividade',
     },
     '5jkeu1sk': {
       'es': 'Cerrar Sesión',
@@ -306,11 +296,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'You don\'t just exercise, you transform \n Join us in this experience',
       'pt':
           'Você não apenas se exercita, você transforma \n Junte-se a nós nesta experiência',
-    },
-    'pivdaskv': {
-      'es': 'Inicia tu suscripción hoy mismo',
-      'en': 'Start your subscription today',
-      'pt': 'Comece sua assinatura hoje',
     },
     'x9jnewqj': {
       'es': 'Inicia',

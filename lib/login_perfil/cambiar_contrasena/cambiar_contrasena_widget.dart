@@ -102,8 +102,8 @@ class _CambiarContrasenaWidgetState extends State<CambiarContrasenaWidget>
           constraints: const BoxConstraints(
             maxWidth: 570.0,
           ),
-          decoration: BoxDecoration(
-            color: FlutterFlowTheme.of(context).primaryBackground,
+          decoration: const BoxDecoration(
+            color: Color(0xFF175F6D),
           ),
           child: Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
@@ -188,7 +188,7 @@ class _CambiarContrasenaWidgetState extends State<CambiarContrasenaWidget>
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: FlutterFlowTheme.of(context).accent1,
                                 letterSpacing: 0.0,
                               ),
                     ),
@@ -202,7 +202,7 @@ class _CambiarContrasenaWidgetState extends State<CambiarContrasenaWidget>
                     ),
                     style: FlutterFlowTheme.of(context).labelMedium.override(
                           fontFamily: 'Readex Pro',
-                          color: FlutterFlowTheme.of(context).secondaryText,
+                          color: FlutterFlowTheme.of(context).accent1,
                           fontSize: 15.0,
                           letterSpacing: 0.0,
                         ),

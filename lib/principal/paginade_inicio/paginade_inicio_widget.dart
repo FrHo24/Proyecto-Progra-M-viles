@@ -66,15 +66,15 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: const Color(0xFF175F6D),
         drawer: SizedBox(
           width: MediaQuery.sizeOf(context).width * 0.6,
           child: Drawer(
             child: Container(
               width: 100.0,
               height: 100.0,
-              decoration: BoxDecoration(
-                color: FlutterFlowTheme.of(context).primaryBackground,
+              decoration: const BoxDecoration(
+                color: Color(0xFFF0E9E9),
               ),
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
@@ -266,9 +266,9 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                         ),
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1.0,
-                      color: FlutterFlowTheme.of(context).accent4,
+                      color: Color(0xFFE17815),
                     ),
                     Container(
                       width: 250.0,
@@ -287,9 +287,9 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                   context.pushNamed('Ajustes');
                                 },
                                 text: '',
-                                icon: Icon(
+                                icon: const Icon(
                                   Icons.settings_rounded,
-                                  color: FlutterFlowTheme.of(context).accent3,
+                                  color: Color(0xF0F2ECEC),
                                   size: 35.0,
                                 ),
                                 options: FFButtonOptions(
@@ -298,7 +298,7 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                       24.0, 0.0, 24.0, 0.0),
                                   iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context).accent4,
+                                  color: const Color(0xFFE17815),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
@@ -319,9 +319,9 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                         ],
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 1.0,
-                      color: FlutterFlowTheme.of(context).accent4,
+                      color: Color(0xFFE17815),
                     ),
                     Flexible(
                       child: Container(
@@ -343,55 +343,6 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                 children: [
                                   Expanded(
                                     child: FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: FFLocalizations.of(context).getText(
-                                        '33epe25m' /* Calendario */,
-                                      ),
-                                      icon: Icon(
-                                        Icons.calendar_month,
-                                        color: FlutterFlowTheme.of(context)
-                                            .accent3,
-                                        size: 25.0,
-                                      ),
-                                      options: FFButtonOptions(
-                                        height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            24.0, 0.0, 24.0, 0.0),
-                                        iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: FlutterFlowTheme.of(context)
-                                            .accent4,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 20.0,
-                                              letterSpacing: 0.0,
-                                            ),
-                                        elevation: 10.0,
-                                        borderSide: const BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: FFButtonWidget(
                                       onPressed: () async {
                                         GoRouter.of(context).prepareAuthEvent();
                                         await authManager.signOut();
@@ -404,10 +355,9 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                       text: FFLocalizations.of(context).getText(
                                         '5jkeu1sk' /* Cerrar Sesión */,
                                       ),
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.login_outlined,
-                                        color: FlutterFlowTheme.of(context)
-                                            .accent3,
+                                        color: Color(0xF0F8F5F5),
                                         size: 25.0,
                                       ),
                                       options: FFButtonOptions(
@@ -417,15 +367,12 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                         iconPadding:
                                             const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: FlutterFlowTheme.of(context)
-                                            .accent4,
+                                        color: const Color(0xFFE17815),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
+                                              color: const Color(0xFFF6F3F3),
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                             ),
@@ -499,7 +446,7 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                       Align(
                         alignment: const Alignment(0.0, 0),
                         child: TabBar(
-                          labelColor: FlutterFlowTheme.of(context).primaryText,
+                          labelColor: const Color(0xFFF2EBEB),
                           unselectedLabelColor:
                               FlutterFlowTheme.of(context).secondaryText,
                           labelStyle:
@@ -568,16 +515,17 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                                       .getText(
                                                     '4xsr7cec' /* Nombre del usuario... */,
                                                   ),
-                                                  labelStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            fontSize: 16.0,
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                  labelStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color:
+                                                            const Color(0xFFEEEAEA),
+                                                        fontSize: 16.0,
+                                                        letterSpacing: 0.0,
+                                                      ),
                                                   hintStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -589,11 +537,8 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                                           ),
                                                   enabledBorder:
                                                       OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondary,
+                                                    borderSide: const BorderSide(
+                                                      color: Color(0xFFE17815),
                                                       width: 2.0,
                                                     ),
                                                     borderRadius:
@@ -640,14 +585,14 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                                             8.0),
                                                   ),
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF4EEEE),
+                                                      letterSpacing: 0.0,
+                                                    ),
                                                 validator: _model
                                                     .textController1Validator
                                                     .asValidator(context),
@@ -680,32 +625,31 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                                       .getText(
                                                     'arj7y963' /* Apellidos del usuario... */,
                                                   ),
-                                                  labelStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            fontSize: 16.0,
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                  hintStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                  labelStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color:
+                                                            const Color(0xFFF9F3F3),
+                                                        fontSize: 16.0,
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                                  hintStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color:
+                                                            const Color(0xFFF2EBEB),
+                                                        letterSpacing: 0.0,
+                                                      ),
                                                   enabledBorder:
                                                       OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondary,
+                                                    borderSide: const BorderSide(
+                                                      color: Color(0xFFE17815),
                                                       width: 2.0,
                                                     ),
                                                     borderRadius:
@@ -792,32 +736,31 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                                       .getText(
                                                     'qisynqli' /* Correo electrónico del usuario... */,
                                                   ),
-                                                  labelStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            fontSize: 16.0,
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                  hintStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                  labelStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color:
+                                                            const Color(0xFFF5F1F1),
+                                                        fontSize: 16.0,
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                                  hintStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color:
+                                                            const Color(0xFFF4E9E9),
+                                                        letterSpacing: 0.0,
+                                                      ),
                                                   enabledBorder:
                                                       OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondary,
+                                                    borderSide: const BorderSide(
+                                                      color: Color(0xFFE17815),
                                                       width: 2.0,
                                                     ),
                                                     borderRadius:
@@ -904,32 +847,31 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                                       .getText(
                                                     '1qcrnk2h' /* Cédula del usuario... */,
                                                   ),
-                                                  labelStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            fontSize: 16.0,
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                  hintStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                  labelStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color:
+                                                            const Color(0xFFF6F0F0),
+                                                        fontSize: 16.0,
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                                  hintStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color:
+                                                            const Color(0xFFF8F5F5),
+                                                        letterSpacing: 0.0,
+                                                      ),
                                                   enabledBorder:
                                                       OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondary,
+                                                    borderSide: const BorderSide(
+                                                      color: Color(0xFFE17815),
                                                       width: 2.0,
                                                     ),
                                                     borderRadius:
@@ -1016,32 +958,31 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                                       .getText(
                                                     'rh4rfgik' /* Número de teléfono... */,
                                                   ),
-                                                  labelStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            fontSize: 16.0,
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                  hintStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                  labelStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color:
+                                                            const Color(0xFFF0E8E8),
+                                                        fontSize: 16.0,
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                                  hintStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color:
+                                                            const Color(0xFFEEEBEB),
+                                                        letterSpacing: 0.0,
+                                                      ),
                                                   enabledBorder:
                                                       OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondary,
+                                                    borderSide: const BorderSide(
+                                                      color: Color(0xFFE17815),
                                                       width: 2.0,
                                                     ),
                                                     borderRadius:
@@ -1132,7 +1073,7 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                                   ),
                                           hintText: FFLocalizations.of(context)
                                               .getText(
-                                            '6mp87ngw' /* Please select... */,
+                                            '6mp87ngw' /* Seleccione */,
                                           ),
                                           icon: Icon(
                                             Icons.keyboard_arrow_down_rounded,
@@ -1189,9 +1130,7 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                                     const EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
+                                                color: const Color(0xFFE17815),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .titleSmall
@@ -1233,9 +1172,7 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                                     const EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
+                                                color: const Color(0xFFE17815),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .titleSmall
@@ -1288,49 +1225,7 @@ class _PaginadeInicioWidgetState extends State<PaginadeInicioWidget>
                                                     const EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                                textStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleSmall
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          color: Colors.white,
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                                elevation: 3.0,
-                                                borderSide: const BorderSide(
-                                                  color: Colors.transparent,
-                                                  width: 1.0,
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: FFButtonWidget(
-                                              onPressed: () {
-                                                print('Button pressed ...');
-                                              },
-                                              text: FFLocalizations.of(context)
-                                                  .getText(
-                                                'hql0sy80' /* Button */,
-                                              ),
-                                              options: FFButtonOptions(
-                                                height: 40.0,
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        24.0, 0.0, 24.0, 0.0),
-                                                iconPadding:
-                                                    const EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                            0.0, 0.0, 0.0, 0.0),
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
+                                                color: const Color(0xFFE17815),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .titleSmall

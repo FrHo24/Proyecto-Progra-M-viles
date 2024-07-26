@@ -134,7 +134,7 @@ class _LoginWidgetState extends State<LoginWidget>
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: const Color(0xFF175F6D),
         body: SafeArea(
           top: true,
           child: Stack(
@@ -818,9 +818,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .primaryBackground,
+                                                        color:
+                                                            const Color(0xFFE17815),
                                                         textStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)

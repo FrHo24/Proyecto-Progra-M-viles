@@ -61,7 +61,7 @@ class _RecuperarContraWidgetState extends State<RecuperarContraWidget>
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        backgroundColor: const Color(0xFFE5E5E5),
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
@@ -102,7 +102,7 @@ class _RecuperarContraWidgetState extends State<RecuperarContraWidget>
             maxWidth: 570.0,
           ),
           decoration: const BoxDecoration(
-            color: Color(0x4839BAD2),
+            color: Color(0xFF175F6D),
           ),
           child: Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
@@ -329,7 +329,7 @@ class _RecuperarContraWidgetState extends State<RecuperarContraWidget>
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: const Color(0xFFE17815),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Readex Pro',
