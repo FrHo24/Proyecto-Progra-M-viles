@@ -1,17 +1,19 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/form_field_controller.dart';
-import 'paginade_inicio_widget.dart' show PaginadeInicioWidget;
+import 'inventarios1_widget.dart' show Inventarios1Widget;
+import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 
-class PaginadeInicioModel extends FlutterFlowModel<PaginadeInicioWidget> {
+class Inventarios1Model extends FlutterFlowModel<Inventarios1Widget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  final formKey = GlobalKey<FormState>();
   // State field(s) for TabBar widget.
   TabController? tabBarController;
   int get tabBarCurrentIndex =>
       tabBarController != null ? tabBarController!.index : 0;
+
+  // State field(s) for Expandable widget.
+  late ExpandableController expandableExpandableController1;
 
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode1;
@@ -33,13 +35,29 @@ class PaginadeInicioModel extends FlutterFlowModel<PaginadeInicioWidget> {
   FocusNode? textFieldFocusNode5;
   TextEditingController? textController5;
   String? Function(BuildContext, String?)? textController5Validator;
-  // State field(s) for DropDown widget.
-  String? dropDownValue;
-  FormFieldController<String>? dropDownValueController;
-  bool isDataUploading = false;
-  FFUploadedFile uploadedLocalFile =
-      FFUploadedFile(bytes: Uint8List.fromList([]));
-  String uploadedFileUrl = '';
+  // State field(s) for Expandable widget.
+  late ExpandableController expandableExpandableController2;
+
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode6;
+  TextEditingController? textController6;
+  String? Function(BuildContext, String?)? textController6Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode7;
+  TextEditingController? textController7;
+  String? Function(BuildContext, String?)? textController7Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode8;
+  TextEditingController? textController8;
+  String? Function(BuildContext, String?)? textController8Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode9;
+  TextEditingController? textController9;
+  String? Function(BuildContext, String?)? textController9Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode10;
+  TextEditingController? textController10;
+  String? Function(BuildContext, String?)? textController10Validator;
 
   @override
   void initState(BuildContext context) {}
@@ -48,6 +66,7 @@ class PaginadeInicioModel extends FlutterFlowModel<PaginadeInicioWidget> {
   void dispose() {
     unfocusNode.dispose();
     tabBarController?.dispose();
+    expandableExpandableController1.dispose();
     textFieldFocusNode1?.dispose();
     textController1?.dispose();
 
@@ -62,5 +81,21 @@ class PaginadeInicioModel extends FlutterFlowModel<PaginadeInicioWidget> {
 
     textFieldFocusNode5?.dispose();
     textController5?.dispose();
+
+    expandableExpandableController2.dispose();
+    textFieldFocusNode6?.dispose();
+    textController6?.dispose();
+
+    textFieldFocusNode7?.dispose();
+    textController7?.dispose();
+
+    textFieldFocusNode8?.dispose();
+    textController8?.dispose();
+
+    textFieldFocusNode9?.dispose();
+    textController9?.dispose();
+
+    textFieldFocusNode10?.dispose();
+    textController10?.dispose();
   }
 }

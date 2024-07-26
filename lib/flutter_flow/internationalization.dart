@@ -106,104 +106,6 @@ Locale createLocale(String language) => language.contains('_')
     : Locale(language);
 
 final kTranslationsMap = <Map<String, Map<String, String>>>[
-  // PaginadeInicio
-  {
-    'eszqofps': {
-      'es': 'Administrador',
-      'en': '',
-      'pt': '',
-    },
-    '4xsr7cec': {
-      'es': 'Nombre del usuario...',
-      'en': '',
-      'pt': '',
-    },
-    'arj7y963': {
-      'es': 'Apellidos del usuario...',
-      'en': '',
-      'pt': '',
-    },
-    'qisynqli': {
-      'es': 'Correo electrónico del usuario...',
-      'en': '',
-      'pt': '',
-    },
-    '1qcrnk2h': {
-      'es': 'Cédula del usuario...',
-      'en': '',
-      'pt': '',
-    },
-    'rh4rfgik': {
-      'es': 'Número de teléfono...',
-      'en': '',
-      'pt': '',
-    },
-    'hmvurnz3': {
-      'es': 'Option 1',
-      'en': '',
-      'pt': '',
-    },
-    '6mp87ngw': {
-      'es': 'Seleccione',
-      'en': '',
-      'pt': '',
-    },
-    '164alnif': {
-      'es': 'Search for an item...',
-      'en': '',
-      'pt': '',
-    },
-    'h09nzmco': {
-      'es': 'Administrador',
-      'en': '',
-      'pt': '',
-    },
-    '4tbmqs26': {
-      'es': 'Instructor',
-      'en': '',
-      'pt': '',
-    },
-    'e7876oty': {
-      'es': 'Cliente',
-      'en': '',
-      'pt': '',
-    },
-    'rtmm2zns': {
-      'es': 'Instructores',
-      'en': '',
-      'pt': '',
-    },
-    'c5b3ee9u': {
-      'es': 'Title',
-      'en': '',
-      'pt': '',
-    },
-    'h0gynqw4': {
-      'es': 'Subtitle goes here...',
-      'en': '',
-      'pt': '',
-    },
-    'd7tue4oj': {
-      'es': 'Clientes',
-      'en': '',
-      'pt': '',
-    },
-    '5jkeu1sk': {
-      'es': 'Cerrar Sesión',
-      'en': 'Sign off',
-      'pt': 'Fechar Sessão',
-    },
-    'dqw2gkle': {
-      'es': 'Inventario',
-      'en': '',
-      'pt': '',
-    },
-    'woa9x31o': {
-      'es': 'Home',
-      'en': 'home',
-      'pt': 'lar',
-    },
-  },
   // Login
   {
     'hklxceun': {
@@ -514,6 +416,355 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     '0sjtcxm5': {
+      'es': 'Home',
+      'en': '',
+      'pt': '',
+    },
+  },
+  // Menu
+  {
+    '9bsjsg9b': {
+      'es': 'Productos/Proveedores',
+      'en': '',
+      'pt': '',
+    },
+    '0rk5lv56': {
+      'es': 'Cliente/Facturaciones',
+      'en': '',
+      'pt': '',
+    },
+    'dsnutosg': {
+      'es': 'Administrador/Instructor',
+      'en': '',
+      'pt': '',
+    },
+    'vj0kwnto': {
+      'es': 'Equipo/Clases',
+      'en': '',
+      'pt': '',
+    },
+    'pt0gs5zl': {
+      'es': 'Menú',
+      'en': '',
+      'pt': '',
+    },
+    'wok70kn2': {
+      'es': 'Home',
+      'en': '',
+      'pt': '',
+    },
+  },
+  // Inventarios1
+  {
+    '5ihqjqgi': {
+      'es': 'Agregar',
+      'en': '',
+      'pt': '',
+    },
+    '1bupp6v0': {
+      'es': 'Agregar administrador',
+      'en': '',
+      'pt': '',
+    },
+    'q9zf4h0y': {
+      'es': 'Agregar administradores',
+      'en': '',
+      'pt': '',
+    },
+    'v0g4omul': {
+      'es': 'Nombre del usuario...',
+      'en': '',
+      'pt': '',
+    },
+    'j8lo0cbo': {
+      'es': 'Apellidos del usuario...',
+      'en': '',
+      'pt': '',
+    },
+    'kv62gnbb': {
+      'es': 'Correo electrónico del usuario...',
+      'en': '',
+      'pt': '',
+    },
+    '02j7ifzm': {
+      'es': 'Cédula del usuario...',
+      'en': '',
+      'pt': '',
+    },
+    '6yyayzo3': {
+      'es': 'Número de teléfono...',
+      'en': '',
+      'pt': '',
+    },
+    'x6snnbnt': {
+      'es': 'Agregar usuario',
+      'en': '',
+      'pt': '',
+    },
+    'mlxhkhr9': {
+      'es': 'Agregar instructor',
+      'en': '',
+      'pt': '',
+    },
+    '16ouru6s': {
+      'es': 'Agregar instructores',
+      'en': '',
+      'pt': '',
+    },
+    '7ga9ih88': {
+      'es': 'Nombre del instructor...',
+      'en': '',
+      'pt': '',
+    },
+    'pwoqto0o': {
+      'es': 'Área de trabajo del instructor...',
+      'en': '',
+      'pt': '',
+    },
+    'chvit1cr': {
+      'es': 'Correo electrónico del instructor...',
+      'en': '',
+      'pt': '',
+    },
+    'hchaez1b': {
+      'es': 'Cédula del instructor...',
+      'en': '',
+      'pt': '',
+    },
+    'e9dv7uud': {
+      'es': 'Número de teléfono...',
+      'en': '',
+      'pt': '',
+    },
+    '28f1xmxm': {
+      'es': 'Agregar instructor',
+      'en': '',
+      'pt': '',
+    },
+    'bme6z77j': {
+      'es': 'Instructores',
+      'en': '',
+      'pt': '',
+    },
+    'vkweoxi3': {
+      'es': 'Title',
+      'en': '',
+      'pt': '',
+    },
+    'z4h4acfc': {
+      'es': 'Subtitle goes here...',
+      'en': '',
+      'pt': '',
+    },
+    'fprte39k': {
+      'es': 'Editar',
+      'en': '',
+      'pt': '',
+    },
+    'd0tkir2k': {
+      'es': 'Eliminar',
+      'en': '',
+      'pt': '',
+    },
+    'boovxd7l': {
+      'es': 'Administradores',
+      'en': '',
+      'pt': '',
+    },
+    'mnmvsazg': {
+      'es': 'Title',
+      'en': '',
+      'pt': '',
+    },
+    'nai40gfv': {
+      'es': 'Subtitle goes here...',
+      'en': '',
+      'pt': '',
+    },
+    'irpx2azc': {
+      'es': 'Editar',
+      'en': '',
+      'pt': '',
+    },
+    'dvc5pji3': {
+      'es': 'Eliminar',
+      'en': '',
+      'pt': '',
+    },
+    'y941goaj': {
+      'es': 'Cerrar Sesión',
+      'en': '',
+      'pt': '',
+    },
+    '4s06siqr': {
+      'es': 'Inventario',
+      'en': '',
+      'pt': '',
+    },
+    'ndmfk4na': {
+      'es': 'Home',
+      'en': '',
+      'pt': '',
+    },
+  },
+  // Inventarios2
+  {
+    'qqllgopm': {
+      'es': 'Agregar',
+      'en': '',
+      'pt': '',
+    },
+    'ykkol1d1': {
+      'es': 'Agregar productos',
+      'en': '',
+      'pt': '',
+    },
+    'vmzm4sno': {
+      'es': 'Agregar productos',
+      'en': '',
+      'pt': '',
+    },
+    'y8nx7zuz': {
+      'es': 'Nombre del producto...',
+      'en': '',
+      'pt': '',
+    },
+    '811uin2r': {
+      'es': 'Descripción del producto...',
+      'en': '',
+      'pt': '',
+    },
+    'cv1phuya': {
+      'es': 'Precio del producto...',
+      'en': '',
+      'pt': '',
+    },
+    'i5huoupl': {
+      'es': 'Cantidad del producto...',
+      'en': '',
+      'pt': '',
+    },
+    'sz0e94uk': {
+      'es': 'Categoría del producto...',
+      'en': '',
+      'pt': '',
+    },
+    'vif51fqu': {
+      'es': 'Número de teléfono...',
+      'en': '',
+      'pt': '',
+    },
+    'slh89ryw': {
+      'es': 'Agregar usuario',
+      'en': '',
+      'pt': '',
+    },
+    'mfdpbcb3': {
+      'es': 'Agregar proveedor',
+      'en': '',
+      'pt': '',
+    },
+    'g878xgab': {
+      'es': 'Agregar equipo de gimnasio',
+      'en': '',
+      'pt': '',
+    },
+    'dd8hrxff': {
+      'es': 'Nombre del proveedor...',
+      'en': '',
+      'pt': '',
+    },
+    'nqddi4ju': {
+      'es': 'Nombre del distribuidor',
+      'en': '',
+      'pt': '',
+    },
+    'ohksqho4': {
+      'es': 'Teléfono de proveedor...',
+      'en': '',
+      'pt': '',
+    },
+    '1lg49hii': {
+      'es': 'Teléfono del distribuidor...',
+      'en': '',
+      'pt': '',
+    },
+    'ybzqu73g': {
+      'es': 'Correo electrónico del proveedor...',
+      'en': '',
+      'pt': '',
+    },
+    '2u6f7cya': {
+      'es': 'Correo electrónico del distribuidor...',
+      'en': '',
+      'pt': '',
+    },
+    'pjv3uu2r': {
+      'es': 'Agregar usuario',
+      'en': '',
+      'pt': '',
+    },
+    'o4o4s5ql': {
+      'es': 'Productos',
+      'en': '',
+      'pt': '',
+    },
+    '5t6uab16': {
+      'es': 'Title',
+      'en': '',
+      'pt': '',
+    },
+    'hfhknsui': {
+      'es': 'Subtitle goes here...',
+      'en': '',
+      'pt': '',
+    },
+    '9v80eyut': {
+      'es': 'Editar',
+      'en': '',
+      'pt': '',
+    },
+    'y492caki': {
+      'es': 'Eliminar',
+      'en': '',
+      'pt': '',
+    },
+    '74boavsk': {
+      'es': 'Proveedores',
+      'en': '',
+      'pt': '',
+    },
+    'ifuourxx': {
+      'es': 'Title',
+      'en': '',
+      'pt': '',
+    },
+    'w7e6dmo6': {
+      'es': 'Subtitle goes here...',
+      'en': '',
+      'pt': '',
+    },
+    'a4ptqtlh': {
+      'es': 'Editar',
+      'en': '',
+      'pt': '',
+    },
+    'jbbemob0': {
+      'es': 'Eliminar',
+      'en': '',
+      'pt': '',
+    },
+    'kpnfvkm2': {
+      'es': 'Cerrar Sesión',
+      'en': '',
+      'pt': '',
+    },
+    'olnc54ev': {
+      'es': 'Inventario',
+      'en': '',
+      'pt': '',
+    },
+    'v2wm8mlb': {
       'es': 'Home',
       'en': '',
       'pt': '',

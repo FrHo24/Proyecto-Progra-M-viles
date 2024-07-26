@@ -55,7 +55,7 @@ class _AjustesWidgetState extends State<AjustesWidget> {
               size: 30.0,
             ),
             onPressed: () async {
-              context.pushNamed('PaginadeInicio');
+              context.safePop();
             },
           ),
           title: Text(

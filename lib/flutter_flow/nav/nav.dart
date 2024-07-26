@@ -74,19 +74,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const PaginadeInicioWidget() : const LoginWidget(),
+          appStateNotifier.loggedIn ? const MenuWidget() : const LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? const PaginadeInicioWidget()
-              : const LoginWidget(),
-        ),
-        FFRoute(
-          name: 'PaginadeInicio',
-          path: '/paginadeInicio',
-          builder: (context, params) => const PaginadeInicioWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? const MenuWidget() : const LoginWidget(),
         ),
         FFRoute(
           name: 'Login',
@@ -122,6 +116,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Perfil',
           path: '/perfil',
           builder: (context, params) => const PerfilWidget(),
+        ),
+        FFRoute(
+          name: 'Menu',
+          path: '/menu',
+          builder: (context, params) => const MenuWidget(),
+        ),
+        FFRoute(
+          name: 'Inventarios1',
+          path: '/inventarios1',
+          builder: (context, params) => const Inventarios1Widget(),
+        ),
+        FFRoute(
+          name: 'Inventarios2',
+          path: '/inventarios2',
+          builder: (context, params) => const Inventarios2Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

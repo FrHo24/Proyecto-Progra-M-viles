@@ -48,7 +48,7 @@ class _SobreNosotrosWidgetState extends State<SobreNosotrosWidget> {
             hoverColor: Colors.transparent,
             highlightColor: Colors.transparent,
             onTap: () async {
-              context.pushNamed('PaginadeInicio');
+              context.safePop();
             },
             child: Icon(
               Icons.arrow_back,

@@ -1244,7 +1244,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         if (currentUserEmailVerified ==
                                                             true) {
                                                           context.pushNamedAuth(
-                                                              'PaginadeInicio',
+                                                              'Menu',
                                                               context.mounted);
                                                         } else {
                                                           ScaffoldMessenger.of(
