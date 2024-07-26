@@ -101,8 +101,8 @@ class _RecuperarContraWidgetState extends State<RecuperarContraWidget>
           constraints: const BoxConstraints(
             maxWidth: 570.0,
           ),
-          decoration: BoxDecoration(
-            color: FlutterFlowTheme.of(context).primaryBackground,
+          decoration: const BoxDecoration(
+            color: Color(0x4839BAD2),
           ),
           child: Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
@@ -262,8 +262,7 @@ class _RecuperarContraWidgetState extends State<RecuperarContraWidget>
                           borderRadius: BorderRadius.circular(12.0),
                         ),
                         filled: true,
-                        fillColor:
-                            FlutterFlowTheme.of(context).secondaryBackground,
+                        fillColor: const Color(0xFFE5E5E5),
                         contentPadding: const EdgeInsetsDirectional.fromSTEB(
                             24.0, 24.0, 20.0, 24.0),
                       ),

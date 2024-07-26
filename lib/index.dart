@@ -11,3 +11,4 @@ export '/ajustes/sobre_nosotros/sobre_nosotros_widget.dart'
     show SobreNosotrosWidget;
 export '/login_perfil/cambiar_contrasena/cambiar_contrasena_widget.dart'
     show CambiarContrasenaWidget;
+export '/principal/perfil/perfil_widget.dart' show PerfilWidget;

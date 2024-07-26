@@ -153,8 +153,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    'z4f252ze': {
-      'es': 'Agregar imagen',
+    'h09nzmco': {
+      'es': 'Administrador',
+      'en': '',
+      'pt': '',
+    },
+    '4tbmqs26': {
+      'es': 'Instructor',
+      'en': '',
+      'pt': '',
+    },
+    'e7876oty': {
+      'es': 'Cliente',
+      'en': '',
+      'pt': '',
+    },
+    'hql0sy80': {
+      'es': 'Button',
       'en': '',
       'pt': '',
     },
@@ -489,6 +504,34 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Home',
       'en': 'home',
       'pt': 'lar',
+    },
+  },
+  // Perfil
+  {
+    'n6hkwk67': {
+      'es': 'Información Personal',
+      'en': '',
+      'pt': '',
+    },
+    'eesnuyas': {
+      'es': 'Cédula',
+      'en': '',
+      'pt': '',
+    },
+    '2muvaexv': {
+      'es': 'Número Telefónico',
+      'en': '',
+      'pt': '',
+    },
+    'oivitafn': {
+      'es': 'Perfil',
+      'en': '',
+      'pt': '',
+    },
+    '0sjtcxm5': {
+      'es': 'Home',
+      'en': '',
+      'pt': '',
     },
   },
   // Miscellaneous
