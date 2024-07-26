@@ -1151,7 +1151,7 @@ class _Inventarios2WidgetState extends State<Inventarios2Widget>
                                                                   labelText: FFLocalizations.of(
                                                                           context)
                                                                       .getText(
-                                                                    'vif51fqu' /* Número de teléfono... */,
+                                                                    'vif51fqu' /* Proveedor del producto... */,
                                                                   ),
                                                                   labelStyle: FlutterFlowTheme.of(
                                                                           context)
@@ -1277,7 +1277,7 @@ class _Inventarios2WidgetState extends State<Inventarios2Widget>
                                                               text: FFLocalizations
                                                                       .of(context)
                                                                   .getText(
-                                                                'slh89ryw' /* Agregar usuario */,
+                                                                'slh89ryw' /* Agregar producto */,
                                                               ),
                                                               icon: const Icon(
                                                                 Icons.add,
@@ -2219,7 +2219,7 @@ class _Inventarios2WidgetState extends State<Inventarios2Widget>
                                                               text: FFLocalizations
                                                                       .of(context)
                                                                   .getText(
-                                                                'pjv3uu2r' /* Agregar usuario */,
+                                                                'pjv3uu2r' /* Agregar proveedor */,
                                                               ),
                                                               icon: const Icon(
                                                                 Icons.add,
@@ -2299,8 +2299,8 @@ class _Inventarios2WidgetState extends State<Inventarios2Widget>
                                 ].divide(const SizedBox(height: 15.0)),
                               ),
                             ),
-                            StreamBuilder<List<InstructoresRecord>>(
-                              stream: queryInstructoresRecord(),
+                            StreamBuilder<List<ProductosRecord>>(
+                              stream: queryProductosRecord(),
                               builder: (context, snapshot) {
                                 // Customize what your widget looks like when it's loading.
                                 if (!snapshot.hasData) {
@@ -2317,18 +2317,17 @@ class _Inventarios2WidgetState extends State<Inventarios2Widget>
                                     ),
                                   );
                                 }
-                                List<InstructoresRecord>
-                                    listViewInstructoresRecordList =
+                                List<ProductosRecord>
+                                    listViewProductosRecordList =
                                     snapshot.data!;
 
                                 return ListView.builder(
                                   padding: EdgeInsets.zero,
                                   scrollDirection: Axis.vertical,
-                                  itemCount:
-                                      listViewInstructoresRecordList.length,
+                                  itemCount: listViewProductosRecordList.length,
                                   itemBuilder: (context, listViewIndex) {
-                                    final listViewInstructoresRecord =
-                                        listViewInstructoresRecordList[
+                                    final listViewProductosRecord =
+                                        listViewProductosRecordList[
                                             listViewIndex];
                                     return Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -2482,8 +2481,8 @@ class _Inventarios2WidgetState extends State<Inventarios2Widget>
                                 );
                               },
                             ),
-                            StreamBuilder<List<InstructoresRecord>>(
-                              stream: queryInstructoresRecord(),
+                            StreamBuilder<List<ProveedoresRecord>>(
+                              stream: queryProveedoresRecord(),
                               builder: (context, snapshot) {
                                 // Customize what your widget looks like when it's loading.
                                 if (!snapshot.hasData) {
@@ -2500,18 +2499,18 @@ class _Inventarios2WidgetState extends State<Inventarios2Widget>
                                     ),
                                   );
                                 }
-                                List<InstructoresRecord>
-                                    listViewInstructoresRecordList =
+                                List<ProveedoresRecord>
+                                    listViewProveedoresRecordList =
                                     snapshot.data!;
 
                                 return ListView.builder(
                                   padding: EdgeInsets.zero,
                                   scrollDirection: Axis.vertical,
                                   itemCount:
-                                      listViewInstructoresRecordList.length,
+                                      listViewProveedoresRecordList.length,
                                   itemBuilder: (context, listViewIndex) {
-                                    final listViewInstructoresRecord =
-                                        listViewInstructoresRecordList[
+                                    final listViewProveedoresRecord =
+                                        listViewProveedoresRecordList[
                                             listViewIndex];
                                     return Column(
                                       mainAxisSize: MainAxisSize.max,

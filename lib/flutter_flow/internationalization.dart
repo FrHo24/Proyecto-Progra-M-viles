@@ -650,12 +650,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'vif51fqu': {
-      'es': 'Número de teléfono...',
+      'es': 'Proveedor del producto...',
       'en': '',
       'pt': '',
     },
     'slh89ryw': {
-      'es': 'Agregar usuario',
+      'es': 'Agregar producto',
       'en': '',
       'pt': '',
     },
@@ -700,7 +700,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'pjv3uu2r': {
-      'es': 'Agregar usuario',
+      'es': 'Agregar proveedor',
       'en': '',
       'pt': '',
     },
