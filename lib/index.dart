@@ -15,3 +15,4 @@ export '/principal/inventarios1/inventarios1_widget.dart'
     show Inventarios1Widget;
 export '/principal/inventarios2/inventarios2_widget.dart'
     show Inventarios2Widget;
+export '/ver_reservas/ver_reservas_widget.dart' show VerReservasWidget;

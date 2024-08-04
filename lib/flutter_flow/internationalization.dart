@@ -501,6 +501,36 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
+    '80eqg16c': {
+      'es': 'Share',
+      'en': '',
+      'pt': '',
+    },
+    'lt7eei9f': {
+      'es': 'Title',
+      'en': '',
+      'pt': '',
+    },
+    '8nxjrcm3': {
+      'es': 'Subtitle goes here...',
+      'en': '',
+      'pt': '',
+    },
+    's55psjto': {
+      'es': 'Share',
+      'en': '',
+      'pt': '',
+    },
+    'qfx7c6eb': {
+      'es': 'Title',
+      'en': '',
+      'pt': '',
+    },
+    '62k2dhrd': {
+      'es': 'Subtitle goes here...',
+      'en': '',
+      'pt': '',
+    },
     'mlxhkhr9': {
       'es': 'Agregar instructor',
       'en': '',
@@ -765,6 +795,79 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'v2wm8mlb': {
+      'es': 'Home',
+      'en': '',
+      'pt': '',
+    },
+  },
+  // verReservas
+  {
+    'm2lk5wb0': {
+      'es': 'Calendario para ver las reservas',
+      'en': '',
+      'pt': '',
+    },
+    'iga8u7i7': {
+      'es': 'Reservar',
+      'en': '',
+      'pt': '',
+    },
+    'fck008wi': {
+      'es': 'Instructor:',
+      'en': '',
+      'pt': '',
+    },
+    '02b1trwd': {
+      'es': 'BD',
+      'en': '',
+      'pt': '',
+    },
+    'uns6m5cb': {
+      'es': 'Clase:',
+      'en': '',
+      'pt': '',
+    },
+    'lxa3v2p4': {
+      'es': 'BD',
+      'en': '',
+      'pt': '',
+    },
+    '7aiiop1m': {
+      'es': 'Clientes:',
+      'en': '',
+      'pt': '',
+    },
+    'doz3h5ma': {
+      'es': 'BD',
+      'en': '',
+      'pt': '',
+    },
+    'wnwm9kux': {
+      'es': 'Hora:',
+      'en': '',
+      'pt': '',
+    },
+    'h95nrd8v': {
+      'es': 'BD',
+      'en': '',
+      'pt': '',
+    },
+    '9y8j5sf5': {
+      'es': 'Editar',
+      'en': '',
+      'pt': '',
+    },
+    'oeywn4uz': {
+      'es': 'Eliminar',
+      'en': '',
+      'pt': '',
+    },
+    'afdeghbf': {
+      'es': 'Page Title',
+      'en': '',
+      'pt': '',
+    },
+    'gq7msw2y': {
       'es': 'Home',
       'en': '',
       'pt': '',

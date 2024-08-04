@@ -131,6 +131,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Inventarios2',
           path: '/inventarios2',
           builder: (context, params) => const Inventarios2Widget(),
+        ),
+        FFRoute(
+          name: 'verReservas',
+          path: '/verReservas',
+          builder: (context, params) => const VerReservasWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
