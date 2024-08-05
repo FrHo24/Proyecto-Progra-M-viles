@@ -14,6 +14,7 @@ import 'schema/clientes_record.dart';
 import 'schema/usuarios_record.dart';
 import 'schema/proveedores_record.dart';
 import 'schema/transacciones_record.dart';
+import 'schema/administradores_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -31,6 +32,7 @@ export 'schema/clientes_record.dart';
 export 'schema/usuarios_record.dart';
 export 'schema/proveedores_record.dart';
 export 'schema/transacciones_record.dart';
+export 'schema/administradores_record.dart';
 
 /// Functions to query InstructoresRecords (as a Stream and as a Future).
 Future<int> queryInstructoresRecordCount({
@@ -360,6 +362,43 @@ Future<List<TransaccionesRecord>> queryTransaccionesRecordOnce({
     queryCollectionOnce(
       TransaccionesRecord.collection,
       TransaccionesRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query AdministradoresRecords (as a Stream and as a Future).
+Future<int> queryAdministradoresRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      AdministradoresRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<AdministradoresRecord>> queryAdministradoresRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      AdministradoresRecord.collection,
+      AdministradoresRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<AdministradoresRecord>> queryAdministradoresRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      AdministradoresRecord.collection,
+      AdministradoresRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

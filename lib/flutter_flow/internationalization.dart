@@ -109,12 +109,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Login
   {
     'hklxceun': {
-      'es': 'Crear Cuenta',
+      'es': 'Registrarse',
       'en': 'Create Account',
       'pt': 'Criar uma conta',
     },
     'z49z5u4s': {
-      'es': 'Crear Cuenta',
+      'es': 'Registrar Cuenta',
       'en': 'Create Account',
       'pt': 'Criar uma conta',
     },
@@ -501,73 +501,133 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    '80eqg16c': {
-      'es': 'Share',
-      'en': '',
-      'pt': '',
-    },
-    'lt7eei9f': {
-      'es': 'Title',
-      'en': '',
-      'pt': '',
-    },
-    '8nxjrcm3': {
-      'es': 'Subtitle goes here...',
-      'en': '',
-      'pt': '',
-    },
-    's55psjto': {
-      'es': 'Share',
-      'en': '',
-      'pt': '',
-    },
-    'qfx7c6eb': {
-      'es': 'Title',
-      'en': '',
-      'pt': '',
-    },
-    '62k2dhrd': {
-      'es': 'Subtitle goes here...',
-      'en': '',
-      'pt': '',
-    },
-    'mlxhkhr9': {
+    'szdqr2nx': {
       'es': 'Agregar instructor',
       'en': '',
       'pt': '',
     },
-    '16ouru6s': {
+    'o6m4do8z': {
       'es': 'Agregar instructores',
       'en': '',
       'pt': '',
     },
-    '7ga9ih88': {
+    '8jdn7saa': {
       'es': 'Nombre del instructor...',
       'en': '',
       'pt': '',
     },
-    'pwoqto0o': {
-      'es': 'Área de trabajo del instructor...',
+    '4t5prmgr': {
+      'es': 'Apellidos del instructor...',
       'en': '',
       'pt': '',
     },
-    'chvit1cr': {
+    'cejo38mg': {
       'es': 'Correo electrónico del instructor...',
       'en': '',
       'pt': '',
     },
-    'hchaez1b': {
+    'tdn37zmm': {
       'es': 'Cédula del instructor...',
       'en': '',
       'pt': '',
     },
-    'e9dv7uud': {
+    'jywepfkg': {
       'es': 'Número de teléfono...',
       'en': '',
       'pt': '',
     },
-    '28f1xmxm': {
+    'exewebp3': {
       'es': 'Agregar instructor',
+      'en': '',
+      'pt': '',
+    },
+    'djy6ydny': {
+      'es': 'Agregar productos',
+      'en': '',
+      'pt': '',
+    },
+    'ifbr0yql': {
+      'es': 'Agregar productos',
+      'en': '',
+      'pt': '',
+    },
+    '1ak77j28': {
+      'es': 'Nombre del producto...',
+      'en': '',
+      'pt': '',
+    },
+    'flfvdr57': {
+      'es': 'Descripción del producto...',
+      'en': '',
+      'pt': '',
+    },
+    'h4nv53f1': {
+      'es': 'Precio del producto...',
+      'en': '',
+      'pt': '',
+    },
+    'ecuv6sn1': {
+      'es': 'Cantidad del producto...',
+      'en': '',
+      'pt': '',
+    },
+    '0f4dqm97': {
+      'es': 'Categoría del producto...',
+      'en': '',
+      'pt': '',
+    },
+    'gvey92ep': {
+      'es': 'Proveedor...',
+      'en': '',
+      'pt': '',
+    },
+    'ef3jq7ne': {
+      'es': 'Agregar producto',
+      'en': '',
+      'pt': '',
+    },
+    'mlxhkhr9': {
+      'es': 'Agregar proveedor',
+      'en': '',
+      'pt': '',
+    },
+    '16ouru6s': {
+      'es': 'Agregar provedores',
+      'en': '',
+      'pt': '',
+    },
+    '7ga9ih88': {
+      'es': 'Nombre del proveedor...',
+      'en': '',
+      'pt': '',
+    },
+    'pwoqto0o': {
+      'es': 'Nombre del distribuidor...',
+      'en': '',
+      'pt': '',
+    },
+    'chvit1cr': {
+      'es': 'Número de teléfono del distribuidor...',
+      'en': '',
+      'pt': '',
+    },
+    'hchaez1b': {
+      'es': 'Número de teléfono del proveedor...',
+      'en': '',
+      'pt': '',
+    },
+    'e9dv7uud': {
+      'es': 'Correo electrónico del proveedor...',
+      'en': '',
+      'pt': '',
+    },
+    't52jq3tm': {
+      'es': 'Correo electrónico del distribuidor...',
+      'en': '',
+      'pt': '',
+    },
+    '28f1xmxm': {
+      'es': 'Agregar proveedor',
       'en': '',
       'pt': '',
     },
@@ -601,23 +661,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    'mnmvsazg': {
-      'es': 'Title',
-      'en': '',
-      'pt': '',
-    },
-    'nai40gfv': {
-      'es': 'Subtitle goes here...',
-      'en': '',
-      'pt': '',
-    },
-    'irpx2azc': {
-      'es': 'Editar',
-      'en': '',
-      'pt': '',
-    },
-    'dvc5pji3': {
-      'es': 'Eliminar',
+    'znvwzrcf': {
+      'es': 'Administradores',
       'en': '',
       'pt': '',
     },
