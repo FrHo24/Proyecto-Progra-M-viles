@@ -149,7 +149,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Entrar',
     },
     'rhgeqy2d': {
-      'es': 'Bienvenido de vuelta',
+      'es': 'Bienvenido',
       'en': 'welcome back',
       'pt': 'Bem vindo de volta',
     },

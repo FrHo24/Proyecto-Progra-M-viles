@@ -122,7 +122,7 @@ class _Inventarios1WidgetState extends State<Inventarios1Widget>
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFF175F6D),
+        backgroundColor: const Color(0xFF09394A),
         drawer: SizedBox(
           width: MediaQuery.sizeOf(context).width * 0.6,
           child: Drawer(
