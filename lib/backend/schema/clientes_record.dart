@@ -60,6 +60,11 @@ class ClientesRecord extends FirestoreRecord {
   String get tipoMembresia => _tipoMembresia ?? '';
   bool hasTipoMembresia() => _tipoMembresia != null;
 
+  // "apellidosCliente" field.
+  String? _apellidosCliente;
+  String get apellidosCliente => _apellidosCliente ?? '';
+  bool hasApellidosCliente() => _apellidosCliente != null;
+
   void _initializeFields() {
     _nombreCliente = snapshotData['nombreCliente'] as String?;
     _telefonoCliente = snapshotData['telefonoCliente'] as String?;
@@ -70,6 +75,7 @@ class ClientesRecord extends FirestoreRecord {
     _fechaDePago = snapshotData['fechaDePago'] as DateTime?;
     _fechaProximoPago = snapshotData['fechaProximoPago'] as DateTime?;
     _tipoMembresia = snapshotData['tipoMembresia'] as String?;
+    _apellidosCliente = snapshotData['apellidosCliente'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -116,6 +122,7 @@ Map<String, dynamic> createClientesRecordData({
   DateTime? fechaDePago,
   DateTime? fechaProximoPago,
   String? tipoMembresia,
+  String? apellidosCliente,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -128,6 +135,7 @@ Map<String, dynamic> createClientesRecordData({
       'fechaDePago': fechaDePago,
       'fechaProximoPago': fechaProximoPago,
       'tipoMembresia': tipoMembresia,
+      'apellidosCliente': apellidosCliente,
     }.withoutNulls,
   );
 
@@ -147,7 +155,8 @@ class ClientesRecordDocumentEquality implements Equality<ClientesRecord> {
         e1?.activo == e2?.activo &&
         e1?.fechaDePago == e2?.fechaDePago &&
         e1?.fechaProximoPago == e2?.fechaProximoPago &&
-        e1?.tipoMembresia == e2?.tipoMembresia;
+        e1?.tipoMembresia == e2?.tipoMembresia &&
+        e1?.apellidosCliente == e2?.apellidosCliente;
   }
 
   @override
@@ -160,7 +169,8 @@ class ClientesRecordDocumentEquality implements Equality<ClientesRecord> {
         e?.activo,
         e?.fechaDePago,
         e?.fechaProximoPago,
-        e?.tipoMembresia
+        e?.tipoMembresia,
+        e?.apellidosCliente
       ]);
 
   @override

@@ -103,11 +103,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const AjustesWidget(),
         ),
         FFRoute(
-          name: 'SobreNosotros',
-          path: '/sobreNosotros',
-          builder: (context, params) => const SobreNosotrosWidget(),
-        ),
-        FFRoute(
           name: 'CambiarContrasena',
           path: '/cambiarContrasena',
           builder: (context, params) => const CambiarContrasenaWidget(),
@@ -123,19 +118,49 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const MenuWidget(),
         ),
         FFRoute(
-          name: 'Inventarios1',
-          path: '/inventarios1',
-          builder: (context, params) => const Inventarios1Widget(),
-        ),
-        FFRoute(
-          name: 'Inventarios2',
-          path: '/inventarios2',
-          builder: (context, params) => const Inventarios2Widget(),
-        ),
-        FFRoute(
           name: 'verReservas',
           path: '/verReservas',
           builder: (context, params) => const VerReservasWidget(),
+        ),
+        FFRoute(
+          name: 'agregarActividad',
+          path: '/agregarActividad',
+          builder: (context, params) => const AgregarActividadWidget(),
+        ),
+        FFRoute(
+          name: 'inventarioInstructores',
+          path: '/inventarioInstructores',
+          builder: (context, params) => const InventarioInstructoresWidget(),
+        ),
+        FFRoute(
+          name: 'inventarioAdministradores',
+          path: '/inventarioAdministradores',
+          builder: (context, params) => const InventarioAdministradoresWidget(),
+        ),
+        FFRoute(
+          name: 'inventarioProveedores',
+          path: '/inventarioProveedores',
+          builder: (context, params) => const InventarioProveedoresWidget(),
+        ),
+        FFRoute(
+          name: 'inventarioEquipo',
+          path: '/inventarioEquipo',
+          builder: (context, params) => const InventarioEquipoWidget(),
+        ),
+        FFRoute(
+          name: 'inventarioClases',
+          path: '/inventarioClases',
+          builder: (context, params) => const InventarioClasesWidget(),
+        ),
+        FFRoute(
+          name: 'inventarioClientes',
+          path: '/inventarioClientes',
+          builder: (context, params) => const InventarioClientesWidget(),
+        ),
+        FFRoute(
+          name: 'inventarioProductos',
+          path: '/inventarioProductos',
+          builder: (context, params) => const InventarioProductosWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

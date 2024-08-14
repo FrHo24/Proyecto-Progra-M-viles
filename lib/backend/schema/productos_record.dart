@@ -40,10 +40,10 @@ class ProductosRecord extends FirestoreRecord {
   String get categoriaProducto => _categoriaProducto ?? '';
   bool hasCategoriaProducto() => _categoriaProducto != null;
 
-  // "proveedorProducto" field.
-  String? _proveedorProducto;
-  String get proveedorProducto => _proveedorProducto ?? '';
-  bool hasProveedorProducto() => _proveedorProducto != null;
+  // "proveedorProductos" field.
+  DocumentReference? _proveedorProductos;
+  DocumentReference? get proveedorProductos => _proveedorProductos;
+  bool hasProveedorProductos() => _proveedorProductos != null;
 
   void _initializeFields() {
     _nombreProducto = snapshotData['nombreProducto'] as String?;
@@ -51,7 +51,8 @@ class ProductosRecord extends FirestoreRecord {
     _precioProducto = castToType<double>(snapshotData['precioProducto']);
     _cantidadProducto = castToType<int>(snapshotData['cantidadProducto']);
     _categoriaProducto = snapshotData['categoriaProducto'] as String?;
-    _proveedorProducto = snapshotData['proveedorProducto'] as String?;
+    _proveedorProductos =
+        snapshotData['proveedorProductos'] as DocumentReference?;
   }
 
   static CollectionReference get collection =>
@@ -94,7 +95,7 @@ Map<String, dynamic> createProductosRecordData({
   double? precioProducto,
   int? cantidadProducto,
   String? categoriaProducto,
-  String? proveedorProducto,
+  DocumentReference? proveedorProductos,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -103,7 +104,7 @@ Map<String, dynamic> createProductosRecordData({
       'precioProducto': precioProducto,
       'cantidadProducto': cantidadProducto,
       'categoriaProducto': categoriaProducto,
-      'proveedorProducto': proveedorProducto,
+      'proveedorProductos': proveedorProductos,
     }.withoutNulls,
   );
 
@@ -120,7 +121,7 @@ class ProductosRecordDocumentEquality implements Equality<ProductosRecord> {
         e1?.precioProducto == e2?.precioProducto &&
         e1?.cantidadProducto == e2?.cantidadProducto &&
         e1?.categoriaProducto == e2?.categoriaProducto &&
-        e1?.proveedorProducto == e2?.proveedorProducto;
+        e1?.proveedorProductos == e2?.proveedorProductos;
   }
 
   @override
@@ -130,7 +131,7 @@ class ProductosRecordDocumentEquality implements Equality<ProductosRecord> {
         e?.precioProducto,
         e?.cantidadProducto,
         e?.categoriaProducto,
-        e?.proveedorProducto
+        e?.proveedorProductos
       ]);
 
   @override

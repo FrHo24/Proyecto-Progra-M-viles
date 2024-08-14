@@ -15,6 +15,7 @@ import 'schema/usuarios_record.dart';
 import 'schema/proveedores_record.dart';
 import 'schema/transacciones_record.dart';
 import 'schema/administradores_record.dart';
+import 'schema/calendario_reservas_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -33,6 +34,7 @@ export 'schema/usuarios_record.dart';
 export 'schema/proveedores_record.dart';
 export 'schema/transacciones_record.dart';
 export 'schema/administradores_record.dart';
+export 'schema/calendario_reservas_record.dart';
 
 /// Functions to query InstructoresRecords (as a Stream and as a Future).
 Future<int> queryInstructoresRecordCount({
@@ -399,6 +401,43 @@ Future<List<AdministradoresRecord>> queryAdministradoresRecordOnce({
     queryCollectionOnce(
       AdministradoresRecord.collection,
       AdministradoresRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query CalendarioReservasRecords (as a Stream and as a Future).
+Future<int> queryCalendarioReservasRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      CalendarioReservasRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<CalendarioReservasRecord>> queryCalendarioReservasRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      CalendarioReservasRecord.collection,
+      CalendarioReservasRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<CalendarioReservasRecord>> queryCalendarioReservasRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      CalendarioReservasRecord.collection,
+      CalendarioReservasRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

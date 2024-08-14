@@ -40,12 +40,18 @@ class InstructoresRecord extends FirestoreRecord {
   String get areaTrabajoInstructor => _areaTrabajoInstructor ?? '';
   bool hasAreaTrabajoInstructor() => _areaTrabajoInstructor != null;
 
+  // "apellidosInstructor" field.
+  String? _apellidosInstructor;
+  String get apellidosInstructor => _apellidosInstructor ?? '';
+  bool hasApellidosInstructor() => _apellidosInstructor != null;
+
   void _initializeFields() {
     _nombreInstructor = snapshotData['nombreInstructor'] as String?;
     _emailInstructor = snapshotData['email_Instructor'] as String?;
     _telefonoInstructor = snapshotData['telefonoInstructor'] as String?;
     _cedulaInstructor = snapshotData['cedulaInstructor'] as String?;
     _areaTrabajoInstructor = snapshotData['areaTrabajo_Instructor'] as String?;
+    _apellidosInstructor = snapshotData['apellidosInstructor'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -88,6 +94,7 @@ Map<String, dynamic> createInstructoresRecordData({
   String? telefonoInstructor,
   String? cedulaInstructor,
   String? areaTrabajoInstructor,
+  String? apellidosInstructor,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -96,6 +103,7 @@ Map<String, dynamic> createInstructoresRecordData({
       'telefonoInstructor': telefonoInstructor,
       'cedulaInstructor': cedulaInstructor,
       'areaTrabajo_Instructor': areaTrabajoInstructor,
+      'apellidosInstructor': apellidosInstructor,
     }.withoutNulls,
   );
 
@@ -112,7 +120,8 @@ class InstructoresRecordDocumentEquality
         e1?.emailInstructor == e2?.emailInstructor &&
         e1?.telefonoInstructor == e2?.telefonoInstructor &&
         e1?.cedulaInstructor == e2?.cedulaInstructor &&
-        e1?.areaTrabajoInstructor == e2?.areaTrabajoInstructor;
+        e1?.areaTrabajoInstructor == e2?.areaTrabajoInstructor &&
+        e1?.apellidosInstructor == e2?.apellidosInstructor;
   }
 
   @override
@@ -121,7 +130,8 @@ class InstructoresRecordDocumentEquality
         e?.emailInstructor,
         e?.telefonoInstructor,
         e?.cedulaInstructor,
-        e?.areaTrabajoInstructor
+        e?.areaTrabajoInstructor,
+        e?.apellidosInstructor
       ]);
 
   @override

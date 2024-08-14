@@ -20,16 +20,6 @@ class ProveedoresRecord extends FirestoreRecord {
   String get nombreProveedor => _nombreProveedor ?? '';
   bool hasNombreProveedor() => _nombreProveedor != null;
 
-  // "nombreDistribuidor" field.
-  String? _nombreDistribuidor;
-  String get nombreDistribuidor => _nombreDistribuidor ?? '';
-  bool hasNombreDistribuidor() => _nombreDistribuidor != null;
-
-  // "telefonoDistribuidor" field.
-  String? _telefonoDistribuidor;
-  String get telefonoDistribuidor => _telefonoDistribuidor ?? '';
-  bool hasTelefonoDistribuidor() => _telefonoDistribuidor != null;
-
   // "telefonoProveedor" field.
   String? _telefonoProveedor;
   String get telefonoProveedor => _telefonoProveedor ?? '';
@@ -40,18 +30,16 @@ class ProveedoresRecord extends FirestoreRecord {
   String get emailProveedor => _emailProveedor ?? '';
   bool hasEmailProveedor() => _emailProveedor != null;
 
-  // "emailDistribuidor" field.
-  String? _emailDistribuidor;
-  String get emailDistribuidor => _emailDistribuidor ?? '';
-  bool hasEmailDistribuidor() => _emailDistribuidor != null;
+  // "producto" field.
+  DocumentReference? _producto;
+  DocumentReference? get producto => _producto;
+  bool hasProducto() => _producto != null;
 
   void _initializeFields() {
     _nombreProveedor = snapshotData['nombreProveedor'] as String?;
-    _nombreDistribuidor = snapshotData['nombreDistribuidor'] as String?;
-    _telefonoDistribuidor = snapshotData['telefonoDistribuidor'] as String?;
     _telefonoProveedor = snapshotData['telefonoProveedor'] as String?;
     _emailProveedor = snapshotData['emailProveedor'] as String?;
-    _emailDistribuidor = snapshotData['emailDistribuidor'] as String?;
+    _producto = snapshotData['producto'] as DocumentReference?;
   }
 
   static CollectionReference get collection =>
@@ -90,20 +78,16 @@ class ProveedoresRecord extends FirestoreRecord {
 
 Map<String, dynamic> createProveedoresRecordData({
   String? nombreProveedor,
-  String? nombreDistribuidor,
-  String? telefonoDistribuidor,
   String? telefonoProveedor,
   String? emailProveedor,
-  String? emailDistribuidor,
+  DocumentReference? producto,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
       'nombreProveedor': nombreProveedor,
-      'nombreDistribuidor': nombreDistribuidor,
-      'telefonoDistribuidor': telefonoDistribuidor,
       'telefonoProveedor': telefonoProveedor,
       'emailProveedor': emailProveedor,
-      'emailDistribuidor': emailDistribuidor,
+      'producto': producto,
     }.withoutNulls,
   );
 
@@ -116,21 +100,17 @@ class ProveedoresRecordDocumentEquality implements Equality<ProveedoresRecord> {
   @override
   bool equals(ProveedoresRecord? e1, ProveedoresRecord? e2) {
     return e1?.nombreProveedor == e2?.nombreProveedor &&
-        e1?.nombreDistribuidor == e2?.nombreDistribuidor &&
-        e1?.telefonoDistribuidor == e2?.telefonoDistribuidor &&
         e1?.telefonoProveedor == e2?.telefonoProveedor &&
         e1?.emailProveedor == e2?.emailProveedor &&
-        e1?.emailDistribuidor == e2?.emailDistribuidor;
+        e1?.producto == e2?.producto;
   }
 
   @override
   int hash(ProveedoresRecord? e) => const ListEquality().hash([
         e?.nombreProveedor,
-        e?.nombreDistribuidor,
-        e?.telefonoDistribuidor,
         e?.telefonoProveedor,
         e?.emailProveedor,
-        e?.emailDistribuidor
+        e?.producto
       ]);
 
   @override

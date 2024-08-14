@@ -31,8 +31,8 @@ class ClasesRecord extends FirestoreRecord {
   bool hasCantidadParticipantes() => _cantidadParticipantes != null;
 
   // "instructorAsignado" field.
-  String? _instructorAsignado;
-  String get instructorAsignado => _instructorAsignado ?? '';
+  DocumentReference? _instructorAsignado;
+  DocumentReference? get instructorAsignado => _instructorAsignado;
   bool hasInstructorAsignado() => _instructorAsignado != null;
 
   void _initializeFields() {
@@ -40,7 +40,8 @@ class ClasesRecord extends FirestoreRecord {
     _descripcionClase = snapshotData['descripcionClase'] as String?;
     _cantidadParticipantes =
         castToType<int>(snapshotData['cantidadParticipantes']);
-    _instructorAsignado = snapshotData['instructorAsignado'] as String?;
+    _instructorAsignado =
+        snapshotData['instructorAsignado'] as DocumentReference?;
   }
 
   static CollectionReference get collection =>
@@ -80,7 +81,7 @@ Map<String, dynamic> createClasesRecordData({
   String? nombreClase,
   String? descripcionClase,
   int? cantidadParticipantes,
-  String? instructorAsignado,
+  DocumentReference? instructorAsignado,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{

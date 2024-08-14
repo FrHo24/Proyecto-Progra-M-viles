@@ -20,11 +20,6 @@ class TransaccionesRecord extends FirestoreRecord {
   DateTime? get fechaTransaccion => _fechaTransaccion;
   bool hasFechaTransaccion() => _fechaTransaccion != null;
 
-  // "clientePago" field.
-  String? _clientePago;
-  String get clientePago => _clientePago ?? '';
-  bool hasClientePago() => _clientePago != null;
-
   // "fechaProximaTransaccion" field.
   DateTime? _fechaProximaTransaccion;
   DateTime? get fechaProximaTransaccion => _fechaProximaTransaccion;
@@ -35,12 +30,17 @@ class TransaccionesRecord extends FirestoreRecord {
   int get idTransaccion => _idTransaccion ?? 0;
   bool hasIdTransaccion() => _idTransaccion != null;
 
+  // "clientePago" field.
+  DocumentReference? _clientePago;
+  DocumentReference? get clientePago => _clientePago;
+  bool hasClientePago() => _clientePago != null;
+
   void _initializeFields() {
     _fechaTransaccion = snapshotData['fechaTransaccion'] as DateTime?;
-    _clientePago = snapshotData['clientePago'] as String?;
     _fechaProximaTransaccion =
         snapshotData['fechaProximaTransaccion'] as DateTime?;
     _idTransaccion = castToType<int>(snapshotData['idTransaccion']);
+    _clientePago = snapshotData['clientePago'] as DocumentReference?;
   }
 
   static CollectionReference get collection =>
@@ -79,16 +79,16 @@ class TransaccionesRecord extends FirestoreRecord {
 
 Map<String, dynamic> createTransaccionesRecordData({
   DateTime? fechaTransaccion,
-  String? clientePago,
   DateTime? fechaProximaTransaccion,
   int? idTransaccion,
+  DocumentReference? clientePago,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
       'fechaTransaccion': fechaTransaccion,
-      'clientePago': clientePago,
       'fechaProximaTransaccion': fechaProximaTransaccion,
       'idTransaccion': idTransaccion,
+      'clientePago': clientePago,
     }.withoutNulls,
   );
 
@@ -102,17 +102,17 @@ class TransaccionesRecordDocumentEquality
   @override
   bool equals(TransaccionesRecord? e1, TransaccionesRecord? e2) {
     return e1?.fechaTransaccion == e2?.fechaTransaccion &&
-        e1?.clientePago == e2?.clientePago &&
         e1?.fechaProximaTransaccion == e2?.fechaProximaTransaccion &&
-        e1?.idTransaccion == e2?.idTransaccion;
+        e1?.idTransaccion == e2?.idTransaccion &&
+        e1?.clientePago == e2?.clientePago;
   }
 
   @override
   int hash(TransaccionesRecord? e) => const ListEquality().hash([
         e?.fechaTransaccion,
-        e?.clientePago,
         e?.fechaProximaTransaccion,
-        e?.idTransaccion
+        e?.idTransaccion,
+        e?.clientePago
       ]);
 
   @override
