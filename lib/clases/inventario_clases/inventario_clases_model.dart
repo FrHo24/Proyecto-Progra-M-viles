@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/form_field_controller.dart';
 import 'inventario_clases_widget.dart' show InventarioClasesWidget;
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
@@ -18,14 +19,13 @@ class InventarioClasesModel extends FlutterFlowModel<InventarioClasesWidget> {
   FocusNode? txtDClaseFocusNode;
   TextEditingController? txtDClaseTextController;
   String? Function(BuildContext, String?)? txtDClaseTextControllerValidator;
-  // State field(s) for txtInstructor widget.
-  FocusNode? txtInstructorFocusNode;
-  TextEditingController? txtInstructorTextController;
-  String? Function(BuildContext, String?)? txtInstructorTextControllerValidator;
   // State field(s) for txtCClase widget.
   FocusNode? txtCClaseFocusNode;
   TextEditingController? txtCClaseTextController;
   String? Function(BuildContext, String?)? txtCClaseTextControllerValidator;
+  // State field(s) for ddInstructor widget.
+  String? ddInstructorValue;
+  FormFieldController<String>? ddInstructorValueController;
 
   @override
   void initState(BuildContext context) {}
@@ -38,9 +38,6 @@ class InventarioClasesModel extends FlutterFlowModel<InventarioClasesWidget> {
 
     txtDClaseFocusNode?.dispose();
     txtDClaseTextController?.dispose();
-
-    txtInstructorFocusNode?.dispose();
-    txtInstructorTextController?.dispose();
 
     txtCClaseFocusNode?.dispose();
     txtCClaseTextController?.dispose();

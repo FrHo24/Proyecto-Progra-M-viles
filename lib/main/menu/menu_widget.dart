@@ -186,8 +186,8 @@ class _MenuWidgetState extends State<MenuWidget> {
                         child: Align(
                           alignment: const AlignmentDirectional(0.0, 0.0),
                           child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
+                            onPressed: () async {
+                              context.pushNamed('inventarioClases');
                             },
                             text: FFLocalizations.of(context).getText(
                               'vj0kwnto' /* Equipo/Clases */,

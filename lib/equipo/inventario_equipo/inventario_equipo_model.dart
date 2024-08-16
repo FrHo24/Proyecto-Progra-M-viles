@@ -26,6 +26,7 @@ class InventarioEquipoModel extends FlutterFlowModel<InventarioEquipoWidget> {
   FocusNode? txtUIDFocusNode;
   TextEditingController? txtUIDTextController;
   String? Function(BuildContext, String?)? txtUIDTextControllerValidator;
+  DateTime? datePicked;
 
   @override
   void initState(BuildContext context) {}

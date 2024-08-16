@@ -865,6 +865,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
+    '6cr651ky': {
+      'es': 'Fecha',
+      'en': '',
+      'pt': '',
+    },
     '7tg0sxzb': {
       'es': 'Agregar equipo',
       'en': '',
@@ -899,7 +904,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'k88fpwuo': {
-      'es': 'Agregar proveedores',
+      'es': 'Agregar Clase',
       'en': '',
       'pt': '',
     },
@@ -913,13 +918,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    's36htil0': {
-      'es': 'Intructor que la imparte...',
+    'j1eu7zch': {
+      'es': 'Cantidad de clientes maxima...',
       'en': '',
       'pt': '',
     },
-    'j1eu7zch': {
-      'es': 'Cantidad de clientes maxima...',
+    '633h5z9v': {
+      'es': 'Option 1',
+      'en': '',
+      'pt': '',
+    },
+    'jiauq70t': {
+      'es': 'Intructor:',
+      'en': '',
+      'pt': '',
+    },
+    'lj3beo3q': {
+      'es': 'Search for an item...',
       'en': '',
       'pt': '',
     },
