@@ -1180,19 +1180,6 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
-                                          Text(
-                                            valueOrDefault<String>(
-                                              listViewProductosRecord
-                                                  .proveedorProductos?.id,
-                                              'ddd',
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  letterSpacing: 0.0,
-                                                ),
-                                          ),
                                         ],
                                       ),
                                       SizedBox(

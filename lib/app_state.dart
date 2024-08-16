@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import '/backend/backend.dart';
-import 'flutter_flow/flutter_flow_util.dart';
 
 class FFAppState extends ChangeNotifier {
   static FFAppState _instance = FFAppState._internal();
@@ -27,11 +25,5 @@ class FFAppState extends ChangeNotifier {
   DateTime? get fechaSeleccionada => _fechaSeleccionada;
   set fechaSeleccionada(DateTime? value) {
     _fechaSeleccionada = value;
-  }
-
-  DocumentReference? _proveedorSeleccionado;
-  DocumentReference? get proveedorSeleccionado => _proveedorSeleccionado;
-  set proveedorSeleccionado(DocumentReference? value) {
-    _proveedorSeleccionado = value;
   }
 }

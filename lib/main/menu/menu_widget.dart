@@ -73,8 +73,8 @@ class _MenuWidgetState extends State<MenuWidget> {
                         child: Align(
                           alignment: const AlignmentDirectional(0.0, 0.0),
                           child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
+                            onPressed: () async {
+                              context.pushNamed('inventarioProductos');
                             },
                             text: FFLocalizations.of(context).getText(
                               '9bsjsg9b' /* Productos/Proveedores */,
@@ -108,8 +108,8 @@ class _MenuWidgetState extends State<MenuWidget> {
                         child: Align(
                           alignment: const AlignmentDirectional(0.0, 0.0),
                           child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
+                            onPressed: () async {
+                              context.pushNamed('inventarioClientes');
                             },
                             text: FFLocalizations.of(context).getText(
                               '0rk5lv56' /* Cliente/Facturaciones */,

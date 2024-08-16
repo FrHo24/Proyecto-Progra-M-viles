@@ -16,49 +16,114 @@ class InventarioClientesModel
   TextEditingController? txtANombreClienteTextController;
   String? Function(BuildContext, String?)?
       txtANombreClienteTextControllerValidator;
+  String? _txtANombreClienteTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'qn6levts' /* Espacio Requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txtAApellidoCliente widget.
   FocusNode? txtAApellidoClienteFocusNode;
   TextEditingController? txtAApellidoClienteTextController;
   String? Function(BuildContext, String?)?
       txtAApellidoClienteTextControllerValidator;
+  String? _txtAApellidoClienteTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        't77i7lg9' /* Espacio Requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txtACedulaCliente widget.
   FocusNode? txtACedulaClienteFocusNode;
   TextEditingController? txtACedulaClienteTextController;
   String? Function(BuildContext, String?)?
       txtACedulaClienteTextControllerValidator;
-  // State field(s) for txtAEdadCliente widget.
-  FocusNode? txtAEdadClienteFocusNode;
-  TextEditingController? txtAEdadClienteTextController;
-  String? Function(BuildContext, String?)?
-      txtAEdadClienteTextControllerValidator;
+  String? _txtACedulaClienteTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'fm0szui9' /* Espacio Requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txtANTelefonoCliente widget.
-  FocusNode? txtANTelefonoClienteFocusNode1;
-  TextEditingController? txtANTelefonoClienteTextController1;
+  FocusNode? txtANTelefonoClienteFocusNode;
+  TextEditingController? txtANTelefonoClienteTextController;
   String? Function(BuildContext, String?)?
-      txtANTelefonoClienteTextController1Validator;
+      txtANTelefonoClienteTextControllerValidator;
+  String? _txtANTelefonoClienteTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'rww8o5zm' /* Espacio Requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txtACorreoCliente widget.
   FocusNode? txtACorreoClienteFocusNode;
   TextEditingController? txtACorreoClienteTextController;
   String? Function(BuildContext, String?)?
       txtACorreoClienteTextControllerValidator;
-  // State field(s) for txtANTelefonoCliente widget.
-  FocusNode? txtANTelefonoClienteFocusNode2;
-  TextEditingController? txtANTelefonoClienteTextController2;
+  String? _txtACorreoClienteTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'cjaavho5' /* Espacio Requerido */,
+      );
+    }
+
+    return null;
+  }
+
+  // State field(s) for txtANTipoMembresia widget.
+  FocusNode? txtANTipoMembresiaFocusNode;
+  TextEditingController? txtANTipoMembresiaTextController;
   String? Function(BuildContext, String?)?
-      txtANTelefonoClienteTextController2Validator;
-  // State field(s) for txtAFechaUltimoPagoCliente widget.
-  FocusNode? txtAFechaUltimoPagoClienteFocusNode;
-  TextEditingController? txtAFechaUltimoPagoClienteTextController;
-  String? Function(BuildContext, String?)?
-      txtAFechaUltimoPagoClienteTextControllerValidator;
-  // State field(s) for txtAFechaProxPagoCliente widget.
-  FocusNode? txtAFechaProxPagoClienteFocusNode;
-  TextEditingController? txtAFechaProxPagoClienteTextController;
-  String? Function(BuildContext, String?)?
-      txtAFechaProxPagoClienteTextControllerValidator;
+      txtANTipoMembresiaTextControllerValidator;
+  String? _txtANTipoMembresiaTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'xis2k4o5' /* Espacio Requerido */,
+      );
+    }
+
+    return null;
+  }
+
+  DateTime? datePicked;
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    txtANombreClienteTextControllerValidator =
+        _txtANombreClienteTextControllerValidator;
+    txtAApellidoClienteTextControllerValidator =
+        _txtAApellidoClienteTextControllerValidator;
+    txtACedulaClienteTextControllerValidator =
+        _txtACedulaClienteTextControllerValidator;
+    txtANTelefonoClienteTextControllerValidator =
+        _txtANTelefonoClienteTextControllerValidator;
+    txtACorreoClienteTextControllerValidator =
+        _txtACorreoClienteTextControllerValidator;
+    txtANTipoMembresiaTextControllerValidator =
+        _txtANTipoMembresiaTextControllerValidator;
+  }
 
   @override
   void dispose() {
@@ -72,22 +137,13 @@ class InventarioClientesModel
     txtACedulaClienteFocusNode?.dispose();
     txtACedulaClienteTextController?.dispose();
 
-    txtAEdadClienteFocusNode?.dispose();
-    txtAEdadClienteTextController?.dispose();
-
-    txtANTelefonoClienteFocusNode1?.dispose();
-    txtANTelefonoClienteTextController1?.dispose();
+    txtANTelefonoClienteFocusNode?.dispose();
+    txtANTelefonoClienteTextController?.dispose();
 
     txtACorreoClienteFocusNode?.dispose();
     txtACorreoClienteTextController?.dispose();
 
-    txtANTelefonoClienteFocusNode2?.dispose();
-    txtANTelefonoClienteTextController2?.dispose();
-
-    txtAFechaUltimoPagoClienteFocusNode?.dispose();
-    txtAFechaUltimoPagoClienteTextController?.dispose();
-
-    txtAFechaProxPagoClienteFocusNode?.dispose();
-    txtAFechaProxPagoClienteTextController?.dispose();
+    txtANTipoMembresiaFocusNode?.dispose();
+    txtANTipoMembresiaTextController?.dispose();
   }
 }

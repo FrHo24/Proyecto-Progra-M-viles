@@ -26,10 +26,6 @@ class InventarioEquipoModel extends FlutterFlowModel<InventarioEquipoWidget> {
   FocusNode? txtUIDFocusNode;
   TextEditingController? txtUIDTextController;
   String? Function(BuildContext, String?)? txtUIDTextControllerValidator;
-  // State field(s) for txtUNT widget.
-  FocusNode? txtUNTFocusNode;
-  TextEditingController? txtUNTTextController;
-  String? Function(BuildContext, String?)? txtUNTTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
@@ -48,8 +44,5 @@ class InventarioEquipoModel extends FlutterFlowModel<InventarioEquipoWidget> {
 
     txtUIDFocusNode?.dispose();
     txtUIDTextController?.dispose();
-
-    txtUNTFocusNode?.dispose();
-    txtUNTTextController?.dispose();
   }
 }

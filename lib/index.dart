@@ -11,8 +11,8 @@ export '/login_perfil/perfil/perfil_widget.dart' show PerfilWidget;
 export '/main/menu/menu_widget.dart' show MenuWidget;
 export '/calendario/ver_reservas/ver_reservas_widget.dart'
     show VerReservasWidget;
-export '/calendario/agregar_actividad/agregar_actividad_widget.dart'
-    show AgregarActividadWidget;
+export '/calendario/agregar_reserva/agregar_reserva_widget.dart'
+    show AgregarReservaWidget;
 export '/instructores/inventario_instructores/inventario_instructores_widget.dart'
     show InventarioInstructoresWidget;
 export '/administradores/inventario_administradores/inventario_administradores_widget.dart'

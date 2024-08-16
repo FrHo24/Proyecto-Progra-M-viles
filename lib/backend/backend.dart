@@ -9,11 +9,9 @@ import 'schema/instructores_record.dart';
 import 'schema/productos_record.dart';
 import 'schema/equipos_record.dart';
 import 'schema/clases_record.dart';
-import 'schema/reservas_record.dart';
 import 'schema/clientes_record.dart';
 import 'schema/usuarios_record.dart';
 import 'schema/proveedores_record.dart';
-import 'schema/transacciones_record.dart';
 import 'schema/administradores_record.dart';
 import 'schema/calendario_reservas_record.dart';
 
@@ -28,11 +26,9 @@ export 'schema/instructores_record.dart';
 export 'schema/productos_record.dart';
 export 'schema/equipos_record.dart';
 export 'schema/clases_record.dart';
-export 'schema/reservas_record.dart';
 export 'schema/clientes_record.dart';
 export 'schema/usuarios_record.dart';
 export 'schema/proveedores_record.dart';
-export 'schema/transacciones_record.dart';
 export 'schema/administradores_record.dart';
 export 'schema/calendario_reservas_record.dart';
 
@@ -184,43 +180,6 @@ Future<List<ClasesRecord>> queryClasesRecordOnce({
       singleRecord: singleRecord,
     );
 
-/// Functions to query ReservasRecords (as a Stream and as a Future).
-Future<int> queryReservasRecordCount({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-}) =>
-    queryCollectionCount(
-      ReservasRecord.collection,
-      queryBuilder: queryBuilder,
-      limit: limit,
-    );
-
-Stream<List<ReservasRecord>> queryReservasRecord({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollection(
-      ReservasRecord.collection,
-      ReservasRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-Future<List<ReservasRecord>> queryReservasRecordOnce({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollectionOnce(
-      ReservasRecord.collection,
-      ReservasRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
 /// Functions to query ClientesRecords (as a Stream and as a Future).
 Future<int> queryClientesRecordCount({
   Query Function(Query)? queryBuilder,
@@ -327,43 +286,6 @@ Future<List<ProveedoresRecord>> queryProveedoresRecordOnce({
     queryCollectionOnce(
       ProveedoresRecord.collection,
       ProveedoresRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-/// Functions to query TransaccionesRecords (as a Stream and as a Future).
-Future<int> queryTransaccionesRecordCount({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-}) =>
-    queryCollectionCount(
-      TransaccionesRecord.collection,
-      queryBuilder: queryBuilder,
-      limit: limit,
-    );
-
-Stream<List<TransaccionesRecord>> queryTransaccionesRecord({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollection(
-      TransaccionesRecord.collection,
-      TransaccionesRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-Future<List<TransaccionesRecord>> queryTransaccionesRecordOnce({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollectionOnce(
-      TransaccionesRecord.collection,
-      TransaccionesRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

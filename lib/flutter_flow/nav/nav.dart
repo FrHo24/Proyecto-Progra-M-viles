@@ -123,9 +123,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const VerReservasWidget(),
         ),
         FFRoute(
-          name: 'agregarActividad',
-          path: '/agregarActividad',
-          builder: (context, params) => const AgregarActividadWidget(),
+          name: 'agregarReserva',
+          path: '/agregarReserva',
+          builder: (context, params) => const AgregarReservaWidget(),
         ),
         FFRoute(
           name: 'inventarioInstructores',

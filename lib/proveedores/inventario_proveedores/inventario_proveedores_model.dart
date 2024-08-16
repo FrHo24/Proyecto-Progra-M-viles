@@ -15,21 +15,53 @@ class InventarioProveedoresModel
   FocusNode? txtNProveedorFocusNode;
   TextEditingController? txtNProveedorTextController;
   String? Function(BuildContext, String?)? txtNProveedorTextControllerValidator;
+  String? _txtNProveedorTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        '8uyynapd' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txtPCorreo widget.
   FocusNode? txtPCorreoFocusNode;
   TextEditingController? txtPCorreoTextController;
   String? Function(BuildContext, String?)? txtPCorreoTextControllerValidator;
-  // State field(s) for txtProducto widget.
-  FocusNode? txtProductoFocusNode;
-  TextEditingController? txtProductoTextController;
-  String? Function(BuildContext, String?)? txtProductoTextControllerValidator;
+  String? _txtPCorreoTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'z7add1i5' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txtUNT widget.
   FocusNode? txtUNTFocusNode;
   TextEditingController? txtUNTTextController;
   String? Function(BuildContext, String?)? txtUNTTextControllerValidator;
+  String? _txtUNTTextControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        's5i1cz0b' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    txtNProveedorTextControllerValidator =
+        _txtNProveedorTextControllerValidator;
+    txtPCorreoTextControllerValidator = _txtPCorreoTextControllerValidator;
+    txtUNTTextControllerValidator = _txtUNTTextControllerValidator;
+  }
 
   @override
   void dispose() {
@@ -39,9 +71,6 @@ class InventarioProveedoresModel
 
     txtPCorreoFocusNode?.dispose();
     txtPCorreoTextController?.dispose();
-
-    txtProductoFocusNode?.dispose();
-    txtProductoTextController?.dispose();
 
     txtUNTFocusNode?.dispose();
     txtUNTTextController?.dispose();

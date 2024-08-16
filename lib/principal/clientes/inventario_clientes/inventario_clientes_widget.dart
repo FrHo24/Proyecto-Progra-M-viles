@@ -38,23 +38,14 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
     _model.txtACedulaClienteTextController ??= TextEditingController();
     _model.txtACedulaClienteFocusNode ??= FocusNode();
 
-    _model.txtAEdadClienteTextController ??= TextEditingController();
-    _model.txtAEdadClienteFocusNode ??= FocusNode();
-
-    _model.txtANTelefonoClienteTextController1 ??= TextEditingController();
-    _model.txtANTelefonoClienteFocusNode1 ??= FocusNode();
+    _model.txtANTelefonoClienteTextController ??= TextEditingController();
+    _model.txtANTelefonoClienteFocusNode ??= FocusNode();
 
     _model.txtACorreoClienteTextController ??= TextEditingController();
     _model.txtACorreoClienteFocusNode ??= FocusNode();
 
-    _model.txtANTelefonoClienteTextController2 ??= TextEditingController();
-    _model.txtANTelefonoClienteFocusNode2 ??= FocusNode();
-
-    _model.txtAFechaUltimoPagoClienteTextController ??= TextEditingController();
-    _model.txtAFechaUltimoPagoClienteFocusNode ??= FocusNode();
-
-    _model.txtAFechaProxPagoClienteTextController ??= TextEditingController();
-    _model.txtAFechaProxPagoClienteFocusNode ??= FocusNode();
+    _model.txtANTipoMembresiaTextController ??= TextEditingController();
+    _model.txtANTipoMembresiaFocusNode ??= FocusNode();
   }
 
   @override
@@ -168,7 +159,7 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                   ),
                                   child: Form(
                                     key: _model.formKey,
-                                    autovalidateMode: AutovalidateMode.disabled,
+                                    autovalidateMode: AutovalidateMode.always,
                                     child: SingleChildScrollView(
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -557,133 +548,9 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                     width: 370.0,
                                                     child: TextFormField(
                                                       controller: _model
-                                                          .txtAEdadClienteTextController,
+                                                          .txtANTelefonoClienteTextController,
                                                       focusNode: _model
-                                                          .txtAEdadClienteFocusNode,
-                                                      autofocus: true,
-                                                      obscureText: false,
-                                                      decoration:
-                                                          InputDecoration(
-                                                        labelText:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          'b27r4o1g' /* Edad actual del cliente... */,
-                                                        ),
-                                                        labelStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: Colors
-                                                                      .black,
-                                                                  fontSize:
-                                                                      16.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                        hintStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: const Color(
-                                                                      0xFFF8F5F5),
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                        enabledBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              const BorderSide(
-                                                            color: Color(
-                                                                0xFF09394A),
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                        focusedBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primary,
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                        errorBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .error,
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                        focusedErrorBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .error,
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                      ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                      validator: _model
-                                                          .txtAEdadClienteTextControllerValidator
-                                                          .asValidator(context),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Expanded(
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          8.0, 0.0, 8.0, 0.0),
-                                                  child: SizedBox(
-                                                    width: 370.0,
-                                                    child: TextFormField(
-                                                      controller: _model
-                                                          .txtANTelefonoClienteTextController1,
-                                                      focusNode: _model
-                                                          .txtANTelefonoClienteFocusNode1,
+                                                          .txtANTelefonoClienteFocusNode,
                                                       autofocus: true,
                                                       obscureText: false,
                                                       decoration:
@@ -785,7 +652,7 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                             letterSpacing: 0.0,
                                                           ),
                                                       validator: _model
-                                                          .txtANTelefonoClienteTextController1Validator
+                                                          .txtANTelefonoClienteTextControllerValidator
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -929,9 +796,9 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                     width: 370.0,
                                                     child: TextFormField(
                                                       controller: _model
-                                                          .txtANTelefonoClienteTextController2,
+                                                          .txtANTipoMembresiaTextController,
                                                       focusNode: _model
-                                                          .txtANTelefonoClienteFocusNode2,
+                                                          .txtANTipoMembresiaFocusNode,
                                                       autofocus: true,
                                                       obscureText: false,
                                                       decoration:
@@ -1033,7 +900,7 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                             letterSpacing: 0.0,
                                                           ),
                                                       validator: _model
-                                                          .txtANTelefonoClienteTextController2Validator
+                                                          .txtANTipoMembresiaTextControllerValidator
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -1043,251 +910,210 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                           ),
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceEvenly,
                                             children: [
-                                              Expanded(
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          8.0, 0.0, 8.0, 0.0),
-                                                  child: SizedBox(
-                                                    width: 370.0,
-                                                    child: TextFormField(
-                                                      controller: _model
-                                                          .txtAFechaUltimoPagoClienteTextController,
-                                                      focusNode: _model
-                                                          .txtAFechaUltimoPagoClienteFocusNode,
-                                                      autofocus: true,
-                                                      obscureText: false,
-                                                      decoration:
-                                                          InputDecoration(
-                                                        labelText:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          '0ned3shr' /* Fecha de último pago... */,
-                                                        ),
-                                                        labelStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: Colors
-                                                                      .black,
-                                                                  fontSize:
-                                                                      16.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                        hintStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: const Color(
-                                                                      0xFFEEEBEB),
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                        enabledBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              const BorderSide(
-                                                            color: Color(
-                                                                0xFF09394A),
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                        focusedBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primary,
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                        errorBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .error,
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                        focusedErrorBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .error,
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                      ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                      validator: _model
-                                                          .txtAFechaUltimoPagoClienteTextControllerValidator
-                                                          .asValidator(context),
-                                                    ),
+                                              Padding(
+                                                padding: const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        8.0, 0.0, 8.0, 0.0),
+                                                child: Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'v0mmpbas' /* Fecha de pago: */,
                                                   ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
                                                 ),
+                                              ),
+                                              Text(
+                                                valueOrDefault<String>(
+                                                  _model.datePicked?.toString(),
+                                                  'N/A',
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          letterSpacing: 0.0,
+                                                        ),
                                               ),
                                             ],
                                           ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Expanded(
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          8.0, 0.0, 8.0, 0.0),
-                                                  child: SizedBox(
-                                                    width: 370.0,
-                                                    child: TextFormField(
-                                                      controller: _model
-                                                          .txtAFechaProxPagoClienteTextController,
-                                                      focusNode: _model
-                                                          .txtAFechaProxPagoClienteFocusNode,
-                                                      autofocus: true,
-                                                      obscureText: false,
-                                                      decoration:
-                                                          InputDecoration(
-                                                        labelText:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          'euwf4xw4' /* Fecha de próximo pago... */,
-                                                        ),
-                                                        labelStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: Colors
-                                                                      .black,
-                                                                  fontSize:
-                                                                      16.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                        hintStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: const Color(
-                                                                      0xFFEEEBEB),
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                        enabledBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              const BorderSide(
-                                                            color: Color(
-                                                                0xFF09394A),
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                        focusedBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primary,
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                        errorBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .error,
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                        focusedErrorBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .error,
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
+                                          FFButtonWidget(
+                                            onPressed: () async {
+                                              final datePickedDate =
+                                                  await showDatePicker(
+                                                context: context,
+                                                initialDate:
+                                                    getCurrentTimestamp,
+                                                firstDate: getCurrentTimestamp,
+                                                lastDate: DateTime(2050),
+                                                builder: (context, child) {
+                                                  return wrapInMaterialDatePickerTheme(
+                                                    context,
+                                                    child!,
+                                                    headerBackgroundColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .primary,
+                                                    headerForegroundColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .info,
+                                                    headerTextStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .headlineLarge
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Outfit',
+                                                              fontSize: 32.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600,
+                                                            ),
+                                                    pickerBackgroundColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .secondaryBackground,
+                                                    pickerForegroundColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .primaryText,
+                                                    selectedDateTimeBackgroundColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .primary,
+                                                    selectedDateTimeForegroundColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .info,
+                                                    actionButtonForegroundColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .primaryText,
+                                                    iconSize: 24.0,
+                                                  );
+                                                },
+                                              );
+
+                                              TimeOfDay? datePickedTime;
+                                              if (datePickedDate != null) {
+                                                datePickedTime =
+                                                    await showTimePicker(
+                                                  context: context,
+                                                  initialTime:
+                                                      TimeOfDay.fromDateTime(
+                                                          getCurrentTimestamp),
+                                                  builder: (context, child) {
+                                                    return wrapInMaterialTimePickerTheme(
+                                                      context,
+                                                      child!,
+                                                      headerBackgroundColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                      headerForegroundColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .info,
+                                                      headerTextStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .headlineLarge
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Outfit',
+                                                                fontSize: 32.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
+                                                              ),
+                                                      pickerBackgroundColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .secondaryBackground,
+                                                      pickerForegroundColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryText,
+                                                      selectedDateTimeBackgroundColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                      selectedDateTimeForegroundColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .info,
+                                                      actionButtonForegroundColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primaryText,
+                                                      iconSize: 24.0,
+                                                    );
+                                                  },
+                                                );
+                                              }
+
+                                              if (datePickedDate != null &&
+                                                  datePickedTime != null) {
+                                                safeSetState(() {
+                                                  _model.datePicked = DateTime(
+                                                    datePickedDate.year,
+                                                    datePickedDate.month,
+                                                    datePickedDate.day,
+                                                    datePickedTime!.hour,
+                                                    datePickedTime.minute,
+                                                  );
+                                                });
+                                              }
+                                            },
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              'yn0rdqq0' /* Fecha */,
+                                            ),
+                                            options: FFButtonOptions(
+                                              height: 40.0,
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      24.0, 0.0, 24.0, 0.0),
+                                              iconPadding: const EdgeInsetsDirectional
+                                                  .fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color: Colors.white,
+                                                        letterSpacing: 0.0,
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                      validator: _model
-                                                          .txtAFechaProxPagoClienteTextControllerValidator
-                                                          .asValidator(context),
-                                                    ),
-                                                  ),
-                                                ),
+                                              elevation: 3.0,
+                                              borderSide: const BorderSide(
+                                                color: Colors.transparent,
+                                                width: 1.0,
                                               ),
-                                            ],
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                            ),
                                           ),
                                           Padding(
                                             padding:
@@ -1301,26 +1127,40 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                 Expanded(
                                                   child: FFButtonWidget(
                                                     onPressed: () async {
-                                                      await EquiposRecord
+                                                      if (_model.formKey
+                                                                  .currentState ==
+                                                              null ||
+                                                          !_model.formKey
+                                                              .currentState!
+                                                              .validate()) {
+                                                        return;
+                                                      }
+
+                                                      await ClientesRecord
                                                           .collection
                                                           .doc()
                                                           .set(
-                                                              createEquiposRecordData(
-                                                            nombreMaquina: _model
+                                                              createClientesRecordData(
+                                                            nombreCliente: _model
                                                                 .txtANombreClienteTextController
                                                                 .text,
-                                                            cantidad: int
-                                                                .tryParse(_model
-                                                                    .txtACedulaClienteTextController
-                                                                    .text),
-                                                            categoriaMaquina: _model
+                                                            telefonoCliente: _model
+                                                                .txtANTelefonoClienteTextController
+                                                                .text,
+                                                            emailCliente: _model
+                                                                .txtACorreoClienteTextController
+                                                                .text,
+                                                            cedulaCliente: _model
+                                                                .txtACedulaClienteTextController
+                                                                .text,
+                                                            tipoMembresia: _model
+                                                                .txtANTipoMembresiaTextController
+                                                                .text,
+                                                            apellidosCliente: _model
                                                                 .txtAApellidoClienteTextController
                                                                 .text,
-                                                            estadoMaquina: _model
-                                                                .txtAEdadClienteTextController
-                                                                .text,
-                                                            fechaUltimoMantenimiento:
-                                                                getCurrentTimestamp,
+                                                            fechaDePago: _model
+                                                                .datePicked,
                                                           ));
                                                       ScaffoldMessenger.of(
                                                               context)
@@ -1343,6 +1183,26 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                                   .secondary,
                                                         ),
                                                       );
+                                                      setState(() {
+                                                        _model
+                                                            .txtANombreClienteTextController
+                                                            ?.clear();
+                                                        _model
+                                                            .txtAApellidoClienteTextController
+                                                            ?.clear();
+                                                        _model
+                                                            .txtACedulaClienteTextController
+                                                            ?.clear();
+                                                        _model
+                                                            .txtANTelefonoClienteTextController
+                                                            ?.clear();
+                                                        _model
+                                                            .txtACorreoClienteTextController
+                                                            ?.clear();
+                                                        _model
+                                                            .txtANTipoMembresiaTextController
+                                                            ?.clear();
+                                                      });
                                                     },
                                                     text: FFLocalizations.of(
                                                             context)
@@ -1493,29 +1353,10 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Text(
-                                            dateTimeFormat(
-                                              "d/M/y",
-                                              listViewClientesRecord
-                                                  .fechaDePago!,
-                                              locale:
-                                                  FFLocalizations.of(context)
-                                                      .languageCode,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  letterSpacing: 0.0,
-                                                ),
-                                          ),
-                                          Text(
-                                            dateTimeFormat(
-                                              "d/M/y",
-                                              listViewClientesRecord
-                                                  .fechaProximoPago!,
-                                              locale:
-                                                  FFLocalizations.of(context)
-                                                      .languageCode,
+                                            valueOrDefault<String>(
+                                              listViewClientesRecord.fechaDePago
+                                                  ?.toString(),
+                                              'N/A',
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium

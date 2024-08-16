@@ -69,27 +69,6 @@ class EditarClienteModel extends FlutterFlowModel<EditarClienteWidget> {
     return null;
   }
 
-  // State field(s) for txt_EEdadCliente widget.
-  FocusNode? txtEEdadClienteFocusNode;
-  TextEditingController? txtEEdadClienteTextController;
-  String? Function(BuildContext, String?)?
-      txtEEdadClienteTextControllerValidator;
-  String? _txtEEdadClienteTextControllerValidator(
-      BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return FFLocalizations.of(context).getText(
-        'f7s7wmo5' /* Field is required */,
-      );
-    }
-
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        '970jtgh1' /* Debe ingresar las áreas de enf... */,
-      );
-    }
-    return null;
-  }
-
   // State field(s) for txt_ENTelefonoCliente widget.
   FocusNode? txtENTelefonoClienteFocusNode;
   TextEditingController? txtENTelefonoClienteTextController;
@@ -121,16 +100,6 @@ class EditarClienteModel extends FlutterFlowModel<EditarClienteWidget> {
   TextEditingController? txtEMembresiaClienteTextController;
   String? Function(BuildContext, String?)?
       txtEMembresiaClienteTextControllerValidator;
-  // State field(s) for txt_EFechaUltPago widget.
-  FocusNode? txtEFechaUltPagoFocusNode;
-  TextEditingController? txtEFechaUltPagoTextController;
-  String? Function(BuildContext, String?)?
-      txtEFechaUltPagoTextControllerValidator;
-  // State field(s) for txt_EFechaProxPago widget.
-  FocusNode? txtEFechaProxPagoFocusNode;
-  TextEditingController? txtEFechaProxPagoTextController;
-  String? Function(BuildContext, String?)?
-      txtEFechaProxPagoTextControllerValidator;
 
   @override
   void initState(BuildContext context) {
@@ -140,8 +109,6 @@ class EditarClienteModel extends FlutterFlowModel<EditarClienteWidget> {
         _txtEApellidoClienteTextControllerValidator;
     txtECorreoClienteTextController1Validator =
         _txtECorreoClienteTextController1Validator;
-    txtEEdadClienteTextControllerValidator =
-        _txtEEdadClienteTextControllerValidator;
     txtENTelefonoClienteTextControllerValidator =
         _txtENTelefonoClienteTextControllerValidator;
   }
@@ -157,9 +124,6 @@ class EditarClienteModel extends FlutterFlowModel<EditarClienteWidget> {
     txtECorreoClienteFocusNode1?.dispose();
     txtECorreoClienteTextController1?.dispose();
 
-    txtEEdadClienteFocusNode?.dispose();
-    txtEEdadClienteTextController?.dispose();
-
     txtENTelefonoClienteFocusNode?.dispose();
     txtENTelefonoClienteTextController?.dispose();
 
@@ -168,11 +132,5 @@ class EditarClienteModel extends FlutterFlowModel<EditarClienteWidget> {
 
     txtEMembresiaClienteFocusNode?.dispose();
     txtEMembresiaClienteTextController?.dispose();
-
-    txtEFechaUltPagoFocusNode?.dispose();
-    txtEFechaUltPagoTextController?.dispose();
-
-    txtEFechaProxPagoFocusNode?.dispose();
-    txtEFechaProxPagoTextController?.dispose();
   }
 }

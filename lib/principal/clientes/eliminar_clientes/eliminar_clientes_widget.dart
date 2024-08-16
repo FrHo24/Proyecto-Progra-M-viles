@@ -46,7 +46,7 @@ class _EliminarClientesWidgetState extends State<EliminarClientesWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.sizeOf(context).width * 1.0,
-      height: MediaQuery.sizeOf(context).height * 1.0,
+      height: MediaQuery.sizeOf(context).height * 0.5,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),

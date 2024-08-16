@@ -496,7 +496,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
   },
-  // agregarActividad
+  // agregarReserva
   {
     'e0xbur0n': {
       'es': 'Instructor : ',
@@ -548,63 +548,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    'z68k3q3p': {
-      'es': 'Hora :',
-      'en': '',
-      'pt': '',
-    },
-    'uv6ko974': {
-      'es': 'Option 1',
-      'en': '',
-      'pt': '',
-    },
-    'myxo0bwc': {
-      'es': 'Please select...',
-      'en': '',
-      'pt': '',
-    },
-    'isubecbw': {
-      'es': 'Search for an item...',
-      'en': '',
-      'pt': '',
-    },
-    '2bbbf7gg': {
-      'es': ':',
-      'en': '',
-      'pt': '',
-    },
-    'd4awh2z0': {
-      'es': 'Option 1',
-      'en': '',
-      'pt': '',
-    },
-    'up9jw8lz': {
-      'es': 'Please select...',
-      'en': '',
-      'pt': '',
-    },
-    '7ifs0zir': {
-      'es': 'Search for an item...',
-      'en': '',
-      'pt': '',
-    },
-    'lczv2u1d': {
-      'es': ':',
-      'en': '',
-      'pt': '',
-    },
-    '2vwuvrta': {
-      'es': 'Option 1',
-      'en': '',
-      'pt': '',
-    },
-    '85co9231': {
-      'es': 'Please select...',
-      'en': '',
-      'pt': '',
-    },
-    'l9er3ini': {
-      'es': 'Search for an item...',
+    'tqzhzqbh': {
+      'es': 'Agregar',
       'en': '',
       'pt': '',
     },
@@ -729,6 +674,56 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
+    'cydvqhpm': {
+      'es': 'Espacio Requerido',
+      'en': '',
+      'pt': '',
+    },
+    '6jr9vkf7': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
+    '646xqjc8': {
+      'es': 'Espacio Requerido',
+      'en': '',
+      'pt': '',
+    },
+    '54h1gjbp': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
+    'qsyaxl48': {
+      'es': 'Espacio Requerido',
+      'en': '',
+      'pt': '',
+    },
+    'cg5sc6k0': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
+    'amhnjtmi': {
+      'es': 'Espacio Requerido',
+      'en': '',
+      'pt': '',
+    },
+    'gmz4zo0e': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
+    'krdkn4i6': {
+      'es': 'Espacio Requerido',
+      'en': '',
+      'pt': '',
+    },
+    '4a31zqx4': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
     '2h7zltu6': {
       'es': 'Editar',
       'en': '',
@@ -772,11 +767,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    'i31disxk': {
-      'es': 'Producto...',
-      'en': '',
-      'pt': '',
-    },
     '15qmyt4z': {
       'es': 'Número de teléfono...',
       'en': '',
@@ -784,6 +774,36 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '199sg2ks': {
       'es': 'Agregar proveedor',
+      'en': '',
+      'pt': '',
+    },
+    '8uyynapd': {
+      'es': 'Espacio requerido',
+      'en': '',
+      'pt': '',
+    },
+    'qhh85fgo': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
+    'z7add1i5': {
+      'es': 'Espacio requerido',
+      'en': '',
+      'pt': '',
+    },
+    't4nxc7ml': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
+    's5i1cz0b': {
+      'es': 'Espacio requerido',
+      'en': '',
+      'pt': '',
+    },
+    'plqu7ds9': {
+      'es': 'Please choose an option from the dropdown',
       'en': '',
       'pt': '',
     },
@@ -840,8 +860,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    'hsujavqp': {
-      'es': 'Fecha del último mantenimiento...',
+    'hguixecs': {
+      'es': 'Fecha de pago:',
       'en': '',
       'pt': '',
     },
@@ -956,11 +976,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    'b27r4o1g': {
-      'es': 'Edad actual del cliente...',
-      'en': '',
-      'pt': '',
-    },
     '0kagbkaj': {
       'es': 'Número telefónico...',
       'en': '',
@@ -976,18 +991,98 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    '0ned3shr': {
-      'es': 'Fecha de último pago...',
+    'v0mmpbas': {
+      'es': 'Fecha de pago:',
       'en': '',
       'pt': '',
     },
-    'euwf4xw4': {
-      'es': 'Fecha de próximo pago...',
+    'yn0rdqq0': {
+      'es': 'Fecha',
       'en': '',
       'pt': '',
     },
     'wyxjuhvj': {
       'es': 'Agregar cliente',
+      'en': '',
+      'pt': '',
+    },
+    'qn6levts': {
+      'es': 'Espacio Requerido',
+      'en': '',
+      'pt': '',
+    },
+    '2tqt1odm': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
+    't77i7lg9': {
+      'es': 'Espacio Requerido',
+      'en': '',
+      'pt': '',
+    },
+    'y0qqvq1f': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
+    'fm0szui9': {
+      'es': 'Espacio Requerido',
+      'en': '',
+      'pt': '',
+    },
+    'hzr3yfrc': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
+    'rww8o5zm': {
+      'es': 'Espacio Requerido',
+      'en': '',
+      'pt': '',
+    },
+    '33g7sqg9': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
+    'cjaavho5': {
+      'es': 'Espacio Requerido',
+      'en': '',
+      'pt': '',
+    },
+    'f0h4xjsj': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
+    'xis2k4o5': {
+      'es': 'Espacio Requerido',
+      'en': '',
+      'pt': '',
+    },
+    'g5i3blgv': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
+    '4meksqfe': {
+      'es': 'Espacio Requerido',
+      'en': '',
+      'pt': '',
+    },
+    'eytix919': {
+      'es': 'Please choose an option from the dropdown',
+      'en': '',
+      'pt': '',
+    },
+    'v2zegdxg': {
+      'es': 'Espacio Requerido',
+      'en': '',
+      'pt': '',
+    },
+    'bpupgai2': {
+      'es': 'Please choose an option from the dropdown',
       'en': '',
       'pt': '',
     },
@@ -1358,11 +1453,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ijb1zh64': {
       'es': 'Nuevo número telefónico del proveedor...',
-      'en': '',
-      'pt': '',
-    },
-    'qm0w7d3o': {
-      'es': 'Nuevo producto abastecido por proveedor...',
       'en': '',
       'pt': '',
     },
@@ -1780,11 +1870,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    '9oww5ys7': {
-      'es': 'Nueva edad del cliente...',
-      'en': '',
-      'pt': '',
-    },
     'uossb4uf': {
       'es': 'Nuevo número telefónico del cliente...',
       'en': '',
@@ -1797,16 +1882,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'x9tv0owg': {
       'es': 'Tipo de membresía...',
-      'en': '',
-      'pt': '',
-    },
-    'nlqc8twi': {
-      'es': 'Fecha de último pago...',
-      'en': '',
-      'pt': '',
-    },
-    'gp2w23cw': {
-      'es': 'Fecha de próximo pago...',
       'en': '',
       'pt': '',
     },

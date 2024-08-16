@@ -63,11 +63,6 @@ class EditarProveedorModel extends FlutterFlowModel<EditarProveedorWidget> {
     return null;
   }
 
-  // State field(s) for txt_NPP widget.
-  FocusNode? txtNPPFocusNode;
-  TextEditingController? txtNPPTextController;
-  String? Function(BuildContext, String?)? txtNPPTextControllerValidator;
-
   @override
   void initState(BuildContext context) {
     txtNNPTextControllerValidator = _txtNNPTextControllerValidator;
@@ -85,8 +80,5 @@ class EditarProveedorModel extends FlutterFlowModel<EditarProveedorWidget> {
 
     txtNTPFocusNode?.dispose();
     txtNTPTextController?.dispose();
-
-    txtNPPFocusNode?.dispose();
-    txtNPPTextController?.dispose();
   }
 }

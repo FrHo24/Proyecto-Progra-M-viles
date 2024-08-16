@@ -35,26 +35,6 @@ class ClientesRecord extends FirestoreRecord {
   String get cedulaCliente => _cedulaCliente ?? '';
   bool hasCedulaCliente() => _cedulaCliente != null;
 
-  // "edadCliente" field.
-  String? _edadCliente;
-  String get edadCliente => _edadCliente ?? '';
-  bool hasEdadCliente() => _edadCliente != null;
-
-  // "activo" field.
-  bool? _activo;
-  bool get activo => _activo ?? false;
-  bool hasActivo() => _activo != null;
-
-  // "fechaDePago" field.
-  DateTime? _fechaDePago;
-  DateTime? get fechaDePago => _fechaDePago;
-  bool hasFechaDePago() => _fechaDePago != null;
-
-  // "fechaProximoPago" field.
-  DateTime? _fechaProximoPago;
-  DateTime? get fechaProximoPago => _fechaProximoPago;
-  bool hasFechaProximoPago() => _fechaProximoPago != null;
-
   // "tipoMembresia" field.
   String? _tipoMembresia;
   String get tipoMembresia => _tipoMembresia ?? '';
@@ -65,17 +45,19 @@ class ClientesRecord extends FirestoreRecord {
   String get apellidosCliente => _apellidosCliente ?? '';
   bool hasApellidosCliente() => _apellidosCliente != null;
 
+  // "fechaDePago" field.
+  DateTime? _fechaDePago;
+  DateTime? get fechaDePago => _fechaDePago;
+  bool hasFechaDePago() => _fechaDePago != null;
+
   void _initializeFields() {
     _nombreCliente = snapshotData['nombreCliente'] as String?;
     _telefonoCliente = snapshotData['telefonoCliente'] as String?;
     _emailCliente = snapshotData['emailCliente'] as String?;
     _cedulaCliente = snapshotData['cedulaCliente'] as String?;
-    _edadCliente = snapshotData['edadCliente'] as String?;
-    _activo = snapshotData['activo'] as bool?;
-    _fechaDePago = snapshotData['fechaDePago'] as DateTime?;
-    _fechaProximoPago = snapshotData['fechaProximoPago'] as DateTime?;
     _tipoMembresia = snapshotData['tipoMembresia'] as String?;
     _apellidosCliente = snapshotData['apellidosCliente'] as String?;
+    _fechaDePago = snapshotData['fechaDePago'] as DateTime?;
   }
 
   static CollectionReference get collection =>
@@ -117,12 +99,9 @@ Map<String, dynamic> createClientesRecordData({
   String? telefonoCliente,
   String? emailCliente,
   String? cedulaCliente,
-  String? edadCliente,
-  bool? activo,
-  DateTime? fechaDePago,
-  DateTime? fechaProximoPago,
   String? tipoMembresia,
   String? apellidosCliente,
+  DateTime? fechaDePago,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -130,12 +109,9 @@ Map<String, dynamic> createClientesRecordData({
       'telefonoCliente': telefonoCliente,
       'emailCliente': emailCliente,
       'cedulaCliente': cedulaCliente,
-      'edadCliente': edadCliente,
-      'activo': activo,
-      'fechaDePago': fechaDePago,
-      'fechaProximoPago': fechaProximoPago,
       'tipoMembresia': tipoMembresia,
       'apellidosCliente': apellidosCliente,
+      'fechaDePago': fechaDePago,
     }.withoutNulls,
   );
 
@@ -151,12 +127,9 @@ class ClientesRecordDocumentEquality implements Equality<ClientesRecord> {
         e1?.telefonoCliente == e2?.telefonoCliente &&
         e1?.emailCliente == e2?.emailCliente &&
         e1?.cedulaCliente == e2?.cedulaCliente &&
-        e1?.edadCliente == e2?.edadCliente &&
-        e1?.activo == e2?.activo &&
-        e1?.fechaDePago == e2?.fechaDePago &&
-        e1?.fechaProximoPago == e2?.fechaProximoPago &&
         e1?.tipoMembresia == e2?.tipoMembresia &&
-        e1?.apellidosCliente == e2?.apellidosCliente;
+        e1?.apellidosCliente == e2?.apellidosCliente &&
+        e1?.fechaDePago == e2?.fechaDePago;
   }
 
   @override
@@ -165,12 +138,9 @@ class ClientesRecordDocumentEquality implements Equality<ClientesRecord> {
         e?.telefonoCliente,
         e?.emailCliente,
         e?.cedulaCliente,
-        e?.edadCliente,
-        e?.activo,
-        e?.fechaDePago,
-        e?.fechaProximoPago,
         e?.tipoMembresia,
-        e?.apellidosCliente
+        e?.apellidosCliente,
+        e?.fechaDePago
       ]);
 
   @override

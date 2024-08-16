@@ -794,6 +794,15 @@ class _InventarioAdministradoresWidgetState
                                                 Expanded(
                                                   child: FFButtonWidget(
                                                     onPressed: () async {
+                                                      if (_model.formKey
+                                                                  .currentState ==
+                                                              null ||
+                                                          !_model.formKey
+                                                              .currentState!
+                                                              .validate()) {
+                                                        return;
+                                                      }
+
                                                       await AdministradoresRecord
                                                           .collection
                                                           .doc()
@@ -836,6 +845,23 @@ class _InventarioAdministradoresWidgetState
                                                                   .secondary,
                                                         ),
                                                       );
+                                                      setState(() {
+                                                        _model
+                                                            .txtANombreAdminTextController
+                                                            ?.clear();
+                                                        _model
+                                                            .txtAApellidosAdminTextController
+                                                            ?.clear();
+                                                        _model
+                                                            .txtACorreoAdminTextController
+                                                            ?.clear();
+                                                        _model
+                                                            .txtACedulaAdminTextController
+                                                            ?.clear();
+                                                        _model
+                                                            .txtATelefonoAdminTextController
+                                                            ?.clear();
+                                                      });
                                                     },
                                                     text: FFLocalizations.of(
                                                             context)
