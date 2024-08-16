@@ -161,6 +161,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'inventarioProductos',
           path: '/inventarioProductos',
           builder: (context, params) => const InventarioProductosWidget(),
+        ),
+        FFRoute(
+          name: 'PruebasWidgets',
+          path: '/pruebasWidgets',
+          builder: (context, params) => const PruebasWidgetsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

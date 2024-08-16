@@ -250,6 +250,10 @@ class _VerReservasWidgetState extends State<VerReservasWidget> {
                         ),
                       ),
                     ),
+                    const Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [],
+                    ),
                   ],
                 ),
               ),

@@ -11,32 +11,36 @@ class InventarioInstructoresModel
   // State field(s) for Expandable widget.
   late ExpandableController expandableExpandableController;
 
-  // State field(s) for txtNInstructor widget.
-  FocusNode? txtNInstructorFocusNode;
-  TextEditingController? txtNInstructorTextController;
+  // State field(s) for txt_Agre_NombreInstructor widget.
+  FocusNode? txtAgreNombreInstructorFocusNode;
+  TextEditingController? txtAgreNombreInstructorTextController;
   String? Function(BuildContext, String?)?
-      txtNInstructorTextControllerValidator;
-  // State field(s) for txtAInstructor widget.
-  FocusNode? txtAInstructorFocusNode;
-  TextEditingController? txtAInstructorTextController;
+      txtAgreNombreInstructorTextControllerValidator;
+  // State field(s) for txt_Agre_ApellidosInstructor widget.
+  FocusNode? txtAgreApellidosInstructorFocusNode;
+  TextEditingController? txtAgreApellidosInstructorTextController;
   String? Function(BuildContext, String?)?
-      txtAInstructorTextControllerValidator;
-  // State field(s) for txtICorreo widget.
-  FocusNode? txtICorreoFocusNode;
-  TextEditingController? txtICorreoTextController;
-  String? Function(BuildContext, String?)? txtICorreoTextControllerValidator;
-  // State field(s) for txtIID widget.
-  FocusNode? txtIIDFocusNode;
-  TextEditingController? txtIIDTextController;
-  String? Function(BuildContext, String?)? txtIIDTextControllerValidator;
-  // State field(s) for txtNTI widget.
-  FocusNode? txtNTIFocusNode;
-  TextEditingController? txtNTITextController;
-  String? Function(BuildContext, String?)? txtNTITextControllerValidator;
-  // State field(s) for txtATI widget.
-  FocusNode? txtATIFocusNode;
-  TextEditingController? txtATITextController;
-  String? Function(BuildContext, String?)? txtATITextControllerValidator;
+      txtAgreApellidosInstructorTextControllerValidator;
+  // State field(s) for txt_Agre_EmailInstructor widget.
+  FocusNode? txtAgreEmailInstructorFocusNode;
+  TextEditingController? txtAgreEmailInstructorTextController;
+  String? Function(BuildContext, String?)?
+      txtAgreEmailInstructorTextControllerValidator;
+  // State field(s) for txt_Agre_IDInstructor widget.
+  FocusNode? txtAgreIDInstructorFocusNode;
+  TextEditingController? txtAgreIDInstructorTextController;
+  String? Function(BuildContext, String?)?
+      txtAgreIDInstructorTextControllerValidator;
+  // State field(s) for txt_Agre_NTelefonoInstructor widget.
+  FocusNode? txtAgreNTelefonoInstructorFocusNode;
+  TextEditingController? txtAgreNTelefonoInstructorTextController;
+  String? Function(BuildContext, String?)?
+      txtAgreNTelefonoInstructorTextControllerValidator;
+  // State field(s) for txt_Agre_ATrabajoInstructor widget.
+  FocusNode? txtAgreATrabajoInstructorFocusNode;
+  TextEditingController? txtAgreATrabajoInstructorTextController;
+  String? Function(BuildContext, String?)?
+      txtAgreATrabajoInstructorTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
@@ -44,22 +48,22 @@ class InventarioInstructoresModel
   @override
   void dispose() {
     expandableExpandableController.dispose();
-    txtNInstructorFocusNode?.dispose();
-    txtNInstructorTextController?.dispose();
+    txtAgreNombreInstructorFocusNode?.dispose();
+    txtAgreNombreInstructorTextController?.dispose();
 
-    txtAInstructorFocusNode?.dispose();
-    txtAInstructorTextController?.dispose();
+    txtAgreApellidosInstructorFocusNode?.dispose();
+    txtAgreApellidosInstructorTextController?.dispose();
 
-    txtICorreoFocusNode?.dispose();
-    txtICorreoTextController?.dispose();
+    txtAgreEmailInstructorFocusNode?.dispose();
+    txtAgreEmailInstructorTextController?.dispose();
 
-    txtIIDFocusNode?.dispose();
-    txtIIDTextController?.dispose();
+    txtAgreIDInstructorFocusNode?.dispose();
+    txtAgreIDInstructorTextController?.dispose();
 
-    txtNTIFocusNode?.dispose();
-    txtNTITextController?.dispose();
+    txtAgreNTelefonoInstructorFocusNode?.dispose();
+    txtAgreNTelefonoInstructorTextController?.dispose();
 
-    txtATIFocusNode?.dispose();
-    txtATITextController?.dispose();
+    txtAgreATrabajoInstructorFocusNode?.dispose();
+    txtAgreATrabajoInstructorTextController?.dispose();
   }
 }

@@ -6,11 +6,13 @@ class EditarInstructorModel extends FlutterFlowModel<EditarInstructorWidget> {
   ///  State fields for stateful widgets in this component.
 
   final formKey = GlobalKey<FormState>();
-  // State field(s) for txt_NI widget.
-  FocusNode? txtNIFocusNode;
-  TextEditingController? txtNITextController;
-  String? Function(BuildContext, String?)? txtNITextControllerValidator;
-  String? _txtNITextControllerValidator(BuildContext context, String? val) {
+  // State field(s) for txt_Edit_NombreInstructor widget.
+  FocusNode? txtEditNombreInstructorFocusNode;
+  TextEditingController? txtEditNombreInstructorTextController;
+  String? Function(BuildContext, String?)?
+      txtEditNombreInstructorTextControllerValidator;
+  String? _txtEditNombreInstructorTextControllerValidator(
+      BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
         '0iq5r7f3' /* Field is required */,
@@ -25,11 +27,13 @@ class EditarInstructorModel extends FlutterFlowModel<EditarInstructorWidget> {
     return null;
   }
 
-  // State field(s) for txt_NAI widget.
-  FocusNode? txtNAIFocusNode;
-  TextEditingController? txtNAITextController;
-  String? Function(BuildContext, String?)? txtNAITextControllerValidator;
-  String? _txtNAITextControllerValidator(BuildContext context, String? val) {
+  // State field(s) for txt_Edit_ApellidoInstructor widget.
+  FocusNode? txtEditApellidoInstructorFocusNode;
+  TextEditingController? txtEditApellidoInstructorTextController;
+  String? Function(BuildContext, String?)?
+      txtEditApellidoInstructorTextControllerValidator;
+  String? _txtEditApellidoInstructorTextControllerValidator(
+      BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
         'zs1xixiw' /* Field is required */,
@@ -44,11 +48,13 @@ class EditarInstructorModel extends FlutterFlowModel<EditarInstructorWidget> {
     return null;
   }
 
-  // State field(s) for txt_NCI widget.
-  FocusNode? txtNCIFocusNode;
-  TextEditingController? txtNCITextController;
-  String? Function(BuildContext, String?)? txtNCITextControllerValidator;
-  String? _txtNCITextControllerValidator(BuildContext context, String? val) {
+  // State field(s) for txt_Edit_Email_Instructor widget.
+  FocusNode? txtEditEmailInstructorFocusNode;
+  TextEditingController? txtEditEmailInstructorTextController;
+  String? Function(BuildContext, String?)?
+      txtEditEmailInstructorTextControllerValidator;
+  String? _txtEditEmailInstructorTextControllerValidator(
+      BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
         'n8dyzqv4' /* Field is required */,
@@ -63,11 +69,13 @@ class EditarInstructorModel extends FlutterFlowModel<EditarInstructorWidget> {
     return null;
   }
 
-  // State field(s) for txt_NIDI widget.
-  FocusNode? txtNIDIFocusNode;
-  TextEditingController? txtNIDITextController;
-  String? Function(BuildContext, String?)? txtNIDITextControllerValidator;
-  String? _txtNIDITextControllerValidator(BuildContext context, String? val) {
+  // State field(s) for txt_Edit_IDInstructor widget.
+  FocusNode? txtEditIDInstructorFocusNode;
+  TextEditingController? txtEditIDInstructorTextController;
+  String? Function(BuildContext, String?)?
+      txtEditIDInstructorTextControllerValidator;
+  String? _txtEditIDInstructorTextControllerValidator(
+      BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
         'gg4di69a' /* Field is required */,
@@ -82,11 +90,13 @@ class EditarInstructorModel extends FlutterFlowModel<EditarInstructorWidget> {
     return null;
   }
 
-  // State field(s) for txt_NTI widget.
-  FocusNode? txtNTIFocusNode;
-  TextEditingController? txtNTITextController;
-  String? Function(BuildContext, String?)? txtNTITextControllerValidator;
-  String? _txtNTITextControllerValidator(BuildContext context, String? val) {
+  // State field(s) for txt_Edit_NTelefonoInstructor widget.
+  FocusNode? txtEditNTelefonoInstructorFocusNode;
+  TextEditingController? txtEditNTelefonoInstructorTextController;
+  String? Function(BuildContext, String?)?
+      txtEditNTelefonoInstructorTextControllerValidator;
+  String? _txtEditNTelefonoInstructorTextControllerValidator(
+      BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
         '0gy7dqin' /* Field is required */,
@@ -101,38 +111,44 @@ class EditarInstructorModel extends FlutterFlowModel<EditarInstructorWidget> {
     return null;
   }
 
-  // State field(s) for txt_NATI widget.
-  FocusNode? txtNATIFocusNode;
-  TextEditingController? txtNATITextController;
-  String? Function(BuildContext, String?)? txtNATITextControllerValidator;
+  // State field(s) for txt_Edit_ATrabajoInstructor widget.
+  FocusNode? txtEditATrabajoInstructorFocusNode;
+  TextEditingController? txtEditATrabajoInstructorTextController;
+  String? Function(BuildContext, String?)?
+      txtEditATrabajoInstructorTextControllerValidator;
 
   @override
   void initState(BuildContext context) {
-    txtNITextControllerValidator = _txtNITextControllerValidator;
-    txtNAITextControllerValidator = _txtNAITextControllerValidator;
-    txtNCITextControllerValidator = _txtNCITextControllerValidator;
-    txtNIDITextControllerValidator = _txtNIDITextControllerValidator;
-    txtNTITextControllerValidator = _txtNTITextControllerValidator;
+    txtEditNombreInstructorTextControllerValidator =
+        _txtEditNombreInstructorTextControllerValidator;
+    txtEditApellidoInstructorTextControllerValidator =
+        _txtEditApellidoInstructorTextControllerValidator;
+    txtEditEmailInstructorTextControllerValidator =
+        _txtEditEmailInstructorTextControllerValidator;
+    txtEditIDInstructorTextControllerValidator =
+        _txtEditIDInstructorTextControllerValidator;
+    txtEditNTelefonoInstructorTextControllerValidator =
+        _txtEditNTelefonoInstructorTextControllerValidator;
   }
 
   @override
   void dispose() {
-    txtNIFocusNode?.dispose();
-    txtNITextController?.dispose();
+    txtEditNombreInstructorFocusNode?.dispose();
+    txtEditNombreInstructorTextController?.dispose();
 
-    txtNAIFocusNode?.dispose();
-    txtNAITextController?.dispose();
+    txtEditApellidoInstructorFocusNode?.dispose();
+    txtEditApellidoInstructorTextController?.dispose();
 
-    txtNCIFocusNode?.dispose();
-    txtNCITextController?.dispose();
+    txtEditEmailInstructorFocusNode?.dispose();
+    txtEditEmailInstructorTextController?.dispose();
 
-    txtNIDIFocusNode?.dispose();
-    txtNIDITextController?.dispose();
+    txtEditIDInstructorFocusNode?.dispose();
+    txtEditIDInstructorTextController?.dispose();
 
-    txtNTIFocusNode?.dispose();
-    txtNTITextController?.dispose();
+    txtEditNTelefonoInstructorFocusNode?.dispose();
+    txtEditNTelefonoInstructorTextController?.dispose();
 
-    txtNATIFocusNode?.dispose();
-    txtNATITextController?.dispose();
+    txtEditATrabajoInstructorFocusNode?.dispose();
+    txtEditATrabajoInstructorTextController?.dispose();
   }
 }

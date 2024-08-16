@@ -622,7 +622,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'l05hp3wj': {
-      'es': 'Gestión de personal',
+      'es': 'Gestión de instructores',
       'en': '',
       'pt': '',
     },
@@ -818,7 +818,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'djspd0id': {
-      'es': 'Gestión de personal',
+      'es': 'Gestión de proveedores',
       'en': '',
       'pt': '',
     },
@@ -861,7 +861,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'hguixecs': {
-      'es': 'Fecha de pago:',
+      'es': 'Fecha de último mantenimiento:',
       'en': '',
       'pt': '',
     },
@@ -886,7 +886,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'zqivtssf': {
-      'es': 'Gestión de personal',
+      'es': 'Gestión de equipo',
       'en': '',
       'pt': '',
     },
@@ -954,7 +954,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     '292k630x': {
-      'es': 'Gestión de personal',
+      'es': 'Gestión de clases',
       'en': '',
       'pt': '',
     },
@@ -1135,7 +1135,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'o1ner9eo': {
-      'es': 'Nombre del usuario...',
+      'es': 'Nombre del producto...',
       'en': '',
       'pt': '',
     },
@@ -1195,6 +1195,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'czz6ql96': {
+      'es': 'Home',
+      'en': '',
+      'pt': '',
+    },
+  },
+  // PruebasWidgets
+  {
+    'qwv37uvf': {
+      'es': 'Page Title',
+      'en': '',
+      'pt': '',
+    },
+    'n77hous7': {
       'es': 'Home',
       'en': '',
       'pt': '',
@@ -1615,11 +1628,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    'oxszvlx8': {
-      'es': 'Último mantenimiento...',
-      'en': '',
-      'pt': '',
-    },
     'r7mgvmbw': {
       'es': 'Agregar cambios',
       'en': '',
@@ -1754,8 +1762,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
+    '69end16o': {
+      'es': 'Option 1',
+      'en': '',
+      'pt': '',
+    },
     'uhnib69o': {
       'es': 'Nuevo intructor que imparte la clase...',
+      'en': '',
+      'pt': '',
+    },
+    '0tkt53tk': {
+      'es': 'Search for an item...',
       'en': '',
       'pt': '',
     },
@@ -2010,11 +2028,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'fcymbpsv': {
       'es': 'Nueva categoría...',
-      'en': '',
-      'pt': '',
-    },
-    '4alndu2y': {
-      'es': 'Nuevo proveedor...',
       'en': '',
       'pt': '',
     },

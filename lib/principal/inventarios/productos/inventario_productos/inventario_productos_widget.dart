@@ -1,51 +1,50 @@
 import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/instructores/editar_instructor/editar_instructor_widget.dart';
+import '/flutter_flow/form_field_controller.dart';
+import '/principal/inventarios/productos/editar_producto/editar_producto_widget.dart';
+import '/principal/inventarios/productos/eliminar_producto/eliminar_producto_widget.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'inventario_instructores_model.dart';
-export 'inventario_instructores_model.dart';
+import 'inventario_productos_model.dart';
+export 'inventario_productos_model.dart';
 
-class InventarioInstructoresWidget extends StatefulWidget {
-  const InventarioInstructoresWidget({super.key});
+class InventarioProductosWidget extends StatefulWidget {
+  const InventarioProductosWidget({super.key});
 
   @override
-  State<InventarioInstructoresWidget> createState() =>
-      _InventarioInstructoresWidgetState();
+  State<InventarioProductosWidget> createState() =>
+      _InventarioProductosWidgetState();
 }
 
-class _InventarioInstructoresWidgetState
-    extends State<InventarioInstructoresWidget> {
-  late InventarioInstructoresModel _model;
+class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
+  late InventarioProductosModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => InventarioInstructoresModel());
+    _model = createModel(context, () => InventarioProductosModel());
 
     _model.expandableExpandableController =
         ExpandableController(initialExpanded: false);
-    _model.txtAgreNombreInstructorTextController ??= TextEditingController();
-    _model.txtAgreNombreInstructorFocusNode ??= FocusNode();
+    _model.txtAgreNombreProductoTextController ??= TextEditingController();
+    _model.txtAgreNombreProductoFocusNode ??= FocusNode();
 
-    _model.txtAgreApellidosInstructorTextController ??= TextEditingController();
-    _model.txtAgreApellidosInstructorFocusNode ??= FocusNode();
+    _model.txtAgreDescProductoTextController ??= TextEditingController();
+    _model.txtAgreDescProductoFocusNode ??= FocusNode();
 
-    _model.txtAgreEmailInstructorTextController ??= TextEditingController();
-    _model.txtAgreEmailInstructorFocusNode ??= FocusNode();
+    _model.txtAgrePrecioProductoTextController ??= TextEditingController();
+    _model.txtAgrePrecioProductoFocusNode ??= FocusNode();
 
-    _model.txtAgreIDInstructorTextController ??= TextEditingController();
-    _model.txtAgreIDInstructorFocusNode ??= FocusNode();
+    _model.txtAgreCantProductoTextController ??= TextEditingController();
+    _model.txtAgreCantProductoFocusNode ??= FocusNode();
 
-    _model.txtAgreNTelefonoInstructorTextController ??= TextEditingController();
-    _model.txtAgreNTelefonoInstructorFocusNode ??= FocusNode();
-
-    _model.txtAgreATrabajoInstructorTextController ??= TextEditingController();
-    _model.txtAgreATrabajoInstructorFocusNode ??= FocusNode();
+    _model.txtAgreCategProductoTextController ??= TextEditingController();
+    _model.txtAgreCategProductoFocusNode ??= FocusNode();
   }
 
   @override
@@ -83,7 +82,7 @@ class _InventarioInstructoresWidgetState
             alignment: const AlignmentDirectional(-1.0, 0.0),
             child: Text(
               FFLocalizations.of(context).getText(
-                'l05hp3wj' /* Gestión de instructores */,
+                '4bssmuxb' /* Gestión de productos */,
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Readex Pro',
@@ -124,7 +123,7 @@ class _InventarioInstructoresWidgetState
                                         25.0, 0.0, 0.0, 10.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
-                                        'on36keim' /* Agregar instructor */,
+                                        'ftdsh83p' /* Agregar producto */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .displaySmall
@@ -142,7 +141,7 @@ class _InventarioInstructoresWidgetState
                                   alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'zqo3glrb' /* Agregar instructores */,
+                                      '4ts76eyg' /* Agregar productos */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -176,9 +175,9 @@ class _InventarioInstructoresWidgetState
                                                     width: 370.0,
                                                     child: TextFormField(
                                                       controller: _model
-                                                          .txtAgreNombreInstructorTextController,
+                                                          .txtAgreNombreProductoTextController,
                                                       focusNode: _model
-                                                          .txtAgreNombreInstructorFocusNode,
+                                                          .txtAgreNombreProductoFocusNode,
                                                       autofocus: true,
                                                       obscureText: false,
                                                       decoration:
@@ -187,7 +186,7 @@ class _InventarioInstructoresWidgetState
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'vv90e9ye' /* Nombre del instructor... */,
+                                                          'o1ner9eo' /* Nombre del producto... */,
                                                         ),
                                                         labelStyle:
                                                             FlutterFlowTheme.of(
@@ -280,7 +279,7 @@ class _InventarioInstructoresWidgetState
                                                             letterSpacing: 0.0,
                                                           ),
                                                       validator: _model
-                                                          .txtAgreNombreInstructorTextControllerValidator
+                                                          .txtAgreNombreProductoTextControllerValidator
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -300,9 +299,9 @@ class _InventarioInstructoresWidgetState
                                                     width: 370.0,
                                                     child: TextFormField(
                                                       controller: _model
-                                                          .txtAgreApellidosInstructorTextController,
+                                                          .txtAgreDescProductoTextController,
                                                       focusNode: _model
-                                                          .txtAgreApellidosInstructorFocusNode,
+                                                          .txtAgreDescProductoFocusNode,
                                                       autofocus: true,
                                                       obscureText: false,
                                                       decoration:
@@ -311,7 +310,7 @@ class _InventarioInstructoresWidgetState
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          '84jpw1lz' /* Apellidos del instructor... */,
+                                                          '4v6v89e7' /* Descripción de producto... */,
                                                         ),
                                                         labelStyle:
                                                             FlutterFlowTheme.of(
@@ -404,7 +403,7 @@ class _InventarioInstructoresWidgetState
                                                             letterSpacing: 0.0,
                                                           ),
                                                       validator: _model
-                                                          .txtAgreApellidosInstructorTextControllerValidator
+                                                          .txtAgreDescProductoTextControllerValidator
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -424,9 +423,9 @@ class _InventarioInstructoresWidgetState
                                                     width: 370.0,
                                                     child: TextFormField(
                                                       controller: _model
-                                                          .txtAgreEmailInstructorTextController,
+                                                          .txtAgrePrecioProductoTextController,
                                                       focusNode: _model
-                                                          .txtAgreEmailInstructorFocusNode,
+                                                          .txtAgrePrecioProductoFocusNode,
                                                       autofocus: true,
                                                       obscureText: false,
                                                       decoration:
@@ -435,7 +434,7 @@ class _InventarioInstructoresWidgetState
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'msglkonl' /* Correo electrónico del instruc... */,
+                                                          'hfa7scsb' /* Precio producto... */,
                                                         ),
                                                         labelStyle:
                                                             FlutterFlowTheme.of(
@@ -528,7 +527,7 @@ class _InventarioInstructoresWidgetState
                                                             letterSpacing: 0.0,
                                                           ),
                                                       validator: _model
-                                                          .txtAgreEmailInstructorTextControllerValidator
+                                                          .txtAgrePrecioProductoTextControllerValidator
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -548,9 +547,9 @@ class _InventarioInstructoresWidgetState
                                                     width: 370.0,
                                                     child: TextFormField(
                                                       controller: _model
-                                                          .txtAgreIDInstructorTextController,
+                                                          .txtAgreCantProductoTextController,
                                                       focusNode: _model
-                                                          .txtAgreIDInstructorFocusNode,
+                                                          .txtAgreCantProductoFocusNode,
                                                       autofocus: true,
                                                       obscureText: false,
                                                       decoration:
@@ -559,7 +558,7 @@ class _InventarioInstructoresWidgetState
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'or9bwh5y' /* Cédula del instructor... */,
+                                                          'fy4dtlbz' /* Cantidad disponible del produc... */,
                                                         ),
                                                         labelStyle:
                                                             FlutterFlowTheme.of(
@@ -652,7 +651,7 @@ class _InventarioInstructoresWidgetState
                                                             letterSpacing: 0.0,
                                                           ),
                                                       validator: _model
-                                                          .txtAgreIDInstructorTextControllerValidator
+                                                          .txtAgreCantProductoTextControllerValidator
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -672,9 +671,9 @@ class _InventarioInstructoresWidgetState
                                                     width: 370.0,
                                                     child: TextFormField(
                                                       controller: _model
-                                                          .txtAgreNTelefonoInstructorTextController,
+                                                          .txtAgreCategProductoTextController,
                                                       focusNode: _model
-                                                          .txtAgreNTelefonoInstructorFocusNode,
+                                                          .txtAgreCategProductoFocusNode,
                                                       autofocus: true,
                                                       obscureText: false,
                                                       decoration:
@@ -683,7 +682,7 @@ class _InventarioInstructoresWidgetState
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'f3wve1w2' /* Número de teléfono... */,
+                                                          'gjszh52k' /* Categoría del producto... */,
                                                         ),
                                                         labelStyle:
                                                             FlutterFlowTheme.of(
@@ -707,7 +706,7 @@ class _InventarioInstructoresWidgetState
                                                                   fontFamily:
                                                                       'Readex Pro',
                                                                   color: const Color(
-                                                                      0xFFEEEBEB),
+                                                                      0xFFF8F5F5),
                                                                   letterSpacing:
                                                                       0.0,
                                                                 ),
@@ -776,7 +775,7 @@ class _InventarioInstructoresWidgetState
                                                             letterSpacing: 0.0,
                                                           ),
                                                       validator: _model
-                                                          .txtAgreNTelefonoInstructorTextControllerValidator
+                                                          .txtAgreCategProductoTextControllerValidator
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -788,122 +787,105 @@ class _InventarioInstructoresWidgetState
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Expanded(
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          8.0, 0.0, 8.0, 0.0),
-                                                  child: SizedBox(
-                                                    width: 370.0,
-                                                    child: TextFormField(
-                                                      controller: _model
-                                                          .txtAgreATrabajoInstructorTextController,
-                                                      focusNode: _model
-                                                          .txtAgreATrabajoInstructorFocusNode,
-                                                      autofocus: true,
-                                                      obscureText: false,
-                                                      decoration:
-                                                          InputDecoration(
-                                                        labelText:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          '485menbk' /* Área de trabajo.. */,
-                                                        ),
-                                                        labelStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: Colors
-                                                                      .black,
-                                                                  fontSize:
-                                                                      16.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                        hintStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: const Color(
-                                                                      0xFFEEEBEB),
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                        enabledBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              const BorderSide(
-                                                            color: Color(
-                                                                0xFF09394A),
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                        focusedBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primary,
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                        errorBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .error,
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                        focusedErrorBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide:
-                                                              BorderSide(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .error,
-                                                            width: 2.0,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                        ),
-                                                      ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                      validator: _model
-                                                          .txtAgreATrabajoInstructorTextControllerValidator
-                                                          .asValidator(context),
-                                                    ),
+                                                child: StreamBuilder<
+                                                    List<ProveedoresRecord>>(
+                                                  stream:
+                                                      queryProveedoresRecord(
+                                                    queryBuilder:
+                                                        (proveedoresRecord) =>
+                                                            proveedoresRecord
+                                                                .orderBy(
+                                                                    'nombreProveedor'),
                                                   ),
+                                                  builder: (context, snapshot) {
+                                                    // Customize what your widget looks like when it's loading.
+                                                    if (!snapshot.hasData) {
+                                                      return Center(
+                                                        child: SizedBox(
+                                                          width: 50.0,
+                                                          height: 50.0,
+                                                          child:
+                                                              CircularProgressIndicator(
+                                                            valueColor:
+                                                                AlwaysStoppedAnimation<
+                                                                    Color>(
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .primary,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    }
+                                                    List<ProveedoresRecord>
+                                                        ddProveedoresProductosProveedoresRecordList =
+                                                        snapshot.data!;
+
+                                                    return FlutterFlowDropDown<
+                                                        String>(
+                                                      controller: _model
+                                                              .ddProveedoresProductosValueController ??=
+                                                          FormFieldController<
+                                                              String>(null),
+                                                      options:
+                                                          ddProveedoresProductosProveedoresRecordList
+                                                              .map((e) => e
+                                                                  .nombreProveedor)
+                                                              .toList(),
+                                                      onChanged: (val) =>
+                                                          setState(() => _model
+                                                                  .ddProveedoresProductosValue =
+                                                              val),
+                                                      width: 300.0,
+                                                      height: 56.0,
+                                                      textStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                letterSpacing:
+                                                                    0.0,
+                                                              ),
+                                                      hintText:
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                        'x65tjk5x' /* Please select... */,
+                                                      ),
+                                                      icon: Icon(
+                                                        Icons
+                                                            .keyboard_arrow_down_rounded,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .secondaryText,
+                                                        size: 24.0,
+                                                      ),
+                                                      fillColor: FlutterFlowTheme
+                                                              .of(context)
+                                                          .secondaryBackground,
+                                                      elevation: 2.0,
+                                                      borderColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .alternate,
+                                                      borderWidth: 2.0,
+                                                      borderRadius: 8.0,
+                                                      margin:
+                                                          const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  16.0,
+                                                                  4.0,
+                                                                  16.0,
+                                                                  4.0),
+                                                      hidesUnderline: true,
+                                                      isOverButton: true,
+                                                      isSearchable: false,
+                                                      isMultiSelect: false,
+                                                    );
+                                                  },
                                                 ),
                                               ),
                                             ],
@@ -918,105 +900,165 @@ class _InventarioInstructoresWidgetState
                                                   MainAxisAlignment.center,
                                               children: [
                                                 Expanded(
-                                                  child: FFButtonWidget(
-                                                    onPressed: () async {
-                                                      await InstructoresRecord
-                                                          .collection
-                                                          .doc()
-                                                          .set(
-                                                              createInstructoresRecordData(
-                                                            nombreInstructor: _model
-                                                                .txtAgreNombreInstructorTextController
-                                                                .text,
-                                                            emailInstructor: _model
-                                                                .txtAgreEmailInstructorTextController
-                                                                .text,
-                                                            telefonoInstructor:
-                                                                _model
-                                                                    .txtAgreNTelefonoInstructorTextController
-                                                                    .text,
-                                                            cedulaInstructor: _model
-                                                                .txtAgreIDInstructorTextController
-                                                                .text,
-                                                            areaTrabajoInstructor:
-                                                                _model
-                                                                    .txtAgreATrabajoInstructorTextController
-                                                                    .text,
-                                                            apellidosInstructor:
-                                                                _model
-                                                                    .txtAgreApellidosInstructorTextController
-                                                                    .text,
-                                                          ));
-                                                      ScaffoldMessenger.of(
-                                                              context)
-                                                          .showSnackBar(
-                                                        SnackBar(
-                                                          content: Text(
-                                                            'Instructor añadido exitosamente',
-                                                            style: TextStyle(
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .primaryText,
+                                                  child: StreamBuilder<
+                                                      List<ProveedoresRecord>>(
+                                                    stream:
+                                                        queryProveedoresRecord(
+                                                      queryBuilder:
+                                                          (proveedoresRecord) =>
+                                                              proveedoresRecord
+                                                                  .where(
+                                                        'nombreProveedor',
+                                                        isEqualTo: _model
+                                                            .ddProveedoresProductosValue,
+                                                      ),
+                                                      singleRecord: true,
+                                                    ),
+                                                    builder:
+                                                        (context, snapshot) {
+                                                      // Customize what your widget looks like when it's loading.
+                                                      if (!snapshot.hasData) {
+                                                        return Center(
+                                                          child: SizedBox(
+                                                            width: 50.0,
+                                                            height: 50.0,
+                                                            child:
+                                                                CircularProgressIndicator(
+                                                              valueColor:
+                                                                  AlwaysStoppedAnimation<
+                                                                      Color>(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primary,
+                                                              ),
                                                             ),
                                                           ),
-                                                          duration: const Duration(
-                                                              milliseconds:
-                                                                  4000),
-                                                          backgroundColor:
+                                                        );
+                                                      }
+                                                      List<ProveedoresRecord>
+                                                          btnAgregarProductosProveedoresRecordList =
+                                                          snapshot.data!;
+                                                      // Return an empty Container when the item does not exist.
+                                                      if (snapshot
+                                                          .data!.isEmpty) {
+                                                        return Container();
+                                                      }
+                                                      final btnAgregarProductosProveedoresRecord =
+                                                          btnAgregarProductosProveedoresRecordList
+                                                                  .isNotEmpty
+                                                              ? btnAgregarProductosProveedoresRecordList
+                                                                  .first
+                                                              : null;
+
+                                                      return FFButtonWidget(
+                                                        onPressed: () async {
+                                                          await ProductosRecord
+                                                              .collection
+                                                              .doc()
+                                                              .set(
+                                                                  createProductosRecordData(
+                                                                nombreProducto:
+                                                                    _model
+                                                                        .txtAgreNombreProductoTextController
+                                                                        .text,
+                                                                descripcionProducto:
+                                                                    _model
+                                                                        .txtAgreDescProductoTextController
+                                                                        .text,
+                                                                precioProducto:
+                                                                    double.tryParse(_model
+                                                                        .txtAgrePrecioProductoTextController
+                                                                        .text),
+                                                                cantidadProducto:
+                                                                    int.tryParse(_model
+                                                                        .txtAgreCantProductoTextController
+                                                                        .text),
+                                                                categoriaProducto:
+                                                                    _model
+                                                                        .txtAgreCategProductoTextController
+                                                                        .text,
+                                                                proveedorProductos:
+                                                                    btnAgregarProductosProveedoresRecord
+                                                                        ?.reference,
+                                                              ));
+                                                          ScaffoldMessenger.of(
+                                                                  context)
+                                                              .showSnackBar(
+                                                            SnackBar(
+                                                              content: Text(
+                                                                'Producto añadido exitosamente',
+                                                                style:
+                                                                    TextStyle(
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryText,
+                                                                ),
+                                                              ),
+                                                              duration: const Duration(
+                                                                  milliseconds:
+                                                                      4000),
+                                                              backgroundColor:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .secondary,
+                                                            ),
+                                                          );
+                                                        },
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          '79or5oq1' /* Agregar producto */,
+                                                        ),
+                                                        icon: const Icon(
+                                                          Icons.add,
+                                                          size: 15.0,
+                                                        ),
+                                                        options:
+                                                            FFButtonOptions(
+                                                          height: 40.0,
+                                                          padding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      24.0,
+                                                                      0.0,
+                                                                      24.0,
+                                                                      0.0),
+                                                          iconPadding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      0.0,
+                                                                      0.0,
+                                                                      0.0),
+                                                          color:
+                                                              const Color(0xFF09394A),
+                                                          textStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
-                                                                  .secondary,
+                                                                  .titleSmall
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Readex Pro',
+                                                                    color: Colors
+                                                                        .white,
+                                                                    letterSpacing:
+                                                                        0.0,
+                                                                  ),
+                                                          elevation: 3.0,
+                                                          borderSide:
+                                                              const BorderSide(
+                                                            color: Colors
+                                                                .transparent,
+                                                            width: 1.0,
+                                                          ),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      8.0),
                                                         ),
                                                       );
                                                     },
-                                                    text: FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      'm4nzbith' /* Agregar instructor */,
-                                                    ),
-                                                    icon: const Icon(
-                                                      Icons.add,
-                                                      size: 15.0,
-                                                    ),
-                                                    options: FFButtonOptions(
-                                                      height: 40.0,
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  24.0,
-                                                                  0.0,
-                                                                  24.0,
-                                                                  0.0),
-                                                      iconPadding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      color: const Color(0xFF09394A),
-                                                      textStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .titleSmall
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Readex Pro',
-                                                                color: Colors
-                                                                    .white,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                              ),
-                                                      elevation: 3.0,
-                                                      borderSide: const BorderSide(
-                                                        color:
-                                                            Colors.transparent,
-                                                        width: 1.0,
-                                                      ),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              8.0),
-                                                    ),
                                                   ),
                                                 ),
                                               ].divide(const SizedBox(width: 15.0)),
@@ -1052,8 +1094,8 @@ class _InventarioInstructoresWidgetState
                   Padding(
                     padding:
                         const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
-                    child: StreamBuilder<List<InstructoresRecord>>(
-                      stream: queryInstructoresRecord(),
+                    child: StreamBuilder<List<ProductosRecord>>(
+                      stream: queryProductosRecord(),
                       builder: (context, snapshot) {
                         // Customize what your widget looks like when it's loading.
                         if (!snapshot.hasData) {
@@ -1069,23 +1111,23 @@ class _InventarioInstructoresWidgetState
                             ),
                           );
                         }
-                        List<InstructoresRecord>
-                            listViewInstructoresRecordList = snapshot.data!;
+                        List<ProductosRecord> listViewProductosRecordList =
+                            snapshot.data!;
 
                         return ListView.builder(
                           padding: EdgeInsets.zero,
                           shrinkWrap: true,
                           scrollDirection: Axis.vertical,
-                          itemCount: listViewInstructoresRecordList.length,
+                          itemCount: listViewProductosRecordList.length,
                           itemBuilder: (context, listViewIndex) {
-                            final listViewInstructoresRecord =
-                                listViewInstructoresRecordList[listViewIndex];
+                            final listViewProductosRecord =
+                                listViewProductosRecordList[listViewIndex];
                             return Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 ListTile(
                                   title: Text(
-                                    listViewInstructoresRecord.nombreInstructor,
+                                    listViewProductosRecord.nombreProducto,
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
@@ -1094,8 +1136,7 @@ class _InventarioInstructoresWidgetState
                                         ),
                                   ),
                                   subtitle: Text(
-                                    listViewInstructoresRecord
-                                        .apellidosInstructor,
+                                    listViewProductosRecord.descripcionProducto,
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
@@ -1119,8 +1160,9 @@ class _InventarioInstructoresWidgetState
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Text(
-                                            listViewInstructoresRecord
-                                                .cedulaInstructor,
+                                            listViewProductosRecord
+                                                .cantidadProducto
+                                                .toString(),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -1129,8 +1171,8 @@ class _InventarioInstructoresWidgetState
                                                 ),
                                           ),
                                           Text(
-                                            listViewInstructoresRecord
-                                                .telefonoInstructor,
+                                            listViewProductosRecord
+                                                .categoriaProducto,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -1149,8 +1191,8 @@ class _InventarioInstructoresWidgetState
                                         ),
                                       ),
                                       Text(
-                                        listViewInstructoresRecord
-                                            .emailInstructor,
+                                        listViewProductosRecord.precioProducto
+                                            .toString(),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -1190,10 +1232,9 @@ class _InventarioInstructoresWidgetState
                                                                 context)
                                                             .height *
                                                         0.5,
-                                                    child:
-                                                        EditarInstructorWidget(
-                                                      edicionInstructor:
-                                                          listViewInstructoresRecord
+                                                    child: EditarProductoWidget(
+                                                      edicionProductos:
+                                                          listViewProductosRecord
                                                               .reference,
                                                     ),
                                                   ),
@@ -1205,7 +1246,7 @@ class _InventarioInstructoresWidgetState
                                         },
                                         text:
                                             FFLocalizations.of(context).getText(
-                                          '5lhopjby' /* Editar */,
+                                          '9pnfbi6d' /* Editar */,
                                         ),
                                         options: FFButtonOptions(
                                           width:
@@ -1254,9 +1295,9 @@ class _InventarioInstructoresWidgetState
                                                   padding:
                                                       MediaQuery.viewInsetsOf(
                                                           context),
-                                                  child: EditarInstructorWidget(
-                                                    edicionInstructor:
-                                                        listViewInstructoresRecord
+                                                  child: EliminarProductoWidget(
+                                                    eliminacionProducto:
+                                                        listViewProductosRecord
                                                             .reference,
                                                   ),
                                                 ),
@@ -1267,7 +1308,7 @@ class _InventarioInstructoresWidgetState
                                         },
                                         text:
                                             FFLocalizations.of(context).getText(
-                                          'pqzohcoc' /* Eliminar */,
+                                          'rp1sc1ss' /* Eliminar */,
                                         ),
                                         options: FFButtonOptions(
                                           width:

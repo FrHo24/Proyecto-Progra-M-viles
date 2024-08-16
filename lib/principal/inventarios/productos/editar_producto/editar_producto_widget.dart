@@ -3,23 +3,23 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'editar_instructor_model.dart';
-export 'editar_instructor_model.dart';
+import 'editar_producto_model.dart';
+export 'editar_producto_model.dart';
 
-class EditarInstructorWidget extends StatefulWidget {
-  const EditarInstructorWidget({
+class EditarProductoWidget extends StatefulWidget {
+  const EditarProductoWidget({
     super.key,
-    required this.edicionInstructor,
+    required this.edicionProductos,
   });
 
-  final DocumentReference? edicionInstructor;
+  final DocumentReference? edicionProductos;
 
   @override
-  State<EditarInstructorWidget> createState() => _EditarInstructorWidgetState();
+  State<EditarProductoWidget> createState() => _EditarProductoWidgetState();
 }
 
-class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
-  late EditarInstructorModel _model;
+class _EditarProductoWidgetState extends State<EditarProductoWidget> {
+  late EditarProductoModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -30,25 +30,22 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => EditarInstructorModel());
+    _model = createModel(context, () => EditarProductoModel());
 
-    _model.txtEditNombreInstructorTextController ??= TextEditingController();
-    _model.txtEditNombreInstructorFocusNode ??= FocusNode();
+    _model.txtEditNombreProductoTextController ??= TextEditingController();
+    _model.txtEditNombreProductoFocusNode ??= FocusNode();
 
-    _model.txtEditApellidoInstructorTextController ??= TextEditingController();
-    _model.txtEditApellidoInstructorFocusNode ??= FocusNode();
+    _model.txtEditDescProductoTextController ??= TextEditingController();
+    _model.txtEditDescProductoFocusNode ??= FocusNode();
 
-    _model.txtEditEmailInstructorTextController ??= TextEditingController();
-    _model.txtEditEmailInstructorFocusNode ??= FocusNode();
+    _model.txtEditPrecioProductoTextController ??= TextEditingController();
+    _model.txtEditPrecioProductoFocusNode ??= FocusNode();
 
-    _model.txtEditIDInstructorTextController ??= TextEditingController();
-    _model.txtEditIDInstructorFocusNode ??= FocusNode();
+    _model.txtEditCantProductoTextController ??= TextEditingController();
+    _model.txtEditCantProductoFocusNode ??= FocusNode();
 
-    _model.txtEditNTelefonoInstructorTextController ??= TextEditingController();
-    _model.txtEditNTelefonoInstructorFocusNode ??= FocusNode();
-
-    _model.txtEditATrabajoInstructorTextController ??= TextEditingController();
-    _model.txtEditATrabajoInstructorFocusNode ??= FocusNode();
+    _model.txtEditCategProductoTextController ??= TextEditingController();
+    _model.txtEditCategProductoFocusNode ??= FocusNode();
   }
 
   @override
@@ -79,7 +76,7 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                 children: [
                   Text(
                     FFLocalizations.of(context).getText(
-                      'dx5i2ynf' /* Edición de instructor */,
+                      'thk45bo2' /* Edición de producto */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
@@ -96,14 +93,13 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: TextFormField(
-                        controller:
-                            _model.txtEditNombreInstructorTextController,
-                        focusNode: _model.txtEditNombreInstructorFocusNode,
+                        controller: _model.txtEditNombreProductoTextController,
+                        focusNode: _model.txtEditNombreProductoFocusNode,
                         autofocus: true,
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: FFLocalizations.of(context).getText(
-                            'evacxokq' /* Nuevo nombre del instructor... */,
+                            'jsfx4dq8' /* Nuevo nombre del producto... */,
                           ),
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
@@ -149,7 +145,7 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                               letterSpacing: 0.0,
                             ),
                         validator: _model
-                            .txtEditNombreInstructorTextControllerValidator
+                            .txtEditNombreProductoTextControllerValidator
                             .asValidator(context),
                       ),
                     ),
@@ -164,14 +160,13 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: TextFormField(
-                        controller:
-                            _model.txtEditApellidoInstructorTextController,
-                        focusNode: _model.txtEditApellidoInstructorFocusNode,
+                        controller: _model.txtEditDescProductoTextController,
+                        focusNode: _model.txtEditDescProductoFocusNode,
                         autofocus: true,
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: FFLocalizations.of(context).getText(
-                            'dohfr87x' /* Nuevo apellido del instructor.... */,
+                            '5p8wzttn' /* Nueva descripción... */,
                           ),
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
@@ -217,7 +212,7 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                               letterSpacing: 0.0,
                             ),
                         validator: _model
-                            .txtEditApellidoInstructorTextControllerValidator
+                            .txtEditDescProductoTextControllerValidator
                             .asValidator(context),
                       ),
                     ),
@@ -232,13 +227,13 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: TextFormField(
-                        controller: _model.txtEditEmailInstructorTextController,
-                        focusNode: _model.txtEditEmailInstructorFocusNode,
+                        controller: _model.txtEditPrecioProductoTextController,
+                        focusNode: _model.txtEditPrecioProductoFocusNode,
                         autofocus: true,
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: FFLocalizations.of(context).getText(
-                            'zze0jhw7' /* Nuevo correo del instructor... */,
+                            'gkus6shx' /* Nuevo precio del producto... */,
                           ),
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
@@ -284,7 +279,7 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                               letterSpacing: 0.0,
                             ),
                         validator: _model
-                            .txtEditEmailInstructorTextControllerValidator
+                            .txtEditPrecioProductoTextControllerValidator
                             .asValidator(context),
                       ),
                     ),
@@ -299,13 +294,13 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: TextFormField(
-                        controller: _model.txtEditIDInstructorTextController,
-                        focusNode: _model.txtEditIDInstructorFocusNode,
+                        controller: _model.txtEditCantProductoTextController,
+                        focusNode: _model.txtEditCantProductoFocusNode,
                         autofocus: true,
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: FFLocalizations.of(context).getText(
-                            'suufol4m' /* Nueva cédula del instructor... */,
+                            'pvk7oivo' /* Nueva cantidad... */,
                           ),
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
@@ -351,7 +346,7 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                               letterSpacing: 0.0,
                             ),
                         validator: _model
-                            .txtEditIDInstructorTextControllerValidator
+                            .txtEditCantProductoTextControllerValidator
                             .asValidator(context),
                       ),
                     ),
@@ -366,14 +361,13 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: TextFormField(
-                        controller:
-                            _model.txtEditNTelefonoInstructorTextController,
-                        focusNode: _model.txtEditNTelefonoInstructorFocusNode,
+                        controller: _model.txtEditCategProductoTextController,
+                        focusNode: _model.txtEditCategProductoFocusNode,
                         autofocus: true,
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: FFLocalizations.of(context).getText(
-                            'rmp9dhzn' /* Nuevo número telefónico del in... */,
+                            'fcymbpsv' /* Nueva categoría... */,
                           ),
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
@@ -419,75 +413,7 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                               letterSpacing: 0.0,
                             ),
                         validator: _model
-                            .txtEditNTelefonoInstructorTextControllerValidator
-                            .asValidator(context),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Expanded(
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
-                      child: TextFormField(
-                        controller:
-                            _model.txtEditATrabajoInstructorTextController,
-                        focusNode: _model.txtEditATrabajoInstructorFocusNode,
-                        autofocus: true,
-                        obscureText: false,
-                        decoration: InputDecoration(
-                          labelText: FFLocalizations.of(context).getText(
-                            'h65uf0hn' /* Área de trabajo del instructor... */,
-                          ),
-                          labelStyle:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
-                          hintStyle:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Colors.black,
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).primary,
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          errorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).error,
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          focusedErrorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).error,
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
-                              letterSpacing: 0.0,
-                            ),
-                        validator: _model
-                            .txtEditATrabajoInstructorTextControllerValidator
+                            .txtEditCategProductoTextControllerValidator
                             .asValidator(context),
                       ),
                     ),
@@ -496,20 +422,18 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
               ),
               FFButtonWidget(
                 onPressed: () async {
-                  await widget.edicionInstructor!
-                      .update(createInstructoresRecordData(
-                    nombreInstructor:
-                        _model.txtEditNombreInstructorTextController.text,
-                    emailInstructor:
-                        _model.txtEditEmailInstructorTextController.text,
-                    telefonoInstructor:
-                        _model.txtEditNTelefonoInstructorTextController.text,
-                    cedulaInstructor:
-                        _model.txtEditIDInstructorTextController.text,
-                    areaTrabajoInstructor:
-                        _model.txtEditATrabajoInstructorTextController.text,
-                    apellidosInstructor:
-                        _model.txtEditApellidoInstructorTextController.text,
+                  await widget.edicionProductos!
+                      .update(createProductosRecordData(
+                    nombreProducto:
+                        _model.txtEditNombreProductoTextController.text,
+                    descripcionProducto:
+                        _model.txtEditDescProductoTextController.text,
+                    precioProducto: double.tryParse(
+                        _model.txtEditPrecioProductoTextController.text),
+                    cantidadProducto: int.tryParse(
+                        _model.txtEditCantProductoTextController.text),
+                    categoriaProducto:
+                        _model.txtEditCategProductoTextController.text,
                   ));
                   await showDialog(
                     context: context,
@@ -530,7 +454,7 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                   Navigator.pop(context);
                 },
                 text: FFLocalizations.of(context).getText(
-                  'vpm04c17' /* Agregar cambios */,
+                  'mej9n3n9' /* Agregar cambios */,
                 ),
                 options: FFButtonOptions(
                   height: 40.0,
