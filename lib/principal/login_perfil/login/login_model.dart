@@ -15,32 +15,32 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
   TextEditingController? emailAddressCreateTextController;
   String? Function(BuildContext, String?)?
       emailAddressCreateTextControllerValidator;
-  // State field(s) for name_Create widget.
-  FocusNode? nameCreateFocusNode;
-  TextEditingController? nameCreateTextController;
-  late bool nameCreateVisibility;
-  String? Function(BuildContext, String?)? nameCreateTextControllerValidator;
-  // State field(s) for password_Create widget.
-  FocusNode? passwordCreateFocusNode;
-  TextEditingController? passwordCreateTextController;
-  late bool passwordCreateVisibility;
+  // State field(s) for password widget.
+  FocusNode? passwordFocusNode1;
+  TextEditingController? passwordTextController1;
+  late bool passwordVisibility1;
+  String? Function(BuildContext, String?)? passwordTextController1Validator;
+  // State field(s) for confirmPassword widget.
+  FocusNode? confirmPasswordFocusNode;
+  TextEditingController? confirmPasswordTextController;
+  late bool confirmPasswordVisibility;
   String? Function(BuildContext, String?)?
-      passwordCreateTextControllerValidator;
+      confirmPasswordTextControllerValidator;
   // State field(s) for emailAddress widget.
   FocusNode? emailAddressFocusNode;
   TextEditingController? emailAddressTextController;
   String? Function(BuildContext, String?)? emailAddressTextControllerValidator;
   // State field(s) for password widget.
-  FocusNode? passwordFocusNode;
-  TextEditingController? passwordTextController;
-  late bool passwordVisibility;
-  String? Function(BuildContext, String?)? passwordTextControllerValidator;
+  FocusNode? passwordFocusNode2;
+  TextEditingController? passwordTextController2;
+  late bool passwordVisibility2;
+  String? Function(BuildContext, String?)? passwordTextController2Validator;
 
   @override
   void initState(BuildContext context) {
-    nameCreateVisibility = false;
-    passwordCreateVisibility = false;
-    passwordVisibility = false;
+    passwordVisibility1 = false;
+    confirmPasswordVisibility = false;
+    passwordVisibility2 = false;
   }
 
   @override
@@ -49,16 +49,16 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
     emailAddressCreateFocusNode?.dispose();
     emailAddressCreateTextController?.dispose();
 
-    nameCreateFocusNode?.dispose();
-    nameCreateTextController?.dispose();
+    passwordFocusNode1?.dispose();
+    passwordTextController1?.dispose();
 
-    passwordCreateFocusNode?.dispose();
-    passwordCreateTextController?.dispose();
+    confirmPasswordFocusNode?.dispose();
+    confirmPasswordTextController?.dispose();
 
     emailAddressFocusNode?.dispose();
     emailAddressTextController?.dispose();
 
-    passwordFocusNode?.dispose();
-    passwordTextController?.dispose();
+    passwordFocusNode2?.dispose();
+    passwordTextController2?.dispose();
   }
 }

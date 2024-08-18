@@ -64,19 +64,10 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           automaticallyImplyLeading: true,
-          leading: InkWell(
-            splashColor: Colors.transparent,
-            focusColor: Colors.transparent,
-            hoverColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            onTap: () async {
-              scaffoldKey.currentState!.openDrawer();
-            },
-            child: Icon(
-              Icons.menu,
-              color: FlutterFlowTheme.of(context).accent3,
-              size: 30.0,
-            ),
+          leading: Icon(
+            Icons.menu,
+            color: FlutterFlowTheme.of(context).accent3,
+            size: 30.0,
           ),
           title: Align(
             alignment: const AlignmentDirectional(-1.0, 0.0),
@@ -783,112 +774,117 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
                                               ),
                                             ],
                                           ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Expanded(
-                                                child: StreamBuilder<
-                                                    List<ProveedoresRecord>>(
-                                                  stream:
-                                                      queryProveedoresRecord(
-                                                    queryBuilder:
-                                                        (proveedoresRecord) =>
-                                                            proveedoresRecord
-                                                                .orderBy(
-                                                                    'nombreProveedor'),
-                                                  ),
-                                                  builder: (context, snapshot) {
-                                                    // Customize what your widget looks like when it's loading.
-                                                    if (!snapshot.hasData) {
-                                                      return Center(
-                                                        child: SizedBox(
-                                                          width: 50.0,
-                                                          height: 50.0,
-                                                          child:
-                                                              CircularProgressIndicator(
-                                                            valueColor:
-                                                                AlwaysStoppedAnimation<
-                                                                    Color>(
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .primary,
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    10.0, 0.0, 10.0, 0.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Expanded(
+                                                  child: StreamBuilder<
+                                                      List<ProveedoresRecord>>(
+                                                    stream:
+                                                        queryProveedoresRecord(
+                                                      queryBuilder:
+                                                          (proveedoresRecord) =>
+                                                              proveedoresRecord
+                                                                  .orderBy(
+                                                                      'nombreProveedor'),
+                                                    ),
+                                                    builder:
+                                                        (context, snapshot) {
+                                                      // Customize what your widget looks like when it's loading.
+                                                      if (!snapshot.hasData) {
+                                                        return Center(
+                                                          child: SizedBox(
+                                                            width: 50.0,
+                                                            height: 50.0,
+                                                            child:
+                                                                CircularProgressIndicator(
+                                                              valueColor:
+                                                                  AlwaysStoppedAnimation<
+                                                                      Color>(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primary,
+                                                              ),
                                                             ),
                                                           ),
-                                                        ),
-                                                      );
-                                                    }
-                                                    List<ProveedoresRecord>
-                                                        ddProveedoresProductosProveedoresRecordList =
-                                                        snapshot.data!;
+                                                        );
+                                                      }
+                                                      List<ProveedoresRecord>
+                                                          ddProveedoresProductosProveedoresRecordList =
+                                                          snapshot.data!;
 
-                                                    return FlutterFlowDropDown<
-                                                        String>(
-                                                      controller: _model
-                                                              .ddProveedoresProductosValueController ??=
-                                                          FormFieldController<
-                                                              String>(null),
-                                                      options:
-                                                          ddProveedoresProductosProveedoresRecordList
-                                                              .map((e) => e
-                                                                  .nombreProveedor)
-                                                              .toList(),
-                                                      onChanged: (val) =>
-                                                          setState(() => _model
-                                                                  .ddProveedoresProductosValue =
-                                                              val),
-                                                      width: 300.0,
-                                                      height: 56.0,
-                                                      textStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Readex Pro',
-                                                                letterSpacing:
-                                                                    0.0,
-                                                              ),
-                                                      hintText:
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
-                                                        'x65tjk5x' /* Please select... */,
-                                                      ),
-                                                      icon: Icon(
-                                                        Icons
-                                                            .keyboard_arrow_down_rounded,
-                                                        color:
+                                                      return FlutterFlowDropDown<
+                                                          String>(
+                                                        controller: _model
+                                                                .ddProveedoresProductosValueController ??=
+                                                            FormFieldController<
+                                                                String>(null),
+                                                        options:
+                                                            ddProveedoresProductosProveedoresRecordList
+                                                                .map((e) => e
+                                                                    .nombreProveedor)
+                                                                .toList(),
+                                                        onChanged: (val) =>
+                                                            setState(() => _model
+                                                                    .ddProveedoresProductosValue =
+                                                                val),
+                                                        width: 375.0,
+                                                        height: 55.0,
+                                                        textStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .secondaryText,
-                                                        size: 24.0,
-                                                      ),
-                                                      fillColor: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
-                                                      elevation: 2.0,
-                                                      borderColor:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .alternate,
-                                                      borderWidth: 2.0,
-                                                      borderRadius: 8.0,
-                                                      margin:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  16.0,
-                                                                  4.0,
-                                                                  16.0,
-                                                                  4.0),
-                                                      hidesUnderline: true,
-                                                      isOverButton: true,
-                                                      isSearchable: false,
-                                                      isMultiSelect: false,
-                                                    );
-                                                  },
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                        hintText:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'x65tjk5x' /* Sleccione un Producto */,
+                                                        ),
+                                                        icon: Icon(
+                                                          Icons
+                                                              .keyboard_arrow_down_rounded,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryText,
+                                                          size: 24.0,
+                                                        ),
+                                                        fillColor: FlutterFlowTheme
+                                                                .of(context)
+                                                            .secondaryBackground,
+                                                        elevation: 2.0,
+                                                        borderColor:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .alternate,
+                                                        borderWidth: 2.0,
+                                                        borderRadius: 8.0,
+                                                        margin:
+                                                            const EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    16.0,
+                                                                    4.0,
+                                                                    16.0,
+                                                                    4.0),
+                                                        hidesUnderline: true,
+                                                        isOverButton: true,
+                                                        isSearchable: false,
+                                                        isMultiSelect: false,
+                                                      );
+                                                    },
+                                                  ),
                                                 ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
                                           Padding(
                                             padding:

@@ -218,21 +218,23 @@ class _RecuperarContraWidgetState extends State<RecuperarContraWidget>
                       autofillHints: const [AutofillHints.email],
                       obscureText: false,
                       decoration: InputDecoration(
-                        labelStyle:
-                            FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).accent3,
-                                  letterSpacing: 0.0,
-                                ),
+                        labelStyle: FlutterFlowTheme.of(context)
+                            .labelMedium
+                            .override(
+                              fontFamily: 'Readex Pro',
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              letterSpacing: 0.0,
+                            ),
                         hintText: FFLocalizations.of(context).getText(
                           'xxp2om25' /* Ingrese su correo electrónico */,
                         ),
-                        hintStyle:
-                            FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).accent3,
-                                  letterSpacing: 0.0,
-                                ),
+                        hintStyle: FlutterFlowTheme.of(context)
+                            .labelMedium
+                            .override(
+                              fontFamily: 'Readex Pro',
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              letterSpacing: 0.0,
+                            ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: const BorderSide(
                             color: Color(0x00000000),
@@ -262,7 +264,7 @@ class _RecuperarContraWidgetState extends State<RecuperarContraWidget>
                           borderRadius: BorderRadius.circular(12.0),
                         ),
                         filled: true,
-                        fillColor: const Color(0xFFE5E5E5),
+                        fillColor: const Color(0xFFC8BABA),
                         contentPadding: const EdgeInsetsDirectional.fromSTEB(
                             24.0, 24.0, 20.0, 24.0),
                       ),

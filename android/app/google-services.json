@@ -12,7 +12,20 @@
           "package_name": "com.fenixbox.proyectomoviles"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "857675165794-bpofgmvmoot0jsdlf37r4p5otierepi7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fenixbox.proyectomoviles",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "857675165794-7ne3s0mbv1ppj6j9q0h95r0jmt1n283r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAjMiqQArG0DpnqhdqSvcPpUe3YIqi3w8o"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "857675165794-7ne3s0mbv1ppj6j9q0h95r0jmt1n283r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "857675165794-0phqqt60tfoa5fbqmqctr5d19dqvcjr8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fenixbox.proyectomoviles"
+              }
+            }
+          ]
         }
       }
     },
@@ -31,7 +56,12 @@
           "package_name": "com.mycompany.proyectomoviles"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "857675165794-7ne3s0mbv1ppj6j9q0h95r0jmt1n283r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAjMiqQArG0DpnqhdqSvcPpUe3YIqi3w8o"
@@ -39,7 +69,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "857675165794-7ne3s0mbv1ppj6j9q0h95r0jmt1n283r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "857675165794-0phqqt60tfoa5fbqmqctr5d19dqvcjr8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fenixbox.proyectomoviles"
+              }
+            }
+          ]
         }
       }
     }

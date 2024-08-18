@@ -224,56 +224,6 @@ class _EditarClaseWidgetState extends State<EditarClaseWidget> {
                     child: Padding(
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
-                      child: FlutterFlowDropDown<String>(
-                        controller:
-                            _model.ddEditInstructorAsigValueController ??=
-                                FormFieldController<String>(null),
-                        options: [
-                          FFLocalizations.of(context).getText(
-                            '69end16o' /* Option 1 */,
-                          )
-                        ],
-                        onChanged: (val) => setState(
-                            () => _model.ddEditInstructorAsigValue = val),
-                        width: 300.0,
-                        height: 56.0,
-                        textStyle:
-                            FlutterFlowTheme.of(context).bodyMedium.override(
-                                  fontFamily: 'Readex Pro',
-                                  letterSpacing: 0.0,
-                                ),
-                        hintText: FFLocalizations.of(context).getText(
-                          'uhnib69o' /* Nuevo intructor que imparte la... */,
-                        ),
-                        icon: Icon(
-                          Icons.keyboard_arrow_down_rounded,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 24.0,
-                        ),
-                        fillColor:
-                            FlutterFlowTheme.of(context).secondaryBackground,
-                        elevation: 2.0,
-                        borderColor: Colors.black,
-                        borderWidth: 2.0,
-                        borderRadius: 8.0,
-                        margin: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 4.0, 16.0, 4.0),
-                        hidesUnderline: true,
-                        isOverButton: true,
-                        isSearchable: false,
-                        isMultiSelect: false,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Expanded(
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: TextFormField(
                         controller: _model.txtEditCantClientesTextController,
                         focusNode: _model.txtEditCantClientesFocusNode,
@@ -334,14 +284,87 @@ class _EditarClaseWidgetState extends State<EditarClaseWidget> {
                   ),
                 ],
               ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                      child: StreamBuilder<List<InstructoresRecord>>(
+                        stream: queryInstructoresRecord(),
+                        builder: (context, snapshot) {
+                          // Customize what your widget looks like when it's loading.
+                          if (!snapshot.hasData) {
+                            return Center(
+                              child: SizedBox(
+                                width: 50.0,
+                                height: 50.0,
+                                child: CircularProgressIndicator(
+                                  valueColor: AlwaysStoppedAnimation<Color>(
+                                    FlutterFlowTheme.of(context).primary,
+                                  ),
+                                ),
+                              ),
+                            );
+                          }
+                          List<InstructoresRecord>
+                              ddEditInstructorAsigInstructoresRecordList =
+                              snapshot.data!;
+
+                          return FlutterFlowDropDown<String>(
+                            controller:
+                                _model.ddEditInstructorAsigValueController ??=
+                                    FormFieldController<String>(null),
+                            options: [
+                              FFLocalizations.of(context).getText(
+                                '69end16o' /* Option 1 */,
+                              )
+                            ],
+                            onChanged: (val) => setState(
+                                () => _model.ddEditInstructorAsigValue = val),
+                            width: 300.0,
+                            height: 56.0,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  letterSpacing: 0.0,
+                                ),
+                            hintText: FFLocalizations.of(context).getText(
+                              'uhnib69o' /* Nuevo intructor que imparte la... */,
+                            ),
+                            icon: Icon(
+                              Icons.keyboard_arrow_down_rounded,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              size: 24.0,
+                            ),
+                            fillColor: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            elevation: 2.0,
+                            borderColor: Colors.black,
+                            borderWidth: 2.0,
+                            borderRadius: 8.0,
+                            margin: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 4.0, 16.0, 4.0),
+                            hidesUnderline: true,
+                            isOverButton: true,
+                            isSearchable: false,
+                            isMultiSelect: false,
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               StreamBuilder<List<InstructoresRecord>>(
                 stream: queryInstructoresRecord(
                   queryBuilder: (instructoresRecord) =>
                       instructoresRecord.where(
                     'nombreInstructor',
-                    isEqualTo: widget.instructor?.id,
+                    isEqualTo: _model.ddEditInstructorAsigValue,
                   ),
-                  singleRecord: true,
                 ),
                 builder: (context, snapshot) {
                   // Customize what your widget looks like when it's loading.
@@ -361,14 +384,6 @@ class _EditarClaseWidgetState extends State<EditarClaseWidget> {
                   List<InstructoresRecord>
                       btnAgregarCambiosClasesInstructoresRecordList =
                       snapshot.data!;
-                  // Return an empty Container when the item does not exist.
-                  if (snapshot.data!.isEmpty) {
-                    return Container();
-                  }
-                  final btnAgregarCambiosClasesInstructoresRecord =
-                      btnAgregarCambiosClasesInstructoresRecordList.isNotEmpty
-                          ? btnAgregarCambiosClasesInstructoresRecordList.first
-                          : null;
 
                   return FFButtonWidget(
                     onPressed: () async {

@@ -49,14 +49,14 @@ class EditarClaseModel extends FlutterFlowModel<EditarClaseWidget> {
     return null;
   }
 
-  // State field(s) for dd_Edit_InstructorAsig widget.
-  String? ddEditInstructorAsigValue;
-  FormFieldController<String>? ddEditInstructorAsigValueController;
   // State field(s) for txt_Edit_CantClientes widget.
   FocusNode? txtEditCantClientesFocusNode;
   TextEditingController? txtEditCantClientesTextController;
   String? Function(BuildContext, String?)?
       txtEditCantClientesTextControllerValidator;
+  // State field(s) for dd_Edit_InstructorAsig widget.
+  String? ddEditInstructorAsigValue;
+  FormFieldController<String>? ddEditInstructorAsigValueController;
 
   @override
   void initState(BuildContext context) {

@@ -1,1 +1,1 @@
-export 'notas_widget.dart' show NotasWidget;
+export 'animated_text.dart' show AnimatedText;

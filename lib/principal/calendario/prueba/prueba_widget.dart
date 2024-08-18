@@ -4,26 +4,27 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
-import 'agregar_reserva_model.dart';
-export 'agregar_reserva_model.dart';
+import 'prueba_model.dart';
+export 'prueba_model.dart';
 
-class AgregarReservaWidget extends StatefulWidget {
-  const AgregarReservaWidget({super.key});
+class PruebaWidget extends StatefulWidget {
+  const PruebaWidget({super.key});
 
   @override
-  State<AgregarReservaWidget> createState() => _AgregarReservaWidgetState();
+  State<PruebaWidget> createState() => _PruebaWidgetState();
 }
 
-class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
-  late AgregarReservaModel _model;
+class _PruebaWidgetState extends State<PruebaWidget> {
+  late PruebaModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AgregarReservaModel());
+    _model = createModel(context, () => PruebaModel());
   }
 
   @override
@@ -66,6 +67,87 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      FFLocalizations.of(context).getText(
+                        '5y9z8d1h' /* Clase :  */,
+                      ),
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Readex Pro',
+                            letterSpacing: 0.0,
+                          ),
+                    ),
+                    StreamBuilder<List<ClasesRecord>>(
+                      stream: queryClasesRecord(
+                        queryBuilder: (clasesRecord) =>
+                            clasesRecord.orderBy('nombreClase'),
+                      ),
+                      builder: (context, snapshot) {
+                        // Customize what your widget looks like when it's loading.
+                        if (!snapshot.hasData) {
+                          return Center(
+                            child: SizedBox(
+                              width: 50.0,
+                              height: 50.0,
+                              child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                  FlutterFlowTheme.of(context).primary,
+                                ),
+                              ),
+                            ),
+                          );
+                        }
+                        List<ClasesRecord> ddClaseClasesRecordList =
+                            snapshot.data!;
+
+                        return FlutterFlowDropDown<String>(
+                          controller: _model.ddClaseValueController1 ??=
+                              FormFieldController<String>(
+                            _model.ddClaseValue1 ??=
+                                FFLocalizations.of(context).getText(
+                              'fwxlh12s' /* Clase */,
+                            ),
+                          ),
+                          options: ddClaseClasesRecordList
+                              .map((e) => e.nombreClase)
+                              .toList(),
+                          onChanged: (val) =>
+                              setState(() => _model.ddClaseValue1 = val),
+                          width: 280.0,
+                          height: 56.0,
+                          textStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
+                          hintText: FFLocalizations.of(context).getText(
+                            'eb6hpc1j' /* Seleccione una Clase */,
+                          ),
+                          icon: Icon(
+                            Icons.keyboard_arrow_down_rounded,
+                            color: FlutterFlowTheme.of(context).secondaryText,
+                            size: 24.0,
+                          ),
+                          fillColor:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                          elevation: 2.0,
+                          borderColor: FlutterFlowTheme.of(context).alternate,
+                          borderWidth: 2.0,
+                          borderRadius: 8.0,
+                          margin: const EdgeInsetsDirectional.fromSTEB(
+                              16.0, 4.0, 16.0, 4.0),
+                          hidesUnderline: true,
+                          isOverButton: true,
+                          isSearchable: false,
+                          isMultiSelect: false,
+                        );
+                      },
+                    ),
+                  ],
+                ),
                 Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -115,7 +197,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                               .toList(),
                           onChanged: (val) =>
                               setState(() => _model.ddInstructorValue = val),
-                          width: 300.0,
+                          width: 280.0,
                           height: 56.0,
                           textStyle:
                               FlutterFlowTheme.of(context).bodyMedium.override(
@@ -153,78 +235,61 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
-                        '5y9z8d1h' /* Clase :  */,
+                        'nldbiq79' /* Cantidad 
+participantes:  */
+                        ,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
                             letterSpacing: 0.0,
                           ),
                     ),
-                    StreamBuilder<List<ClasesRecord>>(
-                      stream: queryClasesRecord(
-                        queryBuilder: (clasesRecord) =>
-                            clasesRecord.orderBy('nombreClase'),
+                    FlutterFlowDropDown<String>(
+                      controller: _model.ddClaseValueController2 ??=
+                          FormFieldController<String>(
+                        _model.ddClaseValue2 ??=
+                            FFLocalizations.of(context).getText(
+                          '3r9zpn1o' /* Clase */,
+                        ),
                       ),
-                      builder: (context, snapshot) {
-                        // Customize what your widget looks like when it's loading.
-                        if (!snapshot.hasData) {
-                          return Center(
-                            child: SizedBox(
-                              width: 50.0,
-                              height: 50.0,
-                              child: CircularProgressIndicator(
-                                valueColor: AlwaysStoppedAnimation<Color>(
-                                  FlutterFlowTheme.of(context).primary,
-                                ),
+                      options: List.generate(
+                          random_data.randomInteger(1, 30),
+                          (index) => random_data.randomString(
+                                1,
+                                5,
+                                true,
+                                false,
+                                true,
+                              )),
+                      onChanged: (val) =>
+                          setState(() => _model.ddClaseValue2 = val),
+                      width: 280.0,
+                      height: 56.0,
+                      textStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.override(
+                                fontFamily: 'Readex Pro',
+                                letterSpacing: 0.0,
                               ),
-                            ),
-                          );
-                        }
-                        List<ClasesRecord> ddClaseClasesRecordList =
-                            snapshot.data!;
-
-                        return FlutterFlowDropDown<String>(
-                          controller: _model.ddClaseValueController ??=
-                              FormFieldController<String>(
-                            _model.ddClaseValue ??=
-                                FFLocalizations.of(context).getText(
-                              'fwxlh12s' /* Clase */,
-                            ),
-                          ),
-                          options: ddClaseClasesRecordList
-                              .map((e) => e.nombreClase)
-                              .toList(),
-                          onChanged: (val) =>
-                              setState(() => _model.ddClaseValue = val),
-                          width: 300.0,
-                          height: 56.0,
-                          textStyle:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
-                          hintText: FFLocalizations.of(context).getText(
-                            'eb6hpc1j' /* Seleccione una Clase */,
-                          ),
-                          icon: Icon(
-                            Icons.keyboard_arrow_down_rounded,
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                            size: 24.0,
-                          ),
-                          fillColor:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                          elevation: 2.0,
-                          borderColor: FlutterFlowTheme.of(context).alternate,
-                          borderWidth: 2.0,
-                          borderRadius: 8.0,
-                          margin: const EdgeInsetsDirectional.fromSTEB(
-                              16.0, 4.0, 16.0, 4.0),
-                          hidesUnderline: true,
-                          isOverButton: true,
-                          isSearchable: false,
-                          isMultiSelect: false,
-                        );
-                      },
+                      hintText: FFLocalizations.of(context).getText(
+                        '1gmkhjue' /* Seleccione una Clase */,
+                      ),
+                      icon: Icon(
+                        Icons.keyboard_arrow_down_rounded,
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        size: 24.0,
+                      ),
+                      fillColor:
+                          FlutterFlowTheme.of(context).secondaryBackground,
+                      elevation: 2.0,
+                      borderColor: FlutterFlowTheme.of(context).alternate,
+                      borderWidth: 2.0,
+                      borderRadius: 8.0,
+                      margin:
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                      hidesUnderline: true,
+                      isOverButton: true,
+                      isSearchable: false,
+                      isMultiSelect: false,
                     ),
                   ],
                 ),

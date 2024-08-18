@@ -74,13 +74,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const MenuWidget() : const LoginWidget(),
+          appStateNotifier.loggedIn ? const PerfilWidget() : const PaginadeIngresoWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? const MenuWidget() : const LoginWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? const PerfilWidget()
+              : const PaginadeIngresoWidget(),
         ),
         FFRoute(
           name: 'Login',
@@ -113,19 +114,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const PerfilWidget(),
         ),
         FFRoute(
-          name: 'Menu',
-          path: '/menu',
-          builder: (context, params) => const MenuWidget(),
-        ),
-        FFRoute(
           name: 'verReservas',
           path: '/verReservas',
           builder: (context, params) => const VerReservasWidget(),
         ),
         FFRoute(
-          name: 'agregarReserva',
-          path: '/agregarReserva',
-          builder: (context, params) => const AgregarReservaWidget(),
+          name: 'prueba',
+          path: '/prueba',
+          builder: (context, params) => const PruebaWidget(),
         ),
         FFRoute(
           name: 'inventarioInstructores',
@@ -163,9 +159,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const InventarioProductosWidget(),
         ),
         FFRoute(
-          name: 'PruebasWidgets',
-          path: '/pruebasWidgets',
-          builder: (context, params) => const PruebasWidgetsWidget(),
+          name: 'agregarReserva',
+          path: '/agregarReserva',
+          builder: (context, params) => const AgregarReservaWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -338,7 +334,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/login';
+            return '/paginadeIngreso';
           }
           return null;
         },

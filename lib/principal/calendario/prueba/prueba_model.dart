@@ -1,17 +1,20 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'agregar_reserva_widget.dart' show AgregarReservaWidget;
+import 'prueba_widget.dart' show PruebaWidget;
 import 'package:flutter/material.dart';
 
-class AgregarReservaModel extends FlutterFlowModel<AgregarReservaWidget> {
+class PruebaModel extends FlutterFlowModel<PruebaWidget> {
   ///  State fields for stateful widgets in this page.
 
+  // State field(s) for ddClase widget.
+  String? ddClaseValue1;
+  FormFieldController<String>? ddClaseValueController1;
   // State field(s) for ddInstructor widget.
   String? ddInstructorValue;
   FormFieldController<String>? ddInstructorValueController;
   // State field(s) for ddClase widget.
-  String? ddClaseValue;
-  FormFieldController<String>? ddClaseValueController;
+  String? ddClaseValue2;
+  FormFieldController<String>? ddClaseValueController2;
 
   @override
   void initState(BuildContext context) {}

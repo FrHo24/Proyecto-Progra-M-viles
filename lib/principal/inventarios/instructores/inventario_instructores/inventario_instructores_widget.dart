@@ -2,7 +2,7 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/instructores/editar_instructor/editar_instructor_widget.dart';
+import '/principal/inventarios/instructores/editar_instructor/editar_instructor_widget.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'inventario_instructores_model.dart';
@@ -65,19 +65,10 @@ class _InventarioInstructoresWidgetState
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           automaticallyImplyLeading: true,
-          leading: InkWell(
-            splashColor: Colors.transparent,
-            focusColor: Colors.transparent,
-            hoverColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            onTap: () async {
-              scaffoldKey.currentState!.openDrawer();
-            },
-            child: Icon(
-              Icons.menu,
-              color: FlutterFlowTheme.of(context).accent3,
-              size: 30.0,
-            ),
+          leading: Icon(
+            Icons.menu,
+            color: FlutterFlowTheme.of(context).accent3,
+            size: 30.0,
           ),
           title: Align(
             alignment: const AlignmentDirectional(-1.0, 0.0),

@@ -365,12 +365,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'eesnuyas': {
-      'es': 'Cédula',
+      'es': 'Perfil',
       'en': '',
       'pt': '',
     },
     '2muvaexv': {
       'es': 'Número Telefónico',
+      'en': '',
+      'pt': '',
+    },
+    '8w4f28z3': {
+      'es': 'Salir',
       'en': '',
       'pt': '',
     },
@@ -380,39 +385,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     '0sjtcxm5': {
-      'es': 'Home',
-      'en': '',
-      'pt': '',
-    },
-  },
-  // Menu
-  {
-    '9bsjsg9b': {
-      'es': 'Productos/Proveedores',
-      'en': '',
-      'pt': '',
-    },
-    '0rk5lv56': {
-      'es': 'Cliente/Facturaciones',
-      'en': '',
-      'pt': '',
-    },
-    'dsnutosg': {
-      'es': 'Administrador/Instructor',
-      'en': '',
-      'pt': '',
-    },
-    'vj0kwnto': {
-      'es': 'Equipo/Clases',
-      'en': '',
-      'pt': '',
-    },
-    'pt0gs5zl': {
-      'es': 'Menú',
-      'en': '',
-      'pt': '',
-    },
-    'wok70kn2': {
       'es': 'Home',
       'en': '',
       'pt': '',
@@ -496,8 +468,33 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
   },
-  // agregarReserva
+  // prueba
   {
+    '5y9z8d1h': {
+      'es': 'Clase : ',
+      'en': '',
+      'pt': '',
+    },
+    'fwxlh12s': {
+      'es': 'Clase',
+      'en': '',
+      'pt': '',
+    },
+    'jwmptqc5': {
+      'es': 'Option 1',
+      'en': '',
+      'pt': '',
+    },
+    'eb6hpc1j': {
+      'es': 'Seleccione una Clase',
+      'en': '',
+      'pt': '',
+    },
+    'ukbd5v0n': {
+      'es': 'Search for an item...',
+      'en': '',
+      'pt': '',
+    },
     'e0xbur0n': {
       'es': 'Instructor : ',
       'en': '',
@@ -523,27 +520,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    '5y9z8d1h': {
-      'es': 'Clase : ',
+    'nldbiq79': {
+      'es': 'Cantidad \nparticipantes: ',
       'en': '',
       'pt': '',
     },
-    'fwxlh12s': {
+    '3r9zpn1o': {
       'es': 'Clase',
       'en': '',
       'pt': '',
     },
-    'jwmptqc5': {
+    'w7qrk0ll': {
       'es': 'Option 1',
       'en': '',
       'pt': '',
     },
-    'eb6hpc1j': {
+    '1gmkhjue': {
       'es': 'Seleccione una Clase',
       'en': '',
       'pt': '',
     },
-    'ukbd5v0n': {
+    '2lz054ht': {
       'es': 'Search for an item...',
       'en': '',
       'pt': '',
@@ -1165,7 +1162,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'x65tjk5x': {
-      'es': 'Please select...',
+      'es': 'Sleccione un Producto',
       'en': '',
       'pt': '',
     },
@@ -1200,10 +1197,105 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
   },
-  // PruebasWidgets
+  // agregarReserva
   {
-    'qwv37uvf': {
-      'es': 'Page Title',
+    '1wkbg726': {
+      'es': 'Option 1',
+      'en': '',
+      'pt': '',
+    },
+    'o3kn8bla': {
+      'es': 'Seleccione Instructor',
+      'en': '',
+      'pt': '',
+    },
+    '7e52r0ts': {
+      'es': 'Search for an item...',
+      'en': '',
+      'pt': '',
+    },
+    'jlfnqt19': {
+      'es': 'Option 1',
+      'en': '',
+      'pt': '',
+    },
+    'u4md6cdc': {
+      'es': 'Seleccione Clase',
+      'en': '',
+      'pt': '',
+    },
+    'ogvnal4c': {
+      'es': 'Search for an item...',
+      'en': '',
+      'pt': '',
+    },
+    'c697tms1': {
+      'es': 'Cantidad Participantes:',
+      'en': '',
+      'pt': '',
+    },
+    'septd68d': {
+      'es': '1.....30',
+      'en': '',
+      'pt': '',
+    },
+    'jpm9cmxq': {
+      'es': 'Fecha y Hora',
+      'en': '',
+      'pt': '',
+    },
+    'ba9wajd0': {
+      'es': 'Fecha',
+      'en': '',
+      'pt': '',
+    },
+    'tkp803e5': {
+      'es': 'Reservar',
+      'en': '',
+      'pt': '',
+    },
+    '3sje1nsj': {
+      'es': 'Reservas',
+      'en': '',
+      'pt': '',
+    },
+    'nfdnsioo': {
+      'es': 'Inventarios',
+      'en': '',
+      'pt': '',
+    },
+    'orfbu45d': {
+      'es': 'Administradores',
+      'en': '',
+      'pt': '',
+    },
+    'wstn2vyj': {
+      'es': 'Clases',
+      'en': '',
+      'pt': '',
+    },
+    'rhmtnr1m': {
+      'es': 'Clientes',
+      'en': '',
+      'pt': '',
+    },
+    'io57kf4b': {
+      'es': 'Equipo',
+      'en': '',
+      'pt': '',
+    },
+    'vyy7yjun': {
+      'es': 'Instructores',
+      'en': '',
+      'pt': '',
+    },
+    'ch8eohvs': {
+      'es': 'productos',
+      'en': '',
+      'pt': '',
+    },
+    'xljmkzt5': {
+      'es': 'Proveedores',
       'en': '',
       'pt': '',
     },
@@ -1762,6 +1854,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
+    'h1met1v2': {
+      'es': 'Nuevo cantidad máxima de clientes..',
+      'en': '',
+      'pt': '',
+    },
     '69end16o': {
       'es': 'Option 1',
       'en': '',
@@ -1774,11 +1871,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '0tkt53tk': {
       'es': 'Search for an item...',
-      'en': '',
-      'pt': '',
-    },
-    'h1met1v2': {
-      'es': 'Nuevo cantidad máxima de clientes..',
       'en': '',
       'pt': '',
     },
@@ -2125,6 +2217,24 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'zylezagi': {
+      'es': 'Eliminar',
+      'en': '',
+      'pt': '',
+    },
+  },
+  // EliminarReserva
+  {
+    '52vg6c5w': {
+      'es': 'Eliminar reserva',
+      'en': '',
+      'pt': '',
+    },
+    'k5ruamp4': {
+      'es': 'Escriba la palabra \"Eliminar\"\n para confirmar',
+      'en': '',
+      'pt': '',
+    },
+    'jykyrmir': {
       'es': 'Eliminar',
       'en': '',
       'pt': '',

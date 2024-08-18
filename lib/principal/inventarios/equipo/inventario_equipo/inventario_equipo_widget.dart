@@ -58,19 +58,10 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           automaticallyImplyLeading: true,
-          leading: InkWell(
-            splashColor: Colors.transparent,
-            focusColor: Colors.transparent,
-            hoverColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            onTap: () async {
-              scaffoldKey.currentState!.openDrawer();
-            },
-            child: Icon(
-              Icons.menu,
-              color: FlutterFlowTheme.of(context).accent3,
-              size: 30.0,
-            ),
+          leading: Icon(
+            Icons.menu,
+            color: FlutterFlowTheme.of(context).accent3,
+            size: 30.0,
           ),
           title: Align(
             alignment: const AlignmentDirectional(-1.0, 0.0),

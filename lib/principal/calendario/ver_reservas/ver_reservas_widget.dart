@@ -207,7 +207,7 @@ class _VerReservasWidgetState extends State<VerReservasWidget> {
                                             .clearRedirectLocation();
 
                                         context.goNamedAuth(
-                                            'Login', context.mounted);
+                                            'PaginadeIngreso', context.mounted);
                                       },
                                       text: FFLocalizations.of(context).getText(
                                         '28653bt6' /* Cerrar Sesión */,
@@ -304,82 +304,49 @@ class _VerReservasWidgetState extends State<VerReservasWidget> {
                     ],
                   ),
                 ),
-                StreamBuilder<List<CalendarioReservasRecord>>(
-                  stream: queryCalendarioReservasRecord(
-                    singleRecord: true,
-                  ),
-                  builder: (context, snapshot) {
-                    // Customize what your widget looks like when it's loading.
-                    if (!snapshot.hasData) {
-                      return Center(
-                        child: SizedBox(
-                          width: 50.0,
-                          height: 50.0,
-                          child: CircularProgressIndicator(
-                            valueColor: AlwaysStoppedAnimation<Color>(
-                              FlutterFlowTheme.of(context).primary,
-                            ),
-                          ),
-                        ),
-                      );
+                FlutterFlowCalendar(
+                  color: const Color(0xFFE17815),
+                  iconColor: const Color(0xFFE17518),
+                  weekFormat: false,
+                  weekStartsMonday: false,
+                  initialDate: getCurrentTimestamp,
+                  rowHeight: 64.0,
+                  onChange: (DateTimeRange? newSelectedDate) async {
+                    if (_model.calendarSelectedDay == newSelectedDate) {
+                      return;
                     }
-                    List<CalendarioReservasRecord>
-                        calendarCalendarioReservasRecordList = snapshot.data!;
-                    // Return an empty Container when the item does not exist.
-                    if (snapshot.data!.isEmpty) {
-                      return Container();
-                    }
-                    final calendarCalendarioReservasRecord =
-                        calendarCalendarioReservasRecordList.isNotEmpty
-                            ? calendarCalendarioReservasRecordList.first
-                            : null;
-
-                    return FlutterFlowCalendar(
-                      color: const Color(0xFFE17815),
-                      iconColor: const Color(0xFFE17518),
-                      weekFormat: false,
-                      weekStartsMonday: false,
-                      initialDate: getCurrentTimestamp,
-                      rowHeight: 64.0,
-                      onChange: (DateTimeRange? newSelectedDate) async {
-                        if (_model.calendarSelectedDay == newSelectedDate) {
-                          return;
-                        }
-                        _model.calendarSelectedDay = newSelectedDate;
-                        FFAppState().fechaSeleccionada =
-                            _model.calendarSelectedDay?.start;
-                        setState(() {});
-                        setState(() {});
-                      },
-                      titleStyle:
-                          FlutterFlowTheme.of(context).headlineSmall.override(
-                                fontFamily: 'Outfit',
-                                letterSpacing: 0.0,
-                              ),
-                      dayOfWeekStyle:
-                          FlutterFlowTheme.of(context).labelLarge.override(
-                                fontFamily: 'Readex Pro',
-                                letterSpacing: 0.0,
-                              ),
-                      dateStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.override(
-                                fontFamily: 'Readex Pro',
-                                color: const Color(0xFFF0EBEB),
-                                letterSpacing: 0.0,
-                              ),
-                      selectedDateStyle:
-                          FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Readex Pro',
-                                letterSpacing: 0.0,
-                              ),
-                      inactiveDateStyle:
-                          FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Readex Pro',
-                                letterSpacing: 0.0,
-                              ),
-                      locale: FFLocalizations.of(context).languageCode,
-                    );
+                    _model.calendarSelectedDay = newSelectedDate;
+                    FFAppState().fechaSeleccionada =
+                        _model.calendarSelectedDay?.start;
+                    setState(() {});
+                    setState(() {});
                   },
+                  titleStyle:
+                      FlutterFlowTheme.of(context).headlineSmall.override(
+                            fontFamily: 'Outfit',
+                            letterSpacing: 0.0,
+                          ),
+                  dayOfWeekStyle:
+                      FlutterFlowTheme.of(context).labelLarge.override(
+                            fontFamily: 'Readex Pro',
+                            letterSpacing: 0.0,
+                          ),
+                  dateStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Readex Pro',
+                        color: const Color(0xFFF0EBEB),
+                        letterSpacing: 0.0,
+                      ),
+                  selectedDateStyle:
+                      FlutterFlowTheme.of(context).titleSmall.override(
+                            fontFamily: 'Readex Pro',
+                            letterSpacing: 0.0,
+                          ),
+                  inactiveDateStyle:
+                      FlutterFlowTheme.of(context).labelMedium.override(
+                            fontFamily: 'Readex Pro',
+                            letterSpacing: 0.0,
+                          ),
+                  locale: FFLocalizations.of(context).languageCode,
                 ),
                 Row(
                   mainAxisSize: MainAxisSize.max,
