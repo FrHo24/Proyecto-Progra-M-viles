@@ -15,11 +15,6 @@ class CalendarioReservasRecord extends FirestoreRecord {
     _initializeFields();
   }
 
-  // "instructor" field.
-  DocumentReference? _instructor;
-  DocumentReference? get instructor => _instructor;
-  bool hasInstructor() => _instructor != null;
-
   // "clase" field.
   DocumentReference? _clase;
   DocumentReference? get clase => _clase;
@@ -40,12 +35,17 @@ class CalendarioReservasRecord extends FirestoreRecord {
   DateTime? get fecha => _fecha;
   bool hasFecha() => _fecha != null;
 
+  // "instructor" field.
+  DocumentReference? _instructor;
+  DocumentReference? get instructor => _instructor;
+  bool hasInstructor() => _instructor != null;
+
   void _initializeFields() {
-    _instructor = snapshotData['instructor'] as DocumentReference?;
     _clase = snapshotData['clase'] as DocumentReference?;
     _clientes = castToType<int>(snapshotData['clientes']);
     _hora = snapshotData['hora'] as DateTime?;
     _fecha = snapshotData['fecha'] as DateTime?;
+    _instructor = snapshotData['instructor'] as DocumentReference?;
   }
 
   static CollectionReference get collection =>
@@ -84,19 +84,19 @@ class CalendarioReservasRecord extends FirestoreRecord {
 }
 
 Map<String, dynamic> createCalendarioReservasRecordData({
-  DocumentReference? instructor,
   DocumentReference? clase,
   int? clientes,
   DateTime? hora,
   DateTime? fecha,
+  DocumentReference? instructor,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
-      'instructor': instructor,
       'clase': clase,
       'clientes': clientes,
       'hora': hora,
       'fecha': fecha,
+      'instructor': instructor,
     }.withoutNulls,
   );
 
@@ -109,16 +109,16 @@ class CalendarioReservasRecordDocumentEquality
 
   @override
   bool equals(CalendarioReservasRecord? e1, CalendarioReservasRecord? e2) {
-    return e1?.instructor == e2?.instructor &&
-        e1?.clase == e2?.clase &&
+    return e1?.clase == e2?.clase &&
         e1?.clientes == e2?.clientes &&
         e1?.hora == e2?.hora &&
-        e1?.fecha == e2?.fecha;
+        e1?.fecha == e2?.fecha &&
+        e1?.instructor == e2?.instructor;
   }
 
   @override
   int hash(CalendarioReservasRecord? e) => const ListEquality()
-      .hash([e?.instructor, e?.clase, e?.clientes, e?.hora, e?.fecha]);
+      .hash([e?.clase, e?.clientes, e?.hora, e?.fecha, e?.instructor]);
 
   @override
   bool isValidKey(Object? o) => o is CalendarioReservasRecord;

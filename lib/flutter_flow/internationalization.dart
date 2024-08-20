@@ -453,7 +453,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'afdeghbf': {
-      'es': 'Page Title',
+      'es': 'Reservas',
       'en': '',
       'pt': '',
     },
@@ -1205,7 +1205,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': '',
     },
     'o3kn8bla': {
-      'es': 'Seleccione Instructor',
+      'es': 'Seleccione la clase',
       'en': '',
       'pt': '',
     },
@@ -1214,28 +1214,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
-    'jlfnqt19': {
+    'cq9qzjgz': {
       'es': 'Option 1',
       'en': '',
       'pt': '',
     },
-    'u4md6cdc': {
-      'es': 'Seleccione Clase',
+    'ksiiq25t': {
+      'es': 'Seleccione Instructor',
       'en': '',
       'pt': '',
     },
-    'ogvnal4c': {
+    'jtlfksox': {
       'es': 'Search for an item...',
-      'en': '',
-      'pt': '',
-    },
-    'c697tms1': {
-      'es': 'Cantidad Participantes:',
-      'en': '',
-      'pt': '',
-    },
-    'septd68d': {
-      'es': '1.....30',
       'en': '',
       'pt': '',
     },

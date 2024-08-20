@@ -265,7 +265,7 @@ class _VerReservasWidgetState extends State<VerReservasWidget> {
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
-              'afdeghbf' /* Page Title */,
+              'afdeghbf' /* Reservas */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Outfit',
@@ -420,7 +420,16 @@ class _VerReservasWidgetState extends State<VerReservasWidget> {
                       width: MediaQuery.sizeOf(context).width * 0.95,
                       height: MediaQuery.sizeOf(context).height * 0.25,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: const Color(0xFFFFFEFE),
+                        borderRadius: const BorderRadius.only(
+                          bottomLeft: Radius.circular(0.0),
+                          bottomRight: Radius.circular(0.0),
+                          topLeft: Radius.circular(0.0),
+                          topRight: Radius.circular(0.0),
+                        ),
+                        border: Border.all(
+                          color: const Color(0xFF0B0303),
+                        ),
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -559,7 +568,7 @@ class _VerReservasWidgetState extends State<VerReservasWidget> {
                                       24.0, 0.0, 24.0, 0.0),
                                   iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: const Color(0xFFE17518),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
@@ -592,7 +601,7 @@ class _VerReservasWidgetState extends State<VerReservasWidget> {
                                       24.0, 0.0, 24.0, 0.0),
                                   iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: const Color(0xFFE17518),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(

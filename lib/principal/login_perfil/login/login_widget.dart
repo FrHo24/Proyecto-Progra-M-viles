@@ -301,7 +301,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         }
 
                                                         context.goNamedAuth(
-                                                            'Perfil',
+                                                            'inventarioAdministradores',
                                                             context.mounted);
                                                       },
                                                       text: FFLocalizations.of(
@@ -367,7 +367,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         }
 
                                                         context.goNamedAuth(
-                                                            'Perfil',
+                                                            'inventarioAdministradores',
                                                             context.mounted);
                                                       },
                                                       text: FFLocalizations.of(

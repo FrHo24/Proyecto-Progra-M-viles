@@ -60,8 +60,8 @@ class _EditarAdminWidgetState extends State<EditarAdminWidget> {
     return Container(
       width: MediaQuery.sizeOf(context).width * 1.0,
       height: MediaQuery.sizeOf(context).height * 1.0,
-      decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).secondaryBackground,
+      decoration: const BoxDecoration(
+        color: Color(0xFF175F6D),
       ),
       child: Form(
         key: _model.formKey,
@@ -104,6 +104,7 @@ class _EditarAdminWidgetState extends State<EditarAdminWidget> {
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
                                     fontFamily: 'Readex Pro',
+                                    color: Colors.black,
                                     letterSpacing: 0.0,
                                   ),
                           hintStyle:
@@ -457,15 +458,15 @@ class _EditarAdminWidgetState extends State<EditarAdminWidget> {
                   padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                   iconPadding:
                       const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  color: const Color(0xFFE17518),
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Readex Pro',
                         color: FlutterFlowTheme.of(context).primaryText,
                         letterSpacing: 0.0,
                       ),
                   elevation: 3.0,
-                  borderSide: BorderSide(
-                    color: FlutterFlowTheme.of(context).accent4,
+                  borderSide: const BorderSide(
+                    color: Colors.black,
                     width: 2.0,
                   ),
                   borderRadius: BorderRadius.circular(8.0),

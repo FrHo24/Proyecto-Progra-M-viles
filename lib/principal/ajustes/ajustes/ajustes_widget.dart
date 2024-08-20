@@ -39,7 +39,7 @@ class _AjustesWidgetState extends State<AjustesWidget> {
         key: scaffoldKey,
         backgroundColor: const Color(0xFF175F6D),
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+          backgroundColor: const Color(0xFFE17518),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
@@ -52,7 +52,7 @@ class _AjustesWidgetState extends State<AjustesWidget> {
               size: 30.0,
             ),
             onPressed: () async {
-              context.safePop();
+              context.pushNamed('verReservas');
             },
           ),
           title: Text(
@@ -292,7 +292,7 @@ class _AjustesWidgetState extends State<AjustesWidget> {
                                   .primaryBackground,
                               borderColor: Colors.transparent,
                               dropdownColor: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
+                                  .secondaryBackground,
                               dropdownIconColor: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
                               borderRadius: 40.0,

@@ -60,9 +60,9 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFF09394A),
+        backgroundColor: const Color(0xFF175F6D),
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+          backgroundColor: const Color(0xFFE17518),
           automaticallyImplyLeading: true,
           leading: Icon(
             Icons.menu,
@@ -1075,6 +1075,7 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
                                   headerAlignment:
                                       ExpandablePanelHeaderAlignment.center,
                                   hasIcon: true,
+                                  iconColor: Color(0xFFE17518),
                                 ),
                               ),
                             ),
@@ -1163,6 +1164,7 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
@@ -1173,6 +1175,7 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
@@ -1193,6 +1196,7 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
+                                              color: Colors.white,
                                               letterSpacing: 0.0,
                                             ),
                                       ),

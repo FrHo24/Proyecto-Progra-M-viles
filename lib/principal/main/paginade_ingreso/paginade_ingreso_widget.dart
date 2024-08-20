@@ -162,7 +162,7 @@ class _PaginadeIngresoWidgetState extends State<PaginadeIngresoWidget>
                                         24.0, 0.0, 24.0, 0.0),
                                     iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: FlutterFlowTheme.of(context).accent1,
+                                    color: const Color(0xFFE17518),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(

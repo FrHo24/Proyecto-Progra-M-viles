@@ -7,23 +7,16 @@ class AgregarReservaModel extends FlutterFlowModel<AgregarReservaWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for ddInstructorReserva widget.
-  String? ddInstructorReservaValue;
-  FormFieldController<String>? ddInstructorReservaValueController;
-  // State field(s) for ddClaseReserva widget.
-  String? ddClaseReservaValue;
-  FormFieldController<String>? ddClaseReservaValueController;
-  // State field(s) for txtCantidad widget.
-  FocusNode? txtCantidadFocusNode;
-  TextEditingController? txtCantidadTextController;
-  String? Function(BuildContext, String?)? txtCantidadTextControllerValidator;
+  String? ddInstructorReservaValue1;
+  FormFieldController<String>? ddInstructorReservaValueController1;
+  // State field(s) for ddInstructorReserva widget.
+  String? ddInstructorReservaValue2;
+  FormFieldController<String>? ddInstructorReservaValueController2;
   DateTime? datePicked;
 
   @override
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {
-    txtCantidadFocusNode?.dispose();
-    txtCantidadTextController?.dispose();
-  }
+  void dispose() {}
 }

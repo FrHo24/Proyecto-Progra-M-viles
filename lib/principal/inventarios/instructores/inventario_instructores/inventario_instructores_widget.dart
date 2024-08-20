@@ -61,14 +61,23 @@ class _InventarioInstructoresWidgetState
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFF09394A),
+        backgroundColor: const Color(0xFF175F6D),
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+          backgroundColor: const Color(0xFFE17518),
           automaticallyImplyLeading: true,
-          leading: Icon(
-            Icons.menu,
-            color: FlutterFlowTheme.of(context).accent3,
-            size: 30.0,
+          leading: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              context.pushNamed('agregarReserva');
+            },
+            child: Icon(
+              Icons.chevron_left,
+              color: FlutterFlowTheme.of(context).secondaryText,
+              size: 24.0,
+            ),
           ),
           title: Align(
             alignment: const AlignmentDirectional(-1.0, 0.0),
@@ -1028,6 +1037,7 @@ class _InventarioInstructoresWidgetState
                                   headerAlignment:
                                       ExpandablePanelHeaderAlignment.center,
                                   hasIcon: true,
+                                  iconColor: Color(0xFFE17518),
                                 ),
                               ),
                             ),
@@ -1116,6 +1126,7 @@ class _InventarioInstructoresWidgetState
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
@@ -1126,6 +1137,7 @@ class _InventarioInstructoresWidgetState
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
+                                                  color: Colors.white,
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
@@ -1146,6 +1158,7 @@ class _InventarioInstructoresWidgetState
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
+                                              color: Colors.white,
                                               letterSpacing: 0.0,
                                             ),
                                       ),
