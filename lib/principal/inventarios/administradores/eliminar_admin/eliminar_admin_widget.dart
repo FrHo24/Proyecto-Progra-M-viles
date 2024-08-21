@@ -65,6 +65,7 @@ class _EliminarAdminWidgetState extends State<EliminarAdminWidget> {
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Readex Pro',
+                        color: Colors.white,
                         letterSpacing: 0.0,
                       ),
                 ),
@@ -125,6 +126,8 @@ class _EliminarAdminWidgetState extends State<EliminarAdminWidget> {
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
+                        filled: true,
+                        fillColor: Colors.white,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
@@ -165,8 +168,8 @@ class _EliminarAdminWidgetState extends State<EliminarAdminWidget> {
                           letterSpacing: 0.0,
                         ),
                     elevation: 3.0,
-                    borderSide: BorderSide(
-                      color: FlutterFlowTheme.of(context).accent4,
+                    borderSide: const BorderSide(
+                      color: Colors.black,
                       width: 2.0,
                     ),
                     borderRadius: BorderRadius.circular(8.0),

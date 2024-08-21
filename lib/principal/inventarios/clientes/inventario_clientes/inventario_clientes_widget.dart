@@ -65,10 +65,19 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
         appBar: AppBar(
           backgroundColor: const Color(0xFFE17518),
           automaticallyImplyLeading: true,
-          leading: Icon(
-            Icons.menu,
-            color: FlutterFlowTheme.of(context).accent3,
-            size: 30.0,
+          leading: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              context.pushNamed('agregarReserva');
+            },
+            child: Icon(
+              Icons.chevron_left,
+              color: FlutterFlowTheme.of(context).secondaryText,
+              size: 24.0,
+            ),
           ),
           title: Align(
             alignment: const AlignmentDirectional(-1.0, 0.0),
@@ -139,14 +148,22 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
+                                          color: Colors.white,
                                           letterSpacing: 0.0,
                                         ),
                                   ),
                                 ),
                                 expanded: Container(
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
+                                  decoration: const BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        Color(0xFF175F6D),
+                                        Color(0xFF55A0B0)
+                                      ],
+                                      stops: [0.0, 1.0],
+                                      begin: AlignmentDirectional(0.0, -1.0),
+                                      end: AlignmentDirectional(0, 1.0),
+                                    ),
                                   ),
                                   child: Form(
                                     key: _model.formKey,
@@ -259,6 +276,8 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -385,6 +404,8 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -509,6 +530,8 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -633,6 +656,8 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -757,6 +782,8 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -881,6 +908,8 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -1085,9 +1114,7 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                       24.0, 0.0, 24.0, 0.0),
                                               iconPadding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: const Color(0xFFE17518),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -1220,7 +1247,7 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                                   0.0,
                                                                   0.0,
                                                                   0.0),
-                                                      color: const Color(0xFF09394A),
+                                                      color: const Color(0xFFE17518),
                                                       textStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)

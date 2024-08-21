@@ -80,6 +80,7 @@ class _EditarProductoWidgetState extends State<EditarProductoWidget> {
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
+                          color: Colors.white,
                           letterSpacing: 0.0,
                         ),
                   ),
@@ -139,6 +140,8 @@ class _EditarProductoWidgetState extends State<EditarProductoWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -206,6 +209,8 @@ class _EditarProductoWidgetState extends State<EditarProductoWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -273,6 +278,8 @@ class _EditarProductoWidgetState extends State<EditarProductoWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -340,6 +347,8 @@ class _EditarProductoWidgetState extends State<EditarProductoWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -407,6 +416,8 @@ class _EditarProductoWidgetState extends State<EditarProductoWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',

@@ -140,14 +140,22 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
+                                          color: Colors.white,
                                           letterSpacing: 0.0,
                                         ),
                                   ),
                                 ),
                                 expanded: Container(
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
+                                  decoration: const BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        Color(0xFF175F6D),
+                                        Color(0xFF55A0B0)
+                                      ],
+                                      stops: [0.0, 1.0],
+                                      begin: AlignmentDirectional(0.0, -1.0),
+                                      end: AlignmentDirectional(0, 1.0),
+                                    ),
                                   ),
                                   child: Form(
                                     key: _model.formKey,
@@ -209,8 +217,7 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                                             OutlineInputBorder(
                                                           borderSide:
                                                               const BorderSide(
-                                                            color: Color(
-                                                                0xFF09394A),
+                                                            color: Colors.black,
                                                             width: 2.0,
                                                           ),
                                                           borderRadius:
@@ -260,6 +267,8 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -335,8 +344,7 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                                             OutlineInputBorder(
                                                           borderSide:
                                                               const BorderSide(
-                                                            color: Color(
-                                                                0xFF09394A),
+                                                            color: Colors.black,
                                                             width: 2.0,
                                                           ),
                                                           borderRadius:
@@ -386,6 +394,8 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -459,8 +469,7 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                                             OutlineInputBorder(
                                                           borderSide:
                                                               const BorderSide(
-                                                            color: Color(
-                                                                0xFF09394A),
+                                                            color: Colors.black,
                                                             width: 2.0,
                                                           ),
                                                           borderRadius:
@@ -510,6 +519,8 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -597,13 +608,9 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                                       .secondaryText,
                                                   size: 24.0,
                                                 ),
-                                                fillColor:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryBackground,
+                                                fillColor: const Color(0xFFE17518),
                                                 elevation: 2.0,
-                                                borderColor:
-                                                    FlutterFlowTheme.of(context)
-                                                        .alternate,
+                                                borderColor: Colors.black,
                                                 borderWidth: 2.0,
                                                 borderRadius: 8.0,
                                                 margin: const EdgeInsetsDirectional
@@ -769,7 +776,7 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                                                       0.0,
                                                                       0.0),
                                                           color:
-                                                              const Color(0xFF09394A),
+                                                              const Color(0xFFE17518),
                                                           textStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -816,6 +823,7 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                   headerAlignment:
                                       ExpandablePanelHeaderAlignment.center,
                                   hasIcon: true,
+                                  iconColor: Color(0xFFE17518),
                                 ),
                               ),
                             ),

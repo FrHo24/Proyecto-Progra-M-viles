@@ -42,7 +42,7 @@ class _PruebaWidgetState extends State<PruebaWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: const Color(0xFFE17518),
           automaticallyImplyLeading: false,
           title: Text(
             FFLocalizations.of(context).getText(
@@ -341,7 +341,7 @@ participantes:  */
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primary,
+                        color: const Color(0xFFE17518),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Readex Pro',

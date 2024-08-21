@@ -83,6 +83,7 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
+                          color: Colors.white,
                           letterSpacing: 0.0,
                         ),
                   ),
@@ -143,6 +144,8 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -211,6 +214,8 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -278,6 +283,8 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -345,6 +352,8 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -413,6 +422,8 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -481,6 +492,8 @@ class _EditarInstructorWidgetState extends State<EditarInstructorWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',

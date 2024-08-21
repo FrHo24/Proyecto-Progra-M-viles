@@ -146,14 +146,36 @@ class _InventarioAdministradoresWidgetState
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
+                                          color: Colors.white,
                                           letterSpacing: 0.0,
                                         ),
                                   ),
                                 ),
                                 expanded: Container(
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        blurRadius: 4.0,
+                                        color: Color(0x33000000),
+                                        offset: Offset(
+                                          0.0,
+                                          2.0,
+                                        ),
+                                      )
+                                    ],
+                                    gradient: const LinearGradient(
+                                      colors: [
+                                        Color(0xFF175F6D),
+                                        Color(0xFF55A0B0)
+                                      ],
+                                      stops: [0.0, 1.0],
+                                      begin: AlignmentDirectional(0.0, -1.0),
+                                      end: AlignmentDirectional(0, 1.0),
+                                    ),
+                                    shape: BoxShape.rectangle,
+                                    border: Border.all(
+                                      color: Colors.transparent,
+                                    ),
                                   ),
                                   child: Form(
                                     key: _model.formKey,
@@ -215,8 +237,7 @@ class _InventarioAdministradoresWidgetState
                                                             OutlineInputBorder(
                                                           borderSide:
                                                               const BorderSide(
-                                                            color: Color(
-                                                                0xFF09394A),
+                                                            color: Colors.black,
                                                             width: 2.0,
                                                           ),
                                                           borderRadius:
@@ -266,6 +287,8 @@ class _InventarioAdministradoresWidgetState
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -341,8 +364,7 @@ class _InventarioAdministradoresWidgetState
                                                             OutlineInputBorder(
                                                           borderSide:
                                                               const BorderSide(
-                                                            color: Color(
-                                                                0xFF09394A),
+                                                            color: Colors.black,
                                                             width: 2.0,
                                                           ),
                                                           borderRadius:
@@ -392,6 +414,8 @@ class _InventarioAdministradoresWidgetState
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -465,8 +489,7 @@ class _InventarioAdministradoresWidgetState
                                                             OutlineInputBorder(
                                                           borderSide:
                                                               const BorderSide(
-                                                            color: Color(
-                                                                0xFF09394A),
+                                                            color: Colors.black,
                                                             width: 2.0,
                                                           ),
                                                           borderRadius:
@@ -516,6 +539,8 @@ class _InventarioAdministradoresWidgetState
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -589,8 +614,7 @@ class _InventarioAdministradoresWidgetState
                                                             OutlineInputBorder(
                                                           borderSide:
                                                               const BorderSide(
-                                                            color: Color(
-                                                                0xFF09394A),
+                                                            color: Colors.black,
                                                             width: 2.0,
                                                           ),
                                                           borderRadius:
@@ -640,6 +664,8 @@ class _InventarioAdministradoresWidgetState
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -713,8 +739,7 @@ class _InventarioAdministradoresWidgetState
                                                             OutlineInputBorder(
                                                           borderSide:
                                                               const BorderSide(
-                                                            color: Color(
-                                                                0xFF09394A),
+                                                            color: Colors.black,
                                                             width: 2.0,
                                                           ),
                                                           borderRadius:
@@ -764,6 +789,8 @@ class _InventarioAdministradoresWidgetState
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -888,7 +915,7 @@ class _InventarioAdministradoresWidgetState
                                                                   0.0,
                                                                   0.0,
                                                                   0.0),
-                                                      color: const Color(0xFF09394A),
+                                                      color: const Color(0xFFE17518),
                                                       textStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)

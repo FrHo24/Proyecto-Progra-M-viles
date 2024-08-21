@@ -132,14 +132,22 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
+                                          color: Colors.white,
                                           letterSpacing: 0.0,
                                         ),
                                   ),
                                 ),
                                 expanded: Container(
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
+                                  decoration: const BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        Color(0xFF175F6D),
+                                        Color(0xFF55A0B0)
+                                      ],
+                                      stops: [0.0, 1.0],
+                                      begin: AlignmentDirectional(0.0, -1.0),
+                                      end: AlignmentDirectional(0, 1.0),
+                                    ),
                                   ),
                                   child: Form(
                                     key: _model.formKey,
@@ -252,6 +260,8 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -378,6 +388,8 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -502,6 +514,8 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -626,6 +640,8 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -830,9 +846,7 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                                       24.0, 0.0, 24.0, 0.0),
                                               iconPadding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: const Color(0xFFE17518),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -955,7 +969,7 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                                                   0.0,
                                                                   0.0,
                                                                   0.0),
-                                                      color: const Color(0xFF09394A),
+                                                      color: const Color(0xFFE17518),
                                                       textStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)

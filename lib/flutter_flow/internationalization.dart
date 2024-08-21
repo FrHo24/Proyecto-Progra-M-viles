@@ -1289,7 +1289,30 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'pt': '',
     },
+    'sl0r1ryc': {
+      'es': 'Asistencia',
+      'en': '',
+      'pt': '',
+    },
     'n77hous7': {
+      'es': 'Home',
+      'en': '',
+      'pt': '',
+    },
+  },
+  // Asistencia
+  {
+    'dx0uvjdp': {
+      'es': 'guardar',
+      'en': '',
+      'pt': '',
+    },
+    'qwv37uvf': {
+      'es': 'Page Title',
+      'en': '',
+      'pt': '',
+    },
+    'uom1yrts': {
       'es': 'Home',
       'en': '',
       'pt': '',

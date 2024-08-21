@@ -163,6 +163,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'agregarReserva',
           path: '/agregarReserva',
           builder: (context, params) => const AgregarReservaWidget(),
+        ),
+        FFRoute(
+          name: 'Asistencia',
+          path: '/asistencia',
+          builder: (context, params) => const AsistenciaWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

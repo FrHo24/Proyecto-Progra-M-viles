@@ -78,6 +78,7 @@ class _EditarClaseWidgetState extends State<EditarClaseWidget> {
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
+                          color: Colors.white,
                           letterSpacing: 0.0,
                         ),
                   ),
@@ -137,6 +138,8 @@ class _EditarClaseWidgetState extends State<EditarClaseWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -204,6 +207,8 @@ class _EditarClaseWidgetState extends State<EditarClaseWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -272,6 +277,8 @@ class _EditarClaseWidgetState extends State<EditarClaseWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -325,7 +332,7 @@ class _EditarClaseWidgetState extends State<EditarClaseWidget> {
                             onChanged: (val) => setState(
                                 () => _model.ddEditInstructorAsigValue = val),
                             width: 300.0,
-                            height: 56.0,
+                            height: 51.56,
                             textStyle: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(

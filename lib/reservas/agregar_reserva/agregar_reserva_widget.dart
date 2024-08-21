@@ -291,6 +291,35 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                           letterSpacing: 0.0,
                         ),
                   ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      FaIcon(
+                        FontAwesomeIcons.tasks,
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        size: 75.0,
+                      ),
+                    ],
+                  ),
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      context.pushNamed('Asistencia');
+                    },
+                    child: Text(
+                      FFLocalizations.of(context).getText(
+                        'sl0r1ryc' /* Asistencia */,
+                      ),
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Readex Pro',
+                            letterSpacing: 0.0,
+                          ),
+                    ),
+                  ),
                 ].divide(const SizedBox(height: 10.0)),
               ),
             ),

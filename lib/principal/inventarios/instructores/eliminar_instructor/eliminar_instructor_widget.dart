@@ -66,6 +66,7 @@ class _EliminarInstructorWidgetState extends State<EliminarInstructorWidget> {
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Readex Pro',
+                        color: Colors.white,
                         letterSpacing: 0.0,
                       ),
                 ),
@@ -126,9 +127,12 @@ class _EliminarInstructorWidgetState extends State<EliminarInstructorWidget> {
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
+                        filled: true,
+                        fillColor: Colors.white,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
+                            color: Colors.black,
                             letterSpacing: 0.0,
                           ),
                       validator: _model

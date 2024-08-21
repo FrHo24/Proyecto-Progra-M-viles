@@ -27,3 +27,4 @@ export '/principal/inventarios/productos/inventario_productos/inventario_product
     show InventarioProductosWidget;
 export '/reservas/agregar_reserva/agregar_reserva_widget.dart'
     show AgregarReservaWidget;
+export '/asistencia/asistencia_widget.dart' show AsistenciaWidget;

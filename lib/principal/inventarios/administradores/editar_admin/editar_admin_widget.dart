@@ -80,6 +80,7 @@ class _EditarAdminWidgetState extends State<EditarAdminWidget> {
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
+                          color: Colors.white,
                           letterSpacing: 0.0,
                         ),
                   ),
@@ -140,6 +141,8 @@ class _EditarAdminWidgetState extends State<EditarAdminWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -207,6 +210,8 @@ class _EditarAdminWidgetState extends State<EditarAdminWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -274,6 +279,8 @@ class _EditarAdminWidgetState extends State<EditarAdminWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -341,6 +348,8 @@ class _EditarAdminWidgetState extends State<EditarAdminWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
@@ -407,6 +416,8 @@ class _EditarAdminWidgetState extends State<EditarAdminWidget> {
                             ),
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',

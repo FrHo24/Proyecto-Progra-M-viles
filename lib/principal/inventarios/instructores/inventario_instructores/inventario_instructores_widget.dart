@@ -148,14 +148,22 @@ class _InventarioInstructoresWidgetState
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
+                                          color: Colors.white,
                                           letterSpacing: 0.0,
                                         ),
                                   ),
                                 ),
                                 expanded: Container(
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
+                                  decoration: const BoxDecoration(
+                                    gradient: LinearGradient(
+                                      colors: [
+                                        Color(0xFF175F6D),
+                                        Color(0xFF55A0B0)
+                                      ],
+                                      stops: [0.0, 1.0],
+                                      begin: AlignmentDirectional(0.0, -1.0),
+                                      end: AlignmentDirectional(0, 1.0),
+                                    ),
                                   ),
                                   child: Form(
                                     key: _model.formKey,
@@ -268,6 +276,8 @@ class _InventarioInstructoresWidgetState
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -394,6 +404,8 @@ class _InventarioInstructoresWidgetState
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -518,6 +530,8 @@ class _InventarioInstructoresWidgetState
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -642,6 +656,8 @@ class _InventarioInstructoresWidgetState
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -766,6 +782,8 @@ class _InventarioInstructoresWidgetState
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -890,6 +908,8 @@ class _InventarioInstructoresWidgetState
                                                                   .circular(
                                                                       8.0),
                                                         ),
+                                                        filled: true,
+                                                        fillColor: Colors.white,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -994,7 +1014,7 @@ class _InventarioInstructoresWidgetState
                                                                   0.0,
                                                                   0.0,
                                                                   0.0),
-                                                      color: const Color(0xFF09394A),
+                                                      color: const Color(0xFFE17518),
                                                       textStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)
