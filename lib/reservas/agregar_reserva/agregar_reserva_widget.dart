@@ -527,7 +527,6 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     height: MediaQuery.sizeOf(context).height * 0.4,
                     decoration: BoxDecoration(
-                      color: const Color(0xFF7AABB4),
                       boxShadow: const [
                         BoxShadow(
                           blurRadius: 4.0,
@@ -538,6 +537,12 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                           ),
                         )
                       ],
+                      gradient: const LinearGradient(
+                        colors: [Color(0xFF175F6D), Color(0xFF55A0B0)],
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(0.0, -1.0),
+                        end: AlignmentDirectional(0, 1.0),
+                      ),
                       borderRadius: BorderRadius.circular(25.0),
                       shape: BoxShape.rectangle,
                       border: Border.all(
@@ -986,7 +991,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                       ),
-                                      tileColor: const Color(0xFF7AABB4),
+                                      tileColor: const Color(0xFF55A0B0),
                                       dense: false,
                                       shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.only(
@@ -1038,7 +1043,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                       ),
-                                      tileColor: const Color(0xFF7AABB4),
+                                      tileColor: const Color(0xFF55A0B0),
                                       dense: false,
                                     );
                                   },
@@ -1056,7 +1061,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                                         child: StyledVerticalDivider(
                                           width: 10.0,
                                           thickness: 5.0,
-                                          color: Color(0xFF7AABB4),
+                                          color: Color(0xFF55A0B0),
                                           lineStyle: DividerLineStyle.dashed,
                                         ),
                                       ),
@@ -1078,7 +1083,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                                         child: StyledVerticalDivider(
                                           width: 10.0,
                                           thickness: 5.0,
-                                          color: Color(0xFF7AABB4),
+                                          color: Color(0xFF55A0B0),
                                           lineStyle: DividerLineStyle.dashed,
                                         ),
                                       ),
@@ -1095,7 +1100,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                                       child: StyledVerticalDivider(
                                         width: 10.0,
                                         thickness: 5.0,
-                                        color: Color(0xFF7AABB4),
+                                        color: Color(0xFF55A0B0),
                                         lineStyle: DividerLineStyle.dashed,
                                       ),
                                     ),
@@ -1119,7 +1124,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                                       child: StyledVerticalDivider(
                                         width: 10.0,
                                         thickness: 5.0,
-                                        color: Color(0xFF7AABB4),
+                                        color: Color(0xFF55A0B0),
                                         lineStyle: DividerLineStyle.dashed,
                                       ),
                                     ),
@@ -1135,7 +1140,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                                       child: StyledVerticalDivider(
                                         width: 10.0,
                                         thickness: 5.0,
-                                        color: Color(0xFF7AABB4),
+                                        color: Color(0xFF55A0B0),
                                         lineStyle: DividerLineStyle.dashed,
                                       ),
                                     ),
@@ -1203,7 +1208,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                                       child: StyledVerticalDivider(
                                         width: 10.0,
                                         thickness: 5.0,
-                                        color: Color(0xFF7AABB4),
+                                        color: Color(0xFF55A0B0),
                                         lineStyle: DividerLineStyle.dashed,
                                       ),
                                     ),
@@ -1213,7 +1218,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                                   width: 480.0,
                                   height: 50.0,
                                   decoration: const BoxDecoration(
-                                    color: Color(0xFF7AABB4),
+                                    color: Color(0xFF55A0B0),
                                     borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(50.0),
                                       bottomRight: Radius.circular(50.0),

@@ -288,8 +288,7 @@ class _AjustesWidgetState extends State<AjustesWidget> {
                             ),
                             FlutterFlowLanguageSelector(
                               width: 200.0,
-                              backgroundColor: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
+                              backgroundColor: const Color(0xFFE17518),
                               borderColor: Colors.transparent,
                               dropdownColor: FlutterFlowTheme.of(context)
                                   .secondaryBackground,

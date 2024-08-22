@@ -2658,6 +2658,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Update information',
       'pt': 'Atualizar informações',
     },
+    '22vr827s': {
+      'es': 'Cerrar Sesión',
+      'en': '',
+      'pt': '',
+    },
   },
   // Configuracion
   {

@@ -238,13 +238,26 @@ class _PerfilWidgetState extends State<PerfilWidget>
                                                         MainAxisAlignment
                                                             .center,
                                                     children: [
-                                                      Icon(
-                                                        Icons.person_sharp,
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .accent1,
-                                                        size: 44.0,
+                                                      InkWell(
+                                                        splashColor:
+                                                            Colors.transparent,
+                                                        focusColor:
+                                                            Colors.transparent,
+                                                        hoverColor:
+                                                            Colors.transparent,
+                                                        highlightColor:
+                                                            Colors.transparent,
+                                                        onTap: () async {
+                                                          context.pushNamed(
+                                                              'agregarReservaCopy');
+                                                        },
+                                                        child: Icon(
+                                                          Icons.person_sharp,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .accent1,
+                                                          size: 44.0,
+                                                        ),
                                                       ),
                                                       Text(
                                                         FFLocalizations.of(

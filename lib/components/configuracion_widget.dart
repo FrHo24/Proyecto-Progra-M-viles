@@ -40,7 +40,7 @@ class _ConfiguracionWidgetState extends State<ConfiguracionWidget> {
       width: MediaQuery.sizeOf(context).width * 1.0,
       height: MediaQuery.sizeOf(context).height * 1.0,
       decoration: const BoxDecoration(
-        color: Color(0xFF1D7168),
+        color: Color(0xFF175F6D),
       ),
       child: SingleChildScrollView(
         child: Column(
@@ -247,16 +247,15 @@ class _ConfiguracionWidgetState extends State<ConfiguracionWidget> {
                       ),
                       FlutterFlowLanguageSelector(
                         width: 200.0,
-                        backgroundColor:
-                            FlutterFlowTheme.of(context).primaryBackground,
+                        backgroundColor: const Color(0xFFE17518),
                         borderColor: Colors.transparent,
                         dropdownColor:
                             FlutterFlowTheme.of(context).secondaryBackground,
                         dropdownIconColor:
                             FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: 40.0,
-                        textStyle: TextStyle(
-                          color: FlutterFlowTheme.of(context).primaryText,
+                        textStyle: const TextStyle(
+                          color: Colors.black,
                           fontWeight: FontWeight.w600,
                           fontSize: 13.0,
                         ),

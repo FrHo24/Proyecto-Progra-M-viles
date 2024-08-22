@@ -111,8 +111,8 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
         child: Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: BoxDecoration(
-            color: FlutterFlowTheme.of(context).accent4,
+          decoration: const BoxDecoration(
+            color: Color(0xFF175F6D),
           ),
           child: SingleChildScrollView(
             child: Column(
@@ -127,7 +127,6 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                       maxWidth: 670.0,
                     ),
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
                       boxShadow: const [
                         BoxShadow(
                           blurRadius: 3.0,
@@ -138,6 +137,12 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                           ),
                         )
                       ],
+                      gradient: const LinearGradient(
+                        colors: [Color(0xFF175F6D), Color(0xFF55A0B0)],
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(0.0, -1.0),
+                        end: AlignmentDirectional(0, 1.0),
+                      ),
                       borderRadius: BorderRadius.circular(16.0),
                       border: Border.all(
                         color: FlutterFlowTheme.of(context).alternate,
@@ -872,7 +877,8 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                     0.0, 16.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
@@ -931,8 +937,71 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                           iconPadding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
+                                          color: const Color(0xFFE17518),
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmall
+                                                  .override(
+                                                    fontFamily: 'Readex Pro',
+                                                    color: Colors.white,
+                                                    letterSpacing: 0.0,
+                                                  ),
+                                          elevation: 2.0,
+                                          borderSide: const BorderSide(
+                                            color: Colors.transparent,
+                                            width: 1.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(40.0),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 4.0, 0.0),
+                                      child: FFButtonWidget(
+                                        onPressed: () async {
+                                          GoRouter.of(context)
+                                              .prepareAuthEvent();
+                                          await authManager.signOut();
+                                          GoRouter.of(context)
+                                              .clearRedirectLocation();
+
+                                          ScaffoldMessenger.of(context)
+                                              .showSnackBar(
+                                            SnackBar(
+                                              content: Text(
+                                                '!Gracias por su visita¡',
+                                                style: TextStyle(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                ),
+                                              ),
+                                              duration:
+                                                  const Duration(milliseconds: 4000),
+                                              backgroundColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .info,
+                                            ),
+                                          );
+
+                                          context.goNamedAuth('PaginadeIngreso',
+                                              context.mounted);
+                                        },
+                                        text:
+                                            FFLocalizations.of(context).getText(
+                                          '22vr827s' /* Cerrar Sesión */,
+                                        ),
+                                        options: FFButtonOptions(
+                                          height: 50.0,
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  32.0, 0.0, 32.0, 0.0),
+                                          iconPadding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 0.0),
+                                          color: const Color(0xFFE17518),
                                           textStyle:
                                               FlutterFlowTheme.of(context)
                                                   .titleSmall
