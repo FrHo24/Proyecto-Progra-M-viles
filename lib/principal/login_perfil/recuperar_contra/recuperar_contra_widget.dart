@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'recuperar_contra_model.dart';
 export 'recuperar_contra_model.dart';
 
@@ -41,16 +42,16 @@ class _RecuperarContraWidgetState extends State<RecuperarContraWidget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: const Color(0xFFE5E5E5),
+        backgroundColor: const Color(0xFFE17518),
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
           borderRadius: 30.0,
           borderWidth: 1.0,
           buttonSize: 60.0,
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_rounded,
-            color: FlutterFlowTheme.of(context).primaryText,
+            color: Colors.white,
             size: 30.0,
           ),
           onPressed: () async {
@@ -65,6 +66,7 @@ class _RecuperarContraWidgetState extends State<RecuperarContraWidget> {
             ),
             style: FlutterFlowTheme.of(context).displaySmall.override(
                   fontFamily: 'Outfit',
+                  color: Colors.white,
                   fontSize: 16.0,
                   letterSpacing: 0.0,
                 ),
@@ -92,17 +94,12 @@ class _RecuperarContraWidgetState extends State<RecuperarContraWidget> {
               children: [
                 Align(
                   alignment: const AlignmentDirectional(0.0, 0.0),
-                  child: Container(
-                    width: 150.0,
-                    height: 150.0,
-                    clipBehavior: Clip.antiAlias,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                    ),
-                    child: Image.asset(
-                      'assets/images/WhatsApp_Image_2024-06-19_at_7.41.43_PM-removebg-preview.png',
-                      fit: BoxFit.cover,
-                    ),
+                  child: Lottie.network(
+                    'https://lottie.host/2aaecbc4-300f-457b-9fbe-1edd218db907/LmXwpcezKt.json',
+                    width: 254.0,
+                    height: 192.0,
+                    fit: BoxFit.cover,
+                    animate: true,
                   ),
                 ),
 
@@ -314,7 +311,7 @@ class _RecuperarContraWidgetState extends State<RecuperarContraWidget> {
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).accent3,
+                                  color: const Color(0xF0F8F5F5),
                                   letterSpacing: 0.0,
                                 ),
                         elevation: 3.0,

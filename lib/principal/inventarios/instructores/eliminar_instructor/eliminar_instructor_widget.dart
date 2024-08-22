@@ -167,12 +167,11 @@ class _EliminarInstructorWidgetState extends State<EliminarInstructorWidget> {
                     color: const Color(0xFFE17518),
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Readex Pro',
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: const Color(0xFFF4F1F1),
                           letterSpacing: 0.0,
                         ),
                     elevation: 3.0,
                     borderSide: const BorderSide(
-                      color: Colors.black,
                       width: 2.0,
                     ),
                     borderRadius: BorderRadius.circular(8.0),

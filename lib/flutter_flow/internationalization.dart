@@ -201,6 +201,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Fenix Box',
       'pt': 'Caixa Fênix',
     },
+    'ze9fqqmn': {
+      'es': 'Aplicación de inventarios y reservas \ndel gimnasio FénixBox',
+      'en': '',
+      'pt': '',
+    },
     'x9jnewqj': {
       'es': 'Inicia',
       'en': 'Start',
@@ -258,44 +263,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Lar',
     },
   },
-  // Ajustes
-  {
-    'x8q5af7d': {
-      'es': 'Cuenta',
-      'en': 'Account',
-      'pt': 'Conta',
-    },
-    'azfkmg9v': {
-      'es': 'Cambiar Contraseña',
-      'en': 'Change Password',
-      'pt': 'Alterar a senha',
-    },
-    's0qw91kk': {
-      'es': 'Recuperar Contraseña',
-      'en': 'Recover Password',
-      'pt': 'Recuperar senha',
-    },
-    '63cr1d4c': {
-      'es': 'General',
-      'en': 'General',
-      'pt': 'Em geral',
-    },
-    'cfja0v7e': {
-      'es': 'Lenguaje',
-      'en': 'Language',
-      'pt': 'Linguagem',
-    },
-    'jkf74pdz': {
-      'es': 'Ajustes',
-      'en': 'Settings',
-      'pt': 'Configurações',
-    },
-    'onplbhv3': {
-      'es': 'Home',
-      'en': 'Home',
-      'pt': 'Lar',
-    },
-  },
   // CambiarContrasena
   {
     'b2bgexof': {
@@ -337,210 +304,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Alterar a senha',
     },
     't5htbhzd': {
-      'es': 'Home',
-      'en': 'Home',
-      'pt': 'Lar',
-    },
-  },
-  // Perfil
-  {
-    'n6hkwk67': {
-      'es': 'Información Personal',
-      'en': 'Personal Information',
-      'pt': 'Informações pessoais',
-    },
-    'eesnuyas': {
-      'es': 'Perfil',
-      'en': 'Profile',
-      'pt': 'Perfil',
-    },
-    'l16444up': {
-      'es': 'Ajustes',
-      'en': 'Settings',
-      'pt': 'Configurações',
-    },
-    '8w4f28z3': {
-      'es': 'Salir',
-      'en': 'Go out',
-      'pt': 'Sair',
-    },
-    'oivitafn': {
-      'es': 'Perfil',
-      'en': 'Profile',
-      'pt': 'Perfil',
-    },
-    '0sjtcxm5': {
-      'es': 'Home',
-      'en': 'Home',
-      'pt': 'Lar',
-    },
-  },
-  // verReservas
-  {
-    'm2lk5wb0': {
-      'es': 'Calendario para ver las reservas',
-      'en': 'Calendar to view reservations',
-      'pt': 'Calendário para visualizar reservas',
-    },
-    'iga8u7i7': {
-      'es': 'Reservar',
-      'en': 'Reserve',
-      'pt': 'Reserva',
-    },
-    'fck008wi': {
-      'es': 'Instructor:',
-      'en': 'Instructor:',
-      'pt': 'Instrutor:',
-    },
-    '02b1trwd': {
-      'es': 'BD',
-      'en': 'BD',
-      'pt': 'B. D.',
-    },
-    'uns6m5cb': {
-      'es': 'Clase:',
-      'en': 'Class:',
-      'pt': 'Aula:',
-    },
-    'lxa3v2p4': {
-      'es': 'BD',
-      'en': 'BD',
-      'pt': 'B. D.',
-    },
-    '7aiiop1m': {
-      'es': 'Clientes:',
-      'en': 'Customers:',
-      'pt': 'Clientes:',
-    },
-    'doz3h5ma': {
-      'es': 'BD',
-      'en': 'BD',
-      'pt': 'B. D.',
-    },
-    'wnwm9kux': {
-      'es': 'Hora:',
-      'en': 'Hour:',
-      'pt': 'Hora:',
-    },
-    'h95nrd8v': {
-      'es': 'BD',
-      'en': 'BD',
-      'pt': 'B. D.',
-    },
-    '9y8j5sf5': {
-      'es': 'Editar',
-      'en': 'Edit',
-      'pt': 'Editar',
-    },
-    'oeywn4uz': {
-      'es': 'Eliminar',
-      'en': 'Eliminate',
-      'pt': 'Eliminar',
-    },
-    'afdeghbf': {
-      'es': 'Reservas',
-      'en': 'Reservations',
-      'pt': 'Reservas',
-    },
-    '28653bt6': {
-      'es': 'Cerrar Sesión',
-      'en': 'Close Session',
-      'pt': 'Sair',
-    },
-    'gq7msw2y': {
-      'es': 'Home',
-      'en': 'Home',
-      'pt': 'Lar',
-    },
-  },
-  // prueba
-  {
-    '5y9z8d1h': {
-      'es': 'Clase : ',
-      'en': 'Class :',
-      'pt': 'Aula :',
-    },
-    'fwxlh12s': {
-      'es': 'Clase',
-      'en': 'Class',
-      'pt': 'Aula',
-    },
-    'jwmptqc5': {
-      'es': 'Option 1',
-      'en': 'Option 1',
-      'pt': 'Opção 1',
-    },
-    'eb6hpc1j': {
-      'es': 'Seleccione una Clase',
-      'en': 'Select a Class',
-      'pt': 'Selecione uma aula',
-    },
-    'ukbd5v0n': {
-      'es': 'Search for an item...',
-      'en': 'Search for an item...',
-      'pt': 'Procure um item...',
-    },
-    'e0xbur0n': {
-      'es': 'Instructor : ',
-      'en': 'Instructor:',
-      'pt': 'Instrutor:',
-    },
-    '116qcb2w': {
-      'es': 'Intructor',
-      'en': 'Instructor',
-      'pt': 'Instrutor',
-    },
-    '3o7xhg57': {
-      'es': 'Option 1',
-      'en': 'Option 1',
-      'pt': 'Opção 1',
-    },
-    'og6a5fkr': {
-      'es': 'Seleccione un Instructor',
-      'en': 'Select an Instructor',
-      'pt': 'Selecione um instrutor',
-    },
-    't7i0k45d': {
-      'es': 'Search for an item...',
-      'en': 'Search for an item...',
-      'pt': 'Procure um item...',
-    },
-    'nldbiq79': {
-      'es': 'Cantidad \nparticipantes: ',
-      'en': 'Number of \nparticipants:',
-      'pt': 'Quantia \nparticipantes:',
-    },
-    '3r9zpn1o': {
-      'es': 'Clase',
-      'en': 'Class',
-      'pt': 'Aula',
-    },
-    'w7qrk0ll': {
-      'es': 'Option 1',
-      'en': 'Option 1',
-      'pt': 'Opção 1',
-    },
-    '1gmkhjue': {
-      'es': 'Seleccione una Clase',
-      'en': 'Select a Class',
-      'pt': 'Selecione uma aula',
-    },
-    '2lz054ht': {
-      'es': 'Search for an item...',
-      'en': 'Search for an item...',
-      'pt': 'Procure um item...',
-    },
-    'tqzhzqbh': {
-      'es': 'Agregar',
-      'en': 'Add',
-      'pt': 'Adicionar',
-    },
-    'kfi1l967': {
-      'es': 'Page Title',
-      'en': 'Page Title',
-      'pt': 'Título da página',
-    },
-    'k00zury0': {
       'es': 'Home',
       'en': 'Home',
       'pt': 'Lar',
@@ -1056,12 +819,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Nome da classe...',
     },
     '74samfy2': {
-      'es': 'Descripcion de la clase...',
+      'es': 'Descripción de la clase...',
       'en': 'Class Description...',
       'pt': 'Descrição da aula...',
     },
     'j1eu7zch': {
-      'es': 'Cantidad de clientes maxima...',
+      'es': 'Cantidad de clientes máxima...',
       'en': 'Maximum number of customers...',
       'pt': 'Número máximo de clientes...',
     },
@@ -1549,156 +1312,39 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Suppliers',
       'pt': 'Fornecedores',
     },
-    'sl0r1ryc': {
-      'es': 'Asistencia',
-      'en': 'Attendance',
-      'pt': 'Presença',
-    },
-    'n77hous7': {
+    'k00zury0': {
       'es': 'Home',
       'en': 'Home',
       'pt': 'Lar',
     },
   },
-  // Asistencia
+  // SobreNosotros
   {
-    'dx0uvjdp': {
-      'es': 'guardar',
-      'en': 'keep',
-      'pt': 'manter',
-    },
-    'qwv37uvf': {
-      'es': 'Page Title',
-      'en': 'Page Title',
-      'pt': 'Título da página',
-    },
-    'uom1yrts': {
-      'es': 'Home',
-      'en': 'Home',
-      'pt': 'Lar',
-    },
-  },
-  // agregarReservaCopy
-  {
-    'v15e8hqj': {
-      'es': 'Option 1',
-      'en': 'Option 1',
-      'pt': 'Opção 1',
-    },
-    'fswyqeol': {
-      'es': 'Seleccione la clase',
-      'en': 'Select class',
-      'pt': 'Selecione a turma',
-    },
-    'u89mpvlz': {
-      'es': 'Search for an item...',
-      'en': 'Search for an item...',
-      'pt': 'Procure um item...',
-    },
-    'gt377lnv': {
-      'es': 'Option 1',
-      'en': 'Option 1',
-      'pt': 'Opção 1',
-    },
-    'ubb5us0h': {
-      'es': 'Seleccione Instructor',
-      'en': 'Select Instructor',
-      'pt': 'Selecione o instrutor',
-    },
-    'cudlgn57': {
-      'es': 'Search for an item...',
-      'en': 'Search for an item...',
-      'pt': 'Procure um item...',
-    },
-    'ecp8q6xl': {
-      'es': 'Fecha y Hora',
-      'en': 'Date and Time',
-      'pt': 'Data e hora',
-    },
-    '5gensj9v': {
-      'es': 'Fecha',
-      'en': 'Date',
-      'pt': 'Data',
-    },
-    'syndivbx': {
-      'es': 'Reservar',
-      'en': 'Reserve',
-      'pt': 'Reserva',
-    },
-    'evl08v10': {
-      'es': '',
+    'x4erwwn8': {
+      'es': 'Back',
       'en': '',
       'pt': '',
     },
-    'p7tae94j': {
-      'es': '',
+    'ypuaib6f': {
+      'es': 'Acerca de FénixBox',
       'en': '',
       'pt': '',
     },
-    'ba9yqkwf': {
-      'es': 'Día de reserva:',
-      'en': 'Reservation day:',
-      'pt': 'Dia da reserva:',
+    'y787ubdq': {
+      'es':
+          'FénixBox es un gimnasio especializado en entrenamiento funcional y de alta intensidad, fundado en 2017 en el corazón de Heredia. Desde su apertura, FénixBox se ha convertido en un referente en la comunidad fitness, ofreciendo un enfoque personalizado y motivador para alcanzar los objetivos de cada uno de nuestros miembros. Siempre buscando nuevas oportunidades de mejora para clientes y colaboradores.\n\nNuestros entrenadores, Esteban y Joshua Castro, son profesionales apasionados por el fitness, con años de experiencia en la industria. Y los cuales buscan actualmente una nueva herramienta administrativa que permita gestionar el trabajo interno del box.\n\nEn FénixBox, creemos en la importancia de una comunidad unida y apoyamos a nuestros colaboradores en cada paso de su viaje hacia la mejor gestión del negocio.\n\n¡Únete a FenixBox y descubre cómo puedes transformar tu vida con nosotros!',
+      'en': '',
+      'pt': '',
     },
-    'g9qk7k22': {
-      'es': 'Cancelar Reserva',
-      'en': 'Cancel Reservation',
-      'pt': 'Cancelar reserva',
+    'bpnkxhby': {
+      'es': 'Sobre Nosotros',
+      'en': '',
+      'pt': '',
     },
-    '9iqzt7sr': {
-      'es': 'Reservas',
-      'en': 'Reservations',
-      'pt': 'Reservas',
-    },
-    'ry0bhksx': {
-      'es': 'Inventarios',
-      'en': 'Inventories',
-      'pt': 'Inventários',
-    },
-    'wqh36qi2': {
-      'es': 'Administradores',
-      'en': 'Administrators',
-      'pt': 'Administradores',
-    },
-    'apewm0ja': {
-      'es': 'Clases',
-      'en': 'Classes',
-      'pt': 'Aulas',
-    },
-    'tr7vzb96': {
-      'es': 'Clientes',
-      'en': 'Customers',
-      'pt': 'Clientes',
-    },
-    'h3zg3i5g': {
-      'es': 'Equipo',
-      'en': 'Equipment',
-      'pt': 'Equipamento',
-    },
-    '9qp0ni7z': {
-      'es': 'Instructores',
-      'en': 'Instructors',
-      'pt': 'Instrutores',
-    },
-    '7q02nd1b': {
-      'es': 'productos',
-      'en': 'products',
-      'pt': 'produtos',
-    },
-    'vqjftubl': {
-      'es': 'Proveedores',
-      'en': 'Suppliers',
-      'pt': 'Fornecedores',
-    },
-    'vebtsdso': {
-      'es': 'Asistencia',
-      'en': 'Attendance',
-      'pt': 'Presença',
-    },
-    '3amrm0x8': {
+    'rooem8qo': {
       'es': 'Home',
-      'en': 'Home',
-      'pt': 'Lar',
+      'en': '',
+      'pt': '',
     },
   },
   // EditarAdmin
@@ -2658,38 +2304,43 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Update information',
       'pt': 'Atualizar informações',
     },
-    '22vr827s': {
-      'es': 'Cerrar Sesión',
-      'en': '',
-      'pt': '',
-    },
   },
   // Configuracion
   {
     'k34a5i5c': {
-      'es': 'Cuenta',
+      'es': 'Ajustes',
       'en': 'Account',
       'pt': 'Conta',
+    },
+    '22tx8qo5': {
+      'es': 'Sobre Nosotros',
+      'en': '',
+      'pt': '',
     },
     'ns08aj25': {
       'es': 'Cambiar Contraseña',
       'en': 'Change Password',
       'pt': 'Alterar a senha',
     },
-    's43wbd79': {
+    '62afb5pu': {
       'es': 'Recuperar Contraseña',
-      'en': 'Recover Password',
-      'pt': 'Recuperar senha',
-    },
-    'q28azxoh': {
-      'es': 'General',
-      'en': 'General',
-      'pt': 'Em geral',
+      'en': '',
+      'pt': '',
     },
     'dab827pz': {
       'es': 'Lenguaje',
       'en': 'Language',
       'pt': 'Linguagem',
+    },
+    's43wbd79': {
+      'es': 'Cerrar Sesión',
+      'en': 'Recover Password',
+      'pt': 'Recuperar senha',
+    },
+    'ag3pnd0w': {
+      'es': 'Salir',
+      'en': '',
+      'pt': '',
     },
   },
   // Miscellaneous

@@ -71,9 +71,9 @@ class _InventarioAdministradoresWidgetState
             onTap: () async {
               context.pushNamed('agregarReserva');
             },
-            child: Icon(
+            child: const Icon(
               Icons.chevron_left,
-              color: FlutterFlowTheme.of(context).secondaryText,
+              color: Color(0xFFF8F8F8),
               size: 24.0,
             ),
           ),
@@ -85,6 +85,7 @@ class _InventarioAdministradoresWidgetState
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Readex Pro',
+                    color: Colors.white,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                   ),
@@ -961,7 +962,7 @@ class _InventarioAdministradoresWidgetState
                                   headerAlignment:
                                       ExpandablePanelHeaderAlignment.center,
                                   hasIcon: true,
-                                  iconColor: Color(0xFFE17518),
+                                  iconColor: Color(0xFFF6F4F2),
                                 ),
                               ),
                             ),

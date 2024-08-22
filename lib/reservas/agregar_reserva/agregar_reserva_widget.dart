@@ -1,12 +1,12 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/components/configuracion_widget.dart';
-import '/components/datos_perfil_widget.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/principal/ajustes/configuracion/configuracion_widget.dart';
+import '/principal/login_perfil/datos_perfil/datos_perfil_widget.dart';
 import '/reservas/eliminar_reserva/eliminar_reserva_widget.dart';
 import 'package:styled_divider/styled_divider.dart';
 import 'package:flutter/material.dart';
@@ -408,35 +408,6 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                           letterSpacing: 0.0,
                         ),
                   ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      FaIcon(
-                        FontAwesomeIcons.tasks,
-                        color: FlutterFlowTheme.of(context).secondaryText,
-                        size: 75.0,
-                      ),
-                    ],
-                  ),
-                  InkWell(
-                    splashColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    onTap: () async {
-                      context.pushNamed('Asistencia');
-                    },
-                    child: Text(
-                      FFLocalizations.of(context).getText(
-                        'sl0r1ryc' /* Asistencia */,
-                      ),
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            letterSpacing: 0.0,
-                          ),
-                    ),
-                  ),
                 ].divide(const SizedBox(height: 10.0)),
               ),
             ),
@@ -457,9 +428,9 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                 onTap: () async {
                   scaffoldKey.currentState!.openDrawer();
                 },
-                child: Icon(
+                child: const Icon(
                   Icons.dehaze,
-                  color: FlutterFlowTheme.of(context).secondaryText,
+                  color: Color(0xFFF0EBEB),
                   size: 35.0,
                 ),
               ),
@@ -471,7 +442,8 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   fontFamily: 'Readex Pro',
-                  fontSize: 25.0,
+                  color: const Color(0xFFF6F0F0),
+                  fontSize: 16.0,
                   letterSpacing: 0.0,
                 ),
           ),
@@ -504,9 +476,9 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                     },
                   ).then((value) => safeSetState(() {}));
                 },
-                child: Icon(
+                child: const Icon(
                   Icons.person,
-                  color: FlutterFlowTheme.of(context).secondaryText,
+                  color: Color(0xFFF6EFEF),
                   size: 40.0,
                 ),
               ),

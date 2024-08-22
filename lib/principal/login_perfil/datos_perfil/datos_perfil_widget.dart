@@ -187,6 +187,8 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                                       .headlineMedium
                                                       .override(
                                                         fontFamily: 'Outfit',
+                                                        color:
+                                                            const Color(0xFFF4F2F2),
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -200,14 +202,14 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                                   .getText(
                                                 'gw02ze00' /* Por favor ingrese la informaci... */,
                                               ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
-                                                        letterSpacing: 0.0,
-                                                      ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily: 'Readex Pro',
+                                                    color: const Color(0xFFF6F3F3),
+                                                    letterSpacing: 0.0,
+                                                  ),
                                             ),
                                           ),
                                         ],
@@ -243,8 +245,16 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                         width: 120.0,
                                         height: 250.0,
                                         decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
-                                              .alternate,
+                                          gradient: const LinearGradient(
+                                            colors: [
+                                              Color(0xFFD9D8E3),
+                                              Color(0xFF55A0B0)
+                                            ],
+                                            stops: [0.0, 1.0],
+                                            begin:
+                                                AlignmentDirectional(0.0, -1.0),
+                                            end: AlignmentDirectional(0, 1.0),
+                                          ),
                                           borderRadius:
                                               BorderRadius.circular(16.0),
                                         ),
@@ -386,6 +396,8 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                                         .titleLarge
                                                         .override(
                                                           fontFamily: 'Outfit',
+                                                          color:
+                                                              const Color(0xFFF4F1F1),
                                                           letterSpacing: 0.0,
                                                         ),
                                                   ),
@@ -418,17 +430,16 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                               .getText(
                                             '33e1tohm' /* Ingrese su nombre  */,
                                           ),
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .headlineMedium
-                                              .override(
-                                                fontFamily: 'Outfit',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                          hintStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineMedium
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: const Color(0xFFF8F4F4),
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
                                           enabledBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
                                               color:
@@ -512,17 +523,16 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                               .getText(
                                             'dy5s5ax1' /* Ingrese sus apellidos */,
                                           ),
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .headlineMedium
-                                              .override(
-                                                fontFamily: 'Outfit',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                          hintStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .headlineMedium
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: const Color(0xFFF8F7F7),
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                  ),
                                           enabledBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
                                               color:
@@ -610,6 +620,7 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                                   .labelLarge
                                                   .override(
                                                     fontFamily: 'Readex Pro',
+                                                    color: const Color(0xFFF9F6F6),
                                                     letterSpacing: 0.0,
                                                   ),
                                           hintStyle:
@@ -702,6 +713,7 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                                   .labelLarge
                                                   .override(
                                                     fontFamily: 'Readex Pro',
+                                                    color: const Color(0xFFF9F7F7),
                                                     letterSpacing: 0.0,
                                                   ),
                                           hintStyle:
@@ -795,6 +807,7 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                                   .labelLarge
                                                   .override(
                                                     fontFamily: 'Readex Pro',
+                                                    color: const Color(0xFFF8F4F4),
                                                     letterSpacing: 0.0,
                                                   ),
                                           hintStyle:
@@ -862,6 +875,7 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                             .bodyLarge
                                             .override(
                                               fontFamily: 'Readex Pro',
+                                              color: const Color(0xFFB21616),
                                               letterSpacing: 0.0,
                                             ),
                                         validator: _model
@@ -928,70 +942,6 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                         text:
                                             FFLocalizations.of(context).getText(
                                           '44eocw8q' /* Actualizar información */,
-                                        ),
-                                        options: FFButtonOptions(
-                                          height: 50.0,
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  32.0, 0.0, 32.0, 0.0),
-                                          iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 0.0),
-                                          color: const Color(0xFFE17518),
-                                          textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmall
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: Colors.white,
-                                                    letterSpacing: 0.0,
-                                                  ),
-                                          elevation: 2.0,
-                                          borderSide: const BorderSide(
-                                            color: Colors.transparent,
-                                            width: 1.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(40.0),
-                                        ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 4.0, 0.0),
-                                      child: FFButtonWidget(
-                                        onPressed: () async {
-                                          GoRouter.of(context)
-                                              .prepareAuthEvent();
-                                          await authManager.signOut();
-                                          GoRouter.of(context)
-                                              .clearRedirectLocation();
-
-                                          ScaffoldMessenger.of(context)
-                                              .showSnackBar(
-                                            SnackBar(
-                                              content: Text(
-                                                '!Gracias por su visita¡',
-                                                style: TextStyle(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryText,
-                                                ),
-                                              ),
-                                              duration:
-                                                  const Duration(milliseconds: 4000),
-                                              backgroundColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .info,
-                                            ),
-                                          );
-
-                                          context.goNamedAuth('PaginadeIngreso',
-                                              context.mounted);
-                                        },
-                                        text:
-                                            FFLocalizations.of(context).getText(
-                                          '22vr827s' /* Cerrar Sesión */,
                                         ),
                                         options: FFButtonOptions(
                                           height: 50.0,

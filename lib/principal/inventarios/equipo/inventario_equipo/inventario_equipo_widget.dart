@@ -66,9 +66,9 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
             onTap: () async {
               context.pushNamed('agregarReserva');
             },
-            child: Icon(
-              Icons.menu,
-              color: FlutterFlowTheme.of(context).accent3,
+            child: const Icon(
+              Icons.chevron_left,
+              color: Color(0xF0F4EFEF),
               size: 30.0,
             ),
           ),
@@ -80,6 +80,7 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Readex Pro',
+                    color: Colors.white,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                   ),
@@ -692,6 +693,8 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                                       .override(
                                                         fontFamily:
                                                             'Readex Pro',
+                                                        color:
+                                                            const Color(0xFFE7E7E7),
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.normal,
@@ -709,6 +712,7 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
+                                                          color: Colors.white,
                                                           letterSpacing: 0.0,
                                                         ),
                                               ),
@@ -1024,7 +1028,7 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                   headerAlignment:
                                       ExpandablePanelHeaderAlignment.center,
                                   hasIcon: true,
-                                  iconColor: Color(0xFFE17518),
+                                  iconColor: Colors.white,
                                 ),
                               ),
                             ),

@@ -42,16 +42,16 @@ class _CambiarContrasenaWidgetState extends State<CambiarContrasenaWidget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        backgroundColor: const Color(0xFFE17518),
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
           borderRadius: 30.0,
           borderWidth: 1.0,
           buttonSize: 60.0,
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_rounded,
-            color: FlutterFlowTheme.of(context).primaryText,
+            color: Colors.white,
             size: 30.0,
           ),
           onPressed: () async {
@@ -66,6 +66,7 @@ class _CambiarContrasenaWidgetState extends State<CambiarContrasenaWidget> {
             ),
             style: FlutterFlowTheme.of(context).displaySmall.override(
                   fontFamily: 'Outfit',
+                  color: Colors.white,
                   fontSize: 16.0,
                   letterSpacing: 0.0,
                 ),
@@ -314,7 +315,7 @@ class _CambiarContrasenaWidgetState extends State<CambiarContrasenaWidget> {
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Readex Pro',
-                                  color: FlutterFlowTheme.of(context).accent3,
+                                  color: const Color(0xF0F6F3F3),
                                   letterSpacing: 0.0,
                                 ),
                         elevation: 3.0,

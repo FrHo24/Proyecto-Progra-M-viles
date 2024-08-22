@@ -443,12 +443,11 @@ class _EditarClaseWidgetState extends State<EditarClaseWidget> {
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Readex Pro',
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: Colors.white,
                                 letterSpacing: 0.0,
                               ),
                       elevation: 3.0,
                       borderSide: const BorderSide(
-                        color: Colors.black,
                         width: 2.0,
                       ),
                       borderRadius: BorderRadius.circular(8.0),

@@ -405,12 +405,11 @@ class _EditarEquipoWidgetState extends State<EditarEquipoWidget> {
                   color: const Color(0xFFE17518),
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Readex Pro',
-                        color: Colors.black,
+                        color: const Color(0xFFFBFBFB),
                         letterSpacing: 0.0,
                       ),
                   elevation: 3.0,
                   borderSide: const BorderSide(
-                    color: Colors.black,
                     width: 2.0,
                   ),
                   borderRadius: BorderRadius.circular(8.0),

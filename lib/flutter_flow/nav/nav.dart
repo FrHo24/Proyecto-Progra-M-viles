@@ -100,29 +100,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const RecuperarContraWidget(),
         ),
         FFRoute(
-          name: 'Ajustes',
-          path: '/ajustes',
-          builder: (context, params) => const AjustesWidget(),
-        ),
-        FFRoute(
           name: 'CambiarContrasena',
           path: '/cambiarContrasena',
           builder: (context, params) => const CambiarContrasenaWidget(),
-        ),
-        FFRoute(
-          name: 'Perfil',
-          path: '/perfil',
-          builder: (context, params) => const PerfilWidget(),
-        ),
-        FFRoute(
-          name: 'verReservas',
-          path: '/verReservas',
-          builder: (context, params) => const VerReservasWidget(),
-        ),
-        FFRoute(
-          name: 'prueba',
-          path: '/prueba',
-          builder: (context, params) => const PruebaWidget(),
         ),
         FFRoute(
           name: 'inventarioInstructores',
@@ -165,14 +145,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const AgregarReservaWidget(),
         ),
         FFRoute(
-          name: 'Asistencia',
-          path: '/asistencia',
-          builder: (context, params) => const AsistenciaWidget(),
-        ),
-        FFRoute(
-          name: 'agregarReservaCopy',
-          path: '/agregarReservaCopy',
-          builder: (context, params) => const AgregarReservaCopyWidget(),
+          name: 'SobreNosotros',
+          path: '/sobreNosotros',
+          builder: (context, params) => const SobreNosotrosWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

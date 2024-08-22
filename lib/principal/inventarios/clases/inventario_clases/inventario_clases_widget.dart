@@ -65,9 +65,9 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
             onTap: () async {
               context.pushNamed('agregarReserva');
             },
-            child: Icon(
+            child: const Icon(
               Icons.chevron_left,
-              color: FlutterFlowTheme.of(context).secondaryText,
+              color: Color(0xFFF8F8F8),
               size: 24.0,
             ),
           ),
@@ -79,6 +79,7 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Readex Pro',
+                    color: const Color(0xFFFFFBFB),
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w600,
                   ),
@@ -311,7 +312,7 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          '74samfy2' /* Descripcion de la clase... */,
+                                                          '74samfy2' /* Descripción de la clase... */,
                                                         ),
                                                         labelStyle:
                                                             FlutterFlowTheme.of(
@@ -436,7 +437,7 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'j1eu7zch' /* Cantidad de clientes maxima... */,
+                                                          'j1eu7zch' /* Cantidad de clientes máxima... */,
                                                         ),
                                                         labelStyle:
                                                             FlutterFlowTheme.of(
@@ -827,7 +828,7 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                   headerAlignment:
                                       ExpandablePanelHeaderAlignment.center,
                                   hasIcon: true,
-                                  iconColor: Color(0xFFE17518),
+                                  iconColor: Colors.white,
                                 ),
                               ),
                             ),
