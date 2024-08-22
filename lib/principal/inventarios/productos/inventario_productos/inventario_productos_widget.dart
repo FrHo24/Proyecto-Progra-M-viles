@@ -64,10 +64,19 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
         appBar: AppBar(
           backgroundColor: const Color(0xFFE17518),
           automaticallyImplyLeading: true,
-          leading: Icon(
-            Icons.menu,
-            color: FlutterFlowTheme.of(context).accent3,
-            size: 30.0,
+          leading: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              context.pushNamed('agregarReserva');
+            },
+            child: Icon(
+              Icons.menu,
+              color: FlutterFlowTheme.of(context).accent3,
+              size: 30.0,
+            ),
           ),
           title: Align(
             alignment: const AlignmentDirectional(-1.0, 0.0),
@@ -269,16 +278,19 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
                                                         filled: true,
                                                         fillColor: Colors.white,
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            color: const Color(
-                                                                0xFFF4EEEE),
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                              ),
                                                       validator: _model
                                                           .txtAgreNombreProductoTextControllerValidator
                                                           .asValidator(context),
@@ -874,8 +886,7 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
                                                           color: Colors.black,
                                                           size: 24.0,
                                                         ),
-                                                        fillColor:
-                                                            const Color(0xFFE17518),
+                                                        fillColor: Colors.white,
                                                         elevation: 2.0,
                                                         borderColor:
                                                             Colors.black,
@@ -961,6 +972,20 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
 
                                                       return FFButtonWidget(
                                                         onPressed: () async {
+                                                          if (_model.formKey
+                                                                      .currentState ==
+                                                                  null ||
+                                                              !_model.formKey
+                                                                  .currentState!
+                                                                  .validate()) {
+                                                            return;
+                                                          }
+                                                          if (_model
+                                                                  .ddProveedoresProductosValue ==
+                                                              null) {
+                                                            return;
+                                                          }
+
                                                           await ProductosRecord
                                                               .collection
                                                               .doc()
@@ -1146,7 +1171,7 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
                                         ),
                                   ),
                                   subtitle: Text(
-                                    listViewProductosRecord.descripcionProducto,
+                                    listViewProductosRecord.categoriaProducto,
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
@@ -1169,49 +1194,73 @@ class _InventarioProductosWidgetState extends State<InventarioProductosWidget> {
                                       Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Text(
-                                            listViewProductosRecord
-                                                .cantidadProducto
-                                                .toString(),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: Colors.white,
-                                                  letterSpacing: 0.0,
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '3vcd0ab4' /* Precio: */,
                                                 ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF8F5F5),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                              Text(
+                                                listViewProductosRecord
+                                                    .precioProducto
+                                                    .toString(),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.white,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
+                                            ].divide(const SizedBox(width: 10.0)),
                                           ),
-                                          Text(
-                                            listViewProductosRecord
-                                                .categoriaProducto,
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: Colors.white,
-                                                  letterSpacing: 0.0,
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'f4yhga27' /* Cantidad: */,
                                                 ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF6F0F0),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                              Text(
+                                                listViewProductosRecord
+                                                    .cantidadProducto
+                                                    .toString(),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.white,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
+                                            ].divide(const SizedBox(width: 10.0)),
                                           ),
-                                        ],
-                                      ),
-                                      SizedBox(
-                                        height: 50.0,
-                                        child: VerticalDivider(
-                                          thickness: 1.0,
-                                          color: FlutterFlowTheme.of(context)
-                                              .accent4,
-                                        ),
-                                      ),
-                                      Text(
-                                        listViewProductosRecord.precioProducto
-                                            .toString(),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                              letterSpacing: 0.0,
-                                            ),
+                                        ].divide(const SizedBox(height: 5.0)),
                                       ),
                                     ],
                                   ),

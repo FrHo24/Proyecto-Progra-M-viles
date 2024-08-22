@@ -279,16 +279,19 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                         filled: true,
                                                         fillColor: Colors.white,
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            color: const Color(
-                                                                0xFFF4EEEE),
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                              ),
                                                       validator: _model
                                                           .txtAgreNombreClienteTextControllerValidator
                                                           .asValidator(context),
@@ -948,6 +951,7 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                       .override(
                                                         fontFamily:
                                                             'Readex Pro',
+                                                        color: Colors.white,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.normal,
@@ -959,14 +963,14 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                   _model.datePicked?.toString(),
                                                   'N/A',
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF0F0F0),
+                                                      letterSpacing: 0.0,
+                                                    ),
                                               ),
                                             ],
                                           ),
@@ -978,7 +982,7 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                                 initialDate:
                                                     getCurrentTimestamp,
                                                 firstDate: getCurrentTimestamp,
-                                                lastDate: DateTime(2050),
+                                                lastDate: getCurrentTimestamp,
                                                 builder: (context, child) {
                                                   return wrapInMaterialDatePickerTheme(
                                                     context,
@@ -1371,39 +1375,137 @@ class _InventarioClientesWidgetState extends State<InventarioClientesWidget> {
                                       Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Text(
-                                            valueOrDefault<String>(
-                                              listViewClientesRecord.fechaDePago
-                                                  ?.toString(),
-                                              'N/A',
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: Colors.white,
-                                                  letterSpacing: 0.0,
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'yno2x0ww' /* Teléfono: */,
                                                 ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF8F5F5),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                              Text(
+                                                listViewClientesRecord
+                                                    .telefonoCliente,
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF4EFEF),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                            ].divide(const SizedBox(width: 10.0)),
                                           ),
-                                        ],
-                                      ),
-                                      SizedBox(
-                                        height: 50.0,
-                                        child: VerticalDivider(
-                                          thickness: 1.0,
-                                          color: FlutterFlowTheme.of(context)
-                                              .accent4,
-                                        ),
-                                      ),
-                                      Text(
-                                        listViewClientesRecord.cedulaCliente,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                              letterSpacing: 0.0,
-                                            ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '018xnzon' /* Cédula: */,
+                                                ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF8F3F3),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                              Text(
+                                                listViewClientesRecord
+                                                    .cedulaCliente,
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.white,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
+                                            ].divide(const SizedBox(width: 10.0)),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'r0bmamnf' /* Membresía: */,
+                                                ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF9F4F4),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                              Text(
+                                                listViewClientesRecord
+                                                    .tipoMembresia,
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF4EEEE),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                            ].divide(const SizedBox(width: 10.0)),
+                                          ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '5zdk0omm' /* Pagado: */,
+                                                ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF2EEEE),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                              Text(
+                                                valueOrDefault<String>(
+                                                  listViewClientesRecord
+                                                      .fechaDePago
+                                                      ?.toString(),
+                                                  'N/A',
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.white,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
+                                            ].divide(const SizedBox(width: 10.0)),
+                                          ),
+                                        ].divide(const SizedBox(height: 5.0)),
                                       ),
                                     ],
                                   ),

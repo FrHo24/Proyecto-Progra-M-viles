@@ -15,15 +15,10 @@ class EditarProductoModel extends FlutterFlowModel<EditarProductoWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '2ohxna8d' /* Field is required */,
+        '2ohxna8d' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'm9sdy4o4' /* Debe ingresar el nombre del en... */,
-      );
-    }
     return null;
   }
 
@@ -36,15 +31,10 @@ class EditarProductoModel extends FlutterFlowModel<EditarProductoWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'na93967y' /* Field is required */,
+        'na93967y' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'nhkuoycj' /* Debe ingresar la duración del ... */,
-      );
-    }
     return null;
   }
 
@@ -57,15 +47,10 @@ class EditarProductoModel extends FlutterFlowModel<EditarProductoWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'zy9mlhby' /* Field is required */,
+        'zy9mlhby' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'zz398vtq' /* Debe ingresar la categoría del... */,
-      );
-    }
     return null;
   }
 
@@ -78,15 +63,10 @@ class EditarProductoModel extends FlutterFlowModel<EditarProductoWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'qz858ycs' /* Field is required */,
+        'qz858ycs' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        '8jw8hx5s' /* Debe ingresar las áreas de enf... */,
-      );
-    }
     return null;
   }
 
@@ -95,6 +75,16 @@ class EditarProductoModel extends FlutterFlowModel<EditarProductoWidget> {
   TextEditingController? txtEditCategProductoTextController;
   String? Function(BuildContext, String?)?
       txtEditCategProductoTextControllerValidator;
+  String? _txtEditCategProductoTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        '2dwq1eca' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
 
   @override
   void initState(BuildContext context) {
@@ -106,6 +96,8 @@ class EditarProductoModel extends FlutterFlowModel<EditarProductoWidget> {
         _txtEditPrecioProductoTextControllerValidator;
     txtEditCantProductoTextControllerValidator =
         _txtEditCantProductoTextControllerValidator;
+    txtEditCategProductoTextControllerValidator =
+        _txtEditCategProductoTextControllerValidator;
   }
 
   @override

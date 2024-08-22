@@ -17,32 +17,98 @@ class InventarioProductosModel
   TextEditingController? txtAgreNombreProductoTextController;
   String? Function(BuildContext, String?)?
       txtAgreNombreProductoTextControllerValidator;
+  String? _txtAgreNombreProductoTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'nuo7pm66' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txt_Agre_DescProducto widget.
   FocusNode? txtAgreDescProductoFocusNode;
   TextEditingController? txtAgreDescProductoTextController;
   String? Function(BuildContext, String?)?
       txtAgreDescProductoTextControllerValidator;
+  String? _txtAgreDescProductoTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'edinrifp' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txt_Agre_PrecioProducto widget.
   FocusNode? txtAgrePrecioProductoFocusNode;
   TextEditingController? txtAgrePrecioProductoTextController;
   String? Function(BuildContext, String?)?
       txtAgrePrecioProductoTextControllerValidator;
+  String? _txtAgrePrecioProductoTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'ar9q36sb' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txt_Agre_CantProducto widget.
   FocusNode? txtAgreCantProductoFocusNode;
   TextEditingController? txtAgreCantProductoTextController;
   String? Function(BuildContext, String?)?
       txtAgreCantProductoTextControllerValidator;
+  String? _txtAgreCantProductoTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'b0ij7umx' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txt_Agre_CategProducto widget.
   FocusNode? txtAgreCategProductoFocusNode;
   TextEditingController? txtAgreCategProductoTextController;
   String? Function(BuildContext, String?)?
       txtAgreCategProductoTextControllerValidator;
+  String? _txtAgreCategProductoTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'u9ms5g82' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for dd_Proveedores_Productos widget.
   String? ddProveedoresProductosValue;
   FormFieldController<String>? ddProveedoresProductosValueController;
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    txtAgreNombreProductoTextControllerValidator =
+        _txtAgreNombreProductoTextControllerValidator;
+    txtAgreDescProductoTextControllerValidator =
+        _txtAgreDescProductoTextControllerValidator;
+    txtAgrePrecioProductoTextControllerValidator =
+        _txtAgrePrecioProductoTextControllerValidator;
+    txtAgreCantProductoTextControllerValidator =
+        _txtAgreCantProductoTextControllerValidator;
+    txtAgreCategProductoTextControllerValidator =
+        _txtAgreCategProductoTextControllerValidator;
+  }
 
   @override
   void dispose() {

@@ -15,15 +15,10 @@ class EditarEquipoModel extends FlutterFlowModel<EditarEquipoWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'l2r0aygp' /* Field is required */,
+        'l2r0aygp' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'hul7f72y' /* Debe ingresar el nombre del en... */,
-      );
-    }
     return null;
   }
 
@@ -36,15 +31,10 @@ class EditarEquipoModel extends FlutterFlowModel<EditarEquipoWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '4rhulxc6' /* Field is required */,
+        '4rhulxc6' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'c2pcs0u7' /* Debe ingresar la categoría del... */,
-      );
-    }
     return null;
   }
 
@@ -57,15 +47,10 @@ class EditarEquipoModel extends FlutterFlowModel<EditarEquipoWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'a0ys22cx' /* Field is required */,
+        'a0ys22cx' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        '0jcvpese' /* Debe ingresar la descripción d... */,
-      );
-    }
     return null;
   }
 
@@ -74,6 +59,16 @@ class EditarEquipoModel extends FlutterFlowModel<EditarEquipoWidget> {
   TextEditingController? txtEditEstadoEquipoTextController;
   String? Function(BuildContext, String?)?
       txtEditEstadoEquipoTextControllerValidator;
+  String? _txtEditEstadoEquipoTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'sxrunrvd' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
 
   @override
   void initState(BuildContext context) {
@@ -83,6 +78,8 @@ class EditarEquipoModel extends FlutterFlowModel<EditarEquipoWidget> {
         _txtEditCategEquipoTextControllerValidator;
     txtEditCantEquipoTextControllerValidator =
         _txtEditCantEquipoTextControllerValidator;
+    txtEditEstadoEquipoTextControllerValidator =
+        _txtEditEstadoEquipoTextControllerValidator;
   }
 
   @override

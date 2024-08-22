@@ -35,11 +35,6 @@ class UsuariosRecord extends FirestoreRecord {
   DateTime? get fechaCreacion => _fechaCreacion;
   bool hasFechaCreacion() => _fechaCreacion != null;
 
-  // "numeroTelefono" field.
-  String? _numeroTelefono;
-  String get numeroTelefono => _numeroTelefono ?? '';
-  bool hasNumeroTelefono() => _numeroTelefono != null;
-
   // "cedulaUsuario" field.
   String? _cedulaUsuario;
   String get cedulaUsuario => _cedulaUsuario ?? '';
@@ -80,12 +75,26 @@ class UsuariosRecord extends FirestoreRecord {
   String get apellidoUsuario => _apellidoUsuario ?? '';
   bool hasApellidoUsuario() => _apellidoUsuario != null;
 
+  // "numeroTelefono" field.
+  String? _numeroTelefono;
+  String get numeroTelefono => _numeroTelefono ?? '';
+  bool hasNumeroTelefono() => _numeroTelefono != null;
+
+  // "isAdministrator" field.
+  bool? _isAdministrator;
+  bool get isAdministrator => _isAdministrator ?? false;
+  bool hasIsAdministrator() => _isAdministrator != null;
+
+  // "rol" field.
+  String? _rol;
+  String get rol => _rol ?? '';
+  bool hasRol() => _rol != null;
+
   void _initializeFields() {
     _nombreUsuario = snapshotData['nombreUsuario'] as String?;
     _emailUsuario = snapshotData['emailUsuario'] as String?;
     _fotoUsuario = snapshotData['fotoUsuario'] as String?;
     _fechaCreacion = snapshotData['fechaCreacion'] as DateTime?;
-    _numeroTelefono = snapshotData['numeroTelefono'] as String?;
     _cedulaUsuario = snapshotData['cedulaUsuario'] as String?;
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -94,6 +103,9 @@ class UsuariosRecord extends FirestoreRecord {
     _createdTime = snapshotData['created_time'] as DateTime?;
     _phoneNumber = snapshotData['phone_number'] as String?;
     _apellidoUsuario = snapshotData['apellidoUsuario'] as String?;
+    _numeroTelefono = snapshotData['numeroTelefono'] as String?;
+    _isAdministrator = snapshotData['isAdministrator'] as bool?;
+    _rol = snapshotData['rol'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -135,7 +147,6 @@ Map<String, dynamic> createUsuariosRecordData({
   String? emailUsuario,
   String? fotoUsuario,
   DateTime? fechaCreacion,
-  String? numeroTelefono,
   String? cedulaUsuario,
   String? email,
   String? displayName,
@@ -144,6 +155,9 @@ Map<String, dynamic> createUsuariosRecordData({
   DateTime? createdTime,
   String? phoneNumber,
   String? apellidoUsuario,
+  String? numeroTelefono,
+  bool? isAdministrator,
+  String? rol,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -151,7 +165,6 @@ Map<String, dynamic> createUsuariosRecordData({
       'emailUsuario': emailUsuario,
       'fotoUsuario': fotoUsuario,
       'fechaCreacion': fechaCreacion,
-      'numeroTelefono': numeroTelefono,
       'cedulaUsuario': cedulaUsuario,
       'email': email,
       'display_name': displayName,
@@ -160,6 +173,9 @@ Map<String, dynamic> createUsuariosRecordData({
       'created_time': createdTime,
       'phone_number': phoneNumber,
       'apellidoUsuario': apellidoUsuario,
+      'numeroTelefono': numeroTelefono,
+      'isAdministrator': isAdministrator,
+      'rol': rol,
     }.withoutNulls,
   );
 
@@ -175,7 +191,6 @@ class UsuariosRecordDocumentEquality implements Equality<UsuariosRecord> {
         e1?.emailUsuario == e2?.emailUsuario &&
         e1?.fotoUsuario == e2?.fotoUsuario &&
         e1?.fechaCreacion == e2?.fechaCreacion &&
-        e1?.numeroTelefono == e2?.numeroTelefono &&
         e1?.cedulaUsuario == e2?.cedulaUsuario &&
         e1?.email == e2?.email &&
         e1?.displayName == e2?.displayName &&
@@ -183,7 +198,10 @@ class UsuariosRecordDocumentEquality implements Equality<UsuariosRecord> {
         e1?.uid == e2?.uid &&
         e1?.createdTime == e2?.createdTime &&
         e1?.phoneNumber == e2?.phoneNumber &&
-        e1?.apellidoUsuario == e2?.apellidoUsuario;
+        e1?.apellidoUsuario == e2?.apellidoUsuario &&
+        e1?.numeroTelefono == e2?.numeroTelefono &&
+        e1?.isAdministrator == e2?.isAdministrator &&
+        e1?.rol == e2?.rol;
   }
 
   @override
@@ -192,7 +210,6 @@ class UsuariosRecordDocumentEquality implements Equality<UsuariosRecord> {
         e?.emailUsuario,
         e?.fotoUsuario,
         e?.fechaCreacion,
-        e?.numeroTelefono,
         e?.cedulaUsuario,
         e?.email,
         e?.displayName,
@@ -200,7 +217,10 @@ class UsuariosRecordDocumentEquality implements Equality<UsuariosRecord> {
         e?.uid,
         e?.createdTime,
         e?.phoneNumber,
-        e?.apellidoUsuario
+        e?.apellidoUsuario,
+        e?.numeroTelefono,
+        e?.isAdministrator,
+        e?.rol
       ]);
 
   @override

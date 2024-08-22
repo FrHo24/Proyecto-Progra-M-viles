@@ -295,55 +295,42 @@ class _PerfilWidgetState extends State<PerfilWidget>
                                                     width: 3.0,
                                                   ),
                                                 ),
-                                                child: Padding(
-                                                  padding: const EdgeInsets.all(12.0),
+                                                child: InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    context
+                                                        .pushNamed('Ajustes');
+                                                  },
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
                                                     children: [
-                                                      Expanded(
-                                                        child: Icon(
-                                                          Icons.phone_sharp,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .accent1,
-                                                          size: 44.0,
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    12.0,
-                                                                    0.0,
-                                                                    4.0),
-                                                        child:
-                                                            AuthUserStreamWidget(
-                                                          builder: (context) =>
-                                                              Text(
-                                                            valueOrDefault(
-                                                                currentUserDocument
-                                                                    ?.numeroTelefono,
-                                                                ''),
-                                                            textAlign: TextAlign
-                                                                .center,
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .displaySmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Outfit',
-                                                                  color: Colors
-                                                                      .white,
-                                                                  fontSize:
-                                                                      20.0,
-                                                                  letterSpacing:
+                                                      Align(
+                                                        alignment:
+                                                            const AlignmentDirectional(
+                                                                0.0, 1.0),
+                                                        child: Padding(
+                                                          padding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
                                                                       0.0,
-                                                                ),
+                                                                      50.0,
+                                                                      0.0,
+                                                                      0.0),
+                                                          child: Icon(
+                                                            Icons
+                                                                .settings_outlined,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .primaryBackground,
+                                                            size: 70.0,
                                                           ),
                                                         ),
                                                       ),
@@ -351,20 +338,18 @@ class _PerfilWidgetState extends State<PerfilWidget>
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                          '2muvaexv' /* Número Telefónico */,
+                                                          'l16444up' /* Ajustes */,
                                                         ),
-                                                        textAlign:
-                                                            TextAlign.center,
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .labelSmall
+                                                                .bodyMedium
                                                                 .override(
                                                                   fontFamily:
                                                                       'Readex Pro',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
-                                                                      .accent1,
+                                                                      .alternate,
                                                                   letterSpacing:
                                                                       0.0,
                                                                 ),

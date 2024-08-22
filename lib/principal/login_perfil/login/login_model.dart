@@ -15,32 +15,32 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
   TextEditingController? emailAddressCreateTextController;
   String? Function(BuildContext, String?)?
       emailAddressCreateTextControllerValidator;
-  // State field(s) for password widget.
-  FocusNode? passwordFocusNode1;
-  TextEditingController? passwordTextController1;
-  late bool passwordVisibility1;
-  String? Function(BuildContext, String?)? passwordTextController1Validator;
-  // State field(s) for confirmPassword widget.
-  FocusNode? confirmPasswordFocusNode;
-  TextEditingController? confirmPasswordTextController;
-  late bool confirmPasswordVisibility;
+  // State field(s) for passwordR widget.
+  FocusNode? passwordRFocusNode;
+  TextEditingController? passwordRTextController;
+  late bool passwordRVisibility;
+  String? Function(BuildContext, String?)? passwordRTextControllerValidator;
+  // State field(s) for confirmPasswordR widget.
+  FocusNode? confirmPasswordRFocusNode;
+  TextEditingController? confirmPasswordRTextController;
+  late bool confirmPasswordRVisibility;
   String? Function(BuildContext, String?)?
-      confirmPasswordTextControllerValidator;
-  // State field(s) for emailAddress widget.
-  FocusNode? emailAddressFocusNode;
-  TextEditingController? emailAddressTextController;
-  String? Function(BuildContext, String?)? emailAddressTextControllerValidator;
-  // State field(s) for password widget.
-  FocusNode? passwordFocusNode2;
-  TextEditingController? passwordTextController2;
-  late bool passwordVisibility2;
-  String? Function(BuildContext, String?)? passwordTextController2Validator;
+      confirmPasswordRTextControllerValidator;
+  // State field(s) for emailAddressL widget.
+  FocusNode? emailAddressLFocusNode;
+  TextEditingController? emailAddressLTextController;
+  String? Function(BuildContext, String?)? emailAddressLTextControllerValidator;
+  // State field(s) for passwordL widget.
+  FocusNode? passwordLFocusNode;
+  TextEditingController? passwordLTextController;
+  late bool passwordLVisibility;
+  String? Function(BuildContext, String?)? passwordLTextControllerValidator;
 
   @override
   void initState(BuildContext context) {
-    passwordVisibility1 = false;
-    confirmPasswordVisibility = false;
-    passwordVisibility2 = false;
+    passwordRVisibility = false;
+    confirmPasswordRVisibility = false;
+    passwordLVisibility = false;
   }
 
   @override
@@ -49,16 +49,16 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
     emailAddressCreateFocusNode?.dispose();
     emailAddressCreateTextController?.dispose();
 
-    passwordFocusNode1?.dispose();
-    passwordTextController1?.dispose();
+    passwordRFocusNode?.dispose();
+    passwordRTextController?.dispose();
 
-    confirmPasswordFocusNode?.dispose();
-    confirmPasswordTextController?.dispose();
+    confirmPasswordRFocusNode?.dispose();
+    confirmPasswordRTextController?.dispose();
 
-    emailAddressFocusNode?.dispose();
-    emailAddressTextController?.dispose();
+    emailAddressLFocusNode?.dispose();
+    emailAddressLTextController?.dispose();
 
-    passwordFocusNode2?.dispose();
-    passwordTextController2?.dispose();
+    passwordLFocusNode?.dispose();
+    passwordLTextController?.dispose();
   }
 }

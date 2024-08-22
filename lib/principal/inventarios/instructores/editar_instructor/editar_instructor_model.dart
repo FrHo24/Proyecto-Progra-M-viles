@@ -15,15 +15,10 @@ class EditarInstructorModel extends FlutterFlowModel<EditarInstructorWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '0iq5r7f3' /* Field is required */,
+        '0iq5r7f3' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'wbvwjd1t' /* Debe ingresar el nombre del en... */,
-      );
-    }
     return null;
   }
 
@@ -36,15 +31,10 @@ class EditarInstructorModel extends FlutterFlowModel<EditarInstructorWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'zs1xixiw' /* Field is required */,
+        'zs1xixiw' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'xpeytyfs' /* Debe ingresar la duración del ... */,
-      );
-    }
     return null;
   }
 
@@ -57,15 +47,10 @@ class EditarInstructorModel extends FlutterFlowModel<EditarInstructorWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'n8dyzqv4' /* Field is required */,
+        'n8dyzqv4' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'lm2r7pt8' /* Debe ingresar la categoría del... */,
-      );
-    }
     return null;
   }
 
@@ -78,15 +63,10 @@ class EditarInstructorModel extends FlutterFlowModel<EditarInstructorWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'gg4di69a' /* Field is required */,
+        'gg4di69a' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        '69q61qav' /* Debe ingresar las áreas de enf... */,
-      );
-    }
     return null;
   }
 
@@ -99,15 +79,10 @@ class EditarInstructorModel extends FlutterFlowModel<EditarInstructorWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '0gy7dqin' /* Field is required */,
+        '0gy7dqin' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'zznt67bl' /* Debe ingresar la descripción d... */,
-      );
-    }
     return null;
   }
 
@@ -116,6 +91,16 @@ class EditarInstructorModel extends FlutterFlowModel<EditarInstructorWidget> {
   TextEditingController? txtEditATrabajoInstructorTextController;
   String? Function(BuildContext, String?)?
       txtEditATrabajoInstructorTextControllerValidator;
+  String? _txtEditATrabajoInstructorTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'sxrunrvd' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
 
   @override
   void initState(BuildContext context) {
@@ -129,6 +114,8 @@ class EditarInstructorModel extends FlutterFlowModel<EditarInstructorWidget> {
         _txtEditIDInstructorTextControllerValidator;
     txtEditNTelefonoInstructorTextControllerValidator =
         _txtEditNTelefonoInstructorTextControllerValidator;
+    txtEditATrabajoInstructorTextControllerValidator =
+        _txtEditATrabajoInstructorTextControllerValidator;
   }
 
   @override

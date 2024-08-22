@@ -290,6 +290,11 @@ class _EditarProveedorWidgetState extends State<EditarProveedorWidget> {
               ),
               FFButtonWidget(
                 onPressed: () async {
+                  if (_model.formKey.currentState == null ||
+                      !_model.formKey.currentState!.validate()) {
+                    return;
+                  }
+
                   await widget.edicionProveedor!
                       .update(createProveedoresRecordData(
                     nombreProveedor:

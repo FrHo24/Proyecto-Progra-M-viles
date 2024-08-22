@@ -15,15 +15,10 @@ class EditarAdminModel extends FlutterFlowModel<EditarAdminWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'k89wd8ve' /* Field is required */,
+        'k89wd8ve' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'vqeadxdf' /* Debe ingresar el nombre del en... */,
-      );
-    }
     return null;
   }
 
@@ -36,15 +31,10 @@ class EditarAdminModel extends FlutterFlowModel<EditarAdminWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'zk0qytuu' /* Field is required */,
+        'zk0qytuu' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'oxcc1xkw' /* Debe ingresar la duración del ... */,
-      );
-    }
     return null;
   }
 
@@ -57,15 +47,10 @@ class EditarAdminModel extends FlutterFlowModel<EditarAdminWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'dt3uv1un' /* Field is required */,
+        'dt3uv1un' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'jjankk63' /* Debe ingresar la categoría del... */,
-      );
-    }
     return null;
   }
 
@@ -78,15 +63,10 @@ class EditarAdminModel extends FlutterFlowModel<EditarAdminWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'gczyue4l' /* Field is required */,
+        'gczyue4l' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        '0wjx5fzb' /* Debe ingresar las áreas de enf... */,
-      );
-    }
     return null;
   }
 
@@ -99,15 +79,10 @@ class EditarAdminModel extends FlutterFlowModel<EditarAdminWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'vg1nu0be' /* Field is required */,
+        'vg1nu0be' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'ge1har7w' /* Debe ingresar la descripción d... */,
-      );
-    }
     return null;
   }
 

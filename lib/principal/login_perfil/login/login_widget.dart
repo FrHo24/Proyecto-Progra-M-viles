@@ -37,17 +37,17 @@ class _LoginWidgetState extends State<LoginWidget>
     _model.emailAddressCreateTextController ??= TextEditingController();
     _model.emailAddressCreateFocusNode ??= FocusNode();
 
-    _model.passwordTextController1 ??= TextEditingController();
-    _model.passwordFocusNode1 ??= FocusNode();
+    _model.passwordRTextController ??= TextEditingController();
+    _model.passwordRFocusNode ??= FocusNode();
 
-    _model.confirmPasswordTextController ??= TextEditingController();
-    _model.confirmPasswordFocusNode ??= FocusNode();
+    _model.confirmPasswordRTextController ??= TextEditingController();
+    _model.confirmPasswordRFocusNode ??= FocusNode();
 
-    _model.emailAddressTextController ??= TextEditingController();
-    _model.emailAddressFocusNode ??= FocusNode();
+    _model.emailAddressLTextController ??= TextEditingController();
+    _model.emailAddressLFocusNode ??= FocusNode();
 
-    _model.passwordTextController2 ??= TextEditingController();
-    _model.passwordFocusNode2 ??= FocusNode();
+    _model.passwordLTextController ??= TextEditingController();
+    _model.passwordLFocusNode ??= FocusNode();
 
     animationsMap.addAll({
       'containerOnPageLoadAnimation': AnimationInfo(
@@ -301,7 +301,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         }
 
                                                         context.goNamedAuth(
-                                                            'inventarioAdministradores',
+                                                            'Perfil',
                                                             context.mounted);
                                                       },
                                                       text: FFLocalizations.of(
@@ -367,7 +367,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         }
 
                                                         context.goNamedAuth(
-                                                            'inventarioAdministradores',
+                                                            'Perfil',
                                                             context.mounted);
                                                       },
                                                       text: FFLocalizations.of(
@@ -629,15 +629,15 @@ class _LoginWidgetState extends State<LoginWidget>
                                                     width: double.infinity,
                                                     child: TextFormField(
                                                       controller: _model
-                                                          .passwordTextController1,
+                                                          .passwordRTextController,
                                                       focusNode: _model
-                                                          .passwordFocusNode1,
+                                                          .passwordRFocusNode,
                                                       autofocus: true,
                                                       autofillHints: const [
                                                         AutofillHints.email
                                                       ],
                                                       obscureText: !_model
-                                                          .passwordVisibility1,
+                                                          .passwordRVisibility,
                                                       decoration:
                                                           InputDecoration(
                                                         labelText:
@@ -727,15 +727,15 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         suffixIcon: InkWell(
                                                           onTap: () => setState(
                                                             () => _model
-                                                                    .passwordVisibility1 =
+                                                                    .passwordRVisibility =
                                                                 !_model
-                                                                    .passwordVisibility1,
+                                                                    .passwordRVisibility,
                                                           ),
                                                           focusNode: FocusNode(
                                                               skipTraversal:
                                                                   true),
                                                           child: Icon(
-                                                            _model.passwordVisibility1
+                                                            _model.passwordRVisibility
                                                                 ? Icons
                                                                     .visibility_outlined
                                                                 : Icons
@@ -764,7 +764,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                           TextInputType
                                                               .emailAddress,
                                                       validator: _model
-                                                          .passwordTextController1Validator
+                                                          .passwordRTextControllerValidator
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -777,15 +777,15 @@ class _LoginWidgetState extends State<LoginWidget>
                                                     width: double.infinity,
                                                     child: TextFormField(
                                                       controller: _model
-                                                          .confirmPasswordTextController,
+                                                          .confirmPasswordRTextController,
                                                       focusNode: _model
-                                                          .confirmPasswordFocusNode,
+                                                          .confirmPasswordRFocusNode,
                                                       autofocus: true,
                                                       autofillHints: const [
                                                         AutofillHints.password
                                                       ],
                                                       obscureText: !_model
-                                                          .confirmPasswordVisibility,
+                                                          .confirmPasswordRVisibility,
                                                       decoration:
                                                           InputDecoration(
                                                         labelText:
@@ -875,15 +875,15 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         suffixIcon: InkWell(
                                                           onTap: () => setState(
                                                             () => _model
-                                                                    .confirmPasswordVisibility =
+                                                                    .confirmPasswordRVisibility =
                                                                 !_model
-                                                                    .confirmPasswordVisibility,
+                                                                    .confirmPasswordRVisibility,
                                                           ),
                                                           focusNode: FocusNode(
                                                               skipTraversal:
                                                                   true),
                                                           child: Icon(
-                                                            _model.confirmPasswordVisibility
+                                                            _model.confirmPasswordRVisibility
                                                                 ? Icons
                                                                     .visibility_outlined
                                                                 : Icons
@@ -910,7 +910,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                 FontWeight.w500,
                                                           ),
                                                       validator: _model
-                                                          .confirmPasswordTextControllerValidator
+                                                          .confirmPasswordRTextControllerValidator
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -929,10 +929,10 @@ class _LoginWidgetState extends State<LoginWidget>
                                                         GoRouter.of(context)
                                                             .prepareAuthEvent();
                                                         if (_model
-                                                                .passwordTextController1
+                                                                .passwordRTextController
                                                                 .text !=
                                                             _model
-                                                                .confirmPasswordTextController
+                                                                .confirmPasswordRTextController
                                                                 .text) {
                                                           ScaffoldMessenger.of(
                                                                   context)
@@ -954,7 +954,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                               .emailAddressCreateTextController
                                                               .text,
                                                           _model
-                                                              .passwordTextController1
+                                                              .passwordRTextController
                                                               .text,
                                                         );
                                                         if (user == null) {
@@ -963,8 +963,29 @@ class _LoginWidgetState extends State<LoginWidget>
 
                                                         await authManager
                                                             .sendEmailVerification();
+                                                        ScaffoldMessenger.of(
+                                                                context)
+                                                            .showSnackBar(
+                                                          SnackBar(
+                                                            content: Text(
+                                                              'Verificasu cuenta de corre',
+                                                              style: TextStyle(
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                              ),
+                                                            ),
+                                                            duration: const Duration(
+                                                                milliseconds:
+                                                                    4000),
+                                                            backgroundColor:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .info,
+                                                          ),
+                                                        );
 
-                                                        context.pushNamedAuth(
+                                                        context.goNamedAuth(
                                                             'Perfil',
                                                             context.mounted);
                                                       },
@@ -1121,9 +1142,9 @@ class _LoginWidgetState extends State<LoginWidget>
                                                     width: double.infinity,
                                                     child: TextFormField(
                                                       controller: _model
-                                                          .emailAddressTextController,
+                                                          .emailAddressLTextController,
                                                       focusNode: _model
-                                                          .emailAddressFocusNode,
+                                                          .emailAddressLFocusNode,
                                                       autofocus: true,
                                                       autofillHints: const [
                                                         AutofillHints.email
@@ -1238,7 +1259,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                           TextInputType
                                                               .emailAddress,
                                                       validator: _model
-                                                          .emailAddressTextControllerValidator
+                                                          .emailAddressLTextControllerValidator
                                                           .asValidator(context),
                                                     ),
                                                   ),
@@ -1247,15 +1268,15 @@ class _LoginWidgetState extends State<LoginWidget>
                                                   width: double.infinity,
                                                   child: TextFormField(
                                                     controller: _model
-                                                        .passwordTextController2,
+                                                        .passwordLTextController,
                                                     focusNode: _model
-                                                        .passwordFocusNode2,
+                                                        .passwordLFocusNode,
                                                     autofocus: true,
                                                     autofillHints: const [
                                                       AutofillHints.password
                                                     ],
                                                     obscureText: !_model
-                                                        .passwordVisibility2,
+                                                        .passwordLVisibility,
                                                     decoration: InputDecoration(
                                                       labelText:
                                                           FFLocalizations.of(
@@ -1339,15 +1360,15 @@ class _LoginWidgetState extends State<LoginWidget>
                                                       suffixIcon: InkWell(
                                                         onTap: () => setState(
                                                           () => _model
-                                                                  .passwordVisibility2 =
+                                                                  .passwordLVisibility =
                                                               !_model
-                                                                  .passwordVisibility2,
+                                                                  .passwordLVisibility,
                                                         ),
                                                         focusNode: FocusNode(
                                                             skipTraversal:
                                                                 true),
                                                         child: Icon(
-                                                          _model.passwordVisibility2
+                                                          _model.passwordLVisibility
                                                               ? Icons
                                                                   .visibility_outlined
                                                               : Icons
@@ -1374,7 +1395,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                               FontWeight.w500,
                                                         ),
                                                     validator: _model
-                                                        .passwordTextController2Validator
+                                                        .passwordLTextControllerValidator
                                                         .asValidator(context),
                                                   ),
                                                 ),
@@ -1389,6 +1410,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                 0.0, 16.0),
                                                     child: FFButtonWidget(
                                                       onPressed: () async {
+                                                        await authManager
+                                                            .refreshUser();
                                                         GoRouter.of(context)
                                                             .prepareAuthEvent();
 
@@ -1397,19 +1420,45 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                 .signInWithEmail(
                                                           context,
                                                           _model
-                                                              .emailAddressTextController
+                                                              .emailAddressLTextController
                                                               .text,
                                                           _model
-                                                              .passwordTextController1
+                                                              .passwordLTextController
                                                               .text,
                                                         );
                                                         if (user == null) {
                                                           return;
                                                         }
 
-                                                        context.pushNamedAuth(
-                                                            'Perfil',
-                                                            context.mounted);
+                                                        if (currentUserEmailVerified ==
+                                                            true) {
+                                                          context.pushNamedAuth(
+                                                              'agregarReserva',
+                                                              context.mounted);
+                                                        } else {
+                                                          ScaffoldMessenger.of(
+                                                                  context)
+                                                              .showSnackBar(
+                                                            SnackBar(
+                                                              content: Text(
+                                                                '¡No! ha verificado tu cuenta, verifique su correo',
+                                                                style:
+                                                                    TextStyle(
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryText,
+                                                                ),
+                                                              ),
+                                                              duration: const Duration(
+                                                                  milliseconds:
+                                                                      4000),
+                                                              backgroundColor:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .warning,
+                                                            ),
+                                                          );
+                                                        }
                                                       },
                                                       text: FFLocalizations.of(
                                                               context)

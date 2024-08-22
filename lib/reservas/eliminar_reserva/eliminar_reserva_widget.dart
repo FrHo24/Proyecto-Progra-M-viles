@@ -61,7 +61,7 @@ class _EliminarReservaWidgetState extends State<EliminarReservaWidget> {
               children: [
                 Text(
                   FFLocalizations.of(context).getText(
-                    '52vg6c5w' /* Eliminar reserva */,
+                    '52vg6c5w' /* Cancelar reserva */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Readex Pro',
@@ -84,7 +84,7 @@ class _EliminarReservaWidgetState extends State<EliminarReservaWidget> {
                       obscureText: false,
                       decoration: InputDecoration(
                         labelText: FFLocalizations.of(context).getText(
-                          'k5ruamp4' /* Escriba la palabra "Eliminar"
+                          'k5ruamp4' /* Escriba la palabra "Cancelar"
 ... */
                           ,
                         ),
@@ -149,13 +149,13 @@ class _EliminarReservaWidgetState extends State<EliminarReservaWidget> {
                 FFButtonWidget(
                   onPressed: () async {
                     if (_model.txtEliminarReservaTextController.text ==
-                        'Eliminar') {
+                        'Cancelar') {
                       await widget.eliminacioReservas!.delete();
                     }
                     Navigator.pop(context);
                   },
                   text: FFLocalizations.of(context).getText(
-                    'jykyrmir' /* Eliminar */,
+                    'jykyrmir' /* Cancelar */,
                   ),
                   options: FFButtonOptions(
                     height: 40.0,

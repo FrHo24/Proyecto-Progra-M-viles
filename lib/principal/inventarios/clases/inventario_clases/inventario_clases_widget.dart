@@ -159,7 +159,7 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                   ),
                                   child: Form(
                                     key: _model.formKey,
-                                    autovalidateMode: AutovalidateMode.disabled,
+                                    autovalidateMode: AutovalidateMode.always,
                                     child: SingleChildScrollView(
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -276,8 +276,7 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Readex Pro',
-                                                            color: const Color(
-                                                                0xFFF4EEEE),
+                                                            color: Colors.black,
                                                             letterSpacing: 0.0,
                                                           ),
                                                       validator: _model
@@ -608,7 +607,7 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                                       .secondaryText,
                                                   size: 24.0,
                                                 ),
-                                                fillColor: const Color(0xFFE17518),
+                                                fillColor: Colors.white,
                                                 elevation: 2.0,
                                                 borderColor: Colors.black,
                                                 borderWidth: 2.0,
@@ -691,6 +690,11 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                                                               !_model.formKey
                                                                   .currentState!
                                                                   .validate()) {
+                                                            return;
+                                                          }
+                                                          if (_model
+                                                                  .ddAgreInstructorAsignadoValue ==
+                                                              null) {
                                                             return;
                                                           }
 
@@ -870,79 +874,54 @@ class _InventarioClasesWidgetState extends State<InventarioClasesWidget> {
                             return Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                ListTile(
-                                  title: Text(
-                                    listViewClasesRecord.nombreClase,
-                                    style: FlutterFlowTheme.of(context)
-                                        .titleLarge
-                                        .override(
-                                          fontFamily: 'Outfit',
-                                          letterSpacing: 0.0,
-                                        ),
-                                  ),
-                                  subtitle: Text(
-                                    listViewClasesRecord.descripcionClase,
-                                    style: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          letterSpacing: 0.0,
-                                        ),
-                                  ),
-                                  tileColor: Colors.white,
-                                  dense: false,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 10.0, 0.0, 0.0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Text(
-                                                listViewClasesRecord
-                                                    .cantidadParticipantes
-                                                    .toString(),
-                                                textAlign: TextAlign.start,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          color: Colors.white,
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                              ),
-                                              Text(
-                                                valueOrDefault<String>(
-                                                  listViewClasesRecord
-                                                      .instructorAsignado?.id,
-                                                  'N/A',
-                                                ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          color: Colors.white,
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                              ),
-                                            ],
+                                StreamBuilder<InstructoresRecord>(
+                                  stream: InstructoresRecord.getDocument(
+                                      listViewClasesRecord.instructorAsignado!),
+                                  builder: (context, snapshot) {
+                                    // Customize what your widget looks like when it's loading.
+                                    if (!snapshot.hasData) {
+                                      return Center(
+                                        child: SizedBox(
+                                          width: 50.0,
+                                          height: 50.0,
+                                          child: CircularProgressIndicator(
+                                            valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                            ),
                                           ),
-                                        ],
+                                        ),
+                                      );
+                                    }
+
+                                    final listTileInstructoresRecord =
+                                        snapshot.data!;
+
+                                    return ListTile(
+                                      title: Text(
+                                        listViewClasesRecord.nombreClase,
+                                        style: FlutterFlowTheme.of(context)
+                                            .titleLarge
+                                            .override(
+                                              fontFamily: 'Outfit',
+                                              letterSpacing: 0.0,
+                                            ),
                                       ),
-                                    ],
-                                  ),
+                                      subtitle: Text(
+                                        listTileInstructoresRecord
+                                            .nombreInstructor,
+                                        style: FlutterFlowTheme.of(context)
+                                            .labelMedium
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              letterSpacing: 0.0,
+                                            ),
+                                      ),
+                                      tileColor: Colors.white,
+                                      dense: false,
+                                    );
+                                  },
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(

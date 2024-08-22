@@ -45,11 +45,6 @@ class InstructoresRecord extends FirestoreRecord {
   String get apellidosInstructor => _apellidosInstructor ?? '';
   bool hasApellidosInstructor() => _apellidosInstructor != null;
 
-  // "isAdmin" field.
-  bool? _isAdmin;
-  bool get isAdmin => _isAdmin ?? false;
-  bool hasIsAdmin() => _isAdmin != null;
-
   void _initializeFields() {
     _nombreInstructor = snapshotData['nombreInstructor'] as String?;
     _emailInstructor = snapshotData['email_Instructor'] as String?;
@@ -57,7 +52,6 @@ class InstructoresRecord extends FirestoreRecord {
     _cedulaInstructor = snapshotData['cedulaInstructor'] as String?;
     _areaTrabajoInstructor = snapshotData['areaTrabajo_Instructor'] as String?;
     _apellidosInstructor = snapshotData['apellidosInstructor'] as String?;
-    _isAdmin = snapshotData['isAdmin'] as bool?;
   }
 
   static CollectionReference get collection =>
@@ -101,7 +95,6 @@ Map<String, dynamic> createInstructoresRecordData({
   String? cedulaInstructor,
   String? areaTrabajoInstructor,
   String? apellidosInstructor,
-  bool? isAdmin,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -111,7 +104,6 @@ Map<String, dynamic> createInstructoresRecordData({
       'cedulaInstructor': cedulaInstructor,
       'areaTrabajo_Instructor': areaTrabajoInstructor,
       'apellidosInstructor': apellidosInstructor,
-      'isAdmin': isAdmin,
     }.withoutNulls,
   );
 
@@ -129,8 +121,7 @@ class InstructoresRecordDocumentEquality
         e1?.telefonoInstructor == e2?.telefonoInstructor &&
         e1?.cedulaInstructor == e2?.cedulaInstructor &&
         e1?.areaTrabajoInstructor == e2?.areaTrabajoInstructor &&
-        e1?.apellidosInstructor == e2?.apellidosInstructor &&
-        e1?.isAdmin == e2?.isAdmin;
+        e1?.apellidosInstructor == e2?.apellidosInstructor;
   }
 
   @override
@@ -140,8 +131,7 @@ class InstructoresRecordDocumentEquality
         e?.telefonoInstructor,
         e?.cedulaInstructor,
         e?.areaTrabajoInstructor,
-        e?.apellidosInstructor,
-        e?.isAdmin
+        e?.apellidosInstructor
       ]);
 
   @override

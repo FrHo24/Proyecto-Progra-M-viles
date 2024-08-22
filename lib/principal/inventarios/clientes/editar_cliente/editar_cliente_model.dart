@@ -15,15 +15,10 @@ class EditarClienteModel extends FlutterFlowModel<EditarClienteWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'lhi54cwi' /* Field is required */,
+        'lhi54cwi' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'kvfow3pa' /* Debe ingresar el nombre del en... */,
-      );
-    }
     return null;
   }
 
@@ -36,15 +31,10 @@ class EditarClienteModel extends FlutterFlowModel<EditarClienteWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'v33ey79v' /* Field is required */,
+        'v33ey79v' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'jztx5qvg' /* Debe ingresar la duración del ... */,
-      );
-    }
     return null;
   }
 
@@ -57,15 +47,10 @@ class EditarClienteModel extends FlutterFlowModel<EditarClienteWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'tqbdbgvf' /* Field is required */,
+        'tqbdbgvf' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'r42blzy8' /* Debe ingresar la categoría del... */,
-      );
-    }
     return null;
   }
 
@@ -78,15 +63,10 @@ class EditarClienteModel extends FlutterFlowModel<EditarClienteWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '7nrtpo04' /* Field is required */,
+        '7nrtpo04' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'vqxenqh8' /* Debe ingresar la descripción d... */,
-      );
-    }
     return null;
   }
 
@@ -95,11 +75,32 @@ class EditarClienteModel extends FlutterFlowModel<EditarClienteWidget> {
   TextEditingController? txtEditEmailClienteTextController;
   String? Function(BuildContext, String?)?
       txtEditEmailClienteTextControllerValidator;
+  String? _txtEditEmailClienteTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'r5ongns6' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txt_E_SubsCliente widget.
   FocusNode? txtESubsClienteFocusNode;
   TextEditingController? txtESubsClienteTextController;
   String? Function(BuildContext, String?)?
       txtESubsClienteTextControllerValidator;
+  String? _txtESubsClienteTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'y2m9hdij' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
 
   @override
   void initState(BuildContext context) {
@@ -111,6 +112,10 @@ class EditarClienteModel extends FlutterFlowModel<EditarClienteWidget> {
         _txtEditIDClienteTextControllerValidator;
     txtEditNTelefonoClienteTextControllerValidator =
         _txtEditNTelefonoClienteTextControllerValidator;
+    txtEditEmailClienteTextControllerValidator =
+        _txtEditEmailClienteTextControllerValidator;
+    txtESubsClienteTextControllerValidator =
+        _txtESubsClienteTextControllerValidator;
   }
 
   @override

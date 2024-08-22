@@ -28,3 +28,5 @@ export '/principal/inventarios/productos/inventario_productos/inventario_product
 export '/reservas/agregar_reserva/agregar_reserva_widget.dart'
     show AgregarReservaWidget;
 export '/asistencia/asistencia_widget.dart' show AsistenciaWidget;
+export '/agregar_reserva_copy/agregar_reserva_copy_widget.dart'
+    show AgregarReservaCopyWidget;

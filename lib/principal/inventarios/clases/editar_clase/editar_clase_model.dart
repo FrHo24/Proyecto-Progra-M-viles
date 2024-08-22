@@ -16,15 +16,10 @@ class EditarClaseModel extends FlutterFlowModel<EditarClaseWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '5qvtn65i' /* Field is required */,
+        '5qvtn65i' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'wei9taw7' /* Debe ingresar el nombre del en... */,
-      );
-    }
     return null;
   }
 
@@ -37,15 +32,10 @@ class EditarClaseModel extends FlutterFlowModel<EditarClaseWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'gnh2mt94' /* Field is required */,
+        'gnh2mt94' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'kfg5jans' /* Debe ingresar la descripción d... */,
-      );
-    }
     return null;
   }
 
@@ -54,6 +44,17 @@ class EditarClaseModel extends FlutterFlowModel<EditarClaseWidget> {
   TextEditingController? txtEditCantClientesTextController;
   String? Function(BuildContext, String?)?
       txtEditCantClientesTextControllerValidator;
+  String? _txtEditCantClientesTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'og7x1uq3' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for dd_Edit_InstructorAsig widget.
   String? ddEditInstructorAsigValue;
   FormFieldController<String>? ddEditInstructorAsigValueController;
@@ -64,6 +65,8 @@ class EditarClaseModel extends FlutterFlowModel<EditarClaseWidget> {
         _txtEditNombreClaseTextControllerValidator;
     txtEditDescClaseTextControllerValidator =
         _txtEditDescClaseTextControllerValidator;
+    txtEditCantClientesTextControllerValidator =
+        _txtEditCantClientesTextControllerValidator;
   }
 
   @override

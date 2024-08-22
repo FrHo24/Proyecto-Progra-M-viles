@@ -58,10 +58,19 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
         appBar: AppBar(
           backgroundColor: const Color(0xFFE17518),
           automaticallyImplyLeading: true,
-          leading: Icon(
-            Icons.menu,
-            color: FlutterFlowTheme.of(context).accent3,
-            size: 30.0,
+          leading: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              context.pushNamed('agregarReserva');
+            },
+            child: Icon(
+              Icons.menu,
+              color: FlutterFlowTheme.of(context).accent3,
+              size: 30.0,
+            ),
           ),
           title: Align(
             alignment: const AlignmentDirectional(-1.0, 0.0),
@@ -151,7 +160,7 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                   ),
                                   child: Form(
                                     key: _model.formKey,
-                                    autovalidateMode: AutovalidateMode.disabled,
+                                    autovalidateMode: AutovalidateMode.always,
                                     child: SingleChildScrollView(
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -263,16 +272,19 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                                         filled: true,
                                                         fillColor: Colors.white,
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            color: const Color(
-                                                                0xFFF4EEEE),
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                              ),
                                                       validator: _model
                                                           .txtAgreNombreEquipoTextControllerValidator
                                                           .asValidator(context),
@@ -710,7 +722,7 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                                 initialDate:
                                                     getCurrentTimestamp,
                                                 firstDate: getCurrentTimestamp,
-                                                lastDate: DateTime(2050),
+                                                lastDate: getCurrentTimestamp,
                                                 builder: (context, child) {
                                                   return wrapInMaterialDatePickerTheme(
                                                     context,
@@ -1093,52 +1105,109 @@ class _InventarioEquipoWidgetState extends State<InventarioEquipoWidget> {
                                       Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Text(
-                                            listViewEquiposRecord.cantidad
-                                                .toString(),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: Colors.white,
-                                                  letterSpacing: 0.0,
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'zsf9mq9o' /* Estado: */,
                                                 ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF8F6F6),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                              Text(
+                                                listViewEquiposRecord
+                                                    .estadoMaquina,
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.white,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
+                                            ].divide(const SizedBox(width: 10.0)),
                                           ),
-                                          Text(
-                                            listViewEquiposRecord.estadoMaquina,
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: Colors.white,
-                                                  letterSpacing: 0.0,
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '3cs4yeoi' /* Cantidad: */,
                                                 ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF8F6F6),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                              Text(
+                                                listViewEquiposRecord.cantidad
+                                                    .toString(),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.white,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
+                                            ].divide(const SizedBox(width: 10.0)),
                                           ),
-                                        ],
-                                      ),
-                                      SizedBox(
-                                        height: 50.0,
-                                        child: VerticalDivider(
-                                          thickness: 1.0,
-                                          color: FlutterFlowTheme.of(context)
-                                              .accent4,
-                                        ),
-                                      ),
-                                      Text(
-                                        dateTimeFormat(
-                                          "d/M/y",
-                                          listViewEquiposRecord
-                                              .fechaUltimoMantenimiento!,
-                                          locale: FFLocalizations.of(context)
-                                              .languageCode,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                              letterSpacing: 0.0,
-                                            ),
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'ikpz3dse' /* Ultimo manteniento: */,
+                                                ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF8F4F4),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                              Text(
+                                                valueOrDefault<String>(
+                                                  listViewEquiposRecord
+                                                      .fechaUltimoMantenimiento
+                                                      ?.toString(),
+                                                  'N/A',
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.white,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
+                                            ].divide(const SizedBox(width: 10.0)),
+                                          ),
+                                        ].divide(const SizedBox(height: 5.0)),
                                       ),
                                     ],
                                   ),

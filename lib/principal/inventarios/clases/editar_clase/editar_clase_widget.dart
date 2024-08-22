@@ -63,7 +63,7 @@ class _EditarClaseWidgetState extends State<EditarClaseWidget> {
       ),
       child: Form(
         key: _model.formKey,
-        autovalidateMode: AutovalidateMode.disabled,
+        autovalidateMode: AutovalidateMode.always,
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -167,7 +167,7 @@ class _EditarClaseWidgetState extends State<EditarClaseWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: FFLocalizations.of(context).getText(
-                            'eexr04of' /* Nuev descripción de la clase .... */,
+                            'eexr04of' /* Nueva descripción de la clase ... */,
                           ),
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
@@ -347,7 +347,7 @@ class _EditarClaseWidgetState extends State<EditarClaseWidget> {
                               color: FlutterFlowTheme.of(context).secondaryText,
                               size: 24.0,
                             ),
-                            fillColor: const Color(0xFFE17518),
+                            fillColor: Colors.white,
                             elevation: 2.0,
                             borderColor: Colors.black,
                             borderWidth: 2.0,
@@ -394,6 +394,14 @@ class _EditarClaseWidgetState extends State<EditarClaseWidget> {
 
                   return FFButtonWidget(
                     onPressed: () async {
+                      if (_model.formKey.currentState == null ||
+                          !_model.formKey.currentState!.validate()) {
+                        return;
+                      }
+                      if (_model.ddEditInstructorAsigValue == null) {
+                        return;
+                      }
+
                       await widget.edicionClase!.update(createClasesRecordData(
                         nombreClase:
                             _model.txtEditNombreClaseTextController.text,

@@ -15,25 +15,78 @@ class InventarioEquipoModel extends FlutterFlowModel<InventarioEquipoWidget> {
   TextEditingController? txtAgreNombreEquipoTextController;
   String? Function(BuildContext, String?)?
       txtAgreNombreEquipoTextControllerValidator;
+  String? _txtAgreNombreEquipoTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        't5v1risq' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txt_Agre_CategEquipo widget.
   FocusNode? txtAgreCategEquipoFocusNode;
   TextEditingController? txtAgreCategEquipoTextController;
   String? Function(BuildContext, String?)?
       txtAgreCategEquipoTextControllerValidator;
+  String? _txtAgreCategEquipoTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'rzpwss90' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txt_Agre_CantEquipo widget.
   FocusNode? txtAgreCantEquipoFocusNode;
   TextEditingController? txtAgreCantEquipoTextController;
   String? Function(BuildContext, String?)?
       txtAgreCantEquipoTextControllerValidator;
+  String? _txtAgreCantEquipoTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        '1b6iwvh4' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
+
   // State field(s) for txt_Agre_EstadoEquipo widget.
   FocusNode? txtAgreEstadoEquipoFocusNode;
   TextEditingController? txtAgreEstadoEquipoTextController;
   String? Function(BuildContext, String?)?
       txtAgreEstadoEquipoTextControllerValidator;
+  String? _txtAgreEstadoEquipoTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'e1ttbxwy' /* Espacio requerido */,
+      );
+    }
+
+    return null;
+  }
+
   DateTime? datePicked;
 
   @override
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    txtAgreNombreEquipoTextControllerValidator =
+        _txtAgreNombreEquipoTextControllerValidator;
+    txtAgreCategEquipoTextControllerValidator =
+        _txtAgreCategEquipoTextControllerValidator;
+    txtAgreCantEquipoTextControllerValidator =
+        _txtAgreCantEquipoTextControllerValidator;
+    txtAgreEstadoEquipoTextControllerValidator =
+        _txtAgreEstadoEquipoTextControllerValidator;
+  }
 
   @override
   void dispose() {

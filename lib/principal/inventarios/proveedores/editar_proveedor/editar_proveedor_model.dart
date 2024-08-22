@@ -15,15 +15,10 @@ class EditarProveedorModel extends FlutterFlowModel<EditarProveedorWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'trw7brzz' /* Field is required */,
+        'trw7brzz' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'ssg2u5j2' /* Debe ingresar el nombre del en... */,
-      );
-    }
     return null;
   }
 
@@ -36,15 +31,10 @@ class EditarProveedorModel extends FlutterFlowModel<EditarProveedorWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'mi982pxj' /* Field is required */,
+        'mi982pxj' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        '0gpsgscg' /* Debe ingresar la categoría del... */,
-      );
-    }
     return null;
   }
 
@@ -57,15 +47,10 @@ class EditarProveedorModel extends FlutterFlowModel<EditarProveedorWidget> {
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'bgfi3kny' /* Field is required */,
+        'bgfi3kny' /* Espacio requerido */,
       );
     }
 
-    if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
-      return FFLocalizations.of(context).getText(
-        'jrc3v1c8' /* Debe ingresar la descripción d... */,
-      );
-    }
     return null;
   }
 

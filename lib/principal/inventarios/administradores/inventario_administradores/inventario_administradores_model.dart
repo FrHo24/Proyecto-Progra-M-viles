@@ -37,7 +37,7 @@ class InventarioAdministradoresModel
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '646xqjc8' /* Espacio Requerido */,
+        '7cz5orjb' /* Espacio Requerido */,
       );
     }
 
@@ -53,10 +53,13 @@ class InventarioAdministradoresModel
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'qsyaxl48' /* Espacio Requerido */,
+        '108tcc6s' /* Espacio Requerido */,
       );
     }
 
+    if (!RegExp(kTextValidatorEmailRegex).hasMatch(val)) {
+      return 'Has to be a valid email address.';
+    }
     return null;
   }
 
@@ -69,7 +72,7 @@ class InventarioAdministradoresModel
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'amhnjtmi' /* Espacio Requerido */,
+        'kdw31x2g' /* Espacio Requerido */,
       );
     }
 
@@ -85,7 +88,7 @@ class InventarioAdministradoresModel
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'krdkn4i6' /* Espacio Requerido */,
+        '8q9rvpjg' /* Espacio Requerido */,
       );
     }
 

@@ -1,9 +1,7 @@
-import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'paginade_ingreso_model.dart';
 export 'paginade_ingreso_model.dart';
 
@@ -14,33 +12,15 @@ class PaginadeIngresoWidget extends StatefulWidget {
   State<PaginadeIngresoWidget> createState() => _PaginadeIngresoWidgetState();
 }
 
-class _PaginadeIngresoWidgetState extends State<PaginadeIngresoWidget>
-    with TickerProviderStateMixin {
+class _PaginadeIngresoWidgetState extends State<PaginadeIngresoWidget> {
   late PaginadeIngresoModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => PaginadeIngresoModel());
-
-    animationsMap.addAll({
-      'circleImageOnPageLoadAnimation': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          ShimmerEffect(
-            curve: Curves.easeInOut,
-            delay: 15.0.ms,
-            duration: 2000.0.ms,
-            color: const Color(0xFFCCF4EF),
-            angle: 0.524,
-          ),
-        ],
-      ),
-    });
   }
 
   @override
@@ -138,8 +118,7 @@ class _PaginadeIngresoWidgetState extends State<PaginadeIngresoWidget>
                                   'assets/images/WhatsApp_Image_2024-06-19_at_7.41.43_PM-removebg-preview.png',
                                   fit: BoxFit.cover,
                                 ),
-                              ).animateOnPageLoad(animationsMap[
-                                  'circleImageOnPageLoadAnimation']!),
+                              ),
                             ],
                           ),
                           Row(

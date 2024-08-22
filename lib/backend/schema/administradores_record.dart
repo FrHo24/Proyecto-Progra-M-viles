@@ -45,6 +45,11 @@ class AdministradoresRecord extends FirestoreRecord {
   String get apellidoUsuario => _apellidoUsuario ?? '';
   bool hasApellidoUsuario() => _apellidoUsuario != null;
 
+  // "isAdmin" field.
+  bool? _isAdmin;
+  bool get isAdmin => _isAdmin ?? false;
+  bool hasIsAdmin() => _isAdmin != null;
+
   void _initializeFields() {
     _nombreUsuario = snapshotData['nombreUsuario'] as String?;
     _emailUsuario = snapshotData['emailUsuario'] as String?;
@@ -52,6 +57,7 @@ class AdministradoresRecord extends FirestoreRecord {
     _numeroTelefono = snapshotData['numeroTelefono'] as String?;
     _cedulaUsuario = snapshotData['cedulaUsuario'] as String?;
     _apellidoUsuario = snapshotData['apellidoUsuario'] as String?;
+    _isAdmin = snapshotData['isAdmin'] as bool?;
   }
 
   static CollectionReference get collection =>
@@ -95,6 +101,7 @@ Map<String, dynamic> createAdministradoresRecordData({
   String? numeroTelefono,
   String? cedulaUsuario,
   String? apellidoUsuario,
+  bool? isAdmin,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -104,6 +111,7 @@ Map<String, dynamic> createAdministradoresRecordData({
       'numeroTelefono': numeroTelefono,
       'cedulaUsuario': cedulaUsuario,
       'apellidoUsuario': apellidoUsuario,
+      'isAdmin': isAdmin,
     }.withoutNulls,
   );
 
@@ -121,7 +129,8 @@ class AdministradoresRecordDocumentEquality
         e1?.fechaCreacion == e2?.fechaCreacion &&
         e1?.numeroTelefono == e2?.numeroTelefono &&
         e1?.cedulaUsuario == e2?.cedulaUsuario &&
-        e1?.apellidoUsuario == e2?.apellidoUsuario;
+        e1?.apellidoUsuario == e2?.apellidoUsuario &&
+        e1?.isAdmin == e2?.isAdmin;
   }
 
   @override
@@ -131,7 +140,8 @@ class AdministradoresRecordDocumentEquality
         e?.fechaCreacion,
         e?.numeroTelefono,
         e?.cedulaUsuario,
-        e?.apellidoUsuario
+        e?.apellidoUsuario,
+        e?.isAdmin
       ]);
 
   @override

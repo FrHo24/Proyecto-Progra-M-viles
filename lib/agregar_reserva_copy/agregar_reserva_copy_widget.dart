@@ -1,35 +1,33 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/components/configuracion_widget.dart';
-import '/components/datos_perfil_widget.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/reservas/eliminar_reserva/eliminar_reserva_widget.dart';
-import 'package:styled_divider/styled_divider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'agregar_reserva_model.dart';
-export 'agregar_reserva_model.dart';
+import 'agregar_reserva_copy_model.dart';
+export 'agregar_reserva_copy_model.dart';
 
-class AgregarReservaWidget extends StatefulWidget {
-  const AgregarReservaWidget({super.key});
+class AgregarReservaCopyWidget extends StatefulWidget {
+  const AgregarReservaCopyWidget({super.key});
 
   @override
-  State<AgregarReservaWidget> createState() => _AgregarReservaWidgetState();
+  State<AgregarReservaCopyWidget> createState() =>
+      _AgregarReservaCopyWidgetState();
 }
 
-class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
-  late AgregarReservaModel _model;
+class _AgregarReservaCopyWidgetState extends State<AgregarReservaCopyWidget> {
+  late AgregarReservaCopyModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AgregarReservaModel());
+    _model = createModel(context, () => AgregarReservaCopyModel());
   }
 
   @override
@@ -54,121 +52,9 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Container(
-                    width: 250.0,
-                    height: 300.0,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF7AABB4),
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(25.0),
-                        bottomRight: Radius.circular(25.0),
-                        topLeft: Radius.circular(25.0),
-                        topRight: Radius.circular(25.0),
-                      ),
-                    ),
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          AuthUserStreamWidget(
-                            builder: (context) => Container(
-                              width: 120.0,
-                              height: 120.0,
-                              clipBehavior: Clip.antiAlias,
-                              decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                              ),
-                              child: Image.network(
-                                currentUserPhoto,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          AuthUserStreamWidget(
-                            builder: (context) => Text(
-                              currentUserDisplayName,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: const Color(0xFFF8F4F4),
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
-                          ),
-                          AuthUserStreamWidget(
-                            builder: (context) => Text(
-                              valueOrDefault(
-                                  currentUserDocument?.apellidoUsuario, ''),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: const Color(0xFFF4F2F2),
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
-                          ),
-                          AuthUserStreamWidget(
-                            builder: (context) => Text(
-                              valueOrDefault(currentUserDocument?.rol, ''),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: const Color(0xFFF6F3F3),
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 15.0, 0.0, 0.0),
-                            child: InkWell(
-                              splashColor: Colors.transparent,
-                              focusColor: Colors.transparent,
-                              hoverColor: Colors.transparent,
-                              highlightColor: Colors.transparent,
-                              onTap: () async {
-                                await showModalBottomSheet(
-                                  isScrollControlled: true,
-                                  backgroundColor: Colors.transparent,
-                                  enableDrag: false,
-                                  context: context,
-                                  builder: (context) {
-                                    return GestureDetector(
-                                      onTap: () =>
-                                          FocusScope.of(context).unfocus(),
-                                      child: Padding(
-                                        padding:
-                                            MediaQuery.viewInsetsOf(context),
-                                        child: SizedBox(
-                                          height: MediaQuery.sizeOf(context)
-                                                  .height *
-                                              0.5,
-                                          child: const ConfiguracionWidget(),
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ).then((value) => safeSetState(() {}));
-                              },
-                              child: const Icon(
-                                Icons.settings_outlined,
-                                color: Color(0xFFF0EDED),
-                                size: 30.0,
-                              ),
-                            ),
-                          ),
-                        ].divide(const SizedBox(height: 10.0)),
-                      ),
-                    ),
-                  ),
                   Text(
                     FFLocalizations.of(context).getText(
-                      'nfdnsioo' /* Inventarios */,
+                      'ry0bhksx' /* Inventarios */,
                     ),
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -203,7 +89,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                   ),
                   Text(
                     FFLocalizations.of(context).getText(
-                      'orfbu45d' /* Administradores */,
+                      'wqh36qi2' /* Administradores */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
@@ -236,7 +122,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                   ),
                   Text(
                     FFLocalizations.of(context).getText(
-                      'wstn2vyj' /* Clases */,
+                      'apewm0ja' /* Clases */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
@@ -269,7 +155,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                   ),
                   Text(
                     FFLocalizations.of(context).getText(
-                      'rhmtnr1m' /* Clientes */,
+                      'tr7vzb96' /* Clientes */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
@@ -302,7 +188,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                   ),
                   Text(
                     FFLocalizations.of(context).getText(
-                      'io57kf4b' /* Equipo */,
+                      'h3zg3i5g' /* Equipo */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
@@ -335,7 +221,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                   ),
                   Text(
                     FFLocalizations.of(context).getText(
-                      'vyy7yjun' /* Instructores */,
+                      '9qp0ni7z' /* Instructores */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
@@ -368,7 +254,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                   ),
                   Text(
                     FFLocalizations.of(context).getText(
-                      'ch8eohvs' /* productos */,
+                      '7q02nd1b' /* productos */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
@@ -401,7 +287,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                   ),
                   Text(
                     FFLocalizations.of(context).getText(
-                      'xljmkzt5' /* Proveedores */,
+                      'vqjftubl' /* Proveedores */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
@@ -429,7 +315,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                     },
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        'sl0r1ryc' /* Asistencia */,
+                        'vebtsdso' /* Asistencia */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
@@ -467,7 +353,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
           ),
           title: Text(
             FFLocalizations.of(context).getText(
-              '3sje1nsj' /* Reservas */,
+              '9iqzt7sr' /* Reservas */,
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
                   fontFamily: 'Readex Pro',
@@ -484,25 +370,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
                 onTap: () async {
-                  await showModalBottomSheet(
-                    isScrollControlled: true,
-                    backgroundColor: Colors.transparent,
-                    context: context,
-                    builder: (context) {
-                      return GestureDetector(
-                        onTap: () => FocusScope.of(context).unfocus(),
-                        child: Padding(
-                          padding: MediaQuery.viewInsetsOf(context),
-                          child: SizedBox(
-                            height: MediaQuery.sizeOf(context).height * 0.85,
-                            child: DatosPerfilWidget(
-                              infoPerfil: currentUserReference!,
-                            ),
-                          ),
-                        ),
-                      );
-                    },
-                  ).then((value) => safeSetState(() {}));
+                  context.pushNamed('Perfil');
                 },
                 child: Icon(
                   Icons.person,
@@ -525,9 +393,9 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                 children: [
                   Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
-                    height: MediaQuery.sizeOf(context).height * 0.4,
+                    height: MediaQuery.sizeOf(context).height * 0.5,
                     decoration: BoxDecoration(
-                      color: const Color(0xFF7AABB4),
+                      color: const Color(0xFF175F6D),
                       boxShadow: const [
                         BoxShadow(
                           blurRadius: 4.0,
@@ -582,13 +450,13 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
 
                                   return FlutterFlowDropDown<String>(
                                     controller: _model
-                                            .ddInstructorReservaValueController ??=
+                                            .ddInstructorReservaValueController1 ??=
                                         FormFieldController<String>(null),
                                     options: ddInstructorReservaClasesRecordList
                                         .map((e) => e.nombreClase)
                                         .toList(),
                                     onChanged: (val) => setState(() =>
-                                        _model.ddInstructorReservaValue = val),
+                                        _model.ddInstructorReservaValue1 = val),
                                     width: 280.0,
                                     height: 56.0,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -599,7 +467,84 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                                         ),
                                     hintText:
                                         FFLocalizations.of(context).getText(
-                                      'o3kn8bla' /* Seleccione la clase */,
+                                      'fswyqeol' /* Seleccione la clase */,
+                                    ),
+                                    icon: Icon(
+                                      Icons.keyboard_arrow_down_rounded,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      size: 24.0,
+                                    ),
+                                    fillColor: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    elevation: 2.0,
+                                    borderColor:
+                                        FlutterFlowTheme.of(context).alternate,
+                                    borderWidth: 2.0,
+                                    borderRadius: 8.0,
+                                    margin: const EdgeInsetsDirectional.fromSTEB(
+                                        16.0, 4.0, 16.0, 4.0),
+                                    hidesUnderline: true,
+                                    isOverButton: true,
+                                    isSearchable: false,
+                                    isMultiSelect: false,
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              StreamBuilder<List<InstructoresRecord>>(
+                                stream: queryInstructoresRecord(
+                                  queryBuilder: (instructoresRecord) =>
+                                      instructoresRecord
+                                          .orderBy('nombreInstructor'),
+                                ),
+                                builder: (context, snapshot) {
+                                  // Customize what your widget looks like when it's loading.
+                                  if (!snapshot.hasData) {
+                                    return Center(
+                                      child: SizedBox(
+                                        width: 50.0,
+                                        height: 50.0,
+                                        child: CircularProgressIndicator(
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                            FlutterFlowTheme.of(context)
+                                                .primary,
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  }
+                                  List<InstructoresRecord>
+                                      ddInstructorReservaInstructoresRecordList =
+                                      snapshot.data!;
+
+                                  return FlutterFlowDropDown<String>(
+                                    controller: _model
+                                            .ddInstructorReservaValueController2 ??=
+                                        FormFieldController<String>(null),
+                                    options:
+                                        ddInstructorReservaInstructoresRecordList
+                                            .map((e) => e.nombreInstructor)
+                                            .toList(),
+                                    onChanged: (val) => setState(() =>
+                                        _model.ddInstructorReservaValue2 = val),
+                                    width: 280.0,
+                                    height: 56.0,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
+                                    hintText:
+                                        FFLocalizations.of(context).getText(
+                                      'ubb5us0h' /* Seleccione Instructor */,
                                     ),
                                     icon: Icon(
                                       Icons.keyboard_arrow_down_rounded,
@@ -654,7 +599,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                                   children: [
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'jpm9cmxq' /* Fecha y Hora */,
+                                        'ecp8q6xl' /* Fecha y Hora */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -785,7 +730,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                                         }
                                       },
                                       text: FFLocalizations.of(context).getText(
-                                        'ba9wajd0' /* Fecha */,
+                                        '5gensj9v' /* Fecha */,
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
@@ -821,7 +766,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                               queryBuilder: (clasesRecord) =>
                                   clasesRecord.where(
                                 'nombreClase',
-                                isEqualTo: _model.ddInstructorReservaValue,
+                                isEqualTo: _model.ddInstructorReservaValue1,
                               ),
                               singleRecord: true,
                             ),
@@ -881,7 +826,7 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                                   );
                                 },
                                 text: FFLocalizations.of(context).getText(
-                                  'tkp803e5' /* Reservar */,
+                                  'syndivbx' /* Reservar */,
                                 ),
                                 icon: const Icon(
                                   Icons.add,
@@ -944,292 +889,197 @@ class _AgregarReservaWidgetState extends State<AgregarReservaWidget> {
                           final listViewCalendarioReservasRecord =
                               listViewCalendarioReservasRecordList[
                                   listViewIndex];
-                          return Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 15.0),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                StreamBuilder<ClasesRecord>(
-                                  stream: ClasesRecord.getDocument(
-                                      listViewCalendarioReservasRecord.clase!),
-                                  builder: (context, snapshot) {
-                                    // Customize what your widget looks like when it's loading.
-                                    if (!snapshot.hasData) {
-                                      return Center(
-                                        child: SizedBox(
-                                          width: 50.0,
-                                          height: 50.0,
-                                          child: CircularProgressIndicator(
-                                            valueColor:
-                                                AlwaysStoppedAnimation<Color>(
-                                              FlutterFlowTheme.of(context)
-                                                  .primary,
-                                            ),
+                          return Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              StreamBuilder<ClasesRecord>(
+                                stream: ClasesRecord.getDocument(
+                                    listViewCalendarioReservasRecord.clase!),
+                                builder: (context, snapshot) {
+                                  // Customize what your widget looks like when it's loading.
+                                  if (!snapshot.hasData) {
+                                    return Center(
+                                      child: SizedBox(
+                                        width: 50.0,
+                                        height: 50.0,
+                                        child: CircularProgressIndicator(
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                            FlutterFlowTheme.of(context)
+                                                .primary,
                                           ),
-                                        ),
-                                      );
-                                    }
-
-                                    final listTileClasesRecord = snapshot.data!;
-
-                                    return ListTile(
-                                      title: Text(
-                                        listTileClasesRecord.nombreClase,
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .override(
-                                              fontFamily: 'Outfit',
-                                              color: Colors.white,
-                                              fontSize: 25.0,
-                                              letterSpacing: 0.0,
-                                            ),
-                                      ),
-                                      tileColor: const Color(0xFF7AABB4),
-                                      dense: false,
-                                      shape: const RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.circular(0.0),
-                                          bottomRight: Radius.circular(0.0),
-                                          topLeft: Radius.circular(50.0),
-                                          topRight: Radius.circular(50.0),
                                         ),
                                       ),
                                     );
-                                  },
-                                ),
-                                StreamBuilder<InstructoresRecord>(
-                                  stream: InstructoresRecord.getDocument(
-                                      listViewCalendarioReservasRecord
-                                          .instructor!),
-                                  builder: (context, snapshot) {
-                                    // Customize what your widget looks like when it's loading.
-                                    if (!snapshot.hasData) {
-                                      return Center(
-                                        child: SizedBox(
-                                          width: 50.0,
-                                          height: 50.0,
-                                          child: CircularProgressIndicator(
-                                            valueColor:
-                                                AlwaysStoppedAnimation<Color>(
-                                              FlutterFlowTheme.of(context)
-                                                  .primary,
-                                            ),
-                                          ),
-                                        ),
-                                      );
-                                    }
+                                  }
 
-                                    final listTileInstructoresRecord =
-                                        snapshot.data!;
+                                  final listTileClasesRecord = snapshot.data!;
 
-                                    return ListTile(
-                                      title: Text(
-                                        listTileInstructoresRecord
-                                            .nombreInstructor,
-                                        textAlign: TextAlign.center,
-                                        style: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .override(
-                                              fontFamily: 'Outfit',
-                                              color: Colors.white,
-                                              fontSize: 25.0,
-                                              letterSpacing: 0.0,
-                                            ),
-                                      ),
-                                      tileColor: const Color(0xFF7AABB4),
-                                      dense: false,
-                                    );
-                                  },
-                                ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 10.0, 0.0, 0.0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      const SizedBox(
-                                        height: 100.0,
-                                        child: StyledVerticalDivider(
-                                          width: 10.0,
-                                          thickness: 5.0,
-                                          color: Color(0xFF7AABB4),
-                                          lineStyle: DividerLineStyle.dashed,
-                                        ),
-                                      ),
-                                      Text(
-                                        FFLocalizations.of(context).getText(
-                                          '1i7bidr6' /* Día de reserva: */,
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              color: const Color(0xFFF6F6F6),
-                                              fontSize: 25.0,
-                                              letterSpacing: 0.0,
-                                            ),
-                                      ),
-                                      const SizedBox(
-                                        height: 100.0,
-                                        child: StyledVerticalDivider(
-                                          width: 10.0,
-                                          thickness: 5.0,
-                                          color: Color(0xFF7AABB4),
-                                          lineStyle: DividerLineStyle.dashed,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    const SizedBox(
-                                      height: 100.0,
-                                      child: StyledVerticalDivider(
-                                        width: 10.0,
-                                        thickness: 5.0,
-                                        color: Color(0xFF7AABB4),
-                                        lineStyle: DividerLineStyle.dashed,
-                                      ),
-                                    ),
-                                    Text(
-                                      valueOrDefault<String>(
-                                        listViewCalendarioReservasRecord.fecha
-                                            ?.toString(),
-                                        'N/A',
-                                      ),
+                                  return ListTile(
+                                    title: Text(
+                                      listTileClasesRecord.nombreClase,
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
+                                          .titleLarge
                                           .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: const Color(0xFFF9F7F7),
-                                            fontSize: 25.0,
+                                            fontFamily: 'Outfit',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                    const SizedBox(
-                                      height: 100.0,
-                                      child: StyledVerticalDivider(
-                                        width: 10.0,
-                                        thickness: 5.0,
-                                        color: Color(0xFF7AABB4),
-                                        lineStyle: DividerLineStyle.dashed,
+                                    tileColor: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    dense: false,
+                                  );
+                                },
+                              ),
+                              StreamBuilder<InstructoresRecord>(
+                                stream: InstructoresRecord.getDocument(
+                                    listViewCalendarioReservasRecord
+                                        .instructor!),
+                                builder: (context, snapshot) {
+                                  // Customize what your widget looks like when it's loading.
+                                  if (!snapshot.hasData) {
+                                    return Center(
+                                      child: SizedBox(
+                                        width: 50.0,
+                                        height: 50.0,
+                                        child: CircularProgressIndicator(
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                            FlutterFlowTheme.of(context)
+                                                .primary,
+                                          ),
+                                        ),
                                       ),
+                                    );
+                                  }
+
+                                  final listTileInstructoresRecord =
+                                      snapshot.data!;
+
+                                  return ListTile(
+                                    title: Text(
+                                      listTileInstructoresRecord
+                                          .nombreInstructor,
+                                      style: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .override(
+                                            fontFamily: 'Outfit',
+                                            letterSpacing: 0.0,
+                                          ),
                                     ),
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    const SizedBox(
-                                      height: 100.0,
-                                      child: StyledVerticalDivider(
-                                        width: 10.0,
-                                        thickness: 5.0,
-                                        color: Color(0xFF7AABB4),
-                                        lineStyle: DividerLineStyle.dashed,
-                                      ),
+                                    tileColor: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    dense: false,
+                                  );
+                                },
+                              ),
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Text(
+                                    FFLocalizations.of(context).getText(
+                                      'ba9yqkwf' /* Día de reserva: */,
                                     ),
-                                    FFButtonWidget(
-                                      onPressed: () async {
-                                        await showModalBottomSheet(
-                                          isScrollControlled: true,
-                                          backgroundColor: Colors.transparent,
-                                          enableDrag: false,
-                                          context: context,
-                                          builder: (context) {
-                                            return GestureDetector(
-                                              onTap: () =>
-                                                  FocusScope.of(context)
-                                                      .unfocus(),
-                                              child: Padding(
-                                                padding:
-                                                    MediaQuery.viewInsetsOf(
-                                                        context),
-                                                child: SizedBox(
-                                                  height:
-                                                      MediaQuery.sizeOf(context)
-                                                              .height *
-                                                          0.5,
-                                                  child: EliminarReservaWidget(
-                                                    eliminacioReservas:
-                                                        listViewCalendarioReservasRecord
-                                                            .reference,
-                                                  ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color: const Color(0xFFF6F6F6),
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
+                                  Text(
+                                    valueOrDefault<String>(
+                                      listViewCalendarioReservasRecord.fecha
+                                          ?.toString(),
+                                      'N/A',
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color: const Color(0xFFF9F7F7),
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  FFButtonWidget(
+                                    onPressed: () async {
+                                      await showModalBottomSheet(
+                                        isScrollControlled: true,
+                                        backgroundColor: Colors.transparent,
+                                        enableDrag: false,
+                                        context: context,
+                                        builder: (context) {
+                                          return GestureDetector(
+                                            onTap: () => FocusScope.of(context)
+                                                .unfocus(),
+                                            child: Padding(
+                                              padding: MediaQuery.viewInsetsOf(
+                                                  context),
+                                              child: SizedBox(
+                                                height:
+                                                    MediaQuery.sizeOf(context)
+                                                            .height *
+                                                        0.5,
+                                                child: EliminarReservaWidget(
+                                                  eliminacioReservas:
+                                                      listViewCalendarioReservasRecord
+                                                          .reference,
                                                 ),
                                               ),
-                                            );
-                                          },
-                                        ).then((value) => safeSetState(() {}));
-                                      },
-                                      text: FFLocalizations.of(context).getText(
-                                        'hm28gevp' /* Cancelar Reserva */,
-                                      ),
-                                      options: FFButtonOptions(
-                                        height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            24.0, 0.0, 24.0, 0.0),
-                                        iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: const Color(0xFFEF3944),
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                              letterSpacing: 0.0,
                                             ),
-                                        elevation: 3.0,
-                                        borderSide: const BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1.0,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
+                                          );
+                                        },
+                                      ).then((value) => safeSetState(() {}));
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      'g9qk7k22' /* Cancelar Reserva */,
                                     ),
-                                    const SizedBox(
-                                      height: 100.0,
-                                      child: StyledVerticalDivider(
-                                        width: 10.0,
-                                        thickness: 5.0,
-                                        color: Color(0xFF7AABB4),
-                                        lineStyle: DividerLineStyle.dashed,
+                                    options: FFButtonOptions(
+                                      height: 40.0,
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: const Color(0xFFEF3944),
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            color: Colors.white,
+                                            letterSpacing: 0.0,
+                                          ),
+                                      elevation: 3.0,
+                                      borderSide: const BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1.0,
                                       ),
-                                    ),
-                                  ],
-                                ),
-                                Container(
-                                  width: 480.0,
-                                  height: 50.0,
-                                  decoration: const BoxDecoration(
-                                    color: Color(0xFF7AABB4),
-                                    borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(50.0),
-                                      bottomRight: Radius.circular(50.0),
-                                      topLeft: Radius.circular(0.0),
-                                      topRight: Radius.circular(0.0),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
+                                ],
+                              ),
+                              Divider(
+                                height: 25.0,
+                                thickness: 5.0,
+                                color: FlutterFlowTheme.of(context).tertiary,
+                              ),
+                            ].divide(const SizedBox(height: 5.0)),
                           );
                         },
                       );
                     },
                   ),
-                ].divide(const SizedBox(height: 20.0)),
+                ].divide(const SizedBox(height: 15.0)),
               ),
             ),
           ),

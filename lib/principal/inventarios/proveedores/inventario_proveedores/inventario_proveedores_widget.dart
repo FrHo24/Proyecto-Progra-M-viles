@@ -57,10 +57,19 @@ class _InventarioProveedoresWidgetState
         appBar: AppBar(
           backgroundColor: const Color(0xFFE17518),
           automaticallyImplyLeading: true,
-          leading: Icon(
-            Icons.menu,
-            color: FlutterFlowTheme.of(context).accent3,
-            size: 30.0,
+          leading: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              context.pushNamed('agregarReserva');
+            },
+            child: Icon(
+              Icons.menu,
+              color: FlutterFlowTheme.of(context).accent3,
+              size: 30.0,
+            ),
           ),
           title: Align(
             alignment: const AlignmentDirectional(-1.0, 0.0),
@@ -269,7 +278,7 @@ class _InventarioProveedoresWidgetState
                                                             fontFamily:
                                                                 'Readex Pro',
                                                             color: const Color(
-                                                                0xFFF4EEEE),
+                                                                0xFF060606),
                                                             letterSpacing: 0.0,
                                                           ),
                                                       validator: _model
@@ -559,21 +568,16 @@ class _InventarioProveedoresWidgetState
                                                           .doc()
                                                           .set(
                                                               createProveedoresRecordData(
-                                                            nombreProveedor:
-                                                                (_model.txtAgreNombreProveedorFocusNode
-                                                                            ?.hasFocus ??
-                                                                        false)
-                                                                    .toString(),
+                                                            nombreProveedor: _model
+                                                                .txtAgreNombreProveedorTextController
+                                                                .text,
                                                             telefonoProveedor:
-                                                                (_model.txtAgreNTelefonoProveedorFocusNode
-                                                                            ?.hasFocus ??
-                                                                        false)
-                                                                    .toString(),
-                                                            emailProveedor: (_model
-                                                                        .txtAgreEmailProveedorFocusNode
-                                                                        ?.hasFocus ??
-                                                                    false)
-                                                                .toString(),
+                                                                _model
+                                                                    .txtAgreNTelefonoProveedorTextController
+                                                                    .text,
+                                                            emailProveedor: _model
+                                                                .txtAgreEmailProveedorTextController
+                                                                .text,
                                                           ));
                                                       ScaffoldMessenger.of(
                                                               context)
@@ -733,15 +737,6 @@ class _InventarioProveedoresWidgetState
                                           letterSpacing: 0.0,
                                         ),
                                   ),
-                                  subtitle: Text(
-                                    listViewProveedoresRecord.telefonoProveedor,
-                                    style: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          letterSpacing: 0.0,
-                                        ),
-                                  ),
                                   tileColor: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
                                   dense: false,
@@ -757,18 +752,70 @@ class _InventarioProveedoresWidgetState
                                       Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Text(
-                                            listViewProveedoresRecord
-                                                .emailProveedor,
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  color: Colors.white,
-                                                  letterSpacing: 0.0,
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '902cc0kv' /* Email: */,
                                                 ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFF8F4F4),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                              Text(
+                                                listViewProveedoresRecord
+                                                    .emailProveedor,
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.white,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
+                                            ].divide(const SizedBox(width: 10.0)),
                                           ),
-                                        ],
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'xz28ljm0' /* Teléfono: */,
+                                                ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFFBFBFB),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                              Text(
+                                                listViewProveedoresRecord
+                                                    .telefonoProveedor,
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: const Color(0xFFFBF9F9),
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                              ),
+                                            ].divide(const SizedBox(width: 10.0)),
+                                          ),
+                                        ].divide(const SizedBox(height: 5.0)),
                                       ),
                                     ],
                                   ),

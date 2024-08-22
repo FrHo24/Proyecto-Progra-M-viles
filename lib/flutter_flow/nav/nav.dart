@@ -73,15 +73,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => appStateNotifier.loggedIn
-          ? const InventarioAdministradoresWidget()
-          : const PaginadeIngresoWidget(),
+      errorBuilder: (context, state) =>
+          appStateNotifier.loggedIn ? const PerfilWidget() : const PaginadeIngresoWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
-              ? const InventarioAdministradoresWidget()
+              ? const PerfilWidget()
               : const PaginadeIngresoWidget(),
         ),
         FFRoute(
@@ -168,6 +167,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Asistencia',
           path: '/asistencia',
           builder: (context, params) => const AsistenciaWidget(),
+        ),
+        FFRoute(
+          name: 'agregarReservaCopy',
+          path: '/agregarReservaCopy',
+          builder: (context, params) => const AgregarReservaCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

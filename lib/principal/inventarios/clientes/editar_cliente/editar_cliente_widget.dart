@@ -103,7 +103,7 @@ class _EditarClienteWidgetState extends State<EditarClienteWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: FFLocalizations.of(context).getText(
-                            'vxhsfere' /* Nuevo nombre del administrador... */,
+                            'vxhsfere' /* Nuevo nombre del cliente... */,
                           ),
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
@@ -172,7 +172,7 @@ class _EditarClienteWidgetState extends State<EditarClienteWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: FFLocalizations.of(context).getText(
-                            '04vwq9ci' /* Nuevo apellido del administrad... */,
+                            '04vwq9ci' /* Nuevo apellido del cliente... */,
                           ),
                           labelStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
@@ -505,6 +505,11 @@ class _EditarClienteWidgetState extends State<EditarClienteWidget> {
               ),
               FFButtonWidget(
                 onPressed: () async {
+                  if (_model.formKey.currentState == null ||
+                      !_model.formKey.currentState!.validate()) {
+                    return;
+                  }
+
                   await widget.edicionCliente!.update(createClientesRecordData(
                     nombreCliente:
                         _model.txtEditNombreClienteTextController.text,

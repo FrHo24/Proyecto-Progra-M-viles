@@ -1,11 +1,9 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'cambiar_contrasena_model.dart';
 export 'cambiar_contrasena_model.dart';
 
@@ -17,13 +15,10 @@ class CambiarContrasenaWidget extends StatefulWidget {
       _CambiarContrasenaWidgetState();
 }
 
-class _CambiarContrasenaWidgetState extends State<CambiarContrasenaWidget>
-    with TickerProviderStateMixin {
+class _CambiarContrasenaWidgetState extends State<CambiarContrasenaWidget> {
   late CambiarContrasenaModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
@@ -32,21 +27,6 @@ class _CambiarContrasenaWidgetState extends State<CambiarContrasenaWidget>
 
     _model.emailAddressRecoverTextController ??= TextEditingController();
     _model.emailAddressRecoverFocusNode ??= FocusNode();
-
-    animationsMap.addAll({
-      'circleImageOnPageLoadAnimation': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          ShimmerEffect(
-            curve: Curves.easeInOut,
-            delay: 15.0.ms,
-            duration: 2000.0.ms,
-            color: const Color(0x80FFFFFF),
-            angle: 0.524,
-          ),
-        ],
-      ),
-    });
   }
 
   @override
@@ -124,8 +104,7 @@ class _CambiarContrasenaWidgetState extends State<CambiarContrasenaWidget>
                       'assets/images/WhatsApp_Image_2024-06-19_at_7.41.43_PM-removebg-preview.png',
                       fit: BoxFit.cover,
                     ),
-                  ).animateOnPageLoad(
-                      animationsMap['circleImageOnPageLoadAnimation']!),
+                  ),
                 ),
 
                 // This row exists for when the "app bar" is hidden on desktop, having a way back for the user can work well.

@@ -20,7 +20,7 @@ class InventarioProveedoresModel
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '8uyynapd' /* Espacio requerido */,
+        '9fiq10sf' /* Espacio requerido */,
       );
     }
 
@@ -40,6 +40,9 @@ class InventarioProveedoresModel
       );
     }
 
+    if (!RegExp(kTextValidatorEmailRegex).hasMatch(val)) {
+      return 'Has to be a valid email address.';
+    }
     return null;
   }
 
