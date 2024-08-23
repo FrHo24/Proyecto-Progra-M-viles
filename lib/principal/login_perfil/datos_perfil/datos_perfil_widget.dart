@@ -220,10 +220,9 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                       borderRadius: 30.0,
                                       borderWidth: 1.0,
                                       buttonSize: 60.0,
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.close_rounded,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
+                                        color: Colors.white,
                                         size: 30.0,
                                       ),
                                       onPressed: () async {
@@ -453,15 +452,13 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                               topRight: Radius.circular(4.0),
                                             ),
                                           ),
-                                          focusedBorder: UnderlineInputBorder(
+                                          focusedBorder: const UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: Color(0xFFF0F0F0),
                                               width: 2.0,
                                             ),
                                             borderRadius:
-                                                const BorderRadius.only(
+                                                BorderRadius.only(
                                               topLeft: Radius.circular(4.0),
                                               topRight: Radius.circular(4.0),
                                             ),
@@ -546,15 +543,13 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                               topRight: Radius.circular(4.0),
                                             ),
                                           ),
-                                          focusedBorder: UnderlineInputBorder(
+                                          focusedBorder: const UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: Colors.white,
                                               width: 2.0,
                                             ),
                                             borderRadius:
-                                                const BorderRadius.only(
+                                                BorderRadius.only(
                                               topLeft: Radius.circular(4.0),
                                               topRight: Radius.circular(4.0),
                                             ),
@@ -643,15 +638,13 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                               topRight: Radius.circular(4.0),
                                             ),
                                           ),
-                                          focusedBorder: UnderlineInputBorder(
+                                          focusedBorder: const UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: Color(0xFFF0F0F0),
                                               width: 2.0,
                                             ),
                                             borderRadius:
-                                                const BorderRadius.only(
+                                                BorderRadius.only(
                                               topLeft: Radius.circular(4.0),
                                               topRight: Radius.circular(4.0),
                                             ),
@@ -736,15 +729,13 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                               topRight: Radius.circular(4.0),
                                             ),
                                           ),
-                                          focusedBorder: UnderlineInputBorder(
+                                          focusedBorder: const UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: Color(0xFFECEBEE),
                                               width: 2.0,
                                             ),
                                             borderRadius:
-                                                const BorderRadius.only(
+                                                BorderRadius.only(
                                               topLeft: Radius.circular(4.0),
                                               topRight: Radius.circular(4.0),
                                             ),
@@ -817,28 +808,24 @@ class _DatosPerfilWidgetState extends State<DatosPerfilWidget>
                                                     fontFamily: 'Readex Pro',
                                                     letterSpacing: 0.0,
                                                   ),
-                                          enabledBorder: UnderlineInputBorder(
+                                          enabledBorder: const UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
+                                              color: Color(0xFFF0F0F0),
                                               width: 2.0,
                                             ),
                                             borderRadius:
-                                                const BorderRadius.only(
+                                                BorderRadius.only(
                                               topLeft: Radius.circular(4.0),
                                               topRight: Radius.circular(4.0),
                                             ),
                                           ),
-                                          focusedBorder: UnderlineInputBorder(
+                                          focusedBorder: const UnderlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: Color(0xFFE9E9E9),
                                               width: 2.0,
                                             ),
                                             borderRadius:
-                                                const BorderRadius.only(
+                                                BorderRadius.only(
                                               topLeft: Radius.circular(4.0),
                                               topRight: Radius.circular(4.0),
                                             ),

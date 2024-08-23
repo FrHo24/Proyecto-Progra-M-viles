@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'cambiar_contrasena_model.dart';
 export 'cambiar_contrasena_model.dart';
 
@@ -94,17 +95,12 @@ class _CambiarContrasenaWidgetState extends State<CambiarContrasenaWidget> {
               children: [
                 Align(
                   alignment: const AlignmentDirectional(0.0, 0.0),
-                  child: Container(
-                    width: 150.0,
-                    height: 150.0,
-                    clipBehavior: Clip.antiAlias,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                    ),
-                    child: Image.asset(
-                      'assets/images/WhatsApp_Image_2024-06-19_at_7.41.43_PM-removebg-preview.png',
-                      fit: BoxFit.cover,
-                    ),
+                  child: Lottie.network(
+                    'https://lottie.host/2aaecbc4-300f-457b-9fbe-1edd218db907/LmXwpcezKt.json',
+                    width: 245.0,
+                    height: 226.0,
+                    fit: BoxFit.cover,
+                    animate: true,
                   ),
                 ),
 
